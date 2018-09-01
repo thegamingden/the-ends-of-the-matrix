@@ -1,5 +1,5 @@
 
-# [View It Github Pages](https://thegamingden.github.io/the-ends-of-the-matrix/)
+# [View It On Github Pages](https://thegamingden.github.io/the-ends-of-the-matrix/)
 
 # The Ends of the Matrix
 
