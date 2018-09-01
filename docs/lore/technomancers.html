@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Technomancers - The Ends of The Matrix</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A complete replacement for the Matrix rules of SR4.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="../lore.html"><strong aria-hidden="true">2.</strong> Lore</a></li><li><ol class="section"><li><a href="../lore/four_questions.html"><strong aria-hidden="true">2.1.</strong> Four Questions</a></li><li><a href="../lore/perceiving_the_matrix.html"><strong aria-hidden="true">2.2.</strong> Perceiving The Matrix</a></li><li><a href="../lore/encryption.html"><strong aria-hidden="true">2.3.</strong> Encryption</a></li><li><a href="../lore/hacking_hardware.html"><strong aria-hidden="true">2.4.</strong> Hacking Hardware</a></li><li><a href="../lore/intrusion_countermeasures.html"><strong aria-hidden="true">2.5.</strong> Intrusion Countermeasures</a></li><li><a href="../lore/matrix_infrastructure_and_topology.html"><strong aria-hidden="true">2.6.</strong> Matrix Infrastructure and Topology</a></li><li><a href="../lore/growing_up_wireless.html"><strong aria-hidden="true">2.7.</strong> Growing Up Wireless</a></li><li><a href="../lore/technomancers.html" class="active"><strong aria-hidden="true">2.8.</strong> Technomancers</a></li><li><a href="../lore/sprites.html"><strong aria-hidden="true">2.9.</strong> Sprites</a></li></ol></li><li><a href="../crunch.html"><strong aria-hidden="true">3.</strong> Crunch</a></li><li><ol class="section"><li><a href="../crunch/dice_pools.html"><strong aria-hidden="true">3.1.</strong> Dice Pools</a></li><li><a href="../crunch/skills.html"><strong aria-hidden="true">3.2.</strong> Skills</a></li><li><a href="../crunch/matrix_architecture.html"><strong aria-hidden="true">3.3.</strong> Matrix Architecture</a></li><li><a href="../crunch/matrix_actions.html"><strong aria-hidden="true">3.4.</strong> Matrix Actions</a></li><li><a href="../crunch/matrix_attributes.html"><strong aria-hidden="true">3.5.</strong> Matrix Attributes</a></li><li><a href="../crunch/programs_and_complex_forms.html"><strong aria-hidden="true">3.6.</strong> Programs and Complex Forms</a></li><li><a href="../crunch/technomancy.html"><strong aria-hidden="true">3.7.</strong> Technomancy</a></li><li><a href="../crunch/sprites.html"><strong aria-hidden="true">3.8.</strong> Sprites</a></li><li><a href="../crunch/equipment.html"><strong aria-hidden="true">3.9.</strong> Equipment</a></li></ol></li><li><a href="../bonus_houserules.html"><strong aria-hidden="true">4.</strong> Bonus Houserules</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Ends of The Matrix</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#technomancers" id="technomancers"><h1>Technomancers</h1></a>
+<p><em>&quot;More even than the leopard, the jaguar, and the shark, man kind has always feared the darkness first among all threats. Because darkness, by its nature, can never be understood.&quot;</em></p>
+<p>The newest and weirdest thing to come on the scene in the Sixth World is the Technomancer. A metahuman who can produce and direct high density signal with their own body. In a very real sense, they follow different rules from everyone else.</p>
+<p>The technomancers are the inheritors of the old SR3 concept of the &quot;Otaku&quot; who were kind of like the blue kids from Akira. They used Datajacks and sent signals across a wired interface that was just like using programs and cyberdecks, and they were specifically hosed in the physical world. They were roundly hated because they had a stupid name (Otaku is an actual word that describes real people in the cyberpunk genre and it doesn't mean anything remotely similar to &quot;natural matrix savant&quot;), they didn't work well with others, and they didn't really do anything cool that &quot;felt&quot; different from what a normal hacker could do. So it is no surprise that the presentation of technomancers in SR4 is extremely different from that of the Otaku. Indeed, it is quite intentional that technomancy is as different as possible from otakudom.</p>
+<a class="header" href="#otaku-how-different-are-we-talking" id="otaku-how-different-are-we-talking"><h4>Otaku: How Different Are We Talking?</h4></a>
+<p>Aside from just having a really dumb name, the Otaku were not very well thought out from a playability standpoint. Their abilities were temporary for some reason, so all otaku had to be children, which right away put a strain on a game about serious business and being hired by dubious criminals to do freelance crime for them. But beyond that, the otaku had super magic-like powers that only turned on when they plugged a datajack into their skulls and tuned the physical world out entirely. The result of this was that they really weren't able to run <em>with</em> the other team members, making them extremely bad in a cooperative storytelling game. It is for <em>this</em> reason more than the largely unpalatable flavor that the Technomancer of SR4 is almost completely different from the otaku.</p>
+<p>Important differences that older players should be aware of: A technomancer suffers a reduction in technomantic efficiency when they replace parts of their body with cybernetics and they <em>don't</em> lose technomantic powers as they age. The mechanic is the same as for Magic loss from Essence reduction, which has led some people to suspect that technomancers are magicians; but really what we're looking at is that technomancers generate their signals with their body and losing parts of their body jacks them. Essence values don't make a lick of sense anyway, and it's convenient to reuse a functional mechanic. The word <strong>fading</strong> now refers to the drain that technomancers take when using their bigger, cooler abilities, rather than them hitting the end of their powers overall. Channels are gone altogether, as the modern Resonance skills have been demystified and now function like normal skills. The technomancer does not need to get any special cybernetics before they can use their abilities, their body inherently generates signal so they can get by without even a datajack (and indeed may well want to do so, because breaking their skin with cybernetics damages their body's ability to generate signal in the first place). The Sprite has become a much bigger deal for the 2070s technomancer, it is no longer a mere glorified frame core (indeed, such things have been edited out of the game entirely in this rule set in order to help keep very rich hackers from having virtually limitless actions), now they are sapient and powerful allies of the technomancer that serve a very similar function to a pack of gun drones or a posse of spirits. Complex Forms are still the program equivalents, but now there are special complex forms that technomancers can learn that have no equivalent program. Finally, technomancers can get an extra set of super powers called &quot;echoes&quot; by attaining deeper levels of submersion.</p>
+<a class="header" href="#fantasy-and-science-fiction-technomancers-and-theme" id="fantasy-and-science-fiction-technomancers-and-theme"><h2>Fantasy and Science Fiction: Technomancers and Theme</h2></a>
+<p><em>&quot;Before writing a story, you have to determine whether the material between the metal fittings on the black box that drives the plot are made out of rune carved stone or shiny plastic. It doesn't make any <strong>real</strong> difference, but it changes who will like your story.&quot;</em></p>
+<p>Shadowrun is a science fiction game that has magic in it. But while there is magic in the setting, the game is still relentlessly science fiction in tone. One can extrapolate from physical principals what will happen if you use magical telekinesis on things or cloak things with invisibility. And so it comes as no surprise that technomancers will be treated as a science fiction entity in these rules. Sure, one can certainly do some mystical introspection with regards to their abilities or the things they interact with, but this will always be relegated to the kinds of weird philosophizing that has littered the world of science fiction since H. G. Wells made broad parables about the equality of humans.</p>
+<p>Technomancers share more than a few game mechanics with magicians, but they are not magicians. The signals that they produce are not the same as the signals produced by the commlinks and transmitters of hackers, but they are real electromagnetic signals nonetheless. People in 2071 do not understand <em>how</em> technomancy works, but they do understand <em>that</em> it works, and they can take entirely physical instruments and use them to demonstrate and measure the workings of technomantic techniques. A technomancer can be discovered by biochemical investigation, and the powers involved can be caught on film. Technomancers are a scientific reality in 2071.</p>
+<a class="header" href="#the-song-and-the-silence-resonance-and-dissonance" id="the-song-and-the-silence-resonance-and-dissonance"><h2>The Song and the Silence: Resonance and Dissonance</h2></a>
+<p><em>&quot;You actually use all of your brain, even when it isn't lit up on the screen. Like on your computer, the zeros as well as the ones are part of the signal, and without them there would be no information at all.&quot;</em></p>
+<p>When it comes down to it, technomancers manipulate and are manipulated by signals. And their experience of this kind of activity centers around wave-based metaphors. And depending on what kind of metaphor they have, the technomancers will decide that something or another needs to get done. And perhaps the very most important thing that technomancers have decided is that other technomancers who have different metaphors and wear different hats need to be <em>shot in the face</em>. This may seem fairly extreme, especially as no one <em>really</em> knows what is going on with all this technomancy stuff anyway, and there is currently no way of knowing whose master plans will &quot;work&quot;, and whether any of them will be good or bad. Nevertheless, many technomancers are entirely willing, even eager, to fight to the literal death over the vagueries of interpretation.</p>
+<p>Perhaps the largest ideological difference among technomancers is whether the <em>peaks</em> or the <em>troughs</em> of the signals are the important, information carrying secret of the matrix, metahumanity's destiny, and whatever. This is called &quot;Resonance Theory&quot; (if you think that the peaks are important) and &quot;Dissonance Theory&quot; (if you think that the troughs are). Now, anyone with even a passing familiarity with sine waves will be able to tell you that it doesn't <em>really</em> matter since an equation that describes where a signal reaches its highest point is just an upside down version of the equation that shows its lowest point. Meaning that you are actually sending the same signals regardless of which way you choose to describe it. So, superficially, it seems that this particular argument (which has claimed hundreds, if not thousands of lives already) is the absolute dumbest thing in the entire universe to even raise your voice about. But the really weird thing is that on some level it genuinely does seem to matter. The Deep Resonance and the Deep Dissonance really do seem to do some different things for the very skilled technomancers.</p>
+<a class="header" href="#streams" id="streams"><h3>Streams</h3></a>
+<p><em>&quot;This is how I rock.&quot;</em></p>
+<p>Every technomancer has a personal metaphor through which they experience the Resonance (or Dissonance). Simply put, high density signal production is not something that metahumans normally do, so when a person's bioelectrical activity is coherent and directable some new brain functions are necessarily at work. Since the manipulation and perception of code is a non-standard sense, most technomancers report synesthesia of one kind or another. Some technomancers report that they &quot;see&quot; the matrix (perhaps through the metaphor of light waves), while others &quot;hear&quot; (perhaps through the metaphor of sound waves), or &quot;feel&quot; it (perhaps through the metaphor of pressure waves). These differences in technomantic perceptions also come with differences in technomantic capabilities. Different technomancers can do different things in the matrix, they can compile different sprites, they can alter the matrix in different ways.</p>
+<p>A manner of contextualizing the matrix is called a &quot;Stream&quot;. And technomancers whose streams are similar have a much easier time talking to one another than do technomancers whose streams are very different. A technomancer who understands the Resonance in terms of waves moving across the surface of water adding together and reflecting one another has a very difficult time explaining what exactly it is that they are doing when they do their thing to another technomancer who understands the Matrix as a continuous symphony of sounds and songs running together and drowning each other out. Mathematically, the two systems are extremely similar, but <em>linguistically</em> the two are quite different.</p>
+<p>Even if the sensory metaphor is extremely simple, Resonance and Dissonance focused streams are almost completely mutually unintelligible. The simple binary choice to pay attention and act upon the local crests or the local troughs is apparently so integral to the technomantic experience that technomancers who focus on the other are virtually incapable of explaining how their techniques work to a technomancer who focuses on the other.</p>
+<p>####Sample Stream: Cyberadepts</p>
+<p>The Cyberadepts are followers of the Deep Resonance who hear it as a continuous droning chant that permeates every machine and brain surrounding them. They see the interactions of signals as mathematically pure additions of tone, and use a unique musical scale. Attempts to play these sounds for non-Cyberadepts have been described as &quot;ghastly&quot; but other cyberadepts reportedly like the sound, and there is at least one musical performer of extremely limited appeal. The name is misleading, on account of the fact that they don't need cyberware and aren't adepts (in the magical sense). But as they were one of the very first technomancer groups named by anyone, the name made more sense to people in 2055 when people still used the words &quot;cyberspace&quot; and &quot;physical adepts&quot;. Cyberadept techniques center around a pseudo-mystical concept of the Akashic Record – a litany of all information that is supposedly being constantly sung by the Deep Resonance.</p>
+<p>Cyberadepts have a tendency to be &quot;builder&quot; personalities who like to use perfectionist strategies and have a disproportionate number of compulsive disorders. Although since no one really understands how technomancy works, many cyberadepts are able to pass their nervous ticks off as rituals that they use to manipulate the matrix. The nodes created by cyberadepts are eclectic masses of wires and tubes, with devastatingly complex topology, covered with incoherent notation in RFID and post-it notes alike. Cyberadepts will point out that their systems are no weirder, and no less effective, than those of hermetic mages.</p>
+<a class="header" href="#networks" id="networks"><h3>Networks</h3></a>
+<p>Technomancers who agree philosophically or mechanistically about how the matrix does or should work often join together into groups in order to affect change upon the world or attain a deeper understanding of their own abilities. These groups are called Networks, and they are usually connected through a node somewhere. The parallels between the standard network of a metahuman brain surrounded by and orchestrating the distributed computing power of a number of inanimate devices that it is connected to, and the technomancer Network of an essentially inanimate node that is somehow connected to a number of living metahumans, is not lost on many technomancy researchers.</p>
+<p>Many technomancer Networks are essentially just like Hacker Clans, sharing data and techniques, socially networking, and so on and so forth. Others behave like scientific research institutions or religious cults. Most Networks have rather extreme limitations on who can join. Membership in a Network has a number of advantages, from easier communication with other members to better training within technomantic disciplines.</p>
+<a class="header" href="#sample-network-the-knights-of-the-eastern-calculus" id="sample-network-the-knights-of-the-eastern-calculus"><h4>Sample Network: The Knights of the Eastern Calculus</h4></a>
+<p>The Knights are a group of technomancers who have a complicated theory involving the origin of The Resonance as regards the upper atmosphere becoming permeated with electromagnetic waves until the Earth itself began making waves consistent with intelligence. They also believe that events that are not remembered either by humans or devices plugged into the matrix <em>actually</em> never occurred, and that events can have retroactively not have occurred if information gets deleted. Aside from their creepy information-centric philosophy, the Knights are attempting to link the world up through a number of resonance nodes and individuals in order to put reality under voluntary control. This will be achieved when only one truth is real, something which apparently requires the strengthening or elimination of low veracity information, and fighting dissonance.</p>
+<p>Is this something that could possibly work? No one really knows, but most people <em>assume</em> that the answer is no. Nevertheless, the Knights of the Eastern Calculus conduct a number of techniques of espionage in order to advance their frankly bizarre agenda, alternately destroying copies of information and disseminating secrets. All the while fighting shadow wars with dissonant technomancers who are apparently attempting to do the opposite.</p>
+<a class="header" href="#technomantic-networks-and-you" id="technomantic-networks-and-you"><h2>Technomantic Networks and You</h2></a>
+<p><em>&quot;People don't like it when you challenge their assumptions.&quot;</em></p>
+<p>Technomancers generate and receive high density signal continuously as if they were themselves commlinks at the hub of an occupied network. They do <em>not</em> generate normal brain waves, and their thoughts can't be listened to or modified by normal brain hacking techniques. They can still be affected by hacking of course, but only in the way that a machine that was operated by a metahuman mind would be, not in the way that a biological organism might be affected. Normal brain text transmissions are basically useless on a technomancer, and thus someone attuned with Resonance or Dissonance has no use for a sim module or the like. A technomancer can add other devices to their network seamlessly, and thus they can read a BTL chip by holding it in their hand or even by simply choosing to access it while it is near them on a table even if they can't make use of a standard BTL player.</p>
+<p>A technomancer lives in AR constantly, and does not need any special equipment to have Matrix Arrows converted to a perceivable format for them. It just happens. Technomancers do not have their own reality filter that they are aware of, so large amounts of matrix traffic can make it difficult for them to concentrate on physical stimuli of any kind. Another facet of this fact is that the way they perceive Arrows is not something that they can decide ahead of time. Most matrix icons appear to technomancers as their programmers intended them to, but even matrix events that have no associated simsense information appear the same to all technomancers. Some technomancers have gotten downright religious about this fact.</p>
+<p>A technomancer can manipulate signal in many ways, up to and including faking brain waves, but these are on a very important level <em>fake</em>. From the standpoint of matrix interactions, technomancers might as well be toasters rather than animals.</p>
+<a class="header" href="#technomantic-vr-ride-the-lightning" id="technomantic-vr-ride-the-lightning"><h3>Technomantic VR: Ride the Lightning</h3></a>
+<p><em>&quot;You just think you go places. I go.&quot;</em></p>
+<p>Technomancers do not use (and indeed, cannot be affected by) RAS Overrides. Nonetheless, they do have a separate system by which they tune out the physical world and travel through the matrix. This system is <em>also</em> called Virtual Reality, and is superficially similar on many levels to the standard generated by RAS Override and sensory lockouts, but for the technomancer it is achieved by suspending the consciousness in the surrounding signals somehow and then generating additional signals from there. While translated into signal, the technomancer can move around very quickly,and interact very freely with  matrix icons, but can't see the physical world at all. While doing this, a technomancer is called a &quot;ghost in the machine&quot;, even though they are usually suspended between machines in the signals that pass from one to another.</p>
+<p>Becoming a ghost in the machine like this is strenuous, and a technomancer can't keep it up forever. A technomancer that attempts to maintain themselves in this state through areas of weak or noisy signal with find themselves disrupted, where they are booted back to their body. Things which affect the signal ghost form of a technomancer are instantaneously replicated on their otherwise inert body, and vice versa.</p>
+<a class="header" href="#a-note-on-astral-projection" id="a-note-on-astral-projection"><h4>A note on Astral Projection</h4></a>
+<p>For reasons of playability, the game uses rules that are almost exactly the same for Astral Projection and for Technomantic VR. This doesn't mean that they are the same thing. For one thing, the signal disturbance of a VR Ghost is in fact physically there and can be affected by physical objects and actions. An electro magnet is <em>awesome</em> but it's entirely non-magical. The fact that you can use one to create a local signal disturbance sufficient to disrupt a technomancer indicates that a technomancer is not on a different plane of existence in any real sense. Nevertheless, techomancers can sustain their altered state for time periods and are affected by &quot;backgrounds&quot; in the same way as magicians in order to limit the number of special rules that players have to learn. The time limits for staying in VR are <em>exactly</em> the same as those for Astral Projection because it's easier that way, not because those things are really the same thing in any meaningful way. Similarly, technomancers get the same speed bonuses from their virtual reality that normal matrix users get from theirs, and again because it's easier that way, not because they are actually the same.</p>
+<a class="header" href="#weird-places-resonance-nodes-and-realms" id="weird-places-resonance-nodes-and-realms"><h3>Weird Places: Resonance Nodes and Realms</h3></a>
+<p><em>&quot;Scratch that. <strong>This</strong> is the weirdest thing I've seen.&quot;</em></p>
+<p>The backbone of Resonance and Dissonance computing isn't just metahumans, it's also these collections of computer products, electronics, cooling vents, magnets, antennae, and power sources which are collectively called &quot;Resonance Nodes&quot; (or Dissonance Nodes, but they pretty much look the same). What it is exactly that Resonance Nodes <em>do</em> is an open bone of contention. Looking at them from the standpoint of standard electronic and computer theory, they don't do <em>anything</em>. Some of the supposedly &quot;key&quot; components aren't even plugged in. Nevertheless, a resonance node is needed by a technomancer to do many things involving long term matrix effects. Resonance nodes are highly personalized, and a technomancer cannot use a resonance node of another technomancer unless they are of the same stream or network.</p>
+<p>A technomancer who has ghosted themselves can move themselves to a point that is orthogonal to normal matrix locations, and these areas are called Resonance and Dissonance Realms. Where exactly they are is up for discussion, because just before they can connect themselves to these places every technomancer puts themselves in a state where they are specifically incapable of really evaluating physical locations and directions. But it is entirely possible that these realms are actually somewhere on Earth or another planet, no one has really proved that one way or another. There is much to be learned there, and according to technomancers who visit them, there are creatures that live inside. Or at the very least, Resonance Realms generate some fascinating simsense and regularly pass Turing Tests from visitors.</p>
+<a class="header" href="#learning-subsystems-resonance-realms-and-nodes" id="learning-subsystems-resonance-realms-and-nodes"><h4>Learning Subsystems: Resonance Realms and Nodes</h4></a>
+<p>For ease of use, Resonance Realms follow rule systems that are very similar to metaplanes. Similarly Resonance Nodes are used in a similar manner to Magical Lodges. No need to learn new rules when you don't have to.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../lore/growing_up_wireless.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../lore/sprites.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../lore/growing_up_wireless.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../lore/sprites.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

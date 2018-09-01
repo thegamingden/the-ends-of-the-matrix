@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Four Questions - The Ends of The Matrix</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A complete replacement for the Matrix rules of SR4.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="../lore.html"><strong aria-hidden="true">2.</strong> Lore</a></li><li><ol class="section"><li><a href="../lore/four_questions.html" class="active"><strong aria-hidden="true">2.1.</strong> Four Questions</a></li><li><a href="../lore/perceiving_the_matrix.html"><strong aria-hidden="true">2.2.</strong> Perceiving The Matrix</a></li><li><a href="../lore/encryption.html"><strong aria-hidden="true">2.3.</strong> Encryption</a></li><li><a href="../lore/hacking_hardware.html"><strong aria-hidden="true">2.4.</strong> Hacking Hardware</a></li><li><a href="../lore/intrusion_countermeasures.html"><strong aria-hidden="true">2.5.</strong> Intrusion Countermeasures</a></li><li><a href="../lore/matrix_infrastructure_and_topology.html"><strong aria-hidden="true">2.6.</strong> Matrix Infrastructure and Topology</a></li><li><a href="../lore/growing_up_wireless.html"><strong aria-hidden="true">2.7.</strong> Growing Up Wireless</a></li><li><a href="../lore/technomancers.html"><strong aria-hidden="true">2.8.</strong> Technomancers</a></li><li><a href="../lore/sprites.html"><strong aria-hidden="true">2.9.</strong> Sprites</a></li></ol></li><li><a href="../crunch.html"><strong aria-hidden="true">3.</strong> Crunch</a></li><li><ol class="section"><li><a href="../crunch/dice_pools.html"><strong aria-hidden="true">3.1.</strong> Dice Pools</a></li><li><a href="../crunch/skills.html"><strong aria-hidden="true">3.2.</strong> Skills</a></li><li><a href="../crunch/matrix_architecture.html"><strong aria-hidden="true">3.3.</strong> Matrix Architecture</a></li><li><a href="../crunch/matrix_actions.html"><strong aria-hidden="true">3.4.</strong> Matrix Actions</a></li><li><a href="../crunch/matrix_attributes.html"><strong aria-hidden="true">3.5.</strong> Matrix Attributes</a></li><li><a href="../crunch/programs_and_complex_forms.html"><strong aria-hidden="true">3.6.</strong> Programs and Complex Forms</a></li><li><a href="../crunch/technomancy.html"><strong aria-hidden="true">3.7.</strong> Technomancy</a></li><li><a href="../crunch/sprites.html"><strong aria-hidden="true">3.8.</strong> Sprites</a></li><li><a href="../crunch/equipment.html"><strong aria-hidden="true">3.9.</strong> Equipment</a></li></ol></li><li><a href="../bonus_houserules.html"><strong aria-hidden="true">4.</strong> Bonus Houserules</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Ends of The Matrix</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#four-questions" id="four-questions"><h1>Four Questions</h1></a>
+<p><em>&quot;Why is it that on all other nights we drink a full bodied Merlot and on this night we drink this sweet nasty stuff?&quot;</em></p>
+<p>Within the game of Shadowrun the player characters drill holes into their heads in order to create a good mind/machine interface so that they can better hack into secure computer systems while running around cyber ninja style so that they can complete espionage missions and go back to the seedy dives that they live in and take the electronic currency that they are paid in and spend what they don't squander on food and rent and buy black market gadgets that let them be even better at espionage and/or shooting people in the face for money so that they can be a bigger noise in freelance crime and eventually retire to a tropical island with a Mercedes full of cheerleaders. A lofty profession, and a noble life goal to be sure, and it makes for some very nice storytelling and some entertaining characters.</p>
+<p>But while one can make a very good story out of just that information, it's insufficient for the needs of a role playing game. Because while when you or I are sitting down to write a novel we can have the characters do any part of that simply by typing a sentence that says that they do, in a cooperative storytelling game it is nowhere near that easy. A cooperative story has a world and rules and characters have to justify their actions in reference to them. A story that I write myself could have the main character do anything at all at whim, I can seriously write &quot;Jack-O sprouted wings and flew&quot; as easily as I could write that he bought a new commlink or hid from a security drone. In a role playing game that shit does not fly.</p>
+<p>Which brings us to the central four questions we have to answer about the world before we can create a rule set that could generate that world: we have to ask ourselves <em>why</em> people get those data jacks, we have to ask ourselves <em>why</em> people can break into supposedly secure computer systems with them, we have to ask ourselves <em>why</em> people who commit crimes over and over again against the most powerful entities on the planet for a living exist at all, and finally we have to ask ourselves <em>why</em> someone who breaks into and alters computers belonging to secure and powerful installations as his actual job gives an entire rat's ass about being paid in <em>electronic</em> currency and still lives in a leaky apartment next to some dwarven prostitutes. Once we can answer these questions, we can make a rule set that allows and reinforces our answers and we'll have a game that logically plays out the kinds of stories that we intend to tell.</p>
+<a class="header" href="#why-datajacks" id="why-datajacks"><h2>Why Datajacks?</h2></a>
+<p><em>&quot;It's going to be like getting a hole drilled into your head. Probably because they are going to drill a hole into your head.&quot;</em></p>
+<p>What exactly a datajack is capable of has changed dramatically over the years. In 1st edition a datajack would <em>by itself</em> allow a character to send and receive their entire sense data worth of information through a cable on a continuous feed. But then of course it also cost half an Essence point to get a cellular phone in your head. Nowadays a datajack is much more limited in scope and any device you happen to have can probably double as a cell phone if you really care. We can pretend that this all works together in some sort of continuous march of technology from 2050 to 2070 but the truth is that the Matrix's rule system has changed unrecognizably about 7 times between 1989 and the present day and the understanding of technology in general has likewise changed. In 1989, the prospect of having a really small phone was supposed to be a big deal. And yeah, in today's world they already make phones that are so small that they are <em>hard to use</em> and the novelty has really worn off. Making a phone feel &quot;high tech&quot; means combining it with other things, and thus the &quot;phone&quot; became an afterthought ability of a variety of devices in the 4th edition rules.</p>
+<p>Nevertheless, people in Shadowrun live in a world where getting cybernetic enhancements is something with a real and measurable cost. You lose Essence. This is a real problem, which could potentially even cause you to die. Also, computers can and do interact directly with the brains of people who don't have any cybernetic enhancement at all in the world of 2071. So what <em>exactly</em> a datajack is for is somewhat... open for interpretation. We've made some interpretations for the purposes of this document, but remember that this marks a core point of divergence with other Matrix writeups. For the purposes of this document, the biggest advantage of a datajack is relative signal privacy and reliability. You <em>can</em> put nanopaste on your head or even your fingertips and get the same Direct Neural Interface (DNI), you can even get the same benefits from just pointing some trodes at your brain. But any external devices can have the signals they send and receive to and from your brain interrupted or even intercepted by shady types. For this reason, people who handle data that is in any way important are highly encouraged to get a data jack.</p>
+<p>Or at least they <em>were</em>. In Shadowrun's current 2070s run, a lot of people have upgraded to internal commlinks. That's fine, the mind/machine interfaces are still internal and relatively safe from shadiness. But a lot of the older stuff and the equipment designed to interface with older people (like research scientists for example) will have inputs designed for people with datajacks. So if you want to do espionage for a living, you probably still want a datajack.</p>
+<a class="header" href="#essence-just-do-it" id="essence-just-do-it"><h3>Essence: Just Do It</h3></a>
+<p><em>&quot;It isn't wiz at all. It's kind of shitty actually. But it <strong>is</strong> essence friendly.&quot;</em></p>
+<p>Essence doesn't make any sense at all. There, I've said it. And I stand by this assessment. The datajack is, and has been, so unbelievably powerful in every edition that it's really hard to justify an Essence cost for much of anything. Why would anyone get cyberarms when they could chop their arms off (losing no Essence) and then just <em>wear</em> some robot arms and run them through their datajacks? If Essence actually existed, and yet the Datajack seriously allowed you to send out any output you wanted, you're damn skippy that people would do that sort of thing. And yet, in Shadowrun they don't. They don't for <em>no reason</em>. That's important. Essence is a game balance concern, not a rational one.</p>
+<a class="header" href="#equipment-spotlight-bone-lacing" id="equipment-spotlight-bone-lacing"><h4>Equipment Spotlight: Bone Lacing</h4></a>
+<p>Bone Lacing is the classic example of a piece of cyberware that costs essence for <em>no reason</em>. And that's fine. In the case of Bone Lacing, it would be entirely &quot;realistic&quot; for it to cost nothing at all. Not only does it not interact with your nervous system in any way, it doesn't even replace a single cell. Your Calcium Phosphate matrix isn't &quot;alive&quot; in any meaningful fashion, it's just a dead mineral scaffold that your body happens to hang on like a fleshy coat. Even more damning, Bone Lacing actually costs more essence when it's made out of something that is more awesome. That's absurd, but it's also good game balance. You <em>should</em> pay more Essence when you get a better bonus, the fact that you're replacing the same amount of stuff that isn't even your living tissue in either case is beside the point.</p>
+<p>And that's the point.</p>
+<a class="header" href="#minds-on-sleeves-nanoware-replacing-cyberware" id="minds-on-sleeves-nanoware-replacing-cyberware"><h3>Minds on Sleeves: Nanoware replacing Cyberware</h3></a>
+<p><em>&quot;What if I just painted a picture of setting my spiritual wellbeing on fire? Isn't that enough?&quot;</em></p>
+<p>Not only do people in the Shadowrun future apparently have the ability to replace almost all DNI in their body with their datajacks, they can potentially replace their datajacks with external devices which take advantage of their brain power with phreaking and induction. This allows people to put on trode nets and stand inside of data stalls and connect their brains directly to the computer without ever once getting a hole drilled into their head, without spilling even a single monad of precious bodily fluids. And yet... people still get those datajacks in 2071 for some reason.</p>
+<p>From a world-design standpoint, people are willing to spend Essence on Datajacks essentially because whatever it is that they get from a Datajack is <em>better</em> than slapping an Essence-free trode net on. If it wasn't better, it wouldn't cost Essence. That's the behind-the-scenes metagame reasoning, which unfortunately is the real reasoning. But that doesn't make a good a story, so it is imperative that there be an in-game justification for this. Granted, the in-game reasoning is in reality backformed from the game balance concerns, but that doesn't mean that the <em>characters</em> have to know that.</p>
+<p>We could come up with a number of reasons why this is the case, but the ones that are going to be assumed here are security and mobility. A cybernetic interface is in fixed spatial relationship with your brain; you can turn upside down and get shaken and your datajack will stay in. A similar treatment to a trode net is quite likely to scramble the signal for a moment even if it's taped down pretty well. Heck, with its very low signal rating it'll be likely permanently on the fritz the first time someone throws up a jamming field; a problem which a fiberoptic cable running from your datajack to a high-signal commlink won't have. Perhaps more importantly, anything transmitting into your brain is going to have to be in &quot;Brain Text&quot;, and in the world of 2071 that's essentially unencrypted because anyone who matters can decode signals sent to or from a metahuman brain.</p>
+<a class="header" href="#equipment-spotlight-nanotrode-paste" id="equipment-spotlight-nanotrode-paste"><h4>Equipment Spotlight: Nanotrode Paste</h4></a>
+<p>Nanopaste trodes are a set of nanomachines that can be painted on to your body which uses the powers of induction to transfer information into and out of your head. In many ways, it's like having a datajack that you never had to spend any essence for, using very short distances and very weak signals to approximate the privacy of an internal link. However, it does also have limitations which make true hackers openly dubious about the stuff. First of all, it's a paste on the outside of your body, which means that the connection becomes sketchy if you're doing vigorous or stressful things. That's not a huge problem in a club scene. If extreme moshing causes your AR feed to fritz out for a second, or even six, then you won't actually have time to get to edge the of the pit to complain before the visuals come back. Of course, when you're running through an Aztechnology compound trying to spoof cameras in real time a few seconds of static is unacceptable. And of course, the signals involved are very weak, that's the <em>point</em>, and that makes it inherently susceptible to being jammed out by magnetic fields and strong language.</p>
+<p>But more importantly still, nanopaste is still an external system even if it is very <em>close</em> to the brain it is <em>not</em> directly connected. Any data flying in and out is still going to be in plain brain text. Anyone with a sufficient receiver can see what your trode link is sending you. Anyone with a sufficient transmitter can send mental commands the same as had they come from your own mind.</p>
+<a class="header" href="#getting-the-most-of-your-datajack" id="getting-the-most-of-your-datajack"><h3>Getting the Most of your Datajack</h3></a>
+<p><em>&quot;I'm tired of just radiopathically sending text messages.&quot;</em></p>
+<p>The 4th edition Datajack sends and receives computer gibberish to and from your brain. And that's it. It does not allow you to &quot;interact&quot; with that information in any way other than that allowed by the information itself (in stark contrast to the Datajack descriptions in 2053, but whatever). So you can send out any text or computer commands you want, but by itself the datajack does not allow you to receive any <em>meaningful</em> feedback on how your actions went over.</p>
+<p>Having computer gibberish inserted into your brain is not always completely useless. Indeed, if that computer gibberish has already been specifically formatted to interact properly with your brain's informational retrieval system (as is the case with a Know-Soft), then you can in fact proceed as if you had gained useful information from the impulses coming up your datajack. But that sort of formatting is apparently so difficult that chips with Linguasofts and Knowsofts cost thousands of nuyen and people are okay with that.</p>
+<p>Systems exist that allow whatever computer data you are interacting with to be transformed into sensory stimuli that you can interact with in a more traditional fashion without a datajack. After all, the primary visual cortex can be stimulated directly as easily as any other part of the brain. However, this is very specifically not the preferred method of getting things done in any version of Shadowrun. Information sent in &quot;brain text&quot; is essentially unencrypted, and people with receivers can pick that up. Projecting sensory information directly into the brain is therefore a security risk. Other people can watch what you see.</p>
+<a class="header" href="#equipment-spotlight-the-display-link" id="equipment-spotlight-the-display-link"><h4>Equipment Spotlight: The Display Link</h4></a>
+<p>People who want to really use <em>anything</em> other than a Know-Soft with their Datajacks are advised to get a Display Link. The display link converts computer impulses into visual stimuli, which is plenty for most people to get their jobs done. Sure, a &quot;real&quot; hacker is going to want to cut the crap and get an implanted simrig, but for the average user the ability to send brain impulses out and literally &quot;see&quot; the computer returns is more than plenty.</p>
+<p>But the thing that people are really excited about is the external display link. A person without a cybernetic DNI can still get information sent to them with relative secrecy by skipping the entire part where the information is broadcast in brain text at their head and is instead encrypted right up until the point that it is displayed on the insides of the person's glasses. The person can just plain <em>read</em> it, and there's no signal to intercept.</p>
+<a class="header" href="#why-crime" id="why-crime"><h2>Why Crime?</h2></a>
+<p><em>&quot;Why yes, Big Brother <strong>is</strong> watching. However Big Brother has ADHD, so I'm going to sit here drinking my soykaf like any of a billion wage slaves are doing right now. And then Big Brother will get bored. And distracted. And then I'm going to do... anything I want.&quot;</em></p>
+<p>One of the core conceits of the Shadowrun game is that crime is possible, and that crime pays. Given the wealth of potential satellite oversight (just look at Google Earth in 2007, imagine the law enforcement version in the 2070s), and the incredibly daunting task that is cracking through somewhat decent encryption, it is entirely reasonable to project a future where getting away with any crime at all requires some sort of elaborate social engineering to pull inside jobs that play off of secret limits of the anti-crime system. But this isn't Minority Report or any other Phildickian setup, this is Shadowrun. And in Shadowrun: bad people shoot other people right in the face for money and get away with it to do it again.</p>
+<p>So here are some quasi-plausible justifications for that:</p>
+<a class="header" href="#a-revolution-in-data-collection-a-crisis-of-storage" id="a-revolution-in-data-collection-a-crisis-of-storage"><h3>A Revolution in Data Collection, a Crisis of Storage</h3></a>
+<p><em>&quot;I'm sorry, I seem to have misplaced my 'give-a-damn'.&quot;</em></p>
+<p>Throughout human history the <em>creation</em> of data has exceeded the capacity to store it. It starts in infancy where a baby simply doesn't remember every single thing she sees, and it continues on through the Age of Bronze where not every conversation or every play gets written down, and it continues today. It could very plausibly continue in the Shadowrun future and for the sake of playability we're assuming that it does. The cameras in the world exceed the number of people who could watch them, and they collectively generate more video footage every day than can be stored on all the world's storage media.</p>
+<p>And that is amongst the things that makes crime possible. When you go to the bathroom, a computer is measuring the mass of your deposit. When you flee a crime scene you're being watched by every store front you pass. But likely as not, none of that information will actually be saved anywhere. Some of it may be, but it quite likely isn't organized enough to actually identify you as the perpetrator (of the crime or the leavings). More importantly, information getting deleted isn't really news. If 18.5 minutes are missing or overwritten by elven pornography, that's not weird.</p>
+<p>Furthermore, remember that in the world of 2071, it is entirely possible that a &quot;legitimate&quot; information request from investigating authorities will simply be refused. There's nothing in it for a Wuxing or Aztechnology subsidiary to share their security footage with Evo security to assist in the investigation of a crime against Evo or one of its subsidiaries. Corporations, especially major corporations, are in <em>competition</em>, but beyond that they actually are regularly committing crimes against one another. Even showing what footage Aztechnology has of an event would be tipping its hand to Evo and it isn't going to compromise itself that way under normal circumstances. Further, it is in the interests of Aztechnology to make investigation and enforcement as expensive a proposition as possible for Evo as this reduces the company's ability to compete with them in other areas. So even when data is successfully stored, there's no reason to believe that investigating authorities will ever be allowed to actually <em>see</em> that data. Which, when you think about it, is a lot like that data being lost or simply not recorded in the first place.</p>
+<a class="header" href="#equipment-spotlight-the-security-camera" id="equipment-spotlight-the-security-camera"><h4>Equipment Spotlight: The Security Camera</h4></a>
+<p>No single device in a modern or science fiction setting causes as much paranoia (both justified and not) as the security camera. And this should come as no surprise, for regardless of what kind of force ratios your team can bring to the party at an instant of your choosing, the fact is that the amount of force that any particular <em>society</em> can bring against an <em>individual</em> is practically infinite in any modern or futuristic setting (as opposed to medieval settings with barest nods to science fiction window dressing, like <em>Warhammer 40K</em>). So any object which promises the heavy hand of eventual retribution by the whole of society against transgressors <em>should</em> be a scary thing, and indeed in Shadowrun it <em>is</em>.</p>
+<p>There are three main camera setups that one must concern yourself with in the day to day criminal operations of Shadowrun: the solitary camera, the networked camera, and the low resolution camera. The solitary camera is exactly what it sounds like: it's a trid recorder that is completely self contained. It's fairly trivial to smash it with a baseball bat or hack it into oblivion and since it's entirely self contained that's the end of any data the recorder had on you. The network camera is attached to a network, which means that destroying the device itself won't do anything at all to the trid already recorded. It'll have to be hacked if you want to get rid of the data already stored (but good news: hacking any part of the network will allow you to edit any of the data from any of the recorders on the system). And finally, the low resolution camera takes basic video and sends it one way by low density signal to some storage system that may be very far away. You can do anything you want to the recorder itself and it won't do a thing to any video already recorded and sent unless you get direct access to the storage systems (wherever <em>they</em> are). Fortunately for the criminally inclined, this last type takes the kind of crappy security camera footage that we get in the 2010s, so the security forces who go back and review it will have such wonderful information as &quot;two orks and a human committed this crime&quot;.</p>
+<a class="header" href="#a-cacophony-of-echoes" id="a-cacophony-of-echoes"><h3>A Cacophony of Echoes</h3></a>
+<p><em>&quot;Okay, everyone who agrees that <strong>I'm</strong> Jennifer Woodyard, raise their hand.&quot;</em></p>
+<p>Your SIN, your driver's license, your home owner's insurance, your medical records, and really every other thing about you are stored electronically in the Matrix. It's like your credit report today. And like your credit report, or wikipedia, pretty much anyone can put stuff into the data stream at any time. You can challenge the data in court and maybe get it changed, but by and large stuff just accumulates in the data stream. Because of the fact that things aren't always correct and some people are total tools, the system is equipped with failsafes to try to weed out incorrect data. Data which is repeated many times in many places (or in important or &quot;trustworthy&quot; places) is considered to have a high <strong>veracity</strong>. Data which shows up only a few times or in very sketchy places is treated as having a lower veracity. If data conflicts, the system automatically chooses to believe higher veracity information at the expense of lower veracity information.</p>
+<p>An example of this in action might be someone getting your name wrong on a delivery of NERPS. Your name is something like Chris McGee, but on the invoice it says Chris Maggie. Now off in the Matrix somewhere there's a little piece of data that your name is in fact Chris Maggie. But fortunately for you, your UCAS driving license and your AzTech Tech diploma are both in your real name. So in the future when machines check your name, the right name will have a higher veracity and displace the wrong name. The Chris Maggie typographical error will only show up again after low intensity searches which stop after the first couple of hits. So the &quot;Chris Maggie&quot; spelling <em>may</em> continue to haunt you for the rest of your life, getting picked up by cheap companies that purchase sales information from NERPS distribution; gradually gaining veracity as it is passed from company to company and appearing in more and more places in the Matrix... but it probably won't.</p>
+<p>This can be used by criminals (that's you). Because of the complete lack of a central authority of Truth©, you can actually create truths that happen to suit you. If you treat something as true long and loudly enough, everyone else will treat it the same way. While archaic considerations like &quot;statute of limitations&quot; are out the window, the fact is that if you can fool the world into believing that you've always lived in Nag Kampuchea for a while, the world will continue to believe it pretty much indefinitely. The world of 2071 has an extremely short attention span and you actually can reinvent yourself with sufficient effort.</p>
+<a class="header" href="#why-hackers" id="why-hackers"><h2>Why Hackers?</h2></a>
+<p><em>&quot;There are people who can sling a spell or swing a sword and I'm sure that on some level what they do is fine. But in <strong>my</strong> world, I'm the best you'll ever see.&quot;</em></p>
+<p>A core conceit of Shadowrun has always been that a savvy matrix expert is an essential member of a Shadowrunner team. That means that the Hacker character's skills and attributes have to be important; it means that the Hacker's contribution to the team has to matter; it means that the Hacker is not easily replaced with a contact or a device that says TraceBuster on the side. And it also means that Hackers <em>have</em> to be able to be able to do their job (breaking into a secure computer system) in a reasonably short period of time so that they don't end up making the story grind to a halt. In short, hacking has to work <em>absolutely nothing</em> like it works in the modern world. There are of course a tremendously large number of ways that hacking <em>could</em> work in 2071, but almost all of them are inconsistent with the story demands we have put on the system: hackers must be resource starved hooligans living in seedy dives who hack things on the fly during ninja assaults. Any of the many realistically plausible models that involve the be all and end all of the hacking race being very large sums of money, or of hacking taking very long times, or of hacking being done from a basement in Formosa are all incompatible with the stories we want to tell, and are thus not going to be incorporated into the speculative fiction. In short: possible mechanics and topologies that lead to that are <em>wrong</em> irrespective of considerations of actual physics and computational theory.</p>
+<a class="header" href="#the-meat-in-the-machine-power-for-precision" id="the-meat-in-the-machine-power-for-precision"><h3>The Meat in the Machine: Power for Precision</h3></a>
+<p><em>&quot;Can I run some of these programs on your sister? She's like a little porcelain doll.&quot;</em></p>
+<p>How powerful are the computers in Shadowrun? <em>Very</em> powerful. But exactly <em>how</em> powerful has never really been explained. And honestly, it shouldn't be. Computing is very fast, very accurate, and very awesome. But for whatever reason, human brains are still employed as an important adjunct. This is itself not particularly surprising. The human brain is in total capable of over 100 trillion computer instructions every second. That's an amount which is, quite frankly, <em>ridiculous</em>. It's a very, <em>very</em> large amount of processor power, and although a tremendous amount of it is being &quot;wasted&quot; in subconscious thought about whether you'd enjoy a Blue Donut™ or whatever, it still has more total processing power than any device in Shadowrun. Computers aren't really ever more powerful than a human brain, they are more <em>dedicated</em> and more <em>precise</em>. A computer can get the same answer to a question over and over again without ever being wrong (or creative) and that right there is its strength and its weakness.</p>
+<p>In Shadowrun history the Cyberterminal was created in 2029 and it is established that no existing computer system could possibly stand against someone using one. This isn't because the cyberterminal was a revolutionarily faster and more powerful computer capable of crushing other computers with its virtual biceps (though it was), it's because the cyberterminal was <em>cybernetic</em>. It literally plugged into the brain of the user. And it crushed other computers not because thinking instructions is so much faster than typing them (though it is), but because a cyberterminal actually uses part of the human's brain in its computer operations. That alone gives it a processing reserve that is well over one hundred thousand times what a super computer was capable of when Shadowrun was first written.</p>
+<p>Shadowrun progressed through the existence of the cyberterminal to the cyberdeck: a portable computer which was nonetheless able to utilize the powers of the human brain. It was the standard in 2050, and for the next 15 years it remained on the cutting edge for Hackers. And that's where the history gets confusing. Because it's entirely possible that at some point the people in Shadowrun managed to create something portable that was in fact <em>more powerful</em> than a human brain. And at that point, the human really <em>is</em> just a vestigial appendage whose purpose is to press the &quot;Go&quot; button. But while that's admirably dystopic and fits into the overall cyberpunk genre fairly well, the game still centers on the player characters, who are still &quot;just&quot; individual humans. The moment they become obsolete, the game is over. Not just your particular campaign, but indeed the entire game of Shadowrun. So we're constrained to believe that in fact the human element <em>is</em> still vital to the operation of high end computing. That's fine, there can be many revolutions in computing power without actually pushing the one hundred trillion computer instructions per second threshold.</p>
+<p>So when we get to the Commlink, the one thing we know <em>didn't</em> happen is that the Commlink did not replace the need for it to be connected to a serious metahuman brain in order to orchestrate enough processing power together to do real cybercombat. We know this did not happen because we are still playing the game.</p>
+<a class="header" href="#equipment-spotlight-the-math-subprocessor" id="equipment-spotlight-the-math-subprocessor"><h4>Equipment Spotlight: The Math Subprocessor</h4></a>
+<p>Many people have asked why one would bother with a math subprocessor as a cybernetic enhancement. After all, a handheld calculator has a <em>stupidly</em> fast and accurate look-up table for approximating trigonometric functions and you can jolly well just hook such a function up to your datajack and get the answers to any reasonable &quot;math&quot; question in less time than it takes to ask it.</p>
+<p>The answer is that a Math Subprocessor is not a calculator that feeds you answers. It's more like a nerve staple that forces part of your brain to perform mathematical analysis on demand. That's why it applies to things like signal jamming. It literally turns part of your brain into an incredibly powerful bio-computer slaved to the tasks you designate for it. In some ways it actually makes you less intelligent: you are seriously using less of your brain on a moment to moment basis. But when the chips are down and you need to extrapolate a wave function or predict the results of a three-body problem, the Math Subprocessor is your friend.</p>
+<a class="header" href="#modern-data-management-the-i-and-the-storm" id="modern-data-management-the-i-and-the-storm"><h3>Modern Data Management: The I and the Storm</h3></a>
+<p><em>&quot;The falling cherry blossoms symbolize both the beauty and the transience of life. The blossoms fall as men fall and remind us of our mortality. Also every one of them is a music player I've harnessed together into a giant parallel processing computing gestalt for the singular purpose of calculating how to make your life a little bit more transient.&quot;</em></p>
+<p>The Wireless Matrix heralds a new paradigm of computer use. Not necessarily in computer <em>power</em>, but in <em>utility</em>. In the modern world parallel processing is a difficult problem; but by 2070 it is the norm.</p>
+<p>With so much computing power all over everything it is a wonder that anything gets done. Indeed, quite often things don't get done simply because the instructions to do so are buried so deeply in lists of things to do that they just never get looked at.</p>
+<a class="header" href="#equipment-spotlight-the-toaster" id="equipment-spotlight-the-toaster"><h4>Equipment Spotlight: the Toaster</h4></a>
+<p>Computing in Shadowrun has reached a level of abstraction that is truly epic. The toaster on the shelf not only has a computer in it, but it has processor cycles to spare after calculating the proper toasting methods based on the thickness and consistency of your bread compared with your stated preferences regarding toast. Not just that it could be utilized as a calculator or day planner while not heating bagels, but that even while in use it could potentially be added to a network and contribute helpfully to the entire operation of a network. The implications of this are far reaching: most importantly it means that the actual amount of <em>total</em> processing power available to your network is both large and unknowable.</p>
+<p>Seriously, it's unknowable. This is a boon to both the Player of the Hacker (as it means that he doesn't have to keep track of exactly how much memory he has to play with), and to the Hacker himself (as it means that there's an unknowably large number of ways to sneak data and access into the networks that he is infiltrating).</p>
+<a class="header" href="#why-money" id="why-money"><h2>Why Money?</h2></a>
+<p><em>&quot;Why rob a bank? That's where the money is.&quot;</em></p>
+<p>Perhaps the most extraordinary claim of all in the annals of hackerdom is the idea that these people get paid in electronic currency to break the laws of society and change electronic records. The extremity of this claim is quite apparent: people are breaking the rules of society to change data records in exchange for being gifted with data records that according to the rules of society entitle them to goods and services. Why not eliminate the middle man and just hack the money records directly? The fact that people in the Shadowrun universe <em>don't</em> is highly indicative that they <em>can't</em>. And the reason for this is primarily because the monetary records themselves are <em>very far away</em>.</p>
+<a class="header" href="#electronic-nuyen-the-ledger-in-the-sky" id="electronic-nuyen-the-ledger-in-the-sky"><h3>Electronic Nuyen: The Ledger in the Sky</h3></a>
+<p><em>&quot;It is the finding of the Corporate Court that the creation of a unified currency that is itself immune to the damaging effects of speculation and devaluation is an essential pillar upon which the global economy must be placed.&quot;</em></p>
+<p>Electronic money can exist in a world where people can force the changing of electronic data from a distance by impressing it with high density signal because it's actually really simple: it's just a number. That means all transactions of electronic money can be done entirely with <em>low</em> density signal. There's nothing complicated enough going on to actually <em>need</em> any of the fancy processing that Shadowrun era signaling can do, and so it lies within the capacity of those maintaining the money to block out <em>all</em> high density signals and still conduct business. To hack the money supply with traditional methods would thus require one to get inside the barriers and thus be on site. Considering that the money is &quot;kept&quot; in servers that are <em>extremely</em> inaccessible, this rarely happens.</p>
+<p>The biggest reservoir of money is a series of servers maintained in Zürich Orbital, a space station which passes over the Earth at nearly 2,000 kilometers above the seas. The &quot;money&quot; is a series of account numbers with money amounts on servers that sit inside this well fortified bunker floating continuously in space. These servers are connected through low density signal cable to retransmitters attached to powerful receivers on the outside of signal shell. The externally available computers don't hold any account information, encryption keys, or passwords, they literally <em>just</em> retransmit heavily encrypted (and short) data bursts into and out of the internal server farm through a signal bottleneck. Thus, ideally, there is nothing at all that an external hacker could hack that would mean anything.</p>
+<p>Now this doesn't mean that the enterprising hacker can't steal money, just that they have to steal it from a specific account by getting a hold of an actual credstick or commlink and hack them to authorize the transfer of funds. However this is understandably dangerous, because doing so still leaves a trail of money transfers on the hidden servers that the hacker is probably in no position to do anything about. It is for this reason, that fraud of this sort is mostly confined to spending sprees on relatively untraceable goods and services rather than actually getting the money into one's own credit line. And thus we get back to the question of eliminating the middle man: it is often plain easier and safer to just hack a carpet supply warehouse to think that it should deliver you some sweet rug than it is to hack a stolen credstick to transfer money to the carpet supply warehouse and &quot;purchase&quot; the same rug with money that may well be flagged as illegit in days, hours, or even seconds. For this reason, personal credsticks are often left to lie by hardened criminals.</p>
+<a class="header" href="#equipment-spotlight-cash" id="equipment-spotlight-cash"><h4>Equipment Spotlight: Cash</h4></a>
+<p>In addition to the purely electronic Nuyen, there are available notes and coins for use with small or informal purchases. Coins are usually issued from national mints and have a variety of imprints. They come in units of .05, .10, .20, .50, 1, and 2 nuyen. The nuyen bills are of a variety of different colors and sizes (and in recent years, the colors have been overhauled to avoid confusion by those metatypes who see in broader frequency ranges). They come in 1¥, 2¥, 5¥, 10¥, 20¥, 50¥, 100¥, 200¥, and 500¥ denominations. The bills are printed under the direction of the corporate court and generally have the portraits of free market advocates from history. All are human men.</p>
+<ul>
+<li>1¥ William Edwards Deming</li>
+<li>2¥ Eugen von Böhm-Bawerk</li>
+<li>5¥ Milton Friedman</li>
+<li>10¥ Robert Mundell</li>
+<li>20¥ Carl Menger</li>
+<li>50¥ Keith Joseph</li>
+<li>100¥ Adam Smith</li>
+<li>200¥ Alan Greenspan</li>
+<li>500¥ Arthur Laffer</li>
+</ul>
+<p>Cash is generally avoided as a medium of exchange by corporations and wage slaves alike because it is essentially untraceable. Very large piles of cash are viewed with suspicion even by shady people. The general feeling even amongst criminals is that anyone who could steal themselves a very large amount of money should be able to get themselves together to get an off-shore bank account like a respectable gangster, and that anyone who isn't a criminal should also have a bank account rather than piles of bills that could be so easily stolen or misplaced.</p>
+<a class="header" href="#other-currencies---" id="other-currencies---"><h3>Other Currencies: ¥, $, €</h3></a>
+<p>Zürich Orbital is not the only game in town, but the others aren't super different. The Malaysian Independent Bank operates an island fortress where they keep all the records, and while it's not actually &quot;in space&quot; it might as well be as far as most people are concerned. The European Economic Commission operates the Euro rather than the ¥, but its account server vault at the bottom of a mineshaft is not especially easy to crack into either. Aztlan's secret bank is so secret that they don't even tell people what is protecting the Peso accounts, but it's presumably pretty intense because all legends of people hacking that particular server are vague and unlikely.</p>
+<a class="header" href="#debits-and-credits-debt-slavery-and-the-credit-spiral" id="debits-and-credits-debt-slavery-and-the-credit-spiral"><h3>Debits and Credits: Debt Slavery and the Credit Spiral</h3></a>
+<p><em>&quot;Work your fingers to the bone and what do you get? Bony fingers!&quot;</em></p>
+<p>An interesting thing that happens in Shadowrun is that despite the fact that the characters are getting a brand new identity several times a month in some cases, they still feel the need to work for a living. And that's actually somewhat odd when you think about it in terms of modern finances. See in the modern world &quot;you&quot; can borrow fairly substantial sums of money at any time at merely ruinous interest with no collateral. The threat of destroying the credit rating of your <em>identity</em> is considered sufficient of a stick to make these short term loan sharking operations solvent. In the modern age, identity fraud comes with a certain amount of cash money automatically. Simply by virtue of trading the credit rating in for cash advances on loans that one has no intention of repaying, someone who is already committing the crime of fraud on their identity can gain a steady income from sketchy banks and loan houses until one is caught for the first offense.</p>
+<p>And yet, in Shadowrun that manifestly doesn't happen, because the characters <em>are</em> perjuring their identities again and again and they are paying money for the privilege instead of vice versa. What does this mean? It means that the credit system in Shadowrun is somehow set up so that taking a loan with an identity that is going to cease to exist long before the first payment comes due is not a no brainer. In fact, it seems that taking a loan is itself so onerous that characters just are not doing it at all - even though the campaign only takes place over a short period of the character's life and thus can be looked at as being in the disposable ID situation even if the character is a SINner. See, the campaign is likely going to end in a year of the character's life, so anything she ever has to repay at any interest in 13 months is just flavor text in any &quot;real&quot; sense. And yet, players just don't take loans. They spend money that they have already earned rather than drawing on the reserves of a speculative future to gain monetary advantages during the actual game.</p>
+<p>The primary reason for this is probably linked directly to the reason that people call corp workers &quot;wage slaves&quot;. See, when you take a loan in 2071 you don't just get a pile of money that you are expected to pay back. You actually sign up for <em>employment</em> and the corp gives you an advance on your wages. Wage slaves literally <em>are</em> slaves. Or indentured servants. Or whatever. They work for nothing except food and board, occasionally having the number of required  work hours they are required to put in go up. And that's why player characters don't usually take loans; they would actually have to show up for work in order to get the money. Which is really just like their current job as freelance mercenaries except less awesome.</p>
+<a class="header" href="#equipment-spotlight-the-credstick" id="equipment-spotlight-the-credstick"><h4>Equipment Spotlight: The Credstick</h4></a>
+<p>Credsticks are much less common in 2071 than they were in 2050, when literally everyone had one (or more). This is because commlinks now do much of the work that Credsticks used to do. But one is entitled to wonder what exact &quot;it&quot; is. The answer is that a Credstick carries a symmetric encryption key that is otherwise held only by part of a secret bank server somewhere on an island or in space. Each credstick sends a set of encoded low density signals to the bank that authorize the bank to move a certain amount of money from one account to another. And because no one actually knows <em>exactly</em> what your credstick is saying to the bank (without hacking the credstick), EUE (Effectively Unbreakable Encryption) is maintained as long as no one breaks into the credstick itself. Lower quality credsticks simply send the signal through a stick reader and hope that it can pass through the Matrix to the bank so that the money transfer will get authorized. Higher quality credsticks (with names like &quot;Platinum&quot; and &quot;Ebony&quot;) are able to send the information directly to the bank themselves and are able to transfer money whether there is a stick reader on hand or not. Most credsticks have some sort of system by which to verify that the right person is actually authorizing transfers of funds. Passcodes, retina scans, and even blood samples are used by various credsticks. Some credsticks send portions of the data from their activation to the bank itself as part of money transfer, while others merely require it as a check before they send the encrypted request. A &quot;certified&quot; credstick is actually the least secure of all - the stick doesn't correspond to any specific real person, the account is just a number associated with a credstick. So anyone can hand the certified stick to another person and that person can trade that money as if they were the original stick holder.</p>
+<p>In modern times, people quite often make use of credit modules in their commlinks. This works pretty much the same, except that the range of finding a matrix connection that is capable of reaching the (doubtless distant) secure bank servers is much greater.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../lore.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../lore/perceiving_the_matrix.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../lore.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../lore/perceiving_the_matrix.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

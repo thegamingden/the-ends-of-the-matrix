@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Perceiving The Matrix - The Ends of The Matrix</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A complete replacement for the Matrix rules of SR4.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="../lore.html"><strong aria-hidden="true">2.</strong> Lore</a></li><li><ol class="section"><li><a href="../lore/four_questions.html"><strong aria-hidden="true">2.1.</strong> Four Questions</a></li><li><a href="../lore/perceiving_the_matrix.html" class="active"><strong aria-hidden="true">2.2.</strong> Perceiving The Matrix</a></li><li><a href="../lore/encryption.html"><strong aria-hidden="true">2.3.</strong> Encryption</a></li><li><a href="../lore/hacking_hardware.html"><strong aria-hidden="true">2.4.</strong> Hacking Hardware</a></li><li><a href="../lore/intrusion_countermeasures.html"><strong aria-hidden="true">2.5.</strong> Intrusion Countermeasures</a></li><li><a href="../lore/matrix_infrastructure_and_topology.html"><strong aria-hidden="true">2.6.</strong> Matrix Infrastructure and Topology</a></li><li><a href="../lore/growing_up_wireless.html"><strong aria-hidden="true">2.7.</strong> Growing Up Wireless</a></li><li><a href="../lore/technomancers.html"><strong aria-hidden="true">2.8.</strong> Technomancers</a></li><li><a href="../lore/sprites.html"><strong aria-hidden="true">2.9.</strong> Sprites</a></li></ol></li><li><a href="../crunch.html"><strong aria-hidden="true">3.</strong> Crunch</a></li><li><ol class="section"><li><a href="../crunch/dice_pools.html"><strong aria-hidden="true">3.1.</strong> Dice Pools</a></li><li><a href="../crunch/skills.html"><strong aria-hidden="true">3.2.</strong> Skills</a></li><li><a href="../crunch/matrix_architecture.html"><strong aria-hidden="true">3.3.</strong> Matrix Architecture</a></li><li><a href="../crunch/matrix_actions.html"><strong aria-hidden="true">3.4.</strong> Matrix Actions</a></li><li><a href="../crunch/matrix_attributes.html"><strong aria-hidden="true">3.5.</strong> Matrix Attributes</a></li><li><a href="../crunch/programs_and_complex_forms.html"><strong aria-hidden="true">3.6.</strong> Programs and Complex Forms</a></li><li><a href="../crunch/technomancy.html"><strong aria-hidden="true">3.7.</strong> Technomancy</a></li><li><a href="../crunch/sprites.html"><strong aria-hidden="true">3.8.</strong> Sprites</a></li><li><a href="../crunch/equipment.html"><strong aria-hidden="true">3.9.</strong> Equipment</a></li></ol></li><li><a href="../bonus_houserules.html"><strong aria-hidden="true">4.</strong> Bonus Houserules</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Ends of The Matrix</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#perceiving-the-matrix-seeing-it-before-it-sees-you" id="perceiving-the-matrix-seeing-it-before-it-sees-you"><h1>Perceiving the Matrix: Seeing It Before It Sees You</h1></a>
+<p><em>&quot;If I'm going to look at an ass all day, it might as well be an attractive ass.&quot;</em></p>
+<p>Electronic devices are perfectly capable of putting information directly into your brain. This is at least as disorienting as it sounds, and is hardly anyone's preferred method of getting information about what is going on in the Matrix. What most people actually do is to have that matrix information translated into normal sense data and sent to them in some sort of format in which they can take it in as one would take in information from any other source: by seeing, touching, tasting or in some scientific way inferring the presence and content of the relevant data.</p>
+<p>When actually perceived, the Matrix data can appear as literally anything, and it often does. There is no special reason that a Matrix Attack would have to look like a sword or a pie, it could just as easily be a rubber hammer or a surrealistic, floating, pipe-smoking head. Any correlation between form and function is entirely voluntary because the actual &quot;things&quot; that the sensory data represents are 1s and 0s furiously overwriting one another in a bewilderingly fast paced dance. The arrows of ancient Egyptian gods and tasty oatmeal is just a metaphor, and an extremely loose and arbitrary metaphor at that.</p>
+<a class="header" href="#reality-filters-wheat-and-chaff" id="reality-filters-wheat-and-chaff"><h2>Reality Filters: Wheat and Chaff</h2></a>
+<p><em>&quot;If that pagoda is going to be so useless, I'd just as soon not see it at all.&quot;</em></p>
+<p>The Matrix uses the brains of people connected with it all the time, but only a small portion of the data is ever converted into something that a user is consciously aware of. With trillions of calculations made, the total number of ways that the Matrix could be presented to a user is effectively infinite. So what is done is to have systems in place which focus on the &quot;important&quot; things and display those to the user and then leave all other Matrix activity unreported. This system is called the Reality Filter, and absolutely every commlink has one. Many matrix devices or activities carry with them sensory notation explaining how a potential user &quot;should&quot; perceive them, but a good reality filter can usually disregard that and display the matrix in a metaphor that makes sense to the user.  What form one's perception of the Matrix is generally in one of three categories: Augmented Reality (AR), Virtual Reality (VR), or Better Than Life (BTL).</p>
+<a class="header" href="#equipment-spotlight-advertising-spam" id="equipment-spotlight-advertising-spam"><h4>Equipment Spotlight: Advertising Spam</h4></a>
+<p>For obvious reasons, corporations would like to beam perceptions of their products in a favorable light directly into the minds of potential consumers. However with the massive weight of corporations trying to do this all the time, the experience is actually kind of wearying to the average person in the 2070s. This perceptive junk is collectively called spam, and people don't like it much. Reality filters are usually set to display adverts in really small boxes or not at all, but advertisers are nothing if not clever, and it is a constant war of oneupmanship between Reality Filter and Advertising designers to try to get you to see the latest NERPS ad or get a decent night's sleep instead.</p>
+<a class="header" href="#augmented-reality-information-superimposed-on-life" id="augmented-reality-information-superimposed-on-life"><h3>Augmented Reality: Information Superimposed on Life</h3></a>
+<p><em>&quot;I really do think that you look better this way.&quot;<br />
+&quot;As a cartoon hippo?&quot;</em></p>
+<p>Perhaps the most common way of perceiving matrix information is by having sensory cues directed into the user's sensory input as needed while the real world is continuing to have the collected sense data perceived. These matrix sensory intrusions are called &quot;Arrows&quot; (from ARO, or &quot;Augmented Reality Object&quot;) and they can get <em>really</em> confusing if there is a lot of matrix activity and physical activity going on at the same time.</p>
+<p>This setup is called &quot;Augmented Reality&quot;, and it is abbreviated &quot;AR&quot;. Classically, AR is handled in the same manner as the classic &quot;Head's Up Display&quot; of the late twentieth century, but technically Arrows can be handled with literally any type of sensory input. Some hackers have been known to pipe their matrix information through touch links as a web of tappings on their body or through audio playback as elaborate music in order to continue seeing the world unimpeded. This is still distracting, but at least you no longer have blind spots.</p>
+<a class="header" href="#equipment-spotlight-the-smartlink" id="equipment-spotlight-the-smartlink"><h4>Equipment Spotlight: the Smartlink</h4></a>
+<p>The smartlink is a system which makes a bunch of calculations from ballistic, proprioceptive, and topographical data and generates a number of Arrows that represent its findings onto the user's perception. The standard Ares interface uses a red curve to indicate predicted bullet paths from the gun's barrel as currently positioned and highlights objects which it calculates will likely be hit with a yellow iron cross that has a clockwise portion intensified based on the likelihood of impact based on current trajectories. Additional arrows clutter the lower right hand corner of vision with icons for what weapon is being used and a number of stats about it including how many rounds of what type are left in the magazine and the User Experience Index for the weapon in question (hint: you should upgrade to an Ares model to maximize your weapon user experience).</p>
+<a class="header" href="#virtual-reality-sense-data-replaced" id="virtual-reality-sense-data-replaced"><h3>Virtual Reality: Sense Data Replaced</h3></a>
+<p><em>&quot;You can be anything you want to be. In the matrix, there are no rules.&quot;<br />
+&quot;So... why am I cartoon hippo?&quot;</em></p>
+<p>The next stage in perceiving the matrix is to replace all sense data from the real world with matrix Arrows. At its crudest implementation, this literally just means that Arrows are so densely packed across one's perceptions that the input from the world around cannot be seen at all. At its ideal, it represents a whole virtual world crafted for the user in which all Arrows are incorporated and contextualized.</p>
+<p>This full sensory replacement is called &quot;Virtual Reality&quot; and abbreviated &quot;VR&quot;. Distractions from physical sensory input are non-existent barring actual physical injury, but any attempts to interact with the real world must necessarily deal with the essential total blindness and deafness that the VR experience is based upon.</p>
+<p>Dealing with the matrix in basic VR is called &quot;cold&quot; in 133+, a reference to the fact that there is an even more extreme way of perceiving the matrix in the form of BTL (which in turn is known as &quot;hot&quot;). Interestingly, the same language's word for AR is &quot;n00b&quot;. A character running BTL AR is thus &quot;hot n00b&quot;.</p>
+<a class="header" href="#equipment-spotlight-the-simmodule" id="equipment-spotlight-the-simmodule"><h4>Equipment Spotlight: the Simmodule</h4></a>
+<p>A simmodule is a device used for weeding out sensory distractions, allowing people to experience full VR. What it literally does is edit out real world interactions, allowing a blank slate on which to overlay Arrows of any sense desired. Most are equipped with RAS Overrides (Reticular Activating System) as well, editing out both sensory and motor functions for those who wish to interact exclusively with the virtual world. Obviously, a character who already has a full cybernetic sensory suite (such as a SimRig) has no need for a Module, because crass physical sensation can be dumped or diverted to a simsense recording for later viewing at any time.</p>
+<a class="header" href="#btl-directly-stimulating-the-brain" id="btl-directly-stimulating-the-brain"><h3>BTL: Directly Stimulating the Brain</h3></a>
+<p><em>&quot;The rats continuously pressed the button activating their nucleus accumbens in preference to consumption of food or water. Cause of death is thirst.&quot;</em></p>
+<p>Sensation passes through a number of pathways through the body to get to the brain, some myelinated and some non. These pathways get parsed out in various parts of the brain and eventually become consciousness somewhere on the cortex (depending upon what <em>kind</em> of sensation it is). This takes some non-zero amount of time and is subject to confusion. For example, the same nerves that carry pain reception to parts of the arm also carry it from the heart; which results in referred pain during myocardial infarctions. And so it may come as no surprise that enterprising technicians have come up with methods to bypass all that and simply cause the triggering of the neurons in the brain itself <em>as if</em> one had already gone through all that tedious business of receiving and parsing sensory stimuli and then interpreted it &quot;correctly&quot;. This technique is called &quot;Better Than Life&quot; because it is potentially experienced much more extremely than anything from real sensation possibly could be. Indeed, it has no particular limitations of intensity at all.</p>
+<p>And that turns out to be something of a problem. Not only do people frequently find themselves addicted to the intensity of stimuli that BTL can offer, but BTL is just plain <em>dangerous</em>. The signals themselves can cause damage, sometimes permanently so. The BTL user often fails to remember to take breaks to <em>drink</em>, because the certainty that BTL stimulation can offer is much stronger than any previously held notions, even ones basic and critical to survival.</p>
+<p>BTL grade signals are illegal in most jurisdictions that have contemplated the issue at all. But of course that doesn't really stop them from being used; the BTL loops are too <em>fun</em>, using BTL to perceive the Matrix is just too <em>fast</em>, and projecting BTL grade signals into unsuspecting fools is just too <em>effective</em>. Indeed, BTL signals form the core code of <em>many</em> anti-metahuman attack routines, even (and especially) those used by Black IC.  So the fact that corporations mostly &quot;outlaw&quot; BTL signaling doesn't mean that they aren't <em>doing</em> it.</p>
+<p>BTL can be handled either in AR or VR. The Arrows are directed directly to interpretive cortex layers, but regular sensation does not have to be completely removed for this to happen. Many BTL addicts simply jack into some emotive tracts and attempt to get through their days interacting with the physical world as normally as is possible when you already feel inhumanely happy or angry.</p>
+<a class="header" href="#equipment-spotlight-btl-players" id="equipment-spotlight-btl-players"><h4>Equipment Spotlight: BTL Players</h4></a>
+<p>The cheapest BTL decks are simply a projector set to target the interpretative portions of the brain directly. To activate one, a person merely shuts off the BTL  protections of their Firewall (assuming they even <em>have</em> a Firewall), slots a BTL chip into the player, and then starts experiencing the magic. There's no trodes or uplink of any kind on these things, so there's no choices involved for the user. The user watches events unfold as one might watch a movie, having no say in what they see or do. Much more expensive and complicated systems exist of course, and there <em>are</em> higher grade BTLs that accept input in addition to projecting output, and as you might expect, these are very expensive even compared to the no input BTLs (which are called &quot;rails&quot; or &quot;lines,&quot; further confusing the drug cultures of BTL and novacoke junkies).</p>
+<p>Most interpretive systems are <em>not</em> set up to send BTL into the brain, and the limitation is generally speaking a hardware one. Quite simply, a standard display link sends things to the optic nerve, not the primary visual cortex. The hardware modifications are easy, and can be done for you in filthy alleys by tattooed guys named stuff like &quot;Twitch&quot; and &quot;Skeeze&quot;, which frankly should be a warning sign.</p>
+<a class="header" href="#the-ras-override-not-always-your-friend" id="the-ras-override-not-always-your-friend"><h3>The RAS Override: Not Always Your Friend</h3></a>
+<p><em>&quot;I could really go for a beer.&quot;<br />
+&quot;Really? I don't think I could.&quot;</em></p>
+<p>Interacting with the Virtual World is really awesome, but unfortunately it can be a bit dangerous. Especially if you are trying to interact with the real world at the same time. And to prevent people from wandering around in the magical world of potential coffee flavors in their minds while <em>actually</em> wandering around in heavy traffic, the RAS Override was developed with much rejoicing. Essentially it's just a set of motor neuron inhibitors that prevent signals from the brain intended to influence goings on in the matrix from causing actual motion. Like having your dopaminergic cells in your substantia nigra working overtime. Like the opposite of having Parkinson's.</p>
+<p>Of course, having a machine generated signal that literally prevents a person from moving or interacting with the physical world has its own dangers. For one thing, there are times when lying inert is not the safest thing you can be doing with your body (like when oncoming traffic is a potentially immediate threat). And for another thing, there is absolutely nothing in the world that guarantees that the signal itself is generated &quot;legitimately&quot;. Once projected into a metahuman body, that body becomes inert regardless of source, and only an extreme act of will on the part of the victim can keep them from collapsing and being completely at the physical mercy of just about anyone.</p>
+<p><strong>Special Note:</strong> The Reticular Activating System is in reality a primarily sensory portion of the midbrain, and it is the portion of the brain upon which general anesthetics act. So the fact that in Shadowrun the RAS Override is the thing that prevents you from accidentally moving while under the influence of Virtual Reality is weird. While it is posible to write in some pseudo-science about how the RAS is a prerequisite brain function for consciousness (which it is) and that specific effects from electromagnetism projected into that part of the brain modulate the body into a state of quasi-coma where the brain is still functional and awake while the rest of the body is inert... this is entirely a back-formation. The real reason that the RAS Override is called that is because someone thought it sounded cool and scientific back in 1988 and now we're stuck with it.</p>
+<a class="header" href="#equipment-spotlight-ras-tasers" id="equipment-spotlight-ras-tasers"><h4>Equipment Spotlight: RAS Tasers</h4></a>
+<p>An interesting side effect of the mere <em>existence</em> of the RAS Override signal creates the ability to incapacitate people at a distance with fair reliability. The RAS Taser is simply a Sim Module that has been modified such that it merely generates a RAS Override, and does so at a distance. This extremely simple device can be and is used in crowd control by police and prisons. Those with strong wills and good firewalls can continue to stand and walk while under its influence, but in many cases it &quot;harmlessly&quot; neutralizes dangerous and violent individuals, so the cops love these things. It's used by kidnappers too, and they love them as well.</p>
+<a class="header" href="#the-look-and-feel-of-operating-systems" id="the-look-and-feel-of-operating-systems"><h3>The Look and Feel of Operating Systems</h3></a>
+<p>The reality filters of any user are largely colored by the Operating System that they are using. It creates a perceptive metaphor by which the user can understand what is going on and use their own actions. Many popular OSs come with default reality filters, which create a tapestry of standardized iconography that contextualize Arrows into an AR or VR display such that they make sense to even the most casual user. Here are a sampling of common OSs that players may use:</p>
+<p><strong>Deva</strong> A bizarre mix of hermetic and high tech imagery, the Deva operating system fills the periphery of the AR interface with a set of pull down menus in stark low res rectangles with cut-away text reminiscent of a 1980s display. Iconography stands side by side in extremely high-res and transparent hermetic mystical symbols. These symbols can be &quot;dialed&quot; up and down out of the field of view to present new options. The default color scheme is pale blue, pale yellow, and bright red.</p>
+<p><strong>Ichi</strong> Ichi is a series of floating alphanumerics in numerous languages. The actual content is unimportant as the user manipulates the <em>shapes</em> and not the content. Lines of gibberish text float down across the vision at various rates and in different columns  in order to represent various aspects of the system's connections and activities. Text boxes can be pulled out of the gibberish and the same information is displayed by rotating and overlapping circles. Default color scheme is green. Trivia fact: most Shadowrun material is presented in Ichi formatting.</p>
+<p><strong>Navi</strong> Navi is a spherical visual disturbance much like a magnifying glass. Potential AR iconography is pushed to the sides and can be pulled towards the center where it becomes proportionally larger. Selected iconography inverts. The default color scheme is primarily blue.</p>
+<p><strong>Nix</strong> Nix is a very &quot;hands off&quot; operating system. The AR display is kept generally empty save for a toolbar running along the bottom along with an attached command line/scratch pad in the lower right hand corner. The background can be filled with pictures if the user desires but by default there's nothing there. The default color scheme is a shiny gray.</p>
+<p><strong>Orb</strong> The Orb OS is a sphere which sheds light. It can be rotated infinitely to project a beam which displays various holograms. The intensity of the light varies as the OS is called upon to perform different actions. The Orb speaks to users in a dispassionate monotone. The default color of the Orb is bright Red.</p>
+<p><strong>Xim</strong> The Xim operating system is usually characterized by a system of windows which are projected as floating around the user, each held in a three dimensional device apparently made of resin and steel. Default color schemes are purple, green, and brushed metal. Actions are generally performed in the UI by mechanical tentacles.</p>
+<a class="header" href="#blocking-out-the-matrix-full-circle" id="blocking-out-the-matrix-full-circle"><h2>Blocking out the Matrix: Full Circle</h2></a>
+<p><em>&quot;With enough effort, equipment, and technical know how, you can block out all the adverts and flashing lights, silence all the alarms and jingles, and live your own life.&quot;</em></p>
+<p>The era when a man could roll out of bed in the morning, eat breakfast, and play with his dog all without interacting with world events and specialty sales through the medium of electronics constantly bombarding him with sights, sounds and smells is by and large over. But as that kind of relatively clear headspace is still desired by many, it is unsurprising that there is much effort put into <em>escaping</em> the Matrix and the constant buzz that metahuman society makes in the mind.</p>
+<p>There are basically two ways to keep Starbucks ads out of your brain: either develop some really good signal defense to cancel out all incoming advertising before it intrudes on your person, or cut yourself off from the Matrix altogether. The latter requires you to be out of signal range, either because you are so far away from metahumanity that high density signals don't reach, or because you have a powerful Faraday cage surrounding you. In the 2070s a quite sizable number of people opt for one or the other. The neo-tribal movement is very strong, and even corporate wage slaves will often pay good money to rest in a matrix deprivation tank in order to have their thoughts and dreams to themselves, if only for an hour.</p>
+<a class="header" href="#equipment-spotlight-the-faraday-suit" id="equipment-spotlight-the-faraday-suit"><h4>Equipment Spotlight: The Faraday Suit</h4></a>
+<p>People can, and sometimes do, wrap their bodies in conductive materials, creating a Faraday Cage. As long as the mesh of conduction is essentially unbroken in a topological sense around the entire body, the effective signal going into and out of the body is very much reduced. This kind of behavior is acknowledged to keep out many deadly and dangerous mind altering signals as well a providing a substantial protection against snooping in on one's thoughts. However, what this Luddite behavior actually <em>looks</em> like from the outside is an empty space in the matrix chatter where a network really obviously ought to be. This means that it looks a lot like a hacker or technomancer going all spooky hidden node on people, and that looks threatening. For this reason, most societies prefer it if you use active Firewall based defenses (which can be quite visible to other matrix users) as opposed to passive Faraday based defenses.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../lore/four_questions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../lore/encryption.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../lore/four_questions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../lore/encryption.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

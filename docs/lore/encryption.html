@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Encryption - The Ends of The Matrix</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A complete replacement for the Matrix rules of SR4.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="../lore.html"><strong aria-hidden="true">2.</strong> Lore</a></li><li><ol class="section"><li><a href="../lore/four_questions.html"><strong aria-hidden="true">2.1.</strong> Four Questions</a></li><li><a href="../lore/perceiving_the_matrix.html"><strong aria-hidden="true">2.2.</strong> Perceiving The Matrix</a></li><li><a href="../lore/encryption.html" class="active"><strong aria-hidden="true">2.3.</strong> Encryption</a></li><li><a href="../lore/hacking_hardware.html"><strong aria-hidden="true">2.4.</strong> Hacking Hardware</a></li><li><a href="../lore/intrusion_countermeasures.html"><strong aria-hidden="true">2.5.</strong> Intrusion Countermeasures</a></li><li><a href="../lore/matrix_infrastructure_and_topology.html"><strong aria-hidden="true">2.6.</strong> Matrix Infrastructure and Topology</a></li><li><a href="../lore/growing_up_wireless.html"><strong aria-hidden="true">2.7.</strong> Growing Up Wireless</a></li><li><a href="../lore/technomancers.html"><strong aria-hidden="true">2.8.</strong> Technomancers</a></li><li><a href="../lore/sprites.html"><strong aria-hidden="true">2.9.</strong> Sprites</a></li></ol></li><li><a href="../crunch.html"><strong aria-hidden="true">3.</strong> Crunch</a></li><li><ol class="section"><li><a href="../crunch/dice_pools.html"><strong aria-hidden="true">3.1.</strong> Dice Pools</a></li><li><a href="../crunch/skills.html"><strong aria-hidden="true">3.2.</strong> Skills</a></li><li><a href="../crunch/matrix_architecture.html"><strong aria-hidden="true">3.3.</strong> Matrix Architecture</a></li><li><a href="../crunch/matrix_actions.html"><strong aria-hidden="true">3.4.</strong> Matrix Actions</a></li><li><a href="../crunch/matrix_attributes.html"><strong aria-hidden="true">3.5.</strong> Matrix Attributes</a></li><li><a href="../crunch/programs_and_complex_forms.html"><strong aria-hidden="true">3.6.</strong> Programs and Complex Forms</a></li><li><a href="../crunch/technomancy.html"><strong aria-hidden="true">3.7.</strong> Technomancy</a></li><li><a href="../crunch/sprites.html"><strong aria-hidden="true">3.8.</strong> Sprites</a></li><li><a href="../crunch/equipment.html"><strong aria-hidden="true">3.9.</strong> Equipment</a></li></ol></li><li><a href="../bonus_houserules.html"><strong aria-hidden="true">4.</strong> Bonus Houserules</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Ends of The Matrix</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#hacking-in-a-world--of-perfect-encryption" id="hacking-in-a-world--of-perfect-encryption"><h1>Hacking in a World  of Perfect Encryption</h1></a>
+<p><em>&quot;We estimate that we can crack this faster by waiting a few years for computers to become faster and then starting the project on the new generation of machines.&quot;</em></p>
+<p>Cryptography is a complex thing. But an immutable fact of it is that if you are handed a set of data that has been scrambled by a non-repeating transformation of comparable size, that you <em>cannot</em> decipher it. Not &quot;it's really hard to decipher&quot; or &quot;It'll take you a long time to decipher that&quot; but that in fact you simply can't do it at all. So anyone with sufficient time on their hands and dedication to cryptographic secrecy <em>can</em> make a system that cannot be decrypted under any circumstances. It's called a one-time pad, and while resource intensive it is actually unbreakable. But people generally don't really <em>need</em> codes that can't be broken <em>ever</em>, most people will settle for codes that cannot be broken any time in the next hundred million years. That's the kind of time frame that even the extremely long lived are generally willing to concede that their secrets of today won't matter much once it has passed.</p>
+<p>So while it is entirely within everyone's capacity to go out into the street, turn the microphone on super high and record random discordant noise for an hour, then download that hour into their drone as an exceedingly long cypher to get an hour of unbreakably encrypted communications between themselves and their drone, the vast majority of people are willing to accept a less intensive system where their communications are merely <em>unlikely</em> to be decrypted before the sun peters out.</p>
+<p>Most secure communications use Essentially Unbreakable Encryption (EUE), a system where the sender and the intended recipient both have a cypher that is overlain on the messages and subsequently removed. The keys used in the 2070s are of variable length, but generally are thousands of bits long, and cannot be expected to be broken by any sort of mathematical attack. In order to attain such levels of security the cypher itself must have been shared at some earlier point between the intended sender and receiver, and it can of course be stolen either during the hand off or at any time that anyone has direct access to any of the computers which store the cypher itself. After all, EUE doesn't make the message completely illegible to anyone but the intended recipient; it makes the message completely unintelligible to anyone who doesn't have the key, which is <em>not</em> the same thing once espionage comes into the equation.</p>
+<a class="header" href="#a-note-on-cryptographic-realism" id="a-note-on-cryptographic-realism"><h4>A Note on Cryptographic Realism</h4></a>
+<p>Real world cryptography and code breaking in the modern age revolves around incredibly intensive mathematical analysis and exploitations of technical weaknesses and user error. This is a fascinating field and incredibly non-photogenic. This means that it's the kind of thing that makes a very bad game, because it is almost impossible to describe the action in a way that is in any way comprehensible or cool. I mean basically it would largely come down to people rolling some kind of dice to determine if the security spiders or some non-security conscious user had made some bone headed mistake and then making more die rolls to see if the player could find that mistake and exploit it. You seriously might as well flip coins to see if you win or not, because nothing the player describes their actions as will make any difference to such a system.</p>
+<p>In the interests of playability, the weaknesses of computers have been standardized. If you can project high density signal into a computer, you can manipulate it on the hardware level. And if you have access to both the plain text (or brain text) and the encrypted text version of a message you can break the code. Other weaknesses are assumed to not exist. This is admittedly and specifically an abstraction, but it makes the action <em>so much cooler looking</em> and the game so much more accessible to non-mathematicians that the sacrifice is well worth it.</p>
+<a class="header" href="#vaguely-decent-protection-asymmetric-encryption" id="vaguely-decent-protection-asymmetric-encryption"><h2>Vaguely Decent Protection: Asymmetric Encryption</h2></a>
+<p><em>&quot;The algorithms required to decrypt these things are illegal, so no one has them.&quot;</em></p>
+<p>Sending a message of any kind through EUE requires that both the sender and the receiver have a copy of the key. But what if you <em>don't</em> have a prearranged key, how can you communicate with any privacy? The answer is Asymmetric Encryption. Here's how it works: There are a set of mathematical transformations based on one number that are really hard to undo <em>unless</em> you happen to know a specific second number. So your Commcode gives out the first number to anyone who wants it, and then people can send transformed (and thus encrypted) data <em>to you</em> and since you have the magic second number you can reverse those changes very easily.</p>
+<p>You can also do this in the reverse order, transforming your message with the secret number and letting the receivers of the message decrypt it with the publicly available number. While this is a fairly useless way to keep information secret, it makes a fairly decent digital signature. Whoever sent the encrypted message must have known your personal secret number. This is the core of how every Access ID in the Matrix is verified.</p>
+<a class="header" href="#a-note-on-hacking-spoofing-an-access-id" id="a-note-on-hacking-spoofing-an-access-id"><h4>A Note on Hacking: Spoofing an Access ID</h4></a>
+<p>The key weakness of Asymmetric Code is that by its very nature anyone who really wants to can have both plain text and encrypted text of their choice. Simply take plain text of your choice and encrypt it with the public key and you can spend some time doing &quot;math&quot; to decrypt it back out and have what is essentially the private key. Oh snap.</p>
+<p>What this means is that the Access ID verification system of the Matrix at large is inherently weak. Anyone with the right hacker algorithms who observes the asymmetric key broadcasting of any device can back form an essentially identical key for their own use and then assign themselves the Access ID of that device.</p>
+<a class="header" href="#passing-notes-encryption-reception-and-retransmission" id="passing-notes-encryption-reception-and-retransmission"><h2>Passing Notes: Encryption, Reception, and Retransmission</h2></a>
+<p><em>&quot;The paper doesn't know what is written on it, but the scribe and the reader do.&quot;</em></p>
+<p>In Shadowrun, an encryption scheme can be undone if one has both the encrypted and the unencrypted version of the message. This means that if one compromises the computer on either terminal end of a message relay, that the code itself is compromised. However, merely listening to the encrypted transmission is essentially worthless. Indeed, any number of devices can be along the chain and be compromised without endangering the code in any way. Each computer can take the encrypted information and pass it on, still encrypted, without understanding or changing the data in any way. It is only when one gets to a computer that actually composes the encrypted data or is intended to put the data into brain text or other usable format that a hardware compromise gives away the show.</p>
+<a class="header" href="#equipment-spotlight-the-retransmitter" id="equipment-spotlight-the-retransmitter"><h4>Equipment Spotlight: the Retransmitter</h4></a>
+<p>A retransmitter is a neat little device, it takes signal <em>in</em>, and then it pumps the same signal <em>out</em>. It can take signal in or out through wired or wireless channels depending upon how it has been set up (and thus can convert one type of signal to the other), and it can be set up in hardware to transmit in high density or low density signal. Of primary use for those who want to draw their signal LOS from a place that they are not literally at (possibly even a drone), but clever people have put these bad boys to all kinds of uses. Retransmitting low density signal through a wired interface across a Faraday cage is the basis of the account protections of Zürich Orbital, for example.</p>
+<a class="header" href="#breaking-encryption-if-you-cant-win-cheat" id="breaking-encryption-if-you-cant-win-cheat"><h2>Breaking Encryption: If You Can't Win, Cheat</h2></a>
+<p><em>&quot;Break the code? Nah, I just read the original over your shoulder.&quot;</em></p>
+<p>Over the probable length of time that any game of Shadowrun covers, it is unreasonable to suspect that you will ever see anyone brute force a node's EUE. It simply will not happen, and we aren't even going to bother having rules for it. However, that in no way means that you can't read someone's mail just because it is encoded in EUE. The truth is that for an EUE transmission to work at all, that the sender and all intended receivers must have a copy of the cypher. This creates two main weaknesses, which a hacker can exploit:</p>
+<p><strong>The Physical Hardware:</strong> High Density Signal can cause hardware to do pretty much anything as if it had gotten the correct user inputs to do whatever. This can include forking over the unencrypted versions of encrypted data or even giving out the codes directly if it has that information anywhere on the system in any format.</p>
+<p><strong>The Initial Handoff:</strong> The EUE cypher that any two nodes wish to use to communicate has to be initially generated on one device and transferred to the other. And while information transfer is very secure <em>after</em> the code has been shared, there's nothing in particular protecting the code transfer itself. This is where people do stuff like sneak around late at night in order to hand off their precious data chips hidden away in their shoes.</p>
+<a class="header" href="#protecting-unencrypted-data-using-your-inside-voice" id="protecting-unencrypted-data-using-your-inside-voice"><h3>Protecting Unencrypted Data: Using Your Inside Voice</h3></a>
+<p><em>&quot;You actually are the weakest link.&quot;</em></p>
+<p>No matter how sweet your encryption is, everyone's brain runs on pretty much the same codes. When each data packet is sent to a metahuman brain, that data is essentially unencrypted. Anyone who can &quot;hear&quot; that transmission can read it. Worse, if someone hears the transmission in brain text and they also had a recording of the encrypted version, they can make a Rosetta Stone to decrypt all the rest of your data, which makes all your base belong to them. So it is of no surprise that people in the 2070s attempt to make the actual communications between their brain and the rest of their network be as &quot;quiet&quot; as possible, which is why people use Datajacks, Internal Commlinks, and Trodes. The first two have a directly wired (and shielded) connection between themselves and the brain, while the last option is merely at very low signal strength and very close to the intended recipient. In any case, these methods of data transfer are very difficult to listen in to, and people generally feel relatively safe sending brain formatted information into their own heads by these means.</p>
+<p>Now no data transfer mechanism is truly 100% safe: unscrupulous men <em>can</em> get microtransceivers  very close to your trode set and rebroadcast the precious unencrypted information to their own networks. They <em>can</em> compromise the physical hardware of the datajack or the trode net. And so it is that over and above having relatively secure direct neural interfaces, the truly security conscious will endeavor to conduct important communications from the sanctity of rooms that have been cleared of bugs and at special times and places that hopefully opposing spies won't know about. Cloak and dagger stuff that has been going on for literally thousands of years and shows no signs of stopping at any time in the future.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../lore/perceiving_the_matrix.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../lore/hacking_hardware.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../lore/perceiving_the_matrix.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../lore/hacking_hardware.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

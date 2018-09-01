@@ -1,0 +1,8 @@
+[book]
+title = "The Ends of The Matrix"
+authors = ["Frank Trollman", "Lokathor"]
+description = "A complete replacement for the Matrix rules of SR4."
+
+[build]
+build-dir = "docs"
+create-missing = true

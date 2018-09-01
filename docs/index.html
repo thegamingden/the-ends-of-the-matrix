@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction - The Ends of The Matrix</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A complete replacement for the Matrix rules of SR4.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="lore.html"><strong aria-hidden="true">2.</strong> Lore</a></li><li><ol class="section"><li><a href="lore/four_questions.html"><strong aria-hidden="true">2.1.</strong> Four Questions</a></li><li><a href="lore/perceiving_the_matrix.html"><strong aria-hidden="true">2.2.</strong> Perceiving The Matrix</a></li><li><a href="lore/encryption.html"><strong aria-hidden="true">2.3.</strong> Encryption</a></li><li><a href="lore/hacking_hardware.html"><strong aria-hidden="true">2.4.</strong> Hacking Hardware</a></li><li><a href="lore/intrusion_countermeasures.html"><strong aria-hidden="true">2.5.</strong> Intrusion Countermeasures</a></li><li><a href="lore/matrix_infrastructure_and_topology.html"><strong aria-hidden="true">2.6.</strong> Matrix Infrastructure and Topology</a></li><li><a href="lore/growing_up_wireless.html"><strong aria-hidden="true">2.7.</strong> Growing Up Wireless</a></li><li><a href="lore/technomancers.html"><strong aria-hidden="true">2.8.</strong> Technomancers</a></li><li><a href="lore/sprites.html"><strong aria-hidden="true">2.9.</strong> Sprites</a></li></ol></li><li><a href="crunch.html"><strong aria-hidden="true">3.</strong> Crunch</a></li><li><ol class="section"><li><a href="crunch/dice_pools.html"><strong aria-hidden="true">3.1.</strong> Dice Pools</a></li><li><a href="crunch/skills.html"><strong aria-hidden="true">3.2.</strong> Skills</a></li><li><a href="crunch/matrix_architecture.html"><strong aria-hidden="true">3.3.</strong> Matrix Architecture</a></li><li><a href="crunch/matrix_actions.html"><strong aria-hidden="true">3.4.</strong> Matrix Actions</a></li><li><a href="crunch/matrix_attributes.html"><strong aria-hidden="true">3.5.</strong> Matrix Attributes</a></li><li><a href="crunch/programs_and_complex_forms.html"><strong aria-hidden="true">3.6.</strong> Programs and Complex Forms</a></li><li><a href="crunch/technomancy.html"><strong aria-hidden="true">3.7.</strong> Technomancy</a></li><li><a href="crunch/sprites.html"><strong aria-hidden="true">3.8.</strong> Sprites</a></li><li><a href="crunch/equipment.html"><strong aria-hidden="true">3.9.</strong> Equipment</a></li></ol></li><li><a href="bonus_houserules.html"><strong aria-hidden="true">4.</strong> Bonus Houserules</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Ends of The Matrix</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#introduction" id="introduction"><h1>Introduction</h1></a>
+<p><em>The Ends of the Matrix</em> is a set of full replacement rules for the Matrix of
+Shadowrun 4e. That means that these rules are intended to be used instead of the
+<em>Wireless World</em> chapter (SR4, pgs. 206 - 240) and instead of the <em>Unwired</em> book
+(all pages). It is not a full replacement of the Shadowrun world story, so books
+like <em>Emergence</em> and <em>System Failure</em> stand on their own. This piece is
+admittedly quite long, but when you factor the number of pages of material that
+it replaces, it's not that bad.</p>
+<p>This work is different in tone from other Shadowrun books, because the flavor
+text is not written &quot;in character&quot;. This book is written with a voice directed
+at the players of the game, and with good reason. The matrix is an integral part
+of the lives of every character in the game world from birth, and it really
+isn't reasonable to expect to find material that the characters would consent to
+read that wouldn't make assumptions about basic levels of matrix familiarity
+that the players doubtlessly do not have (not living in that world). While
+astral space is something that a majority of characters in the 2070s have never
+experienced, matrix interaction really isn't. In addition, this is a set of
+optional replacement rules, so the author has chosen to break the 4th wall
+constantly in an effort to show the reader both how the system works and why it
+works that way instead of some other way. After all, the Matrix subsystem has
+undergone an almost complete overwrite upwards of 9 times already (SR1, Virtual
+Realities, SR2, VR 2.0, SR3, Matrix 3, Target: Matrix, SR4, Unwired), so it
+seems clear that the number of ways that the Matrix can be conceived of and
+modeled in-game is tremendously large. Justifying the model here is probably
+necessary.</p>
+<p>The question is raised however of &quot;why do this at all?&quot;, and the answer is
+because I honestly am not happy with the Matrix rules as they stand, and do not
+believe that they hold up to careful observation. The first insult thrown at
+anyone who complains about rules (or any intellectual property) is along the
+lines of &quot;If you don't like it, why don't you make something better?&quot; Well,
+hopefully I have. And while I lack access to a large playtesting crew, I don't
+think there are presently any giant holes in this rule set. If there are, then
+that will be a shame, and I will humbly accept my plate of delicious crow.</p>
+<p>So what precisely is wrong with the Matrix rules in SR4 such that they need to
+be completely rewritten from the ground up? Again, for the 10th time? Simply:
+the Matrix rules in SR4 do not hold up when people attempt to push them or
+exploit them. Even authors of Unwired have described it as &quot;Six parts Hollywood
+hackers, six parts modern tech, zero parts playtesting by a powermunchkin&quot;, and
+that's a shame. Fundamentally, I believe that the matrix rules need to be more
+solid than do the rules of other subsystems. Unlike magic or car driving or
+whatever, the Matrix is predicated on the idea of the acting characters actually
+knowing the rules and deliberately attempting to exploit holes in them. Hacking
+is about finding power exploits, so if power exploits exist in the rules it is
+actually counter-immersive for characters in the world to not use them.</p>
+<p>So the basic SR4 rules contain the exploits of</p>
+<ul>
+<li><strong>Script Kiddy</strong>: where you can wave your credstick around instead of actually
+having any skill to hack effectively.</li>
+<li><strong>Hackastack</strong>: where you can benefit from having multiple iterations of
+hardware to bypass structural limits of personal identity.</li>
+<li><strong>Drop-Out</strong>: where you can choose to segregate yourself from the matrix and
+still hack effectively, despite being unhackable in return.</li>
+<li><strong>Agent Smith</strong>: where you can gain extra actual actions from your pocket
+book.</li>
+</ul>
+<p>The net result is that characters with no technical skills at all can throw some
+money on the table and hack as if they were dozens or hundreds of hackers at no
+actual risk to themselves or anything they care about. That's bad, because the
+entire concept of a hacker entails the fact that if they could do that then they
+would. It is the hope that these presented rules will not have problems like
+that, or that if they do that at the very least they will not produce a such
+perfect storm which relegates the concept of the Matrix Specialist to the
+dustbin of history.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

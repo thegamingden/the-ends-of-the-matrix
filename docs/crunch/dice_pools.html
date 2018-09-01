@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Dice Pools - The Ends of The Matrix</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A complete replacement for the Matrix rules of SR4.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="../lore.html"><strong aria-hidden="true">2.</strong> Lore</a></li><li><ol class="section"><li><a href="../lore/four_questions.html"><strong aria-hidden="true">2.1.</strong> Four Questions</a></li><li><a href="../lore/perceiving_the_matrix.html"><strong aria-hidden="true">2.2.</strong> Perceiving The Matrix</a></li><li><a href="../lore/encryption.html"><strong aria-hidden="true">2.3.</strong> Encryption</a></li><li><a href="../lore/hacking_hardware.html"><strong aria-hidden="true">2.4.</strong> Hacking Hardware</a></li><li><a href="../lore/intrusion_countermeasures.html"><strong aria-hidden="true">2.5.</strong> Intrusion Countermeasures</a></li><li><a href="../lore/matrix_infrastructure_and_topology.html"><strong aria-hidden="true">2.6.</strong> Matrix Infrastructure and Topology</a></li><li><a href="../lore/growing_up_wireless.html"><strong aria-hidden="true">2.7.</strong> Growing Up Wireless</a></li><li><a href="../lore/technomancers.html"><strong aria-hidden="true">2.8.</strong> Technomancers</a></li><li><a href="../lore/sprites.html"><strong aria-hidden="true">2.9.</strong> Sprites</a></li></ol></li><li><a href="../crunch.html"><strong aria-hidden="true">3.</strong> Crunch</a></li><li><ol class="section"><li><a href="../crunch/dice_pools.html" class="active"><strong aria-hidden="true">3.1.</strong> Dice Pools</a></li><li><a href="../crunch/skills.html"><strong aria-hidden="true">3.2.</strong> Skills</a></li><li><a href="../crunch/matrix_architecture.html"><strong aria-hidden="true">3.3.</strong> Matrix Architecture</a></li><li><a href="../crunch/matrix_actions.html"><strong aria-hidden="true">3.4.</strong> Matrix Actions</a></li><li><a href="../crunch/matrix_attributes.html"><strong aria-hidden="true">3.5.</strong> Matrix Attributes</a></li><li><a href="../crunch/programs_and_complex_forms.html"><strong aria-hidden="true">3.6.</strong> Programs and Complex Forms</a></li><li><a href="../crunch/technomancy.html"><strong aria-hidden="true">3.7.</strong> Technomancy</a></li><li><a href="../crunch/sprites.html"><strong aria-hidden="true">3.8.</strong> Sprites</a></li><li><a href="../crunch/equipment.html"><strong aria-hidden="true">3.9.</strong> Equipment</a></li></ol></li><li><a href="../bonus_houserules.html"><strong aria-hidden="true">4.</strong> Bonus Houserules</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Ends of The Matrix</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#why-johnny-cant-hack-the-hacker-and-his-dicepools" id="why-johnny-cant-hack-the-hacker-and-his-dicepools"><h1>Why Johnny Can't Hack: The Hacker and his Dicepools</h1></a>
+<p><em>&quot;I'm sorry Ms. Walters, but your son is an idiot.&quot;</em></p>
+<p>Hacking is a difficult enterprise. You are essentially using your own brain as a Matrix Node and then wrangling a horde of devices into some crazy topological nightmare of computing craziness on top of that to accomplish the ghastly difficult tasks of mathematics and signal management.</p>
+<p>In general, a Hacker rolls Attribute + Skill for the resolution of any task. The skill being used will generally be Computer, Cybercombat, Data Search, Electronic Warfare, or Hacking. The Attribute being used will generally be Logic or Intuition. Resisting damage and other hostile effects from the Matrix is generally the providence of Willpower. Characters with low Logic and Intuition scores are bad at being utilized by computers. Characters with low Willpower scores find themselves susceptible to having their precious neurons overwritten by intrusive machines.</p>
+<a class="header" href="#challenging-players" id="challenging-players"><h2>Challenging Players</h2></a>
+<p><em>&quot;House wins again. Imagine that.&quot;</em></p>
+<p>Shadowrun is a game. But more than that, it is a cooperative storytelling game. That means that unlike a game like roulette (which the player is expected to lose), the player is expected to win. So while the game is intended to be exciting and to carry real consequences of failure, such failure should actually be on the rare side.</p>
+<p>This means that thresholds should be kept well below what characters average on their dicepools. While a character rolling 6 dice <em>averages</em> 2 hits, and successfully gets 2 or more hits some 65% of the time, remember also that such a character's chances of succeeding in two such rolls in a row are only 42%. Of making it three times in a row is only 27%. In short, characters are going to fail more than two times out of three if you ask them to perform &quot;average&quot; difficulties on three consecutive tests. It is for this reason that we advocate a system in which characters roll dice less often in order to accomplish tasks. The fact that this frees up more of the evening to tell stories, plan heists, crack jokes, and otherwise do things which are more fun that rolling dice is a nice benefit as well.</p>
+<a class="header" href="#attribute--skill-expectations-and-range" id="attribute--skill-expectations-and-range"><h2>Attribute + Skill: Expectations and Range</h2></a>
+<p>A basic hacking operation requires the use of one of five checks:</p>
+<ul>
+<li>Logic + Computer</li>
+<li>Logic + Cybercombat</li>
+<li>Logic + Datasearch</li>
+<li>Logic + Electronic Warfare</li>
+<li>Logic + Hacking</li>
+</ul>
+<p>Technomancers use Resonance instead of Logic when using Complex Forms</p>
+<p>Depending upon what you are doing, any of those rolls could be called upon, possibly one after another, with a variety of consequences for success or failure. But regardless, the <em>range</em> of any of these dice pools is pretty much the same. At the low end you have Matrix dabblers, characters who merely have Matrix skills at all so that they can assist a specialist. These characters may have as little as Logic 3 and a relevant skill of 1. This leads to a dicepool of 4, where they are 80% likely to get at least a single hit (and in non-stressful situations they can buy a hit), but they come up with 2 or more hits only 40% of the time (and 3+ about one time in 9). At the very high end you have characters who invested themselves with Cerebral Boosters, Math Processors, and Skill Enhancement (such as Adept Powers). This can generate a dicepool of 20 without getting into special cases like Exceptional Attributes, AIs, or powerful spirits. These characters are 71% likely to get 5 hits (and in non-stressful situations can buy 5 hits).</p>
+<p>It is the assumption of the authors that most Matrix specialists will begin play with a dicepool of about 11 dice.</p>
+<a class="header" href="#equipment-modified-dicepools" id="equipment-modified-dicepools"><h3>Equipment Modified Dicepools</h3></a>
+<p><em>&quot;When the boost button is flashing it means that you can press it to get a boost. You should do that.&quot;</em></p>
+<p>Some checks allow characters to add the rating of equipment in addition to their attributes and skills. While nominally this increases the potential range of player character's dicepools to 4-26, in actual practice it simply shifts the range to 10-26. After all, when was the last time you saw a player character run around with a rating 4 medkit? Allowing equipment bonuses has the following real effects:</p>
+<ul>
+<li>
+<p><strong>Improves player characters vs. the world.</strong> James Bond and the Mission Impossible Team always use the latest and greatest gadgets. The guy behind the counter at Xipi's Chips does not. So if equipment modifiers are being employed, the player characters are at a relative advantage vs. other inhabitants of the world.</p>
+</li>
+<li>
+<p><strong>Hurts characters when buying hits.</strong> Getting 6 extra dice for equipment adds two to the average number of hits, and equipment modified tests usually require thresholds about two higher to compensate (see medkits and first aid). But when buying hits, those 6 dice are only worth a hit and a half.</p>
+</li>
+<li>
+<p><strong>Benefits characters when spending Edge.</strong> The average threshold of an equipment modified test is 2 higher than an unmodified test. But if you spend Edge to reroll failed dice, you average 3.3 more hits when equipment is giving you 6 dice than when it is not.</p>
+</li>
+<li>
+<p><strong>Makes the die rolling experience take longer.</strong> Don't forget that rolling and adjudicating 17 dice takes longer than rolling 11 dice.</p>
+</li>
+</ul>
+<a class="header" href="#dicepools-at-a-glance" id="dicepools-at-a-glance"><h2>Dicepools at a Glance</h2></a>
+<a class="header" href="#matrix" id="matrix"><h3>Matrix</h3></a>
+<ul>
+<li><strong>Use Program:</strong> Logic + Skill
+<ul>
+<li><strong>Analysis:</strong> Data Search</li>
+<li><strong>Attack:</strong> Cybercombat</li>
+<li><strong>Communications:</strong> Electronic Warfare</li>
+<li><strong>Exploit:</strong> Hacking</li>
+<li><strong>Operations:</strong> Computer</li>
+</ul>
+</li>
+<li><strong>Matrix Perception:</strong> Intuition + Datasearch</li>
+<li><strong>Matrix Stealth:</strong> Intuition + Hacking</li>
+<li><strong>Matrix Initiative:</strong>
+<ul>
+<li><strong>AR:</strong> Intuition + Reaction</li>
+<li><strong>VR:</strong> Intuition + Reaction + Response</li>
+</ul>
+</li>
+<li><strong>Matrix Defense:</strong>
+<ul>
+<li><strong>Signal or Handshake Range</strong>: Firewall + Signal Defense</li>
+<li><strong>Connection Range</strong>: Firewall + Cybercombat</li>
+</ul>
+</li>
+</ul>
+<a class="header" href="#technomancy" id="technomancy"><h3>Technomancy</h3></a>
+<ul>
+<li><strong>Use Complex Form:</strong> Resonance + Skill
+<ul>
+<li><strong>Analysis:</strong> Data Search</li>
+<li><strong>Attack:</strong> Cybercombat</li>
+<li><strong>Communications:</strong> Electronic Warfare</li>
+<li><strong>Exploit:</strong> Hacking</li>
+<li><strong>Operations:</strong> Computer</li>
+<li><strong>Decompiling:</strong> Decompiling</li>
+<li><strong>Registering:</strong> Registering</li>
+</ul>
+</li>
+<li><strong>Resist Fading:</strong> Resonance + Willpower</li>
+<li><strong>Compile Sprite:</strong> Resonance + Compiling vs Rating</li>
+<li><strong>Register Sprite:</strong> Resonance + Registering vs 2 * Rating</li>
+</ul>
+<a class="header" href="#rigging" id="rigging"><h3>Rigging</h3></a>
+<ul>
+<li><strong>Perception:</strong>
+<ul>
+<li><strong>Jumped In:</strong> Intuition + Perception</li>
+<li><strong>Windowed:</strong> Intuition + Perception - 2</li>
+</ul>
+</li>
+<li><strong>Independent Drone Initiative:</strong> Sensors + Response</li>
+<li><strong>Sensors:</strong>
+<ul>
+<li><strong>Monitored:</strong> Intuition + Electronic Warfare + Sensors</li>
+<li><strong>Unmonitored:</strong> Sensors + Clearsight Autosoft</li>
+</ul>
+</li>
+<li><strong>Weapons:</strong>
+<ul>
+<li><strong>Remote Firing:</strong> Logic + Gunnery</li>
+<li><strong>Drone Self Firing:</strong> Pilot + Targeting Autosoft</li>
+</ul>
+</li>
+<li><strong>Drone Targeting:</strong> Pilot + Clearsight Autosoft</li>
+<li><strong>Piloting:</strong>
+<ul>
+<li><strong>Remote Piloting:</strong> Reaction + Pilot Skill + Handling</li>
+<li><strong>Drone Self Piloting:</strong> Pilot + Maneuver Autosoft + Handling</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../crunch.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../crunch/skills.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../crunch.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../crunch/skills.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

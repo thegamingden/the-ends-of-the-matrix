@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Intrusion Countermeasures - The Ends of The Matrix</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A complete replacement for the Matrix rules of SR4.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="../lore.html"><strong aria-hidden="true">2.</strong> Lore</a></li><li><ol class="section"><li><a href="../lore/four_questions.html"><strong aria-hidden="true">2.1.</strong> Four Questions</a></li><li><a href="../lore/perceiving_the_matrix.html"><strong aria-hidden="true">2.2.</strong> Perceiving The Matrix</a></li><li><a href="../lore/encryption.html"><strong aria-hidden="true">2.3.</strong> Encryption</a></li><li><a href="../lore/hacking_hardware.html"><strong aria-hidden="true">2.4.</strong> Hacking Hardware</a></li><li><a href="../lore/intrusion_countermeasures.html" class="active"><strong aria-hidden="true">2.5.</strong> Intrusion Countermeasures</a></li><li><a href="../lore/matrix_infrastructure_and_topology.html"><strong aria-hidden="true">2.6.</strong> Matrix Infrastructure and Topology</a></li><li><a href="../lore/growing_up_wireless.html"><strong aria-hidden="true">2.7.</strong> Growing Up Wireless</a></li><li><a href="../lore/technomancers.html"><strong aria-hidden="true">2.8.</strong> Technomancers</a></li><li><a href="../lore/sprites.html"><strong aria-hidden="true">2.9.</strong> Sprites</a></li></ol></li><li><a href="../crunch.html"><strong aria-hidden="true">3.</strong> Crunch</a></li><li><ol class="section"><li><a href="../crunch/dice_pools.html"><strong aria-hidden="true">3.1.</strong> Dice Pools</a></li><li><a href="../crunch/skills.html"><strong aria-hidden="true">3.2.</strong> Skills</a></li><li><a href="../crunch/matrix_architecture.html"><strong aria-hidden="true">3.3.</strong> Matrix Architecture</a></li><li><a href="../crunch/matrix_actions.html"><strong aria-hidden="true">3.4.</strong> Matrix Actions</a></li><li><a href="../crunch/matrix_attributes.html"><strong aria-hidden="true">3.5.</strong> Matrix Attributes</a></li><li><a href="../crunch/programs_and_complex_forms.html"><strong aria-hidden="true">3.6.</strong> Programs and Complex Forms</a></li><li><a href="../crunch/technomancy.html"><strong aria-hidden="true">3.7.</strong> Technomancy</a></li><li><a href="../crunch/sprites.html"><strong aria-hidden="true">3.8.</strong> Sprites</a></li><li><a href="../crunch/equipment.html"><strong aria-hidden="true">3.9.</strong> Equipment</a></li></ol></li><li><a href="../bonus_houserules.html"><strong aria-hidden="true">4.</strong> Bonus Houserules</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Ends of The Matrix</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#intrusion-countermeasures-dont-go-in-there" id="intrusion-countermeasures-dont-go-in-there"><h1>Intrusion Countermeasures: Don't go in there</h1></a>
+<p><em>&quot;That server is ice cold and night black. Like your sister. Also you don't wanna touch it or things will get all hairy and nasty. Like your sister. Basically I'm telling you that I had sex with the IC on that server and it wasn't good.&quot;</em></p>
+<p>In ages past, computer security was in the relatively simple realm of keeping unwanted users from logging on to one's system. In 2071 that isn't really practical, and it became impractical for so long that terms like &quot;Firewall&quot; just don't even mean the same thing anymore. It's more like a &quot;Wall of Fire&quot;. The last time people seriously thought that they could just disconnect their computers from the Internet and be safe from hacking was in 2029, which is over 40 years ago from the standpoint of shadowrunners. Indeed, the majority of shadowrunners were <em>not even alive</em> the last time someone talked about network segregation as a valid defense against network attack. Keeping intruders <em>out</em> is a multi-tiered process of inaccessibility (because the most effective hacking procedures are essentially line of sight, moving your systems to <em>physically</em> inaccessible locations is actually a reasonable defense), and <em>actively fighting back</em>. You can't necessarily keep people from hacking in, but you can set fire to people's brains when they do it. Keep that in mind, because it's incredibly different from the way computers work in the modern world.</p>
+<p>Intrusion Countermeasures, or IC for short (pronounced &quot;ice&quot;), are an integral part of Shadowrun and always have been. There are some systems that the faint of heart simply do not go to because the programming there will fry your brain. This is deemed unfortunate, as most shadowrunners consider their brains to be their second favorite organ. IC scours a network looking for the influence of hackers and does a number of things to undo this as a problem. But before we really get in to talking about what IC can do, let's start by talking about what it <em>can't</em> do.</p>
+<a class="header" href="#ic-cant-team-up" id="ic-cant-team-up"><h2>IC can't Team Up</h2></a>
+<p><em>&quot;That IC looked like hundreds of bees.&quot;</em></p>
+<p>Computing power in Shadowrun is abstracted. We don't keep track of how many processor cycles you have dedicated to whatever processes. We don't even care. If IC is running on a system, it is protecting the entire system to the best of its own capabilities. It is not possible to run <em>another</em> copy of the IC to get better protection. Hell, you can't even benefit from having a copy of a <em>different</em> IC system protecting your system.</p>
+<p>IC is kind of like virus protection software. Running it is great, and it will ward off a number of potential threats. But running Norton and McAfee at the same time isn't helpful. If you have processing cycles to burn, you should get yourself an IC system of a <em>higher rating</em> rather than getting more copies with the same rating.</p>
+<p>In the Matrix, IC can as easily be rendered as a single bridge-keeping troll as by a pack of dogs. It's completely unimportant how “many” icons the IC has. IC is lots of individual instructions zooming through the network at high speed. It's scanning logs for illegal commands, it's scouring data sets looking for tampering, and if these all get represented as a series of monks copying books or a massive tiger sniffing for prey that means precisely jack diddly.</p>
+<p>Most importantly of all, in the instance where there are many devices running on a network together, the single best IC available defends the entire network and all the others don't do a god damned thing. The network as a whole is parallel processing in some ill-defined but extremely powerful fashion and problems anywhere in the network can potentially be detected. Hiding the data you are insinuating somewhere in the network where the IC won't recognize it as phony is the providence of Matrix Perception tests, not something that you as a player should have to work out based on network schema and individual device ratings.</p>
+<a class="header" href="#ic-cant-come-after-you" id="ic-cant-come-after-you"><h2>IC can't come after you.</h2></a>
+<p><em>&quot;Did you whizz on the electric fence?&quot;</em></p>
+<p>IC can't use any programs at a range greater than Connection. It can attack users, it can trace hackers, and it can unravel your Matrix signature. But it can't do any of that unless there is a current open connection between the system it is running on and your system. IC can send e-mail and do all kinds of other Matrix crap. If an IC discovers an intrusion attempt it can send a PM to other computers saying “Hey! Somebody is intruding into my system!” it can even send spam e-mail asking people to <em>pretty please</em> open up an active connection. But it can't offer any mechanical assistance to another system, nor can it attempt to hack itself a connection to a system that declines its offer.</p>
+<a class="header" href="#behind-the-scenes-why-not-allow-ic-to-reach-out-and-touch-someone" id="behind-the-scenes-why-not-allow-ic-to-reach-out-and-touch-someone"><h4>Behind the Scenes: Why not allow IC to reach out and touch someone?</h4></a>
+<p>Remembering that computing power is delineated completely arbitrarily, it is easy to see that one could just as easily define the display of pull-tab burritos as an empty network as one could define each of the Freshsene™ detectors for each of the flavor racks as empty networks. So if IC could make attacks at a signal or even handshake range, the world of Shadowrun would collapse almost instantly. Computing can be divided and subdivided as much as you want. If those subdivisions were each afforded an initiative count in battle the game would suffer tremendously as there would be no logical reason for there to be any finite limitations on armies of computer programs. Because we are trying to model the Matrix from <em>Virtual Realities</em> and not the Matrix from <em>Matrix 2: Electric Boogaloo</em>, having unstoppable armies of Agent Smith is unacceptable. So pretty much everything we're saying about technological specs and hardware limitations and such is flavor text to explain what is at its core a completely game mechanical concern. If we've overlooked something and you figure out some way to have IC operate at range other than Connection and still be consistent with what we wrote, just walk away and pretend you didn't.</p>
+<p>Presumably there is some additional technical constraint that is preventing you from doing that or something. Seriously. For the children.</p>
+<a class="header" href="#hurtful-ic-black-and-gray" id="hurtful-ic-black-and-gray"><h2>Hurtful IC: Black and Gray</h2></a>
+<p><em>&quot;I don't even know what that is. Our system is over there.&quot;<br />
+&quot;But... it's all on fire.&quot;<br />
+&quot;Yes. Yes it is.&quot;</em></p>
+<p>For all the limitations that IC has, it is still a quite fearsome opponent. Once a connection is open, even an empty network can send horrible pulses of energy across an open connection, very little in the way of calculations are required. And so it is that some of the most effective IC is also the simplest: it simply attempts to damage the intruders in some permanent fashion. A piece of IC that damages electronics is called &quot;Gray IC&quot; and a piece of IC that damages real people is called &quot;Black IC&quot;. Sometimes IC that merely traces and reports intruders or attempts to sever connections and call for technical support is called &quot;White IC&quot;, but most speakers just call it IC with no adjective.</p>
+<p>IC can also be used offensively. While a connection is open, the IC &quot;defending&quot; either network can send baleful signals up the connection to the other. A hacker who just wants to wreck things can indeed come with guns blazing and a pet dog who <em>also</em> has guns blazing.</p>
+<a class="header" href="#pseudo-ic-halberstams-babies" id="pseudo-ic-halberstams-babies"><h2>Pseudo-IC: Halberstam's Babies</h2></a>
+<p><em>&quot;I'm going to open up a can of whup ass. Figuratively. I mean, it's an actual can, but I won't actually be opening it.&quot;</em></p>
+<p>The limitations of IC only apply to the actions of the Firewalls of networks themselves. Very important facilities will oftentimes hire the services of real metahumans who are not restricted in these fashions at all, and behave exactly like a hacker because they <em>are</em> a real hacker (a real Hacker who happens to have the passwords set to log in to premade security accounts on just about every device and network in the facility before the action even begins). But some of the <em>really</em> shady projects go for a hybrid system: running networks on &quot;brains&quot; that are literally grown for the purpose.</p>
+<p>In Shadowrun's timeline, the first of these brain-in-a-jar systems came online in the early 2050s, which does in fact mean that some of the currently active systems will have been working for longer than some of the 2071 player characters have been alive. So these IC/Hacker hybrids are not new news or opaque legends to any hacker worth their salt. Levels of sapience for these brain-jar systems varies tremendously, with some being just like dwarfs who are even slower on their feet and others being essentially just like black boxes that generate the raw processing power that a combat hacking network needs if it is to project force beyond its own direct connections and nothing more.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../lore/hacking_hardware.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../lore/matrix_infrastructure_and_topology.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../lore/hacking_hardware.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../lore/matrix_infrastructure_and_topology.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

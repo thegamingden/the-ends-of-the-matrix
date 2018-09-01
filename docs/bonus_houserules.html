@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Bonus Houserules - The Ends of The Matrix</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A complete replacement for the Matrix rules of SR4.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="lore.html"><strong aria-hidden="true">2.</strong> Lore</a></li><li><ol class="section"><li><a href="lore/four_questions.html"><strong aria-hidden="true">2.1.</strong> Four Questions</a></li><li><a href="lore/perceiving_the_matrix.html"><strong aria-hidden="true">2.2.</strong> Perceiving The Matrix</a></li><li><a href="lore/encryption.html"><strong aria-hidden="true">2.3.</strong> Encryption</a></li><li><a href="lore/hacking_hardware.html"><strong aria-hidden="true">2.4.</strong> Hacking Hardware</a></li><li><a href="lore/intrusion_countermeasures.html"><strong aria-hidden="true">2.5.</strong> Intrusion Countermeasures</a></li><li><a href="lore/matrix_infrastructure_and_topology.html"><strong aria-hidden="true">2.6.</strong> Matrix Infrastructure and Topology</a></li><li><a href="lore/growing_up_wireless.html"><strong aria-hidden="true">2.7.</strong> Growing Up Wireless</a></li><li><a href="lore/technomancers.html"><strong aria-hidden="true">2.8.</strong> Technomancers</a></li><li><a href="lore/sprites.html"><strong aria-hidden="true">2.9.</strong> Sprites</a></li></ol></li><li><a href="crunch.html"><strong aria-hidden="true">3.</strong> Crunch</a></li><li><ol class="section"><li><a href="crunch/dice_pools.html"><strong aria-hidden="true">3.1.</strong> Dice Pools</a></li><li><a href="crunch/skills.html"><strong aria-hidden="true">3.2.</strong> Skills</a></li><li><a href="crunch/matrix_architecture.html"><strong aria-hidden="true">3.3.</strong> Matrix Architecture</a></li><li><a href="crunch/matrix_actions.html"><strong aria-hidden="true">3.4.</strong> Matrix Actions</a></li><li><a href="crunch/matrix_attributes.html"><strong aria-hidden="true">3.5.</strong> Matrix Attributes</a></li><li><a href="crunch/programs_and_complex_forms.html"><strong aria-hidden="true">3.6.</strong> Programs and Complex Forms</a></li><li><a href="crunch/technomancy.html"><strong aria-hidden="true">3.7.</strong> Technomancy</a></li><li><a href="crunch/sprites.html"><strong aria-hidden="true">3.8.</strong> Sprites</a></li><li><a href="crunch/equipment.html"><strong aria-hidden="true">3.9.</strong> Equipment</a></li></ol></li><li><a href="bonus_houserules.html" class="active"><strong aria-hidden="true">4.</strong> Bonus Houserules</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Ends of The Matrix</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#bonus-houserules" id="bonus-houserules"><h1>Bonus Houserules</h1></a>
+<p><em>&quot;This is how we do it in S C.&quot;</em></p>
+<a class="header" href="#character-generation-and-advancement-rules" id="character-generation-and-advancement-rules"><h2>Character Generation and Advancement Rules</h2></a>
+<a class="header" href="#bp-advancement" id="bp-advancement"><h3>BP Advancement</h3></a>
+<p>It is an undeniable fact that the Karma system of advancement fits rather poorly with the Build Point system of character creation. Some things that you might buy with BP cost more BP than they would with Karma (ex.: buying your Strength to 2 would cost 10 BP or only 6 Karma), while others cost tremendously more Karma than BP (example: buying a skill from 5 to 6 would cost 4 BP or 12 Karma). That leads to very real and very large discrepancies between characters who min/max their initial BP and those who don't. And frankly, that's bad. We <em>want</em> people to make organic looking characters rather than worrying over much about BP/Karma efficiency or any of that crap.</p>
+<p>There are two obvious ways to deal with that. You could either make people create their characters with Karma in the first place, or you could make people advance their characters by gaining additional BP. The former has optional rules which are either available from Serbitar or in the upcoming Runner's Companion, and you are welcome to use them from either source. Personally, I prefer to use the smaller and more linear numbers of BP Advancement, so that's what gets written up here.</p>
+<p>So here is how it works: your character is made with BP as normal, but when you would gain Karma you gain about 2/3 as many extra BP instead. I suggest that you usually not allow people to purchase ¥ or contacts with these BP, but even that rule is up for grabs (for example: if someone wanted to spend some BP to introduce a new NPC that was a childhood friend they were re-establishing contact with or something, that could b pretty cool). Some things in the game have costs listed only in Karma, and need to be converted back into BP. In general, these costs are simply half Karma, rounded up (5 -&gt; 3, 10 -&gt; 5, etc.). Exceptions follow:</p>
+<ul>
+<li>
+<p>Magic and Resonance do not cost extra BP to raise to the natural maximum. If your current maximum is 6, bringing Resonance to 6 costs 10 BP. If your current maximum is 8, then bringing it to 8 costs 10 BP. This is to prevent people from saving or losing double digit piles of BP depending on the order that they advanced their attributes and Initiations/Submersions.</p>
+</li>
+<li>
+<p>Initiation and Submersion cost the full value, and are not reduced. This is because under the normal rules you're looking at spending 21 Karma to raise Magic to 7 and 13 Karma for the Initiation. Now it's only 10 BP for the stat but still 13 BP for the initation (although you can still take groups and ordeals to lower costs by nearly half).</p>
+</li>
+<li>
+<p>Skill Group Transitive Property is now in effect. This means that if you buy one skill up in a skill group, and you buy another skill up in a skill group, that you can buy up the rest of the skill group to match at the remaining cost. Since all the math is linear, we no longer have to screw people who break up their skill groups and later want to put them back together.</p>
+</li>
+</ul>
+<a class="header" href="#alternate-costs" id="alternate-costs"><h3>Alternate Costs</h3></a>
+<a class="header" href="#metatype" id="metatype"><h4>Metatype</h4></a>
+<p>Seriously, being big and strong isn't even super important. All four basic metatypes are pretty balanced with each other. And all of them should cost the same amount of Build Points at character generation. That amount is 25 BP.</p>
+<a class="header" href="#attributes" id="attributes"><h4>Attributes</h4></a>
+<p>The game works slightly better if the final attribute point costs 20 points instead of 25.  Furthermore, the point beyond the racial maximum should cost 20 points as well. This eliminates some of the high end attribute shenanigans.</p>
+<p>Magic and Resonance should cost a flat 10 points whether they are the current maximum or not, and require Initiation/Submersion to get a new maximum (unlike other attributes, they cannot be purchased past the Racial Maximum).</p>
+<a class="header" href="#skills" id="skills"><h4>Skills</h4></a>
+<p>Skills cost way too much in the standard rules. I can draw you a diagram, but basically I think it's pretty obvious that if you spend 10 BP for +1 to some of your Agility related skills when you can spend the same 10 BP for +1 to all of your Agility related skills, then something is rotten in Denmark. My solution is to halve the costs of all skills.</p>
+<p>This puts us at:</p>
+<table><thead><tr><th align="left"> Item </th><th align="left"> BP Cost </th></tr></thead><tbody>
+<tr><td align="left"> Skill 1-6 </td><td align="left"> 2 BP/rating </td></tr>
+<tr><td align="left"> Skill 7 </td><td align="left"> 4 BP </td></tr>
+<tr><td align="left"> Skill Groups </td><td align="left"> 5 BP/Rating </td></tr>
+<tr><td align="left"> Specializations </td><td align="left"> 1 BP each </td></tr>
+<tr><td align="left"> Knowledge Skills </td><td align="left"> 1 BP/Rating </td></tr>
+</tbody></table>
+<a class="header" href="#qualities" id="qualities"><h4>Qualities</h4></a>
+<ul>
+<li><strong>Exceptional Attribute:</strong> This quality is unnecessary given the other revisions. It is better off removed.</li>
+<li><strong>Lucky:</strong> This quality is unnecessary given the other revisions. It is better off removed.</li>
+<li><strong>Astral Sight:</strong> This quality is extremely shitty. Removing it from the game entirely is too kind.</li>
+<li><strong>Aspected Magician</strong> Aspected Magician is a <em>positive</em> quality. Being an Aspected Magician costs 5 or 10 BP, and such characters begin play as a level 1 Initiate, having one metamagic and an enhanced Magic attribute cap. An Aspected Magician is a Magician except as noted below:
+<ul>
+<li><strong>Aspected Conjurers</strong> Cannot learn Sorcery skills, cast spells, or provide Counterspelling. They can astrally perceive but cannot astrally project. They can can use other magic skills (most notably Conjuring skills). This quality costs 10 points.</li>
+<li><strong>Aspected Sorcerers</strong> Cannot learn Conjuring skills, summon spirits, or Banish. They can astrally perceive but cannot astrally project. They can can use other magic skills (most notably Sorcery skills). This quality costs 10 points.</li>
+<li><strong>Path Aspect</strong> Must choose 2 categories of Magic and the associated spirits according to their tradition. The character may only cast spells or summon spirits of those two categories/types. They may still use Banishing and Counterspelling against any target. They may still conjure Watchers and Allies. They can astrally perceive but cannot astrally project. This quality costs 10 points.</li>
+<li><strong>Astral Aspect</strong> Cannot cast any spells on Physical Targets, nor can they conjure any spirit that has Possession or Materialization (Watchers are still okay). They can still cast Mana spells on Astral Targets. The threshold for their Assensing tests is reduced by 1. This quality costs 5 points.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Sample Tradition: The Miroku Ninja Clan</strong></p>
+<p>The Miroku Ninjas are very physically oriented magicians who interact with spirits which they regard as demons of strong desires called &quot;Shikima&quot;. Most Miroku are physical mages or aspected mages, with Path Aspects being very common. The Shikima come from their own metaplane, a terrible world filled with fighting, lust, and other powerful emotions.</p>
+<p>Most Miroku follow mentors that favor Health spells, and the most common Aspect allows Health and Manipulation spells. They are a materialization tradition.</p>
+<ul>
+<li><strong>Beast:</strong> Manipulation</li>
+<li><strong>Man:</strong> Health</li>
+<li><strong>Guardian:</strong> Detection</li>
+<li><strong>Plant:</strong> Combat</li>
+<li><strong>Guidance:</strong> Illusion</li>
+</ul>
+<a class="header" href="#adept-powers" id="adept-powers"><h4>Adept Powers</h4></a>
+<p>When the schedule for expected numbers got changed all around in SR4, Adepts apparently did not get the memo, in many cases keeping absolute costs as holdovers from books written in 1990. Some of those are not especially reasonable in the current environment (where, for example, an Adept does not get 6 power points for free).</p>
+<ul>
+<li><strong>Improved Ability</strong> This power should cost just .25 points regardless of the type of skill.</li>
+<li><strong>Improved Physical Attribute</strong> This is <em>way</em> too expensive. Sure it doesn't cost Essence, but it may as well, and having it cost <em>more</em> than the cheap and Essence unfriendly ware is off the hook. It should cost only .5/level. Even then it's pretty sketchy compared to the actual high end ware like delta grade Muscle Toner (.4 Essence for +4 to a physical attribute). But at least it doesn't come up on a blood test.</li>
+<li><strong>Improved Reflexes</strong> Similarly, this should be 1 power point per rank (max is still 3 of course).</li>
+<li><strong>Natural Immunity</strong> This ability is incredibly unattractive, a victim of the current power rules. Every level should reduce the <em>power</em> by one rather than increasing the resistance dicepool by one.</li>
+<li><strong>Pain Resistance</strong> Damage penalties are a lot less exciting than they used to be, as they no longer modify target numbers. Paying 1.5 Power Points for a conditional +1 die is just silly. Pain Resistance should reduce damage modifiers rather than altering the number of effective damage boxes you've sustained. So a character with Rating 2 Pain Resistance should be able to sustain 6 boxes of damage with no penalty.</li>
+<li><strong>Distance Strike</strong> I happen to know that the authors were <em>way</em> too cautious on this one. This is a game where people have guns, the ability to punch someone from across the room is kind of assumed. 2 Power Points is completely absurd, and was unfortunately deliberately chosen to screw people who wanted this power for thematic reasons. It should cost .5 Power Points, and it's really not that exciting even then.</li>
+<li><strong>Elemental Strike</strong> There is absolutely no reason to keep people from combining this with distance strike, that was just simple asshattery.</li>
+<li><strong>Gliding</strong> This costs too much, and should be reduced to a .5 power.</li>
+<li><strong>Iron Guts</strong> No idea why this happened when Natural Immunity exists. The new version costs .5 and gives the character straight Immunity to Ingested Toxins.</li>
+<li><strong>Iron Lungs</strong> 30 seconds is physically impressive for a normal human mortal, but seriously this is a world with compressed air tanks an Oxygenate spells. The new version costs .5 Power Points and straight up lets the adept get by without breathing at all.</li>
+<li><strong>Quick Draw</strong> This power straight up does not exist. People can just <em>do</em> this in Shadowrun 4th edition, there is no reason for a power to even exist.</li>
+<li><strong>Traceless Walk</strong> This costs too much and should be reduced to a .5 power.</li>
+<li><strong>Wall Running</strong> This costs too much and should be reduced to a .5 power.</li>
+</ul>
+<a class="header" href="#spirit-allies" id="spirit-allies"><h4>Spirit Allies</h4></a>
+<p>The linear Ally costs lead to some deeply unfortunate things happening at high Forces. I know, I wrote the Spirit Ally rules with a non-linear cost and they were changed in editing and that was a <em>bad thing</em>. A better price scheme would be:</p>
+<ul>
+<li><strong>Force:</strong> Force 1 Free with the Metamagic, Each additional Force Point costs 5 x Current Force. So getting a Force 5 Ally costs 0 + 5 + 10 + 15 + 20 = 50 BP</li>
+<li><strong>Powers and Skills:</strong> 3 points each.</li>
+<li><strong>Spells:</strong> 2 for known, 3 for unknown.</li>
+<li><strong>Rituals of Change:</strong> Enhancing an Ally <em>should</em> cost exactly the same as conjuring an ally in the first place. I know why the alternate costs happened, but it was wrong.</li>
+</ul>
+<a class="header" href="#alternate-resolution-rules" id="alternate-resolution-rules"><h2>Alternate Resolution Rules</h2></a>
+<a class="header" href="#spirit-allies-1" id="spirit-allies-1"><h3>Spirit Allies</h3></a>
+<p>The spirit ally rules I wrote got mangled by well-meaning but ultimately confused editing. I mean seriously, Spell Binding? Why is that even in there (I know why, but's it's still dumb enough to allow a rhetorical question)? So to get things back on track, make the following adjustments:</p>
+<ul>
+<li>Materialization Allies should have a stat line. Pick the stat line of the type of spirit it supposedly is based n its Native Plane, and use that. So if you have an Earth Spirit ally, it will have a lot of Strength and a low Agility.</li>
+<li>Remove Aid Sorcery, Spell Binding, and Spell Sustaining from the list of services. The &quot;Aid Sorcery and Aid Study&quot; heading on page 105 of Street Magic should apply only to Aid Study.</li>
+<li>Allies should do what they used to do: provide a dicepool bonus to Magic dicepools while within LOS and Magic x 10 meters.</li>
+</ul>
+<a class="header" href="#behind-the-scenes-what-the-heck" id="behind-the-scenes-what-the-heck"><h4>Behind the Scenes: What the Heck?</h4></a>
+<p>Giving a bonus to all Magic sounds like a big deal, because it <em>is</em> a big deal. It's just like having an expensive Power Focus that you can have in addition to your normal Power Focus. And that's very powerful. But it's also very simple to explain, and frankly not as powerful as some of the many valid interpretations of whatever Rob intended to happen when he hashed up the Ally services to use normal services. I mean seriously, Ally spirits <em>might</em> have been supposed to act as an unlimited number of strength infinity sustaining foci. I can't even tell. Spell Sustaining, Spell Binding, and Aid Sorcery don't really work well for a spirit that has no spell category assignment and no services, that's why Free Spirits <em>can't do those things</em>.</p>
+<a class="header" href="#hardened-armor" id="hardened-armor"><h3>Hardened Armor</h3></a>
+<p>Hardened Armor's all or nothing approach is unfortunate. A better system is to have Hardened Armor provide half its rating in automatic damage resistance hits, and half its rating in regular damage resistance dice. AP reduces the automatic hits <em>first</em>, making a good AP value much more important against Hardened Armor.</p>
+<p>The only things in the game that really have Hardened armor are Spirits and Drones though. Using this rule, Drones have about the right level of armor. However, Spirits still have a little too much armor. So Spirits just get auto-hits on soak equal to their Force without the armor dice as well (though they do roll Body dice).</p>
+<a class="header" href="#exotic-weapon-skills" id="exotic-weapon-skills"><h3>Exotic Weapon Skills</h3></a>
+<p>The Shadowrun Weapon skills are too specialized across the board (recall that this is a game where driving a motorcycle or a big rig with a steering wheel or a joystick is all the same skill), but the only place where this is genuinely a <em>problem</em> is the Exotic Weapon skills, which flat don't make sense. I mean seriously, who is going to take an Exotic Weapon skill in an improvised weapon? That fails basic interactivity tests. The best answer is to have weapons all fall into the basic weapon skills, even if that's kind of a stretch. Then, have some weapons be &quot;Exotic&quot; which means that people suffer a -1 dicepool penalty when using them <em>unless</em> they happen to specialize in it. So congratulations, a Shield Bash is a &quot;club&quot;, a glaive is a &quot;blade&quot;, a set of fangs is &quot;unarmed combat&quot;, a flare gun is a &quot;heavy weapon&quot; and so on. There is also a new melee combat skill called &quot;Flexible Weapons&quot; and it's part of the Close Combat Group.</p>
+<a class="header" href="#saving-time-on-extended-tests" id="saving-time-on-extended-tests"><h3>Saving Time on Extended Tests</h3></a>
+<p>Extended Tests can be quite time consuming, and often rather pointless. A good solution to this is to simply make a single test and multiply. One gets the same result in terms of total time spent (although individual tests will be much longer or shorter often enough), but it saves a lot of time at the game table.</p>
+<a class="header" href="#spirits-and-sprites" id="spirits-and-sprites"><h3>Spirits and Sprites</h3></a>
+<p>Spirits and should have skill ranks equal to half their force, not their full force. This helps keep large force spirits in a sane range.</p>
+<p>Spirits also should not have Edge equal to their Force, because that's crazy when they go away at sunset and they could just spend it like water. Instead, an unbound spirit has an Edge of 1, and a bound spirit has an Edge equal to half its Force. Free spirits have an Edge based on when they broke free (Street Magic, 106).</p>
+<p>Because the rules for Sprites and AIs are intended to be essentially the same as for Spirits except where noted, they should also use the same skill rank and Edge rules given here.</p>
+<a class="header" href="#encryptions-dont-work-that-way-goodnight" id="encryptions-dont-work-that-way-goodnight"><h1>&quot;Encryptions Don't Work That Way! Goodnight!&quot;</h1></a>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="crunch/equipment.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="crunch/equipment.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

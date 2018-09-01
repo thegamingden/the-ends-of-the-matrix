@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Growing Up Wireless - The Ends of The Matrix</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A complete replacement for the Matrix rules of SR4.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="../lore.html"><strong aria-hidden="true">2.</strong> Lore</a></li><li><ol class="section"><li><a href="../lore/four_questions.html"><strong aria-hidden="true">2.1.</strong> Four Questions</a></li><li><a href="../lore/perceiving_the_matrix.html"><strong aria-hidden="true">2.2.</strong> Perceiving The Matrix</a></li><li><a href="../lore/encryption.html"><strong aria-hidden="true">2.3.</strong> Encryption</a></li><li><a href="../lore/hacking_hardware.html"><strong aria-hidden="true">2.4.</strong> Hacking Hardware</a></li><li><a href="../lore/intrusion_countermeasures.html"><strong aria-hidden="true">2.5.</strong> Intrusion Countermeasures</a></li><li><a href="../lore/matrix_infrastructure_and_topology.html"><strong aria-hidden="true">2.6.</strong> Matrix Infrastructure and Topology</a></li><li><a href="../lore/growing_up_wireless.html" class="active"><strong aria-hidden="true">2.7.</strong> Growing Up Wireless</a></li><li><a href="../lore/technomancers.html"><strong aria-hidden="true">2.8.</strong> Technomancers</a></li><li><a href="../lore/sprites.html"><strong aria-hidden="true">2.9.</strong> Sprites</a></li></ol></li><li><a href="../crunch.html"><strong aria-hidden="true">3.</strong> Crunch</a></li><li><ol class="section"><li><a href="../crunch/dice_pools.html"><strong aria-hidden="true">3.1.</strong> Dice Pools</a></li><li><a href="../crunch/skills.html"><strong aria-hidden="true">3.2.</strong> Skills</a></li><li><a href="../crunch/matrix_architecture.html"><strong aria-hidden="true">3.3.</strong> Matrix Architecture</a></li><li><a href="../crunch/matrix_actions.html"><strong aria-hidden="true">3.4.</strong> Matrix Actions</a></li><li><a href="../crunch/matrix_attributes.html"><strong aria-hidden="true">3.5.</strong> Matrix Attributes</a></li><li><a href="../crunch/programs_and_complex_forms.html"><strong aria-hidden="true">3.6.</strong> Programs and Complex Forms</a></li><li><a href="../crunch/technomancy.html"><strong aria-hidden="true">3.7.</strong> Technomancy</a></li><li><a href="../crunch/sprites.html"><strong aria-hidden="true">3.8.</strong> Sprites</a></li><li><a href="../crunch/equipment.html"><strong aria-hidden="true">3.9.</strong> Equipment</a></li></ol></li><li><a href="../bonus_houserules.html"><strong aria-hidden="true">4.</strong> Bonus Houserules</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Ends of The Matrix</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#growing-up-wireless-culture-and-the-matrix" id="growing-up-wireless-culture-and-the-matrix"><h1>Growing Up Wireless: Culture and the Matrix</h1></a>
+<a class="header" href="#move-your-body-traveling-in-the-flesh" id="move-your-body-traveling-in-the-flesh"><h2>Move Your Body: Traveling in the Flesh</h2></a>
+<p>It is an undeniable fact that the differences drawn between rich and poor in the Shadowrun world are stark and appalling. It's part of the dystopic charm. But the worlds of rich and poor are actually far away from one another in <em>space</em> in addition to any other adjective you choose to use. See, if you're a corporate citizen and you want to visit another corporate citizen, you just do it. There's a high speed tube from your arcology to the airport, and you can just wave your credstick and get on a high speed transport to another airport somewhere else in the world and get on a high speed tube from there to another arcology. On the flip side: if the same Aztechnology citizen wanted to go out and visit someone in the Redmond Barrens, a place which he can physically <em>see</em> from the window in his apartment, he would need to go to customs and be screened to make sure he wasn't taking classified corporate property out of the compound; he'd need to rent a vehicle and get a validation for it to enter Z zones; he'd need to drive it through non-gridlinked areas where some of the streets have actual barricades set up on them and many others have paralyzing foot traffic clogging them. Even not including the bureaucracy, it takes more physical time to drive across town into a place in the Redmond Barrens than it does when traveling from the Aztechnology Pyramid in Seattle to the Aztec Pyramid in Tenochtitlan. Seriously.</p>
+<p>Airplane security is basically a thing of the past in 2071 if you happen to be a corporate citizen. If you're walking in from corporate controlled territory, the RFIDs on any weapons you happen to be carrying will tell the computer system whether they are allowed to be taken off premises, which is the only thing that <em>really</em> matters. A corporate wage slave can pretty much walk onto an airplane with automatic weaponry if for some reason they decide that this is what they want to do. The assumption is that anyone doing that is probably required by their job to  carry such weaponry, and it's just not worth anyone's <em>time</em> trying to keep people from breaking airplanes from the inside. It's just too easy to destroy them from the outside. Airplanes stay in the sky because international mobility is pretty much in everyone's interests these days.</p>
+<a class="header" href="#equipment-spotlight-spirit-enhanced-flight" id="equipment-spotlight-spirit-enhanced-flight"><h4>Equipment Spotlight: Spirit Enhanced Flight</h4></a>
+<p>Yeah, when you use <em>Movement</em> on an airplane, it's <em>fast</em>. But <em>how</em> fast?</p>
+<p>The answer is <em>ridiculously fast</em>. To be precise, a Federated-Boeing 7X1 passenger plane has a &quot;base&quot; speed of about 900 kilometers per hour. A corporate standard is to call upon the services of Force 5 spirits for international flights, which bumps the speed up to 4500 KPH. That means that it takes literally one hour to fly from Seattle to Boston, and 2 hours to fly to Tokyo. And yet, it still takes 3 or 4 hours to drive across a major sprawl. A corporate citizen is <em>literally</em> closer to other corporate citizens anywhere on Earth than they are to poor people who are nominally in the same city that they are in.</p>
+<a class="header" href="#matrix-dialects-133-and-lol" id="matrix-dialects-133-and-lol"><h3>Matrix Dialects: 133+ and lol</h3></a>
+<p><em>&quot;N0 U&quot;</em></p>
+<p>Every metahuman literally creates a new language internally as they grow from a baby to a child, and they do so based upon the inputs they receive growing up. Because the inputs are generally from people around them who speak to and <em>mostly</em> understand one another, it is a historical fact that children generally grow up speaking a language that is similar enough to those around them that misunderstandings are rare. But misunderstandings <em>do</em> happen, and languages <em>do</em> change over time because each newly created language in the brain of each child is a new and somewhat mutated version of the languages that came before. Metahumans who have a need to communicate can create pidgins out of the languages they speak and children who grow up amongst these speakers will form true languages out of those inputs and such is the manner in which new languages are formed.</p>
+<p>So what does this mean for people who grow up in a world where concepts can be literally projected directly into the brain, and essentially instantaneous communication exists around the world? Mostly it means that language continues to evolve and change, only now it does so across cultural groups which have little or nothing to do with geographical distribution or historical parental languages. Over the last decades, several dialects have sprung up that are formed entirely from inputs passed to children through the Matrix. Adverts, trans-continental game pidgins, and matrix flame wars are as good a scaffold for children to form their lingual formations as anything else. So it is that the world has seen the creation of 133+ and lol. 133+ has several roots going back as far as the telegraph, but most proximately is a combination of text pidgins created for the limitations of archaic commlinks and obfuscatory hacker slangs created specifically to limit comprehension and confuse older search engines. lol is a language composed primarily of stilted matrix humor and advertising jingles.</p>
+<p>There is a pervasive idea amongst the speakers of older languages that the people who speak and read these new languages are illiterate and uneducated. And while many of them actually <em>are</em> uneducated, literacy rates of this younger generation is actually incredibly high. It's just that the accepted spelling in lol is so different from the spelling in English or Nipponese that the assumption that the lol speakers are writing &quot;wrong&quot; is very common. But lol speakers do spell consistently with themselves and thus any linguist will tell you that they are not writing badly, merely <em>differently</em> (although many would grit their teeth before admitting to this).</p>
+<a class="header" href="#saying-hello-how-are-you-around-the-world" id="saying-hello-how-are-you-around-the-world"><h4>Saying &quot;Hello. How are you?&quot; around the world:</h4></a>
+<ul>
+<li><strong>lol:</strong> &quot;O hai. U Haz a flava?&quot;</li>
+<li><strong>133+:</strong> &quot;Bak. Stats?&quot;</li>
+<li><strong>Barrio:</strong> &quot;Yo. Ssappening?&quot;</li>
+<li><strong>Buzz:</strong> &quot;Hey you! Do you want to talk about you?&quot;</li>
+<li><strong>Otaku:</strong> &quot;Konichiwa! Ogenki desu ka?&quot;</li>
+</ul>
+<a class="header" href="#consumer-culture-you-are-what-you-buy" id="consumer-culture-you-are-what-you-buy"><h2>Consumer Culture: You are what you Buy</h2></a>
+<p><em>&quot;Have you been feeling the inadequacy of your NERPS lately?&quot;</em></p>
+<p>Corporations keep lists of spending records attached to everyone's SINs, and they buy, sell, and trade this information back and forth amongst each other a million times a second. And the reason for all of this is to better target marketing campaigns and more precisely gauge production runs of future goods and services. But these purchasing records have gained a life of their own, and become the primary tool by which the veracity of an identity is measured. A person who doesn't buy things clearly <em>does not really exist</em> in the eyes of the law, and even in the eyes of other people. A person who drops out of the continuous rat race and goes and joins an urban tribe or whatever may well find that in as little as a few <em>weeks</em> their SIN will have been tagged as a possible fake all over the Matrix because of the lack of financial activity. And any such tags have a tendency to accumulate and reinforce themselves. A person's SIN can become literally unusable in a shockingly short amount of time if one doesn't continuously purchase goods and services in an extractable pattern.</p>
+<p>And the flip side of this of course is that if one's purchases <em>are</em> predictable, that the same corporations whose data mining operations hold the stick of ostracization over everyone's life also hold the &quot;carrot&quot; of tailoring one's adverts to conform to their expected lifestyle choices. That is, from the first time you start out buying groceries and working at a Stuffer Shack, every time you walk into a Cameron's you'll see advertisements for basic and luxury goods that you might plausibly want popping up on displays pointed at you as well as projected into your AR experience as advertisement Arrows (depending upon your Firewall settings). This frankly may not seem like much of a carrot, and indeed many of the Neo-Anarchists and Pinkskins argue that it is not. There are a number of cultures and regions where this sort of practice is heavily discouraged by means running from legal injunctions to sabotage. And people in these areas are considered by the rest of the world to be <em>SINless</em> even if they aren't in their region of choice.</p>
+<p>It is important to note that the strength of product liability and anti-trust legislation in 2071 is laughable. Major corporations make objects as safe or as dangerous as they think that the market will bear. If it weren't for the awesome power of modern medicine, the awe-inspiring number of carcinogens that ordinary people are exposed to on a daily basis would shorten lives tremendously. And indeed, the moment one steps outside the confines of reasonably affluent neighborhoods, the life expectations are offensively tiny. A random selection of sodas off the shelf would find many that were quite horrendous for health, but none of the cans would feel any need to mention this fact. Ironically, competition limiting rules in place at the corporate court that prevent most corporations from negative advertising campaigns make it highly difficult for anyone to raise a fuss about such things. If Wuxing's new softdrink is both addictive and toxic, the other major corporations (and their affiliates) would not report that fact for fear of running afoul of unfair competition clauses, although they might well arrange for freelancers to deliver the research data to independent news groups.</p>
+<a class="header" href="#life-with-rfid-its-almost-like-trust" id="life-with-rfid-its-almost-like-trust"><h3>Life With RFID: It's Almost Like Trust</h3></a>
+<p><em>&quot;Do you accept the charges, punk? Well, do you?&quot;</em></p>
+<p>The RFID is a very tiny chip that gives a very small amount of data out wirelessly and continuously. Very small amounts of data for the 2070s are surprisingly large compared to what a reader in the 2010s would think of the term, and so it is that a casual perusal of the RFID in a can of peas will tell you how much they cost, every warehouse they have ever been stored in, when and where they were canned, how many peas are supposedly contained, and so on and so forth.</p>
+<p>All consumer items contain RFIDs, and it is in this manner that items are purchased. The days of waiting in line to &quot;check out&quot; are long gone. Instead one merely picks out what they want and walks out with it, with the RFIDs on all the goods alerting the store's system that they are leaving and the store responding by requesting a monetary transfer to cover the costs of everything. If you, or anyone else, sends the requisite funds, all the items are tagged as sold both in the store database and on the RFID tags themselves. Getting RFID tags to mark themselves as sold without help from the store is supposedly essentially impossible, because each one is equipped with a short and completely arbitrary one time pad that would cover that particular change, but of course the realities of high density signal interaction is that one can directly flip the requisite bits on the RFID without sending the appropriate password (which of course you will never ever guess unless you outlive the sun).</p>
+<p>And of course, sometimes things <em>are</em> mislabeled. Sometimes to hilarious effect, and there are matrix hosts given over entirely to AR stills from people getting sent Arrows from goods with the wrong ID tag (last month's winner was from a hospital in which a baby was mistakenly marked as a sharps receptacle: &quot;Please Insert Used Needles In Mouth&quot;). But human error in slapping RFIDs around is no worse than human error in running things through a scanner at a check-out counter, and the amount of labor saved by just having a lot less people working retail far outweighs any additional shrinkage from having people occasionally able to walk out with goods that got shelved without proper RFIDs. And yes, there is still work for bag boys even if cashiering is a lost art. Many classier retail outlets will giftwrap your purchases, and big box stores will help you get your stuff into bags.</p>
+<a class="header" href="#equipment-spotlight-tag-eraser" id="equipment-spotlight-tag-eraser"><h4>Equipment Spotlight: Tag Eraser</h4></a>
+<p>The tag eraser is a handheld device that generates a short burst of magnetic power that effectively destroys an RFID. That means that consumer goods can have their entire history, even their very existence, removed from reality. Note that while this is doubtlessly an important part of shoplifting, it does not by itself allow you to walk out of a store with your arms weighted down with the latest trainers and consumer electronics. A store front's system maintains reasonably constant contact with all of the stuff in it, so if you just erase the tags the store's network will notice that the items vanish from internal inventory and the chase is on. So while a tag eraser is necessary to throwing interested security off your trail, it won't keep them from sniffing after you in the first place.</p>
+<p>Tag Erasers are an important part of the backbone of modern commerce. RFIDs of an essentially temporary nature are put on things (especially perishables) all the time, and the RFIDs are purged to reduce noise clutter (or just shoved off into a corner where the original users don't notice them). Anybody who works in any industry which has &quot;an inventory&quot; (which, when you think of it, is most of them) has a perfectly valid reason to have a tag eraser. But of course, the uses for crime are so intense that the police look askance at anyone who has one on their person, especially if they aren't actually working at a stuffer shack or warehouse at the time.</p>
+<a class="header" href="#enforcing-the-matrix-i-fought-the-laws" id="enforcing-the-matrix-i-fought-the-laws"><h2>Enforcing the Matrix: I fought the Law(s)</h2></a>
+<p><em>&quot;No! <strong>You're</strong> off the case!&quot;</em></p>
+<p>The rules governing the Matrix are bewildering and perplexing. Ideally, whoever holds jurisdiction over the location where actual hardware had signal passed into it holds sway over the definition, investigation, and prosecution of crime. Mix in the fact that many matrix actions (especially data searches) involve hundreds or thousands of physical machines, and that technically any device that a AAA corp has designated as a &quot;major&quot; installation is extra-territorial corporate property and you've got a recipe for bureaucratic gesticulation that is hard to even imagine. Basically what it comes down to is that almost anything you do on the matrix is technically illegal somewhere, especially if you're performing data searches. The Sixth World has a lot of authoritarian hellscapes in it, and almost any information you want is probably contraband <em>somewhere</em>, and your computational actions will probably end up sending signal into and through some of those places, meaning that you've broken the law of someone with every blink and breath.</p>
+<p>Of course, in practice this is merely paralytic. The fact that the Tír na nÓg theocracy has a number of portions of Irish history as criminal offenses to even talk about has little effect on a person in the United Netherlands researching Celtic culture even though their matrix signals <em>will</em> doubtlessly be transmitted into Tír territorial matrix hubs many times. Sending law enforcement contractors after whoever breaks these laws is usually not in the interests of anyone. In a world where virtually all activity is criminalized, it's very much like nothing is against the law. Except that occasionally people are sent to the Gulag for indeterminate amounts of time in order to somehow set an example to a fearful and perplexed populace.</p>
+<a class="header" href="#a-god-from-the-machine-the-grid-overwatch-division" id="a-god-from-the-machine-the-grid-overwatch-division"><h3>A GOD from the Machine: The Grid Overwatch Division</h3></a>
+<p><em>&quot;I <strong>am</strong> the Law.&quot;</em></p>
+<p>The corporate court has their own pet matrix enforcement division, called the Grid Overwatch Division. Their jurisdiction is nominally any matrix crime which &quot;concerns&quot; two or more voting members of the corporate court. They answer directly to the Corporate Court, but each individual officer is put forward originally by a specific AAA corp, and honestly a fair number of them are spies.</p>
+<p>The GOD has an extremely high opinion of itself, as do most of the spiders in their employ. They have some impressively pretentiously named subunits (such as the Artificial Resource Management division, the ARM of GOD. Eyerolls are appropriate at this juncture). There are a number of things holding GOD back though, which is great news for shadowrunners. The most obvious of course is that each GOD officer is sent to the agency from a corporation, which means that while they are very good they are specifically <em>not</em> the top talent of their home corp (top talent is kept in-house). And the other part is that the very nature of their jurisdiction leaves them in bureaucratic limbo constantly. Any event which concerns two or more AAA corporations is usually politically sensitive, and corporations are often lethargic when it comes to actually cooperating with the agency.</p>
+<a class="header" href="#wria-the-world-recording-industry-army" id="wria-the-world-recording-industry-army"><h3>WRIA: The World Recording Industry Army</h3></a>
+<p><em>&quot;You wouldn't steal a policeman's helmet, would you?&quot;</em></p>
+<p>One of the few organizations that is actually willing to pursue the massive number of seemingly minor matrix offenses which come like a driving rain against the precepts of modern society is the World Recording Industry Army. They are a mercenary force hired by a conglomerate of intellectual property producers called the World Recording Industry Association (which is conveniently also abbreviated as WRIA). They have dubious jurisdiction and pay even more dubious attention to it. The WRIA very publicly executes people with large caliber weaponry for pirating software. The concept is that if uniformed men burst into peoples' homes and shoot them in the back of the head for sharing music files, that intellectual property will globally be safeguarded. In reality, this seems to have little effect on world wide software piracy, but once an organization like this has actually killed people, it is hard to even imagine them admitting their mistake and doing something else.</p>
+<p>Not all countries and corporations allow WRIA hit teams on their property. Others allow them only with restrictions. For example, the UCAS recognizes the <em>enforcement</em> rights of the WRIA to shoot people down in the street for software piracy, but it does not recognize its <em>investigative</em> authority in their territory. Which means that technically the WRIA is supposed to wait around until the UCAS government tells them that someone has been pirating simsense chips and <em>then</em> they can go in guns blazing. Aztlan gives the WRIA unlimited access to parts of the Yucatan and the Panamanian Isthmus, and no access whatsoever to Tenochtitlan and the surroundings.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../lore/matrix_infrastructure_and_topology.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../lore/technomancers.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../lore/matrix_infrastructure_and_topology.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../lore/technomancers.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

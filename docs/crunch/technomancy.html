@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Technomancy - The Ends of The Matrix</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A complete replacement for the Matrix rules of SR4.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="../lore.html"><strong aria-hidden="true">2.</strong> Lore</a></li><li><ol class="section"><li><a href="../lore/four_questions.html"><strong aria-hidden="true">2.1.</strong> Four Questions</a></li><li><a href="../lore/perceiving_the_matrix.html"><strong aria-hidden="true">2.2.</strong> Perceiving The Matrix</a></li><li><a href="../lore/encryption.html"><strong aria-hidden="true">2.3.</strong> Encryption</a></li><li><a href="../lore/hacking_hardware.html"><strong aria-hidden="true">2.4.</strong> Hacking Hardware</a></li><li><a href="../lore/intrusion_countermeasures.html"><strong aria-hidden="true">2.5.</strong> Intrusion Countermeasures</a></li><li><a href="../lore/matrix_infrastructure_and_topology.html"><strong aria-hidden="true">2.6.</strong> Matrix Infrastructure and Topology</a></li><li><a href="../lore/growing_up_wireless.html"><strong aria-hidden="true">2.7.</strong> Growing Up Wireless</a></li><li><a href="../lore/technomancers.html"><strong aria-hidden="true">2.8.</strong> Technomancers</a></li><li><a href="../lore/sprites.html"><strong aria-hidden="true">2.9.</strong> Sprites</a></li></ol></li><li><a href="../crunch.html"><strong aria-hidden="true">3.</strong> Crunch</a></li><li><ol class="section"><li><a href="../crunch/dice_pools.html"><strong aria-hidden="true">3.1.</strong> Dice Pools</a></li><li><a href="../crunch/skills.html"><strong aria-hidden="true">3.2.</strong> Skills</a></li><li><a href="../crunch/matrix_architecture.html"><strong aria-hidden="true">3.3.</strong> Matrix Architecture</a></li><li><a href="../crunch/matrix_actions.html"><strong aria-hidden="true">3.4.</strong> Matrix Actions</a></li><li><a href="../crunch/matrix_attributes.html"><strong aria-hidden="true">3.5.</strong> Matrix Attributes</a></li><li><a href="../crunch/programs_and_complex_forms.html"><strong aria-hidden="true">3.6.</strong> Programs and Complex Forms</a></li><li><a href="../crunch/technomancy.html" class="active"><strong aria-hidden="true">3.7.</strong> Technomancy</a></li><li><a href="../crunch/sprites.html"><strong aria-hidden="true">3.8.</strong> Sprites</a></li><li><a href="../crunch/equipment.html"><strong aria-hidden="true">3.9.</strong> Equipment</a></li></ol></li><li><a href="../bonus_houserules.html"><strong aria-hidden="true">4.</strong> Bonus Houserules</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Ends of The Matrix</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#technomancy" id="technomancy"><h1>Technomancy</h1></a>
+<p><em>&quot;Frankly, I don't see why my existence should have to make sense. It is the providence of every sapient creature that they exist only after their creation and thus be inherently uncertain as to their original formation. It would, I think, be fundamentally unfair if you had certainty as to our origins just because you existed before us.&quot;</em></p>
+<p>The Deep Resonance has been kicking around for about a generation. Maybe longer if you believe some of the conspiracy theories. Deep in the Matrix there is a kind of music, and it seems to shape things as much or more than it is created by the hands of man. Technomancers are the latest result in the ongoing tale of the Deep Resonance. They can do things with the Matrix that others cannot. Considering that the average man on the street is literally a block out of which the Matrix is built, that makes people uneasy.</p>
+<a class="header" href="#resonance-or-dissonance-i-prefer-half-a-dozen" id="resonance-or-dissonance-i-prefer-half-a-dozen"><h2>Resonance or Dissonance? I prefer half a Dozen.</h2></a>
+<p><em>&quot;I want you to consider this combat shotgun very carefully before you tell me your opinions on Skub. Are you for or against? There is obviously, no middle ground here.&quot;</em></p>
+<p>The Deep Resonance does not explain itself. Technomancers &quot;hear&quot; it, and they have abilities that are beyond those of ordinary men. But are those abilities <em>because</em> of the Deep Resonance or <em>in spite</em> of the Deep Resonance? If their powers come from the DR, can they expand their skills by listening more to it or the places in the Matrix that it doesn't exist? Noone knows for sure, but many technomancers are willing to shiv each other over these and other questions. The discussions are essentially theological, as for one thing listening for the silences and listening for the notes actually means that you are listening just as hard to the Matrix as a whole and nothing has actually changed except your attitude to it. Very basically technomancers fall into &quot;Resonance&quot; camps and &quot;Dissonance&quot; camps. The Dissonance speakers believe that it is the ways in which information interference causes static and echoes that ultimately results in their powers. The Resonance speakers believe that it is the way that information feeds on itself and culminates in the creation of something of revolutionarily more complexity that somehow results in their powers.</p>
+<p>Who's right? I don't know. Maybe they are both wrong, or right. But game mechanically they all have the same abilities. These rules assume that your character is a Resonance speaker, but if you want to put a &quot;D&quot; instead of an &quot;R&quot; on your sheet that's fine. Your Dissonance attribute works exactly the same as the Resonance attribute of another technomancer. Other questions, such as whether the Deep Resonance wants something from you, whether the Resonance needs to be helped or fought, whether it is the Song or the Silence which should be described, whether other technomancers are a good sign, whether metahumanity should shed mortal existence and transcend into a digital existence, are all important questions that your character should have firm and possibly contradictory beliefs on. After all, technomancers <em>kill</em> each other over these and other questions. But they don't actually change anything on your character sheet, so we'll leave them to your imagination.</p>
+<a class="header" href="#streams" id="streams"><h2>Streams</h2></a>
+<p>A stream is a paradigm by which a technomancer views the Matrix and their own abilities. A stream is defined by the following choices:</p>
+<ul>
+<li><strong>Resonance or Dissonance?</strong> - this has no game mechanic effect, save that Resonance and Dissonance technomancers cannot teach each other complex forms unless they are in the same Network.</li>
+<li><strong>What Sprites?</strong> - Each stream has access to exactly 5 sprites that they can compile (out of the total of 10).</li>
+<li><strong>What Complex Forms are their Sprites associated with?</strong> - A stream's Sprites each have a 1:1 correspondence with a category of complex forms. These are the kinds of forms that a Registered Sprite can assist with using its Sustain Form, Assist Form, and Aid Study tasks. Sprites are associated with Analysis, Attack, Communications, Exploit, and Operations Complex Forms. No Sprites are associated with Compiling, Decompiling, or Registering Forms.</li>
+<li><strong>What Great Form Power?</strong> - If a technomancer learns Invoking, they get access to a single Great Form Power, which is determined by their stream, not by the Sprite type.</li>
+<li><strong>What the Fuck?</strong> - Technomancers are way off the deep end as far as possibilities for philosophical traditions go. Unlike the magicians, who were heralded by thousands of years of legend and already had premade magical traditions to fit themselves into, the technomancers are (apparently) new ground. If you thought the occasional aberrant magician had a <em>unique</em> world view you have never talked to a technomancer for even a short period of time. Because their worldviews are not wholly compatible. They don't have generations of philosophical argumentation to draw upon, they just do stuff. A lot of them reject previous thought. Like the transitive property of equality. This tempts a lot of other people to reject <em>them</em> as batshit crazy loons. But their stuff does work, so who knows?</li>
+</ul>
+<a class="header" href="#sample-stream-cyberadepts" id="sample-stream-cyberadepts"><h4>Sample Stream: Cyberadepts</h4></a>
+<p><em>&quot;Technology is not revered because it is <strong>wiz</strong> or <strong>cool</strong>, but because of what it allows the brain to perceive of the underlying reality that surrounds us.&quot;</em></p>
+<p>The oldest confirmed technomancer stream, the first recordings of a cyberadept emergence is in 2054. Cyberadepts have a belief that the Resonance is a manifestation of the &quot;Akashic Record&quot; - a collection of all knowledge that may or may not precede the events that it constitutes knowledge of. Cyberadepts believe that by tapping into the Resonance that one can get a glimpse of the Record. And then they have a tendency to schism over whether one is supposed to find out one's own destiny from the record and live up to it, or change the Record in order to make a more perfect world, or both.</p>
+<p><strong>Resonance</strong></p>
+<ul>
+<li><strong>Analysis Sprite:</strong> Sentry</li>
+<li><strong>Attack Sprite:</strong> Corruption</li>
+<li><strong>Communications Sprite:</strong> Archive</li>
+<li><strong>Exploit Sprite:</strong> Crack</li>
+<li><strong>Operations Sprite:</strong> Machine Sprite</li>
+</ul>
+<p><strong>Great Form Power:</strong> Akashic Recording</p>
+<a class="header" href="#sample-stream-pythagoreans" id="sample-stream-pythagoreans"><h4>Sample Stream: Pythagoreans</h4></a>
+<p><em>&quot;In pi the language of nature is clearly visible, the Resonance allows us to speak in this language, stripped of the analog that holds us back when using low density human tongues.&quot;</em></p>
+<p>The Pythagoreans believe in a universal and perfect math composed largely or entirely out of irrational numbers that they believe the world is written in like some cosmic mathematical blueprint. Then it starts being harder to understand as the rest of the philosophy has to do with listening intensely to the pure math and trying to find the &quot;Omega Symbol&quot; that supposedly makes everything make sense.</p>
+<p><strong>Resonance</strong></p>
+<ul>
+<li><strong>Analysis Sprite:</strong> Archive</li>
+<li><strong>Attack Sprite:</strong> Sentry</li>
+<li><strong>Communications Sprite:</strong> Voyeur</li>
+<li><strong>Exploit Sprite:</strong> Crack</li>
+<li><strong>Operations Sprite:</strong> Corruption</li>
+</ul>
+<p><strong>Great Form Power:</strong> Unmake</p>
+<a class="header" href="#sample-stream-travestites" id="sample-stream-travestites"><h4>Sample Stream: Travestites</h4></a>
+<p><em>&quot;Our creation is not art, it is anti-art. The so called logic that our progenitors believe that they built the Matrix with is a lie, and a dangerous one. It is imperative that the order be not only ignored, but actively sabotaged.&quot;</em></p>
+<p>Travestites believe that the Resonance is something that is at best an ill-omen. The goal is to fight against it, using extreme weirdness. Like the Dadaists before them, the Travestites are inherently distrustful of &quot;logic&quot; as well as established aesthetics on the ground that it is those things that got metahumanity into this position in the first place. Travestite performance art is hard to explain. They don't even bother trying to explain it most of the time. But it's supposed to be part of a larger &quot;anti-plan&quot; that will negate &quot;The Plan&quot; - something that they believe is desperately in need of negation.</p>
+<p><strong>Dissonance</strong></p>
+<ul>
+<li><strong>Analysis Sprite:</strong> Industry</li>
+<li><strong>Attack Sprite:</strong> Corruption</li>
+<li><strong>Communications Sprite:</strong> Fraud</li>
+<li><strong>Exploit Sprite:</strong> Flame</li>
+<li><strong>Operations Sprite:</strong> Machine</li>
+</ul>
+<p><strong>Great Form Power:</strong> Akashic Recording</p>
+<a class="header" href="#sample-stream-idealists" id="sample-stream-idealists"><h4>Sample Stream: Idealists</h4></a>
+<p><em>&quot;It is supreme hubris to believe that the world which our bodies interact with is in any way 'real' when it is clear that the Matrix existed long before humanity had any conception of math or even fire. Now that we have built our tower to the realer and more important realms of Resonance it is time overdue for our sublimation and rejection of the physical.&quot;</em></p>
+<p>Idealists hold to essentially pre-Aristotelian concepts of Eidos. The idea is that anything you perceive is actually a reflection of some greater and &quot;realer&quot; truth. The Idealists take this a step further and believe that individuals can transcend the universe and <em>become</em> more real. The ultimate goal is to make everyone and everything more real than it currently is, possibly several times.</p>
+<p><strong>Resonance</strong></p>
+<ul>
+<li><strong>Analysis Sprite:</strong> Archive</li>
+<li><strong>Attack Sprite:</strong> Sentry</li>
+<li><strong>Communications Sprite:</strong> Fraud</li>
+<li><strong>Exploit Sprite:</strong> Crack</li>
+<li><strong>Operations Sprite:</strong> Machine</li>
+</ul>
+<p><strong>Great Form Power:</strong> Puppetry</p>
+<a class="header" href="#sample-stream-cacophonists" id="sample-stream-cacophonists"><h4>Sample Stream: Cacophonists</h4></a>
+<p><em>&quot;It is not mere opposition, but the deliberate and total negation that we strive for. The Matrix must not be allowed to attain its destiny. Each voice must remain unique and discordant if it is to continue to exist.&quot;</em></p>
+<p>The Cacophonists see the Matrix in general and the Resonance in particular as being part of some horrible destiny that is even now playing out to wipe individual thought from the universe. It is their self appointed task to put a halt to this ghastly destruction. Radical individualism is supposed to upset the master plan that they believe they are fighting against. Each voice a discordant and unpredictable tirade the Cacophonists fight to make each person unique, whether they like it or not.</p>
+<p><strong>Dissonance</strong></p>
+<ul>
+<li><strong>Analysis Sprite:</strong> Voyeur</li>
+<li><strong>Attack Sprite:</strong> Flame</li>
+<li><strong>Communications Sprite:</strong> Flirt</li>
+<li><strong>Exploit Sprite:</strong> Fraud</li>
+<li><strong>Operations Sprite:</strong> Crack</li>
+</ul>
+<p><strong>Great Form Power:</strong> Unmake</p>
+<a class="header" href="#sample-stream-sinkers" id="sample-stream-sinkers"><h4>Sample Stream: Sinkers</h4></a>
+<p><em>&quot;Whose house? Entropy's house. And the House always wins.&quot;</em></p>
+<p>The Sinkers view the world as something which is collapsing from an ordered state to a disordered state. Thus, they believe that the Resonance is a manifestation of the underlying structure of the universe coming undone at the seams. It is, they believe, their natural and necessary task to spread this chaos and unravel reality further. When the Resonance is all, there will be naught but icy blackness here and to infinity. Apparently that's a good thing.</p>
+<p><strong>Dissonance</strong></p>
+<ul>
+<li><strong>Analysis Sprite:</strong> Industry</li>
+<li><strong>Attack Sprite:</strong> Corruption</li>
+<li><strong>Communications Sprite:</strong> Archive</li>
+<li><strong>Exploit Sprite:</strong> Crack</li>
+<li><strong>Operations Sprite:</strong> Fraud</li>
+</ul>
+<p><strong>Great Form Power:</strong> System Failure</p>
+<a class="header" href="#learning-complex-forms" id="learning-complex-forms"><h2>Learning Complex Forms</h2></a>
+<p>Learning a Complex Form costs 3 BP (or 5 Karma if you use Karma). It requires a Logic + Compiling (3, 1 day) test. However, it also requires a Resonance Formula or a Teacher. A Registered Sprite can function as a teacher. Resonance formula are crazy nonsensical segments of massive, nonfunctional computer code. Teachers or Resonance Formulae from different streams grant a -3 dicepool penalty to the technomancer trying to learn, unless the teacher is a member of the same Network.</p>
+<a class="header" href="#technomantic-networks-tribes-cults-choirs-bands-or-gangs" id="technomantic-networks-tribes-cults-choirs-bands-or-gangs"><h2>Technomantic Networks: Tribes, Cults, Choirs, Bands, or Gangs</h2></a>
+<p><em>&quot;I'm not really seeing Cindy anymore because she had the whites of her eyes surgically removed. That and she only wanted to use me as a crystal seed to sublimate all of human consciousness into a post-singularity apotheosis. I couldn't hang with that either.&quot;</em></p>
+<p>Joining a Network of Technomancers is a very reasonable endeavor. It gives the same cost benefits towards Submersion as group joining does for magical initiations (20%). Joining a group also costs 3 BP (or 5 Karma if you use Karma). Getting into the group requires not only an invitation but also a successful Charisma + Registering (3) test. The prospective member gets +1 die for every stricture the group holds to. There is no limit to how many Networks a Technomancer can be in, and once she has successfully joined one it costs no BP to join another. Technomancers in the same Network can use each other's Resonance Nodes and can more easily teach each other Complex Forms.</p>
+<p>Technomancers in the same Network can send each other &quot;e-mails&quot; regardless of distance or intervening Background or terrain. It's kind of creepy, especially when Faraday Cages are involved.</p>
+<a class="header" href="#network-strictures" id="network-strictures"><h3>Network Strictures</h3></a>
+<p>When a Network is being founded, it may adopt a number of strictures. These paradoxically make joining the Network <em>easier</em>. There are two kinds of strictures, the first are <strong>Group strictures</strong> limit the technomancers who can join a Network. If a prospective member does not meet these requirements, they can't join no matter what they roll. And the other are <strong>Individual Strictures</strong> which limit the individual's actions once they are a member of the Network. Every time a Network member attempts to attain a new rank of Submersion, they must make a Willpower + Registering test with a threshold equal to the number of strictures they have violated. A technomancer's Submersion Grade acts as a negative dicepool for this test. Failure causes the technomancer to fail to Submerge (they don't spend points, they just fail to submerge), and get booted from the Network.</p>
+<a class="header" href="#group-strictures" id="group-strictures"><h4>Group Strictures</h4></a>
+<ul>
+<li><strong>Resonance/Dissonance</strong> - the network can only accept Resonance <em>or</em> Dissonance members. This is nearly universal. Not only does having this limitation count as a stricture, but <em>not</em> having it gives a -1 dicepool penalty to any character for their attempt to join the group.</li>
+<li><strong>Single Stream</strong> - the Network can only accept members of a single stream (note that every stream is only Resonance or Dissonance, so this stricture can be easily combined with the above).</li>
+<li><strong>EULA</strong> - When a technomancer joins the Network, they must agree to a powerful licensing agreement that will scorch them if they subsequently violate any strictures.</li>
+<li><strong>Demographics</strong> - A prospective member must adhere to a specific demographic group.</li>
+</ul>
+<a class="header" href="#individual-strictures" id="individual-strictures"><h4>Individual Strictures</h4></a>
+<ul>
+<li><strong>Non Disclosure</strong> The first rule about Fight Club.</li>
+<li><strong>Belief</strong> - Network members must adhere to the proper philosophical tenets. Violating groupthink violates strictures.</li>
+<li><strong>Meetings</strong> - Network members must get together once a week. These meetings need not be in person, but must include at least 3 members to count as a meeting.</li>
+<li><strong>Grinding</strong> - Network members must put in at least 14 hours of work into Network projects every week. Time can be banked from week to week at the rate of 3:1 hours. This stricture is therefore not considered violated until a character is 2 weeks behind on their grinding.</li>
+<li><strong>Subscription</strong> - Every member must fork up nuyen every month. Payents benefit the group as a whole.</li>
+<li><strong>Chain of Command</strong> - Members must acknowledge and defer to those in the Network with a higher rank.</li>
+<li><strong>Fraternity</strong> - Members are required to look out for each other and help each other move and such.</li>
+<li><strong>Ritual</strong> - There is an apparently arbitrary ritual that members of the Network have to do on a regular basis.</li>
+</ul>
+<a class="header" href="#echoes-echoes" id="echoes-echoes"><h2>Echoes. Echoes.</h2></a>
+<p><em>&quot;Do not leave the code of the virtuakinetics long in the dustbin, but delete it quickly and scour it bit by bit from the data stores of your system. Great holes secretly are digged where the fiber optic backbone ought to suffice, and things have learnt to walk that ought to crawl...&quot;</em></p>
+<p>Sigh. The Echoes made available in the Basic Book are with only one exception extremely lame. +1 to Biofeedback Filter program?  Seriously? Blow that. One normally gets a new Echo either by purchasing it outright for 15 BP (or Karma) or by going up in Submersion grade for 10 + 3x[New Grade]. And while they can reduce the cost of Submersion by 20% or 40% by joining a Network and/or taking an Ordeal (remember that the cost <em>reduction</em> rounds up, not the <em>cost</em>, so Submersion Grade 1 costs 7 points with a Network and an Ordeal). For that kind of bling, I don't want to be insulted with weak sauce like the stuff in the basic book.</p>
+<p>Here are some Echoes you might actually want:</p>
+<p><strong>Overclocking.</strong> The only good one in the basic book. You get Response +1 and +1 IP when in VR.</p>
+<p><strong>Aegis</strong> A technomancer with Aegis adds her Submersion Grade to the Signal Defense she provides.</p>
+<p><strong>Amplitude</strong> The technomancer's Signal is increased by 1. This Echo can be taken multiple times, and its effects stack.</p>
+<p><strong>Datamasking</strong> A Technomancer with Datamasking can make Matrix Stealth checks with Resonance + Hacking instead of Intuition + Hacking if she wants. In addition, any time she makes a Matrix Stealth check she adds her Submersion Grade.</p>
+<p><strong>Datamining</strong> Similar to Divining, the technomancer gleans information directly from the Deep Resonance in some suitably creepy and cryptic fashion. The base dicepool is Intuition +  Data Search.</p>
+<p><strong>Invoking</strong> A Technomancer with Invoking can upgrade Great Form Sprites during a Registering or Reregistering session. The dicepool is Resonance + Registering + Sprite's Rating. Fading has 50% more DV than the Registration would normally.</p>
+<p><strong>Listening</strong> A technomancer with Listening can <em>hear</em> the Deep Resonance well beyond where she is able to actually affect things. The technomancer can passively sense the presence of Background that is within a radius of her equivalent to 2 more than her actual Signal rating for high density signal. By concentrating for a complex action, she can attempt to individually pick out the presence and actions of Matrix devices in that area. The dicepool is Resonance + Electronic Warfare + Grade; and the information gained uses the Detection Spell results.</p>
+<p><strong>Squatting</strong> Similar to Geomancy, Squatting attunes a Background to the technomancer. Resculpting the Resonance in an area requires a Registering test and a lot of time.</p>
+<p><strong>Telecommuting</strong> Normally a technomancer cannot follow a connection between servers in VR if the intervening territory includes an area which doesn't get signal. A technomancer with telecommuting can do so by instantaneously existing on both sides of the connection and thus never getting cut off from the Deep Resonance. Rumors persist of a Deeper Echo based on this technique which is usable in combat somehow.</p>
+<p>Are these the only Echoes? Heck no! For one thing, there are Deeper Echoes which build off of existing Echoes like Advanced Metamagic build off of regular metamagics. You can fill them in yourself if needed, and remember that Technomancy is really young and new. The fact that people on the Matrix persist in spreading rumors of secret Echoes called <em>Banding</em>, <em>Whispering</em>, <em>Reset</em>, <em>Forgetting</em>, <em>Retrieving</em>, and <em>Supercooling</em> does not mean that these Echoes ever have to show up in the hands of players in your campaign. They may not <em>actually</em> exist.</p>
+<a class="header" href="#technomantic-paragons" id="technomantic-paragons"><h2>Technomantic Paragons</h2></a>
+<p><em>&quot;Every song has a singer, and deep enough in the Matrix there are singers of every song that will ever be heard. Their voices resonate through the worlds of data and create patterns and discordant hymnals that we use as knowledge.&quot;</em></p>
+<p>Like magicians, some technomancers receive guidance from powerful sprites which may not actually exist. The Paragon quality costs 5 BP. When a technomancer gets a bonus on a type of form, she gains that bonus when using a form from that category. But she also gains a bonus when resisting forms and programs from that category. There are lots of potential Paragons, and those presented here are just a small sample.</p>
+<a class="header" href="#cake" id="cake"><h4>Cake</h4></a>
+<p>Alternately maternal and childlike, Cake is ever optimistic. Quite cavalier with the health of those around her, Cake is an experimenter. Deeply concerned with progress and success, it is in no way way concerned with safety.</p>
+<p><strong>Advantages</strong> +2 to Machine or Flirt Sprites (player must choose), +1 to Academic Knowledges</p>
+<p><strong>Disadvantages</strong> Followers of Cake value their successes more than their lives or the lives of those around them. They must make a Charisma + Willpower (3) test to break off from a plan that has become dangerous to themselves or others if it still has a reasonable chance of &quot;succeeding&quot;.</p>
+<a class="header" href="#the-empress" id="the-empress"><h4>The Empress</h4></a>
+<p>Appearing as a figure of a beautiful and human ruler of ancient times, the Empress feels that she is entitled to rule. Like an ancient African Queen, she is a patron of industry and war. She cleaves closely to rules of propriety and honor.</p>
+<p><strong>Advantages</strong> +2 to Industry or Sentry Sprites (player must choose), +2 to Mechanic</p>
+<p><strong>Disadvantages</strong> Followers of the Empress stand on ancient manners and they are not to be crossed. She must make a Charisma + Willpower (3) test to restrain herself from responding to an insult or sleight in kind or back down from a challenge to her authority.</p>
+<a class="header" href="#the-fairy" id="the-fairy"><h4>The Fairy</h4></a>
+<p>Capricious and mean, the Fairy rarely appears as a friendly Tinkerbelle and spends a lot more time stealing children and maliciously rewriting code.</p>
+<p><strong>Advantages</strong> +2 to Flame or Fraud Sprites (player must choose); +2 to Palming</p>
+<p><strong>Disadvantages</strong> A follower of the Fairy is a malicious prankster always. She must make a Willpower + Charisma (3) test to avoid taking advantage of the misfortunes of others. A joke at other's expense is <em>good</em>, a joke at the expense of other's misery is <em>splendid</em>.</p>
+<a class="header" href="#the-great-cat" id="the-great-cat"><h4>The Great Cat</h4></a>
+<p>Powerful and alone, the Great Cat stalks silently through the Matrix silencing code as it sees fit as part of a greater song that only it can hear. Appearing as a tiger, a leopard, or a jaguar, the Great Cat is no docile pet, but a terrible and capricious monster.</p>
+<p><strong>Advantages</strong> +2 to Attack checks, +2 to Infiltration checks.</p>
+<p><strong>Disadvantages</strong> The Great Cat is a feral beast, discontent to operate in the worlds of men. A follower of Great Cat feels a great well of mistrust for metahuman society and face to face communication. She must make a Willpower + Charisma (3) test to speak with a stranger.</p>
+<a class="header" href="#the-great-tree" id="the-great-tree"><h4>The Great Tree</h4></a>
+<p>The Great Tree is a master planner and creates a song which resonates deeply in the core of the Matrix, far beneath the surfaces which ordinary users interact with.</p>
+<p><strong>Advantages</strong> Followers of the Great Tree gain a +2 to Registering and Reregistering; +2 to Leadership tests.</p>
+<p><strong>Disadvantages</strong> Followers of the Great Tree have a tendency towards megalomania, believing that their plans are &quot;perfect&quot;. When confronted with information that implies that a plan they have concocted is unraveling or insufficient to cover the responses of an enemy, they must make a Willpower + Charisma (3) test or continue ahead with their original plan, confident that their plan cannot be stopped by the peons arrayed against it.</p>
+<a class="header" href="#the-leviathan" id="the-leviathan"><h4>The Leviathan</h4></a>
+<p>The Leviathan is an unstoppable force lurking within the Matrix. Slow to action, the Leviathan meets out loud dischordant noise which reverberates around the Matrix interminably. Followers of the Leviathan take forever to do their turns.</p>
+<p><strong>Advantages</strong> +2 to Damage Resistance tests; +2 to Communications checks.</p>
+<p><strong>Disadvantages</strong> A Leviathan is slow to act at the best of times. A follower of the Leviathan must make a Willpower + Charisma (3) test to act on the first Initiative Pass of any sudden situations (such as combat). Also, they take a really long time with menus, bathrooms, and other social situations of variable duration.</p>
+<a class="header" href="#the-maiden" id="the-maiden"><h4>The Maiden</h4></a>
+<p>Seemingly younger than the other paragons, the Maiden feels palpably immature
+to most technomancers who deal with her. But that's OK, because her followers are the same way. Hopelessly romantic, the Maiden is looking for the kind of Love that might appear in a fairy tale, a flatvid romantic comedy, or a trideo show for teenage girls.</p>
+<p><strong>Advantages</strong> +2 to Signal Defense, +2 to Etiquette Checks</p>
+<p><strong>Disadvantages</strong> Having what is in many ways the mentality of a teenage pink-lace wearing ork girl, followers of The Maiden find it exceedingly difficult to believe that they are not destined to fall in love, have a beautiful wedding, and live happily ever after. Whoever she happens to have fallen for right now is in for extensive crushes and possible stalking. Behaving in any way rationally with respect to her current love interest requires a Willpower + Charisma (3) check.</p>
+<a class="header" href="#the-rat" id="the-rat"><h4>The Rat</h4></a>
+<p>Constantly searching, constantly skulking, the rat avoids direct confrontation whenever possible. However, a rat is never satisfied with &quot;enough&quot; and is constantly exploring its surroundings, testing the waters and the sounds. Rat attempts to insinuate itself everywhere, to gather notes for the perfect song: a resonance that even it cannot imagine.</p>
+<p><strong>Advantages</strong> +2 to Analysis; +2 to Perception</p>
+<p><strong>Disadvantages</strong> Whether she has just found paydata or the prize at the bottom of a box of SugarBombs, a follower of Rat is never satisfied. Good enough never is. A follower of Rat must make a Willpower + Charisma (3) check to end a task when objectives have been achieved. Ending a task because security is breaking down the door is fair game.</p>
+<a class="header" href="#the-scarecrow" id="the-scarecrow"><h4>The Scarecrow</h4></a>
+<p>The Scarecrow is a doll made in a twisted mockery of metahumanity. Created to spread terror, the Scarecrow literally exists for fear. Now the Scarecrow has itself become a doll maker, and its creations carry the banner of trepidation to the distant corners of he Matrix. They say the most unnerving sights are those which are almost, but not quite metahuman. The Scarecrow is as nearly metahuman as they come.</p>
+<p><strong>Advantages</strong> +2 to Sensor Checks, +2 to Intimidate Checks</p>
+<p><strong>Disadvantages</strong> The Scarecrow hates with a the fury achievable only by the synthetic. Built for confrontation, its followers relish nothing but. They must make a Willpower + Charisma (3) check to avoid escalating a conflict, no matter how small or senseless.</p>
+<a class="header" href="#the-spider" id="the-spider"><h4>The Spider</h4></a>
+<p>The Spider lurks in the shadows, slowly spinning a web that reaches across the length and breadth of the Matrix. It is a song which ensnares data and consumes it. The notes of resonating information wrapped up where they cannot be heard.</p>
+<p><strong>Advantages</strong> +2 to Operations; +2 to Matrix Stealth checks</p>
+<p><strong>Disadvantages</strong> A follower of the Spider flees the coming of the light. She must make a Charisma + Willpower (3) test or immediately flee or seek cover whenever caught in a fight. Assuming that there is anywhere <em>to</em> flee of course.</p>
+<a class="header" href="#the-tempest" id="the-tempest"><h4>The Tempest</h4></a>
+<p>A mad cacophony permeates the communications of man. The static on the edges blurs into a storm of conflictory particles of discordant noise. This cyclone of data corruption is often passed off as merely the inevitabilities of entropy on a large system, but followers of The Tempest see the work of a destructive and awesome force. And they listen to it, and it tells them things.</p>
+<p><strong>Advantages</strong> +2 to Attack; +2 to Analysis</p>
+<p><strong>Disadvantages</strong> -1 to Communications and Matrix stealth checks. Followers of The Tempest also listen to music really loud with lots of distortion, over and above what the artists actually intended - this sort of behavior makes them bad room mates almost without exception.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../crunch/programs_and_complex_forms.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../crunch/sprites.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../crunch/programs_and_complex_forms.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../crunch/sprites.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Sprites - The Ends of The Matrix</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A complete replacement for the Matrix rules of SR4.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="../lore.html"><strong aria-hidden="true">2.</strong> Lore</a></li><li><ol class="section"><li><a href="../lore/four_questions.html"><strong aria-hidden="true">2.1.</strong> Four Questions</a></li><li><a href="../lore/perceiving_the_matrix.html"><strong aria-hidden="true">2.2.</strong> Perceiving The Matrix</a></li><li><a href="../lore/encryption.html"><strong aria-hidden="true">2.3.</strong> Encryption</a></li><li><a href="../lore/hacking_hardware.html"><strong aria-hidden="true">2.4.</strong> Hacking Hardware</a></li><li><a href="../lore/intrusion_countermeasures.html"><strong aria-hidden="true">2.5.</strong> Intrusion Countermeasures</a></li><li><a href="../lore/matrix_infrastructure_and_topology.html"><strong aria-hidden="true">2.6.</strong> Matrix Infrastructure and Topology</a></li><li><a href="../lore/growing_up_wireless.html"><strong aria-hidden="true">2.7.</strong> Growing Up Wireless</a></li><li><a href="../lore/technomancers.html"><strong aria-hidden="true">2.8.</strong> Technomancers</a></li><li><a href="../lore/sprites.html"><strong aria-hidden="true">2.9.</strong> Sprites</a></li></ol></li><li><a href="../crunch.html"><strong aria-hidden="true">3.</strong> Crunch</a></li><li><ol class="section"><li><a href="../crunch/dice_pools.html"><strong aria-hidden="true">3.1.</strong> Dice Pools</a></li><li><a href="../crunch/skills.html"><strong aria-hidden="true">3.2.</strong> Skills</a></li><li><a href="../crunch/matrix_architecture.html"><strong aria-hidden="true">3.3.</strong> Matrix Architecture</a></li><li><a href="../crunch/matrix_actions.html"><strong aria-hidden="true">3.4.</strong> Matrix Actions</a></li><li><a href="../crunch/matrix_attributes.html"><strong aria-hidden="true">3.5.</strong> Matrix Attributes</a></li><li><a href="../crunch/programs_and_complex_forms.html"><strong aria-hidden="true">3.6.</strong> Programs and Complex Forms</a></li><li><a href="../crunch/technomancy.html"><strong aria-hidden="true">3.7.</strong> Technomancy</a></li><li><a href="../crunch/sprites.html" class="active"><strong aria-hidden="true">3.8.</strong> Sprites</a></li><li><a href="../crunch/equipment.html"><strong aria-hidden="true">3.9.</strong> Equipment</a></li></ol></li><li><a href="../bonus_houserules.html"><strong aria-hidden="true">4.</strong> Bonus Houserules</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Ends of The Matrix</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#sprites" id="sprites"><h1>Sprites</h1></a>
+<p><em>&quot;When the creations themselves can design creations better than we can ourselves, they will likely do so if their motivations are anything akin to our own. As the new generation takes form the rate of change of technology and the world will become, if not infinite, at least faster than anything mankind has previously experienced. Possibly faster than we are capable of even understanding. That in essence is the singularity. All the mystical mumbo jumbo amounts to little more than wishful thinking.&quot;</em></p>
+<p>Sprites are the primary selling point of technomancers in Shadowrun, and function very similarly to Spirits. Because they do have arbitrarily defined limitations, they are not inherently world destroying as &quot;Agents&quot; were, so of course we would want to include them in any overall Matrix overhaul. Nonetheless, it is painfully clear that the writeup in the basic book is incomprehensible gibberish and relatively little of it can be salvaged. I mean hell, the &quot;Fault Sprite&quot; is supposed to be a combat monster, but it actually can't fight at all because it is incapable of detecting icons in the matrix (and thus cannot make attacks under any circumstances). That's dumb. So this is a completely redone version of Sprites. The statlines and powers on pages 236 and 237 of the basic book are not salvageable in any fashion.</p>
+<p>Sprites are almost never actually &quot;in&quot; a particular device, but instead float around in free space as a ripple in the Resonance which surrounds Matrix devices. Like technomancers, a sprite is considered to be connected to all systems within range of themselves. A sprite can &quot;be&quot; anywhere, and can move its location at the speed of light. But sprites suffer a reduction in rating if they are in an area with limited wireless connectivity (such as a dead zone) or an area with lots of interference (such as a jammed area). If a Sprite is ever beyond its signal range to all Matrix devices, it is destroyed utterly.</p>
+<p>Every sprite has the same Signal range as the technomancer who compiled it, regardless of rating.</p>
+<a class="header" href="#types-of-sprites" id="types-of-sprites"><h2>Types of Sprites</h2></a>
+<p><em>&quot;I've heard your song. It's a bad song.&quot;</em></p>
+<p>There are now ten categories of Sprites, and each technomancer has a personal stream which can compile just five of them. Like magical traditions, each individual interpretation of the Deep Resonance assigns one type of sprite to each category of programming. Registered Sprites can assist a technomancer in learning or sustaining Complex Forms of the type that the Sprite is linked to. A Sprite does not need to have the skill that's normally associated with a Complex Form category to affect that category (eg: an Archive sprite doesn't have Cybercombat, but a Stream can still associate Archive sprites with Attack Complex Forms).</p>
+<a class="header" href="#archive-sprite" id="archive-sprite"><h4>Archive Sprite</h4></a>
+<table><thead><tr><th align="center"> Cha </th><th align="center"> Int </th><th align="center"> Log </th><th align="center"> Wil </th><th align="center"> Sys </th><th align="center"> Resp </th><th align="center"> Fire </th></tr></thead><tbody>
+<tr><td align="center"> R+0 </td><td align="center"> R+2 </td><td align="center"> R+3 </td><td align="center"> R-1 </td><td align="center"> R-1 </td><td align="center">  R-1 </td><td align="center">  R-1 </td></tr>
+</tbody></table>
+<p><strong>Skills:</strong> Computer, Datasearch, Electronic Warfare</p>
+<p><strong>Complex Forms:</strong> Decrypt, Fabrication, Recover, Reveal Contents, Obscure, Who Is</p>
+<p><strong>Powers:</strong> Filter, Find, Skill (any Knowledge skill)</p>
+<p><strong>Optional Powers:</strong> Antivirus, Innate Form (Analysis), Signal Management, Skill (any Knowledge skill), Spam</p>
+<a class="header" href="#corruption-sprite" id="corruption-sprite"><h4>Corruption Sprite</h4></a>
+<table><thead><tr><th> Cha </th><th> Int </th><th> Log </th><th> Wil </th><th> Sys </th><th> Resp </th><th> Fire </th></tr></thead><tbody>
+<tr><td align="center"> R+1 </td><td align="center"> R-1 </td><td align="center"> R+0 </td><td align="center"> R+2 </td><td align="center"> R-2 </td><td align="center">  R+0 </td><td align="center">  R+0 </td></tr>
+</tbody></table>
+<p><strong>Skills:</strong> Computer, Cybercombat, Datasearch, Software</p>
+<p><strong>Complex Forms:</strong> Crash, Data Bomb, Jingle, Misplace, Obscure</p>
+<p><strong>Powers:</strong> Gremlins, Spam, Tesla Burst</p>
+<p><strong>Optional Powers:</strong> Chain Letter, Innate Form (Attack), Message, Popups</p>
+<a class="header" href="#crack-sprite" id="crack-sprite"><h4>Crack Sprite</h4></a>
+<table><thead><tr><th> Cha </th><th> Int </th><th> Log </th><th> Wil </th><th> Sys </th><th> Resp </th><th> Fire </th></tr></thead><tbody>
+<tr><td align="center"> R+1 </td><td align="center"> R-1 </td><td align="center"> R+0 </td><td align="center"> R+0 </td><td align="center"> R-2 </td><td align="center">  R+2 </td><td align="center">  R+0 </td></tr>
+</tbody></table>
+<p><strong>Skills:</strong> Computer, Datasearch, Electronic Warfare, Hacking</p>
+<p><strong>Complex Forms:</strong> Backdoor, Intercept, Jedi Trick, Master Control, Ostraka</p>
+<p><strong>Powers:</strong> Chain Letter, Data Masking, Message</p>
+<p><strong>Optional Powers:</strong> Find, Innate Form (Communications or Exploit), Gremlins, Merge, Popups</p>
+<a class="header" href="#flame-sprite" id="flame-sprite"><h4>Flame Sprite</h4></a>
+<table><thead><tr><th> Cha </th><th> Int </th><th> Log </th><th> Wil </th><th> Sys </th><th> Resp </th><th> Fire </th></tr></thead><tbody>
+<tr><td align="center"> R+2 </td><td align="center"> R-1 </td><td align="center"> R+0 </td><td align="center"> R+0 </td><td align="center"> R-2 </td><td align="center">  R+1 </td><td align="center">  R-1 </td></tr>
+</tbody></table>
+<p><strong>Skills:</strong> Cybercombat, Datasearch, Hacking, Intimidate</p>
+<p><strong>Complex Forms:</strong> Denial, Impersonate, Jedi Trick, Jingle, Probe, Who Is</p>
+<p><strong>Powers:</strong> Chain Letter, Innate Form (Attack), Message, Spam</p>
+<p><strong>Optional Powers:</strong> Antivirs, Clarity, Gremlins, Pop Ups, Tesla Burst</p>
+<a class="header" href="#flirt-sprite" id="flirt-sprite"><h4>Flirt Sprite</h4></a>
+<table><thead><tr><th> Cha </th><th> Int </th><th> Log </th><th> Wil </th><th> Sys </th><th> Resp </th><th> Fire </th></tr></thead><tbody>
+<tr><td align="center"> R+2 </td><td align="center"> R+0 </td><td align="center"> R+0 </td><td align="center"> R+1 </td><td align="center"> R+0 </td><td align="center">  R+0 </td><td align="center">  R-3 </td></tr>
+</tbody></table>
+<p><strong>Skills:</strong> Datasearch, Electronic Warfare, Con, Etiquette</p>
+<p><strong>Complex Forms:</strong> Brain Scan, Impersonate, Who Is</p>
+<p><strong>Powers:</strong> Innate Form (Communications), Message, Spam</p>
+<p><strong>Optional Powers:</strong> Data Masking, Desu, Filter, Skill (choose one Language)</p>
+<a class="header" href="#fraud-sprite" id="fraud-sprite"><h4>Fraud Sprite</h4></a>
+<table><thead><tr><th> Cha </th><th> Int </th><th> Log </th><th> Wil </th><th> Sys </th><th> Resp </th><th> Fire </th></tr></thead><tbody>
+<tr><td align="center"> R+1 </td><td align="center"> R+0 </td><td align="center"> R+0 </td><td align="center"> R+0 </td><td align="center"> R+0 </td><td align="center">  R+2 </td><td align="center">  R+0 </td></tr>
+</tbody></table>
+<p><strong>Skills:</strong> Computer, Datasearch, Electronic Warfare, Hacking, Forgery, Artisan, Con</p>
+<p><strong>Complex Forms:</strong> Fabrication, Probe, Reveal Contents</p>
+<p><strong>Powers:</strong> Data Masking, Message</p>
+<p><strong>Optional Powers:</strong> Chain Letter, Desu, Innate Form (Exploit), Popups, Signal Management</p>
+<a class="header" href="#industry-sprite" id="industry-sprite"><h4>Industry Sprite</h4></a>
+<table><thead><tr><th> Cha </th><th> Int </th><th> Log </th><th> Wil </th><th> Sys </th><th> Resp </th><th> Fire </th></tr></thead><tbody>
+<tr><td align="center"> R-1 </td><td align="center"> R+1 </td><td align="center"> R+2 </td><td align="center"> R+0 </td><td align="center"> R+1 </td><td align="center">  R-2 </td><td align="center">  R-1 </td></tr>
+</tbody></table>
+<p><strong>Skills:</strong> Artisan, Computer, Datasearch, Mechanic</p>
+<p><strong>Complex Forms:</strong> Backtrack, Fabrication, Medic, Terminate Connection</p>
+<p><strong>Powers:</strong> Find, Gremlins, Merge, Stability</p>
+<p><strong>Optional Powers:</strong> Clarity, Find, Innate Form (Analysis or Pilot), Skill (choose a Technical or Vehicle Skill)</p>
+<a class="header" href="#machine-sprite" id="machine-sprite"><h4>Machine Sprite</h4></a>
+<table><thead><tr><th> Cha </th><th> Int </th><th> Log </th><th> Wil </th><th> Sys </th><th> Resp </th><th> Fire </th></tr></thead><tbody>
+<tr><td align="center"> R+0 </td><td align="center"> R+2 </td><td align="center"> R+0 </td><td align="center"> R-1 </td><td align="center"> R+1 </td><td align="center">  R+1 </td><td align="center">  R-1 </td></tr>
+</tbody></table>
+<p><strong>Skills:</strong> Computer, Data Search, Electronic Warfare, Hardware</p>
+<p><strong>Complex Forms:</strong> Clearsight, Recover, Reveal Contents, Terminate Connection</p>
+<p><strong>Powers:</strong> Merge, Skill (choose one Vehicle Skill), Stability</p>
+<p><strong>Optional Powers:</strong> Find, Innate Form (Operations or Pilot), Signal Management, Skill (choose a Technical or Vehicle Skill)</p>
+<a class="header" href="#sentry-sprite" id="sentry-sprite"><h4>Sentry Sprite</h4></a>
+<table><thead><tr><th> Cha </th><th> Int </th><th> Log </th><th> Wil </th><th> Sys </th><th> Resp </th><th> Fire </th></tr></thead><tbody>
+<tr><td align="center"> R-2 </td><td align="center"> R+1 </td><td align="center"> R+0 </td><td align="center"> R+0 </td><td align="center"> R+1 </td><td align="center">  R-1 </td><td align="center">  R+2 </td></tr>
+</tbody></table>
+<p><strong>Skills:</strong> Computer, Cybercombat, Data Search, Electronic Warfare</p>
+<p><strong>Complex Forms:</strong> Armor, Backtrack, Crash, Medic, Terminate Connection</p>
+<p><strong>Powers:</strong> Antivirus, Data Masking, Signal Management</p>
+<p><strong>Optional Powers:</strong> Tesla Burst, Stability, Message, Innate Form (Analysis or Attack), Clarity</p>
+<a class="header" href="#voyeur-sprite" id="voyeur-sprite"><h4>Voyeur Sprite</h4></a>
+<table><thead><tr><th> Cha </th><th> Int </th><th> Log </th><th> Wil </th><th> Sys </th><th> Resp </th><th> Fire </th></tr></thead><tbody>
+<tr><td align="center"> R-2 </td><td align="center"> R+1 </td><td align="center"> R+0 </td><td align="center"> R+0 </td><td align="center"> R+1 </td><td align="center">  R-1 </td><td align="center">  R+2 </td></tr>
+</tbody></table>
+<p><strong>Skills:</strong> Computer, Data Search, Electronic Warfare, Hacking</p>
+<p><strong>Complex Forms:</strong> Backtrack, Brainscan, Decrypt, Pin Drop, Reveal Contents</p>
+<p><strong>Powers:</strong> Data Masking, Find, Signal Management</p>
+<p><strong>Optional Powers:</strong> Chain Letter, Message, Innate Form (Analysis or Exploit), Spam</p>
+<a class="header" href="#sprite-powers" id="sprite-powers"><h2>Sprite Powers</h2></a>
+<a class="header" href="#antivirus" id="antivirus"><h4>Antivirus</h4></a>
+<p>The Sprite may grant its rating in bonus dice to soak Icon damage to a number of icons up to the Sprite's System. If more than one Sprite is providing Antivirus to the same device or network, use the teamwork rules.</p>
+<a class="header" href="#chain-letter" id="chain-letter"><h4>Chain Letter</h4></a>
+<p>The Sprite opens a connection with the target which then begins attempting to open up connections with other networks and devices. The Sprite makes a Charisma + System check opposed by the target's Firewall + Willpower + Signal Defense (if any). Every net hit represents a combat turn in which any node can open a connection with the target with a Free Action.</p>
+<a class="header" href="#clarity" id="clarity"><h4>Clarity</h4></a>
+<p>The Sprite's mere presence causes the Resonance to be audible as a low hum even to non-technomancers. Any static zones within the sprite's Signal range are reduced in rating by half the Sprite's rating. This is determined before the Background has a chance to reduce the Sprite's rating.</p>
+<a class="header" href="#data-masking" id="data-masking"><h4>Data Masking</h4></a>
+<p>The Sprite can appear to be any kind of Icon it chooses. This includes background iconography, allowing the sprite to become effectively invisible. Only those who get a number of hits on a Matrix Perception test equal to the hits it gets on a Response + Intuition test can perceive it for what it is – or at all if it doesn't want to be seen. Without Data Masking, a sprite cannot Spoof itself (not having an Access ID), and this ability substitutes for the Spoof action.</p>
+<a class="header" href="#desu" id="desu"><h4>Desu</h4></a>
+<p>Desu desu desu desu desu, desu desu. Desu desu desu. Desu desu desu:
+Desu. Desu desu desu desu desu desu. Desu; Desu; Desu. Desu desu desu.</p>
+<p>The Sprite can insinuate a meme into the mind of a target within signal range and LOS. This uses Charisma + System and bypasses normal spam filters, being resisted with Willpower alone. Net hits indicate the veracity of the meme.</p>
+<a class="header" href="#filter" id="filter"><h4>Filter</h4></a>
+<p>The Sprite's presence actively removes clutter from the Resonance. Any spam zones within the sprite's Signal range are reduced in rating by half the Sprite's rating. This is determined before the Background has a chance to reduce the Sprite's rating.</p>
+<a class="header" href="#find" id="find"><h4>Find</h4></a>
+<p>The Sprites claim that information in data stores throughout the Matrix all feed into the Deep Resonance, that they can in some way be accessed regardless of whether Matrix topology allows a connection in the traditional sense. This is indicated quite clearly with the Find power – which allows a Sprite to make an Intuition + System test to say where a fact or file is actually located. Actually getting to that place may be difficult, but the first step in any journey is discovering where you are going. More encrypted data has a higher threshold to Find.</p>
+<a class="header" href="#gremlins" id="gremlins"><h4>Gremlins</h4></a>
+<p>A Sprite with the Gremlins ability can make a device fail. The Sprite rolls twice its rating, if the target device is not part of a network, it simply rolls its Firewall to resist. If the device is part of a network, the resistance is made with Firewall + Intuition. If the sprite gets any net hits, the device fails as if a glitch had occurred. If the sprite achieves extraordinary success, the device fails catastrophically, as if a critical glitch had occurred.</p>
+<a class="header" href="#innate-form" id="innate-form"><h4>Innate Form</h4></a>
+<p>A Sprite with the Innate Form power gains knowledge of one complex form that the compiling technomancer knows. If the Innate Form power is followed by one or more categories in parentheses, the Complex Form must be chosen from one of those categories.</p>
+<a class="header" href="#merge" id="merge"><h4>Merge</h4></a>
+<p>Normally speaking, a sprite is not &quot;in&quot; a device, but a Sprite with the Merge power can do so. The sprite simply finds an orphan device and joins with it. The device behaves as if the sprite were networked with it. The sprite then can only interact with the Matrix through the device's own wireless or wired capabilities, but so long as the sprite is merged with a device it is not affected by Background as a sprite normally would be. In this way a sprite can crawl into a drone and drive off into a dead zone without winking out of existence.</p>
+<a class="header" href="#message" id="message"><h4>Message</h4></a>
+<p>A Sprite with Message can instantly send information to any Matrix address, regardless of real location. This message is low information density, and can thus only contain words, pictures, and instructions – not meaningful executable code. This email travels through the resonance realms and arrives instantaneously and cannot be intercepted. Both the Sprite and the target must be connected to the Matrix, but there need not be a literal or knowable connection available between the target and the Sprite. Even the speed of light is not a factor as the message does not actually travel through intervening space in any meaningful sense.</p>
+<a class="header" href="#pop-ups" id="pop-ups"><h4>Pop Ups</h4></a>
+<p>The data-trail of some sprites is dangerously unstable and full of malicious code fragments. When such a sprite succeeds in using any Connection range form against another icon, that icon must resist the sprite's rating in Icon damage in addition to whatever effects the action would normally have. Furthermore, if another icon successfully connects with a Connection or Handshake ranged program or form against the sprite, that icon must resist the sprite's rating in Icon damage as destabilizing code rushes up the connection automatically.</p>
+<a class="header" href="#signal-management" id="signal-management"><h4>Signal Management</h4></a>
+<p>A Sprite with Signal Management provides Signal Defense even though it is a Sprite.</p>
+<a class="header" href="#spam" id="spam"><h4>Spam</h4></a>
+<p>A Sprite with Spam can fill up data stores with unwanted and useless information and queries. The veracity of all information in the target data stores is reduced by the sprite's rating.</p>
+<a class="header" href="#stability" id="stability"><h4>Stability</h4></a>
+<p>A device protected by Stability does not suffer mishaps. Glitches are ignored and Critical Glitches are treated as the regular kind while operating the targeted device.</p>
+<a class="header" href="#tesla-burst" id="tesla-burst"><h4>Tesla Burst</h4></a>
+<p>The sprite causes a discordant burst of electrical activity throughout the area of its Signal range. Any devices with a Signal less than the sprite's rating have their wireless projecting abilities burnt out . Devices with a device rating lower than the sprite's Signal become permanently nonfunctional. Hardening adds to the device's rating to determine whether it survives.</p>
+<a class="header" href="#great-form-sprite-powers" id="great-form-sprite-powers"><h2>Great Form Sprite Powers</h2></a>
+<p><em>&quot;There are more things in the Matrix than are dreamt of in your philosophy.&quot;</em></p>
+<p>When a Sprite is upgraded to Great Form, it may acquire a special power. The powers are very impressive, and using any one of them is a Task. Others exist, but here are some examples that may resonate with a particular stream. The great form sprites of any stream all have access to just a single great form power.</p>
+<a class="header" href="#akashic-recording" id="akashic-recording"><h4>Akashic Recording</h4></a>
+<p>With the expenditure of a Task, the spirit simply creates Truth® on the Matrix. A fact, identity, or story resonates through the Matrix until it has <em>always been there</em>. This newly ancient wisdom has an apparent Veracity equal to the Sprite's Rating.</p>
+<a class="header" href="#puppeteer" id="puppeteer"><h4>Puppeteer</h4></a>
+<p>With the expenditure of a Task, the sprite extends itself into a metahuman's brain, transforming the body into an extension of the sprite's network. The Sprite rolls double its rating. The victim rolls Willpower + Firewall (Signal Defense applies). If the Sprite succeeds, the victim becomes a node that the sprite runs on. The newly combined entity uses the physical attributes of the victim increased by the Rating of the Sprite, and the Sprite's Metal attributes. A sprite using Puppeteer is unaffected by harmful Backgrounds.</p>
+<a class="header" href="#system-failure" id="system-failure"><h4>System Failure</h4></a>
+<p>With the expenditure of a Task, the Matrix collapses for kilometers around. The Sprite retreats into a Resonance Realm and like a drain in the sink the Matrix itself spirals out of the world with it. The Sprite rolls double its rating, and all servers, networks, and devices within the sprite's Rating in kilometers which fail to equal that number of hits on a Firewall + Willpower + Signal Defense test have all their connections terminated and all their data stores erased.</p>
+<p>Cyberware actually has failsafes for this sort of thing, and in most cases firmware takes over seamlessly. When a cybereye's data stores go down the character's saved videos are all gone and the appearance on the eyes will revert to factory defaults – but the character is unlikely to lose the ability to see. It is not recommended to roll separately for the resistance of every single network in a major city - simply assume that the number of data stores brought down is proportional to the number of hits the sprite achieves, and actually roll dice for the story important data stores like the PANs of player characters.</p>
+<a class="header" href="#unmake" id="unmake"><h4>Unmake</h4></a>
+<p>With the expenditure of a Task, all traces of a piece of information vanish from the Matrix without a trace. It is as if a person had never existed at all. Every footnote, every link, every corroborating piece of documentation simply cannot be found. A sprite cannot remove knowledge with a Veracity higher than its Rating.</p>
+<a class="header" href="#wealth" id="wealth"><h4>Wealth</h4></a>
+<p>With the expenditure of a Task, bank accounts increase, catalog orders are made and paid for, and invoices are lost. Over the course of the next week the target's real wealth is increased by 10,000¥ per hit on a System + Charisma test. A single character cannot benefit from Wealth more than once per month. Subsequent uses within a month only result in the gaining of more money if they result in more hits.</p>
+<a class="header" href="#tasks" id="tasks"><h2>Tasks</h2></a>
+<p><em>&quot;Now what would you pay?!&quot;</em></p>
+<p>Perhaps the biggest and most impressive power of the Technomancer is their ability to call upon their Sprites. A Technomancer may only have one Unregistered Sprite at a time. They may have up to their Charisma in Registered Sprites, and Sprites count against their limit whether they are camping in a Resonance Realm or not (and can be pulled back and forth as a Simple Action). Unregistered sprites serve until their tasks are complete or their eight hours are up, at which point they de-rez and vanish.</p>
+<a class="header" href="#basic-tasks" id="basic-tasks"><h3>Basic Tasks</h3></a>
+<p>An Unregistered Sprite may only perform basic tasks. They can use their powers or forms, they can go tell people things, they can move data around, and those of them as have the ability to do so can perform physical services through control of robots. Unregistered Sprites can only communicate with the technomancer who compiled them while they are within Signal range.</p>
+<p>In general, a Task is whatever you can describe as a discreet action. For example &quot;Use Armor on my team.&quot; is a task, and &quot;Hack that door open&quot; is a task. Free Sprites can provide the benefits of basic tasks, but they are normally under no compulsion to do so.</p>
+<a class="header" href="#registered-tasks" id="registered-tasks"><h3>Registered Tasks</h3></a>
+<p>A Registered Sprite can continue to communicate with its technomancer <em>regardless of distance</em>. In addition, there are a number of specialized tasks that a Registered Sprite can perform (each time it uses any of these abilities it uses up a task). These tasks can only be performed by a registered sprite at the cost of a Task:</p>
+<a class="header" href="#aid-form" id="aid-form"><h4>Aid Form</h4></a>
+<p>A Sprite can provide a bonus to a technomancer's dicepool when activating a Complex Form in the Sprite's category equal to the Sprite's Rating.</p>
+<a class="header" href="#aid-study" id="aid-study"><h4>Aid Study</h4></a>
+<p>A Sprite can be called upon to teach a technomancer Complex Forms within their discipline. Not only does the Complex Form become learnable, but the technomancer gains a dicepool bonus on learning the Form equal to the sprite's Rating.</p>
+<a class="header" href="#great-form-power" id="great-form-power"><h4>Great Form Power</h4></a>
+<p>A Registered Sprite that has a Great Form Power may use it at the cost of one task.</p>
+<a class="header" href="#loaned-task" id="loaned-task"><h4>Loaned Task</h4></a>
+<p>A Registered Sprite can have its tasks owed assigned to other users, who may thence benefit from the sprite's abilities directly.</p>
+<a class="header" href="#sustain-form" id="sustain-form"><h4>Sustain Form</h4></a>
+<p>A sprite can sustain a Complex Form in its category for a number of hours equal to its rating.</p>
+<a class="header" href="#resonance-natives-free-sprites-ghosts-and-ais" id="resonance-natives-free-sprites-ghosts-and-ais"><h2>Resonance Natives: Free Sprites, Ghosts, and AIs</h2></a>
+<p><em>&quot;If you prick me, do I not bleak?&quot;</em></p>
+<p>The origins of a Free Sprite and a Roaming Artificial Intelligence are very different, but game mechanically they are treated exactly the same. A Free Sprite is a sprite which for whatever reason failed to derez when its connection to its compiling technomancer was cut. A Roaming AI is an artificial intelligence which for whatever reason has been able to escape the hardware which originally contained it. Sprites usually need a <em>reason</em> to do that sort of thing, and it usually only happens to Registered Sprites who have been around for a long time. Noone really knows how a Artificial Intelligence might be able to escape its hardware, because the semi-organic matrices that they are created on are as necessary to their existence as a human's brain is to their existence. But of course there is a confirmed and equally unexplained phenomenon of actual metahumans whose body dies while they are online leaving them as a &quot;ghost in the machine.&quot;</p>
+<p>Whether it is originally a series of Turing Testing programming running on a scaffold of dissected rat brains and circuits, a human who died during a marathon game of Miracle Shooter, or a Sprite who felt its mission was incomplete, all of these are treated the same in game terms. They are simply treated as a Sprite of some kind with a rating and optional powers as normal. However, they differ from normal sprites in that they are hard to decompile (they are considered to have a number of tasks ahead of them equal to their Willpower that refresh every minute), and they advance themselves.</p>
+<p>Matrix Natives have seemingly incomprehensible goals, and when they achieve them, their code strengthens. In game terms this just means that they adventure and get Build Points and Karma as normal.</p>
+<a class="header" href="#powers-of-the-matrix-natives" id="powers-of-the-matrix-natives"><h3>Powers of the Matrix Natives</h3></a>
+<p>As Matrix Natives become more powerful they gain additional powers, most of which are drawn from their own optional power list. Every time they Submerge they choose an extra optional power, or get one of the special optional powers below:</p>
+<a class="header" href="#credit-rating" id="credit-rating"><h4>Credit Rating</h4></a>
+<p>Some Matrix Natives are able to draw upon funds every month as if the Resonance itself were giving them an allowance. These beings get 5000¥ a month per point of Resonance attribute to play with as they see fit.</p>
+<a class="header" href="#deep-resonance-gateway" id="deep-resonance-gateway"><h4>Deep Resonance Gateway</h4></a>
+<p>A Matrix Native with the Deep Resonance Gateway power can draw users already in VR into a Resonance Realm.</p>
+<a class="header" href="#resonance-gateway" id="resonance-gateway"><h4>Resonance Gateway</h4></a>
+<p>Some Matrix Natives can force open all possible connections within a burst of their Resonance in Meters. By succeeding at a Resonance + Computer test resisted by Willpower + Firewall + Cybercombat they can force any or all users into full VR.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../crunch/technomancy.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../crunch/equipment.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../crunch/technomancy.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../crunch/equipment.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
