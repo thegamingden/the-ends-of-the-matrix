@@ -78,6 +78,7 @@ Some checks allow characters to add the rating of equipment in addition to their
 * **Register Sprite:** Resonance + Registering vs 2 * Rating
 
 ### Rigging
+
 * **Perception:**
   * **Jumped In:** Intuition + Perception
   * **Windowed:** Intuition + Perception - 2
