@@ -10,4 +10,5 @@
 This netbook is Public Domain \([CC0](LICENSE.txt)\).
 
 This version of EotM contains editing and formatting changes to improve clarity,
-but there are no rules changes.
+as well as additional info that isn't in the "base book" but was given as
+Question and Answer rulings later in the thread.
