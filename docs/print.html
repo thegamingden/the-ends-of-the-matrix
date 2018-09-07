@@ -1033,241 +1033,632 @@ dustbin of history.</p>
 <a class="header" href="#sensors-1" id="sensors-1"><h3>Sensors</h3></a>
 <p>Sensory feed by itself is just a set one 1s and 0s. A system intent upon actually deriving information of any sort from sensory feed needs an interpretive function. A drone's sensors rating determines its ability to interpret the world around it. A sensor rating does <em>not</em> entail actually <em>having</em> any cameras or microphones, it just means that it has the ability to identify actual objects from he feeds of any cameras that it happens to have. The sensors rating of a device is the hardware that runs the software that identifies those things for it. It frequently is used instead of Intuition, and is very frequently used with a Clearsight Autosoft - a program whose purpose is to act as the Perception skill for a drone.</p>
 <a class="header" href="#programs-and-complex-forms" id="programs-and-complex-forms"><h1>Programs and Complex Forms</h1></a>
-<a class="header" href="#category" id="category"><h2>Category</h2></a>
-<p>Every Program or Complex Form fits into a Category. This category doesn't simply change which Paragons provide a bonus to characters using them, but to which skill is actually linked with activating the Program in the first place. Many programs are resisted in one manner or another, and they will describe the resistance dice pool within their description. Many programs also have an &quot;optimized defense&quot; available, and if the target <em>has</em> that defense, 2 hits of the user are canceled before resistance dice are even contemplated.</p>
-<a class="header" href="#analysis-programs" id="analysis-programs"><h3>Analysis Programs</h3></a>
-<p>Analysis Programs gather and discriminate information from the Matrix. Based off of the Data Search skill, these programs are most closely analogous to Detection Spells.</p>
-<a class="header" href="#attack-programs" id="attack-programs"><h3>Attack Programs</h3></a>
-<p>Attack Programs interfere with computing procedures, whether performed by machines or the metahuman brain. Based off of the Cybercombat skill, these programs are most closely analogous to Combat Spells.</p>
-<a class="header" href="#background-programs" id="background-programs"><h3>Background Programs</h3></a>
-<p>Background Programs adjust perceptions of the Matrix. Whether they create virtual sensation or create an interactive game world, they take up trivial amounts of memory and do not count as a running program for any purpose. Any perception affecting programming that is capable of actually overwhelming another user's reality preferences is a Communication Program, not a Background Program. Background Programming requires no roll or skill to create or maintain (though playing games and whatnot may involve skill checks if for some reason it is important to determine how well a character's gaming has gone during a session).</p>
-<a class="header" href="#communications-programs" id="communications-programs"><h3>Communications Programs</h3></a>
-<p>Communications Programs affect encryption and signal transmission in the Matrix. Based off the Electronic Warfare skill, these programs are most close analogous to Illusion Spells.</p>
-<a class="header" href="#exploit-programs" id="exploit-programs"><h3>Exploit Programs</h3></a>
-<p>Exploit Programs mimic instructions in devices and networks. Based off the Hacking skill, these programs are most closely analogous to Manipulation Spells, most specifically control manipulations.</p>
-<a class="header" href="#operations-programs" id="operations-programs"><h3>Operations Programs</h3></a>
-<p>Operations Programs make systems do what they are &quot;supposed&quot; to do. Based off the Computer skill, these programs are most closely analogous to Health Spells, though most of the memory hogging programming that the 6th world has filled its servers with, whether it's crunching numbers on projected soda demands or masterminding a world conquest scheme, are also Operations Programs.</p>
-<a class="header" href="#intrusion-countermeasure-programs" id="intrusion-countermeasure-programs"><h3>Intrusion Countermeasure Programs</h3></a>
-<p>Distinct from other programming, an IC Program doesn't use the skills of a computer operator at all. It is a program which actually runs other programs, without a human brain's directions. The IC can use its own rating as a dicepool to use any program, but can only run those programs on its own system or over an established Connection. IC cannot initiate a Connection on its own, and takes no more than 1 IP per round regardless of the network it's on. It does act very quickly though, rolling 2*Rating + Response for Initiative.</p>
+<a class="header" href="#the-elements-of-a-program" id="the-elements-of-a-program"><h2>The Elements of a Program</h2></a>
+<a class="header" href="#category" id="category"><h3>Category</h3></a>
+<p>Every Program or Complex Form fits into a Category. This category doesn't simply
+change which Paragons provide a bonus to characters using them, but to which
+skill is actually linked with activating the Program in the first place. Many
+programs are resisted in one manner or another, and they will describe the
+resistance dice pool within their description. Many programs also have an
+&quot;optimized defense&quot; available, and if the target <em>has</em> that defense, 2 hits of
+the user are canceled before resistance dice are even contemplated.</p>
 <ul>
-<li>Note that the existence of IC is inherently dangerous to the stability and even existence of the world. Should it ever be able to seriously threaten a Hacker in terms of mobility and effect, we're in Skynet or <em>Dreams of Flesh and Sand</em> territory where the human race has perhaps become a pale vestige attached to a planet dominated by instantly self replicating machine overlords - so gamemasters are well advised to take a good hard look at anything that they allow IC to do under any circumstances.</li>
+<li><strong>Analysis Programs:</strong> Analysis Programs gather and discriminate information
+from the Matrix. Based off of the Data Search skill, these programs are most
+closely analogous to Detection Spells.</li>
+<li><strong>Attack Programs:</strong> Attack Programs interfere with computing procedures,
+whether performed by machines or the metahuman brain. Based off of the
+Cybercombat skill, these programs are most closely analogous to Combat Spells.</li>
+<li><strong>Background Programs:</strong> Background Programs adjust perceptions of the Matrix.
+Whether they create virtual sensation or create an interactive game world,
+they take up trivial amounts of memory and do not count as a running program
+for any purpose. Any perception affecting programming that is capable of
+actually overwhelming another user's reality preferences is a Communication
+Program, not a Background Program. Background Programming requires no roll or
+skill to create or maintain (though playing games and whatnot may involve
+skill checks if for some reason it is important to determine how well a
+character's gaming has gone during a session).</li>
+<li><strong>Communications Programs:</strong> Communications Programs affect encryption and
+signal transmission in the Matrix. Based off the Electronic Warfare skill,
+these programs are most close analogous to Illusion Spells.</li>
+<li><strong>Exploit Programs:</strong> Exploit Programs mimic instructions in devices and
+networks. Based off the Hacking skill, these programs are most closely
+analogous to Manipulation Spells, most specifically control manipulations.</li>
+<li><strong>Operations Programs:</strong> Operations Programs make systems do what they are
+&quot;supposed&quot; to do. Based off the Computer skill, these programs are most
+closely analogous to Health Spells, though most of the memory hogging
+programming that the 6th world has filled its servers with, whether it's
+crunching numbers on projected soda demands or masterminding a world conquest
+scheme, are also Operations Programs.</li>
+<li><strong>Intrusion Countermeasure Programs:</strong> Distinct from other programming, an IC
+Program doesn't use the skills of a computer operator at all. It is a program
+which actually runs other programs, without a human brain's directions. The IC
+can use its own rating as a dicepool to use any program, but can only run
+those programs on its own system or over an established Connection. IC cannot
+initiate a Connection on its own, and takes no more than 1 IP per round
+regardless of the network it's on. It does act very quickly though, rolling
+2*Rating + Response for Initiative.
+<ul>
+<li>Note that the existence of IC is inherently dangerous to the stability and
+even existence of the world. Should it ever be able to seriously threaten a
+Hacker in terms of mobility and effect, we're in Skynet or <em>Dreams of Flesh
+and Sand</em> territory where the human race has perhaps become a pale vestige
+attached to a planet dominated by instantly self replicating machine
+overlords - so gamemasters are well advised to take a good hard look at
+anything that they allow IC to do under any circumstances.</li>
 </ul>
-<a class="header" href="#pilots--autosofts--and-skillsofts" id="pilots--autosofts--and-skillsofts"><h3>Pilots / Autosofts / and Skillsofts</h3></a>
-<p>Perhaps the most powerful of programming are the ones which replicate skills. There is no &quot;Longarms&quot; program. There are, however, a number of programs which when confronted with specific hardware and a decently massive pile of processing to fall back on can successfully fire a shotgun. Skillsofts work because there is a Skillwire system in place to slave the human brain into acting as the reserve computer that such a massive program would need. Also, it's metahuman specific, a whole new Skillsoft would have to be devised for a naga or a hellhound, even if they did have a skillwire system produced for them.</p>
-<p>Similarly, a Pilot program is not generic. It's specific to a specific device. You can't just grab a 1000¥ drone and copy its pilot into your car - the drone doesn't have to handle the high speeds that the passenger vehicle does and its programming simply wouldn't be appropriate to the other machine. Autosofts, similarly are device specific. That doesn't necessarily mean that you need hundreds of different versions of every Autosoft. After all, the Clearsight soft is specific to <em>cameras</em> not to one or another kind of drone - so it can actually be reused on many different drones so long as they are all picking up camera data on the same frequencies.</p>
-<a class="header" href="#decompiling-forms-1" id="decompiling-forms-1"><h3>Decompiling Forms</h3></a>
-<p>Decompiling Forms are only available to users of Resonance. They remove things from the Matrix. This is exceedingly different from corrupting data or creating alternative truths of higher seeming veracity, and use of these forms upsets a lot of people.</p>
-<a class="header" href="#registering-forms-1" id="registering-forms-1"><h3>Registering Forms</h3></a>
-<p>Registering Forms are only available to users of Resonance and change the way icons interact with the Matrix. They are therefore more similar to things which might be accomplished with Software or Hardware tests.</p>
-<a class="header" href="#macguffin-programming" id="macguffin-programming"><h3>MacGuffin Programming</h3></a>
-<p>There are lots of programs which do large and processing intensive actions. They synthesize skill softs, they predict the weather, they control nanite fabrication. These programs are often measured in &quot;Man Years&quot; to completion and they take a truly staggering amount of computational power to run to completion. There is no purpose served in having specific rules for these programs and so we don't.</p>
-<a class="header" href="#type" id="type"><h2>Type</h2></a>
-<p>Biofeedback programs directly affect metahuman brains, Data programs affect machines. Programming is labeled with a B or a D to distinguish its type. An orphan brain can only be affected by type B procedures, an empty network or lone device can only be affected by D programming. If a program can be used on either, it will be labeled with both a B and a D.</p>
-<p>A non-metahuman brain always is considered to have an optimized defense against any B type program that was not specifically written for the type of creature that it is. You cannot use hacking on the fly or threading to bypass that particular problem without very specialized skills and talents. So for example, a character who was attempting to use seize on a dragon or a shapeshifter would have their first two hits canceled automatically simply due to the alien neurophysiology. Ghouls are considered metahumans for this purpose.</p>
-<a class="header" href="#range" id="range"><h2>Range</h2></a>
-<a class="header" href="#decrypting-a-signal" id="decrypting-a-signal"><h3>Decrypting a Signal?</h3></a>
-<p>Due to the distributed nature of data storage and transmission, and the direct induction method employed by many major hacking operations, decrypting a device's signal is generally not required to hack a connection to it. Devices can be suborned and added to a hacker's network without the hacker ever knowing or caring what information had previously been passed through it.</p>
-<a class="header" href="#line-of-sight-los" id="line-of-sight-los"><h3>Line of Sight (LOS)</h3></a>
-<p>Many programs can only be used with very precise targeting. Causing a specific transformation in the data of a hard drive is not simply a matter of sending out a broadcast of a long series of waves that will miraculously effect a change in one device and not in any other. It's way more complicated than that and actually not even doable with pre-2029 technology. It involves making a precision electrical effect at a specific point in space. It's probably quantum or something. The point is, if a range is followed by (LOS), then your signal producing device actually has to be able to draw a clear line to the point in space that the target is physically present at, as well as knowing where that target is. The math involved is hellacious of course, but fortunately you've got really powerful computers and they are all harnessed together and able to draw upon the power of a human brain.</p>
-<a class="header" href="#signal-1" id="signal-1"><h3>Signal</h3></a>
-<p>Programming with a Signal range can be used if the target is within the range of projectable high density signal of the actor's network. Signal range is abbreviated &quot;S&quot; in programming descriptions.</p>
-<a class="header" href="#listening" id="listening"><h3>Listening</h3></a>
-<p>Programming with a Listening range can be used if the actor's network is within the range of projected high density signal of the <em>target</em>. Remember that using a high grade Receiver can increase the range at which a signal can be received, precisely as if the original signal had been projected at a higher Signal rating in the first place. An unmodified human has a high density signal rating of 0, meaning that an orphan brain needs to be very close to the acting device in order for Listening programs to function if such Receiver units are not used. Listening range is abbreviated &quot;L&quot; in programming descriptions.</p>
-<a class="header" href="#handshake" id="handshake"><h3>Handshake</h3></a>
-<p>Programming with a Handshake range can only be used if the target is within the range of high density signal of the actor's network <em>and</em> the actor is within the high density signal range of the target's network. In short, if the requirements for both Signal and Listening range are met, the conditions for Handshake range are met as well. If both the target and the actor have an open connection to a third party's node they are within Handshake range of each other regardless of distance in the real world. Handshake range is abbreviated &quot;H&quot; in programming descriptions.</p>
-<a class="header" href="#connection" id="connection"><h3>Connection</h3></a>
-<p>Programming with a Connection range can only be used if the actor has an open account on the target or vice versa. Connection range is abbreviated &quot;C&quot; in programming descriptions.</p>
-<a class="header" href="#matrix-1" id="matrix-1"><h3>Matrix</h3></a>
-<p>Programming with a Matrix range can be used so long as the actor has a connection to the Matrix at large. Matrix range is abbreviated &quot;M&quot; in programming descriptions.</p>
-<a class="header" href="#time" id="time"><h2>Time</h2></a>
-<p>Not all programs take the same amount of time to use. Most take Complex Actions: &quot;CA&quot;, but some take Simple Actions: &quot;SA&quot; or extended periods of time to be properly used. Some programs are Sustained: &quot;(S)&quot; meaning that they are active for more than an instantaneous moment of extreme code use. A network can sustain a number of running procedures equal to its System rating before experiencing slow-down. Every additional sustained program reduces all Matrix dicepools of the network by 2 dice. If a system is called upon to run a number of sustained programs beyond its system rating equal to the Logic of the metahuman brain running it, the entire network crashes. Some programming is Permanent: &quot;(P)&quot; meaning that it affects a real change onto the Matrix which will persist after the network which spawned it stops dedicating processing cycles to it. These programs must be sustained for 15 combat rounds, after which they no longer require or benefit from input the originating network. Hits on the originating success test can be dedicated to reducing the required sustaining time rather than to increasing the effect of the action. Every hit used to speed the process reduces the required sustaining time by 3 rounds.</p>
-<a class="header" href="#analysis-programs-1" id="analysis-programs-1"><h2>Analysis Programs</h2></a>
+</li>
+<li><strong>Pilots / Autosofts / Skillsofts:</strong> Perhaps the most powerful of programming
+are the ones which replicate skills. There is no &quot;Longarms&quot; program. There
+are, however, a number of programs which when confronted with specific
+hardware and a decently massive pile of processing to fall back on can
+successfully fire a shotgun. Skillsofts work because there is a Skillwire
+system in place to slave the human brain into acting as the reserve computer
+that such a massive program would need. Also, it's metahuman specific, a whole
+new Skillsoft would have to be devised for a naga or a hellhound, even if they
+did have a skillwire system produced for them. Similarly, a Pilot program is
+not generic. It's specific to a specific device. You can't just grab a 1000¥
+drone and copy its pilot into your car - the drone doesn't have to handle the
+high speeds that the passenger vehicle does and its programming simply
+wouldn't be appropriate to the other machine. Autosofts, similarly are device
+specific. That doesn't necessarily mean that you need hundreds of different
+versions of every Autosoft. After all, the Clearsight soft is specific to
+<em>cameras</em> not to one or another kind of drone - so it can actually be reused
+on many different drones so long as they are all picking up camera data on the
+same frequencies.</li>
+<li><strong>Decompiling Forms:</strong> Decompiling Forms are only available to users of
+Resonance. They remove things from the Matrix. This is exceedingly different
+from corrupting data or creating alternative truths of higher seeming
+veracity, and use of these forms upsets a lot of people.</li>
+<li><strong>Registering Forms:</strong> Registering Forms are only available to users of
+Resonance and change the way icons interact with the Matrix. They are
+therefore more similar to things which might be accomplished with Software or
+Hardware tests.</li>
+<li><strong>MacGuffin Programming:</strong> There are lots of programs which do large and
+processing intensive actions. They synthesize skill softs, they predict the
+weather, they control nanite fabrication. These programs are often measured in
+&quot;Man Years&quot; to completion and they take a truly staggering amount of
+computational power to run to completion. There is no purpose served in having
+specific rules for these programs and so we don't.</li>
+</ul>
+<a class="header" href="#type" id="type"><h3>Type</h3></a>
+<p>Biofeedback programs directly affect metahuman brains, Data programs affect
+machines. Programming is labeled with a B or a D to distinguish its type. An
+orphan brain can only be affected by type B procedures, an empty network or lone
+device can only be affected by D programming. If a program can be used on
+either, it will be labeled with both a B and a D.</p>
+<p>A non-metahuman brain always is considered to have an optimized defense against
+any B type program that was not specifically written for the type of creature
+that it is. You cannot use hacking on the fly or threading to bypass that
+particular problem without very specialized skills and talents. So for example,
+a character who was attempting to use seize on a dragon or a shapeshifter would
+have their first two hits canceled automatically simply due to the alien
+neurophysiology. Ghouls are considered metahumans for this purpose.</p>
+<a class="header" href="#range" id="range"><h3>Range</h3></a>
+<a class="header" href="#decrypting-a-signal" id="decrypting-a-signal"><h4>Decrypting a Signal?</h4></a>
+<p>Due to the distributed nature of data storage and transmission, and the direct
+induction method employed by many major hacking operations, decrypting a
+device's signal is generally not required to hack a connection to it. Devices
+can be suborned and added to a hacker's network without the hacker ever knowing
+or caring what information had previously been passed through it.</p>
+<a class="header" href="#line-of-sight-los" id="line-of-sight-los"><h4>Line of Sight (LOS)</h4></a>
+<p>Many programs can only be used with very precise targeting. Causing a specific
+transformation in the data of a hard drive is not simply a matter of sending out
+a broadcast of a long series of waves that will miraculously effect a change in
+one device and not in any other. It's way more complicated than that and
+actually not even doable with pre-2029 technology. It involves making a
+precision electrical effect at a specific point in space. It's probably quantum
+or something. The point is, if a range is followed by (LOS), then your signal
+producing device actually has to be able to draw a clear line to the point in
+space that the target is physically present at, as well as knowing where that
+target is. The math involved is hellacious of course, but fortunately you've got
+really powerful computers and they are all harnessed together and able to draw
+upon the power of a human brain.</p>
+<a class="header" href="#signal-1" id="signal-1"><h4>Signal</h4></a>
+<p>Programming with a Signal range can be used if the target is within the range of
+projectable high density signal of the actor's network. Signal range is
+abbreviated &quot;S&quot; in programming descriptions.</p>
+<a class="header" href="#listening" id="listening"><h4>Listening</h4></a>
+<p>Programming with a Listening range can be used if the actor's network is within
+the range of projected high density signal of the <em>target</em>. Remember that using
+a high grade Receiver can increase the range at which a signal can be received,
+precisely as if the original signal had been projected at a higher Signal rating
+in the first place. An unmodified human has a high density signal rating of 0,
+meaning that an orphan brain needs to be very close to the acting device in
+order for Listening programs to function if such Receiver units are not used.
+Listening range is abbreviated &quot;L&quot; in programming descriptions.</p>
+<a class="header" href="#handshake" id="handshake"><h4>Handshake</h4></a>
+<p>Programming with a Handshake range can only be used if the target is within the
+range of high density signal of the actor's network <em>and</em> the actor is within
+the high density signal range of the target's network. In short, if the
+requirements for both Signal and Listening range are met, the conditions for
+Handshake range are met as well. If both the target and the actor have an open
+connection to a third party's node they are within Handshake range of each other
+regardless of distance in the real world. Handshake range is abbreviated &quot;H&quot; in
+programming descriptions.</p>
+<a class="header" href="#connection" id="connection"><h4>Connection</h4></a>
+<p>Programming with a Connection range can only be used if the actor has an open
+account on the target or vice versa. Connection range is abbreviated &quot;C&quot; in
+programming descriptions.</p>
+<a class="header" href="#matrix-1" id="matrix-1"><h4>Matrix</h4></a>
+<p>Programming with a Matrix range can be used so long as the actor has a
+connection to the Matrix at large. Matrix range is abbreviated &quot;M&quot; in
+programming descriptions.</p>
+<a class="header" href="#time" id="time"><h3>Time</h3></a>
+<p>Not all programs take the same amount of time to use. Most take Complex Actions:
+&quot;CA&quot;, but some take Simple Actions: &quot;SA&quot; or extended periods of time to be
+properly used. Some programs are Sustained: &quot;(S)&quot; meaning that they are active
+for more than an instantaneous moment of extreme code use. A network can sustain
+a number of running procedures equal to its System rating before experiencing
+slow-down. Every additional sustained program reduces all Matrix dicepools of
+the network by 2 dice. If a system is called upon to run a number of sustained
+programs beyond its system rating equal to the Logic of the metahuman brain
+running it, the entire network crashes. Some programming is Permanent: &quot;(P)&quot;
+meaning that it affects a real change onto the Matrix which will persist after
+the network which spawned it stops dedicating processing cycles to it. These
+programs must be sustained for 15 combat rounds, after which they no longer
+require or benefit from input the originating network. Hits on the originating
+success test can be dedicated to reducing the required sustaining time rather
+than to increasing the effect of the action. Every hit used to speed the process
+reduces the required sustaining time by 3 rounds.</p>
+<a class="header" href="#analysis-programs" id="analysis-programs"><h2>Analysis Programs</h2></a>
 <p>Using an Analysis program requires a Logic + Data Search test.</p>
-<a class="header" href="#backtrack" id="backtrack"><h4>Backtrack</h4></a>
+<a class="header" href="#backtrack" id="backtrack"><h3>Backtrack</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> C <strong>Time:</strong> SA (P)</p>
-<p>Backtracking is a method to find the real world source of information that is being placed into one's own data stores through a combination of packet analysis and very complicated mathematical hijinks that are well beyond the author to explain or understand. The end result is that a Backtrack action will be successful if it gains more hits on a Logic + Data Search check than the target has already achieved on a Matrix Stealth check (only 1 hit is needed to successfully backtrack a network which is not attempting to be stealthy). The program reveals the real world location of the target to within a 1 meter radius as soon as the program becomes Permanent.</p>
+<p>Backtracking is a method to find the real world source of information that is
+being placed into one's own data stores through a combination of packet analysis
+and very complicated mathematical hijinks that are well beyond the author to
+explain or understand. The end result is that a Backtrack action will be
+successful if it gains more hits on a Logic + Data Search check than the target
+has already achieved on a Matrix Stealth check (only 1 hit is needed to
+successfully backtrack a network which is not attempting to be stealthy). The
+program reveals the real world location of the target to within a 1 meter radius
+as soon as the program becomes Permanent.</p>
 <p><strong>Optimized Defense:</strong> Satellite Routing.</p>
-<a class="header" href="#brain-scan" id="brain-scan"><h4>Brain Scan</h4></a>
+<a class="header" href="#brain-scan" id="brain-scan"><h3>Brain Scan</h3></a>
 <p><strong>Type:</strong> B <strong>Range:</strong> L (LOS) <strong>Time:</strong> CA (P)</p>
-<p>The contents of brains can be determined at a distance with modern data management techniques. But actually getting specific information out of a metahuman brain's gigantic pile of flashing instructions is time consuming and intensive. Success is achieved with a Logic + Datasearch test resisted by Willpower + Firewall. Specific information is not successfully retrieved from the target's memory until the scan has been sustained on the target long enough to be Permanent.</p>
-<a class="header" href="#find-mind" id="find-mind"><h4>Find Mind</h4></a>
+<p>The contents of brains can be determined at a distance with modern data
+management techniques. But actually getting specific information out of a
+metahuman brain's gigantic pile of flashing instructions is time consuming and
+intensive. Success is achieved with a Logic + Datasearch test resisted by
+Willpower + Firewall. Specific information is not successfully retrieved from
+the target's memory until the scan has been sustained on the target long enough
+to be Permanent.</p>
+<a class="header" href="#find-mind" id="find-mind"><h3>Find Mind</h3></a>
 <p><strong>Type:</strong> B <strong>Range:</strong> S <strong>Time:</strong> CA (S)</p>
-<p>Disturbances in the packet flow can reveal the locations of certain kinds of interference. One of the most often looked for is the presence of metahuman brains. This technique is far more likely to work on a brain whose signal is not being modulated by a connection to a network or signal defense. This program functions similarly to a Detection Spell in the information it can give, and is resisted by Firewall and Signal Defense.</p>
-<a class="header" href="#pin-drop" id="pin-drop"><h4>Pin Drop</h4></a>
+<p>Disturbances in the packet flow can reveal the locations of certain kinds of
+interference. One of the most often looked for is the presence of metahuman
+brains. This technique is far more likely to work on a brain whose signal is not
+being modulated by a connection to a network or signal defense. This program
+functions similarly to a Detection Spell in the information it can give, and is
+resisted by Firewall and Signal Defense.</p>
+<a class="header" href="#pin-drop" id="pin-drop"><h3>Pin Drop</h3></a>
 <p><strong>Type:</strong> B&amp;D <strong>Range:</strong> Special (changes L) <strong>Time:</strong> CA (S)</p>
-<p>Light moves towards infinity as fast as anything can, and so the theoretical range at which a signal can be received is much longer than the practical range at which it can be received. Hardware can make a big difference (see Receivers), but software too can make a large difference by combing through what signal is available to isolate individual voices. The user picks a known (though possibly out of range) signal and makes a Logic + Datasearch test opposed only by Signal Defense. For every 2 full net hits, the user can hear the signal from the target as if the target's Signal strength were 1 higher. Only the most successful Pin Drop provides benefits should the character attempt it more than once on the same target, and all Pin Drops against a single target expire the next time the target takes a Matrix Full Defense action.</p>
-<a class="header" href="#probe" id="probe"><h4>Probe</h4></a>
+<p>Light moves towards infinity as fast as anything can, and so the theoretical
+range at which a signal can be received is much longer than the practical range
+at which it can be received. Hardware can make a big difference (see Receivers),
+but software too can make a large difference by combing through what signal is
+available to isolate individual voices. The user picks a known (though possibly
+out of range) signal and makes a Logic + Datasearch test opposed only by Signal
+Defense. For every 2 full net hits, the user can hear the signal from the target
+as if the target's Signal strength were 1 higher. Only the most successful Pin
+Drop provides benefits should the character attempt it more than once on the
+same target, and all Pin Drops against a single target expire the next time the
+target takes a Matrix Full Defense action.</p>
+<a class="header" href="#probe" id="probe"><h3>Probe</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> H (LOS) <strong>Time:</strong> CA (P)</p>
-<p>Probing is a technique used to identify the weaknesses in a device or connection. The user makes a Logic + Datasearch test opposed only by Signal Defense. In subsequent actions, the character's dicepools for programming used against that target are increased by the net hits. Only the most successful Probe provides benefits should the character attempt it more than once on the same target, and all Probes against a single target expire the next time the target takes a Matrix Full Defense action.</p>
-<a class="header" href="#reveal-contents" id="reveal-contents"><h4>Reveal Contents</h4></a>
+<p>Probing is a technique used to identify the weaknesses in a device or
+connection. The user makes a Logic + Datasearch test opposed only by Signal
+Defense. In subsequent actions, the character's dicepools for programming used
+against that target are increased by the net hits. Only the most successful
+Probe provides benefits should the character attempt it more than once on the
+same target, and all Probes against a single target expire the next time the
+target takes a Matrix Full Defense action.</p>
+<a class="header" href="#reveal-contents" id="reveal-contents"><h3>Reveal Contents</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> S (LOS) <strong>Time:</strong> CA (P)</p>
-<p>Data in data stores can be successfully inferred from the outside, given sufficient probing. The user makes a Logic + Datasearch test opposed by the device's Firewall and Signal Defense (if any). Information in the data stores will be copied out (though not necessarily decrypted or defused) once the program has been sustained long enough to become Permanent.</p>
+<p>Data in data stores can be successfully inferred from the outside, given
+sufficient probing. The user makes a Logic + Datasearch test opposed by the
+device's Firewall and Signal Defense (if any). Information in the data stores
+will be copied out (though not necessarily decrypted or defused) once the
+program has been sustained long enough to become Permanent.</p>
 <p><strong>Step by Step: Reveal Contents</strong></p>
-<p>Tani wants to break the EUE on a major competitor, so she drops in on one of the servers that is actually encrypting stuff for the networks. She hits it with a Reveal Contents, and gets a series of unencrypted files. Fascinating stuff to be sure, but she actually wanted something else from another system. Fortunately, she now has something to compare against the encrypted version and can now attempt to Decrypt.</p>
-<a class="header" href="#who-is" id="who-is"><h4>Who Is</h4></a>
+<p>Tani wants to break the EUE on a major competitor, so she drops in on one of the
+servers that is actually encrypting stuff for the networks. She hits it with a
+Reveal Contents, and gets a series of unencrypted files. Fascinating stuff to be
+sure, but she actually wanted something else from another system. Fortunately,
+she now has something to compare against the encrypted version and can now
+attempt to Decrypt.</p>
+<a class="header" href="#who-is" id="who-is"><h3>Who Is</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> M <strong>Time:</strong> CA (P)</p>
-<p>The Who Is protocols are an ancient and time honored method of finding the real world location of an LTG (which is like a phone number or email address). While somewhat time consuming, these techniques are quite powerful. If the number of hits on the Logic + Datasearch test equals the target's Matrix stealth test, the location of the target's transmitter will be found by the time the Who Is becomes permanent.</p>
-<a class="header" href="#attack-programs-1" id="attack-programs-1"><h2>Attack Programs</h2></a>
-<p>Cybercombat usually is a short and brutal affair. As much as hackers like to describe the dance of code and the clashing of packets, when it comes to ending up on top, shooting first is a big step towards it.</p>
-<p>Using an Attack Program involves rolling Logic + Cybercombat, using the target's Firewall as a defense pool. A character may add their own Cybercombat skill to their defense pool against programming with a range of C. Programming with a range of S or H is affected as normal by Signal Defense. If an Attack Program is soaked, a B program is soaked by Willpower and a D program is soaked by System.</p>
-<a class="header" href="#black-hammer" id="black-hammer"><h4>Black Hammer</h4></a>
+<p>The Who Is protocols are an ancient and time honored method of finding the real
+world location of an LTG (which is like a phone number or email address). While
+somewhat time consuming, these techniques are quite powerful. If the number of
+hits on the Logic + Datasearch test equals the target's Matrix stealth test, the
+location of the target's transmitter will be found by the time the Who Is
+becomes permanent.</p>
+<a class="header" href="#attack-programs" id="attack-programs"><h2>Attack Programs</h2></a>
+<p>Cybercombat usually is a short and brutal affair. As much as hackers like to
+describe the dance of code and the clashing of packets, when it comes to ending
+up on top, shooting first is a big step towards it.</p>
+<p>Using an Attack Program involves rolling Logic + Cybercombat, using the target's
+Firewall as a defense pool. A character may add their own Cybercombat skill to
+their defense pool against programming with a range of C. Programming with a
+range of S or H is affected as normal by Signal Defense. If an Attack Program is
+soaked, a B program is soaked by Willpower and a D program is soaked by System.</p>
+<a class="header" href="#black-hammer" id="black-hammer"><h3>Black Hammer</h3></a>
 <p><strong>Type:</strong> B <strong>Range:</strong> S (LOS) <strong>Time:</strong> CA</p>
-<p>An improper neural impulse can digest a pancreas, terminate breathing, or stop a heart, which is exactly what Black Hammer does. If a character is affected by Black Hammer, she uses Willpower (Biofeedback Filter bonuses apply) to resist physical damage equal to the Rating of the attack plus the net hits. Black Hammer is incapable of doing damage beyond that which is necessary to completely fill in the condition monitor. Any excess damage is lost (stoppage of internal organ function is <em>bad</em>, but it's not &quot;heads exploding&quot; bad).</p>
-<a class="header" href="#contagious-ras-override" id="contagious-ras-override"><h4>Contagious RAS Override</h4></a>
+<p>An improper neural impulse can digest a pancreas, terminate breathing, or stop a
+heart, which is exactly what Black Hammer does. If a character is affected by
+Black Hammer, she uses Willpower (Biofeedback Filter bonuses apply) to resist
+physical damage equal to the Rating of the attack plus the net hits. Black
+Hammer is incapable of doing damage beyond that which is necessary to completely
+fill in the condition monitor. Any excess damage is lost (stoppage of internal
+organ function is <em>bad</em>, but it's not &quot;heads exploding&quot; bad).</p>
+<a class="header" href="#contagious-ras-override" id="contagious-ras-override"><h3>Contagious RAS Override</h3></a>
 <p><strong>Type:</strong> B <strong>Range:</strong> S <strong>Time:</strong> CA (S)</p>
-<p>RAS Overrides are a normal part of the Matrix, but a clever Matrix user can inflict them on others. The Logic + Cybercombat check is opposed by the target's Firewall + Willpower + Signal Defense (if any). If net hits are achieved, the subject is paralyzed as their motor neurons are edited out of functionality. All physical actions are taken at a -6 penalty, and the victim must make a Willpower (Net Hits) test to even attempt a physical action. The victim may attempt to end this condition by taking a Toggle AR/VR action and making a Logic + Computer test with a threshold of the net hits of Contagious RAS Override.</p>
+<p>RAS Overrides are a normal part of the Matrix, but a clever Matrix user can
+inflict them on others. The Logic + Cybercombat check is opposed by the target's
+Firewall + Willpower + Signal Defense (if any). If net hits are achieved, the
+subject is paralyzed as their motor neurons are edited out of functionality. All
+physical actions are taken at a -6 penalty, and the victim must make a Willpower
+(Net Hits) test to even attempt a physical action. The victim may attempt to end
+this condition by taking a Toggle AR/VR action and making a Logic + Computer
+test with a threshold of the net hits of Contagious RAS Override.</p>
 <p><strong>Optimized Defense:</strong> Internal SimRig or Reaction Enhancer.</p>
-<a class="header" href="#crash" id="crash"><h4>Crash</h4></a>
+<a class="header" href="#crash" id="crash"><h3>Crash</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> C <strong>Time:</strong> SA</p>
-<p>Spam and Viruses are a fact of life in the wireless world. But when you can see nothing but, you’re probably in the process of being crashed. If an Icon is affected by Crash, it uses Armor + System to resist Icon damage equal to the rating of the attack plus any net hits. Program Icons have their hits reduced by the net hits of the crash attack.</p>
-<a class="header" href="#data-bomb" id="data-bomb"><h4>Data Bomb</h4></a>
+<p>Spam and Viruses are a fact of life in the wireless world. But when you can see
+nothing but, you’re probably in the process of being crashed. If an Icon is
+affected by Crash, it uses Armor + System to resist Icon damage equal to the
+rating of the attack plus any net hits. Program Icons have their hits reduced by
+the net hits of the crash attack.</p>
+<a class="header" href="#data-bomb" id="data-bomb"><h3>Data Bomb</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> C <strong>Time:</strong> CA (P)</p>
-<p>A Data Bomb is a form of trap. If triggered, it releases malicious code and destroys the contents it is wrapped around. A Data Bomb is &quot;set&quot; by wrapping it around one or more files. Databombs are not easy to detect, requiring a Matrix Perception test with a threshold equal to the number of hits achieved when setting the databomb. If the file is directly accessed (to read or copy), the bomb &quot;explodes&quot;. This destroys the data (requiring a threshold of Recovery equal to the number of hits initially scored creating the Data Bomb), and damaging the Icon of whoever detonated the bomb (inflicting Icon Damage equal to program rating). Data Bombs are normally bypassed with a passkey of some sort, but the Data Bomb program can separately be Crashed, or the passkey can be Spoofed. Failing to bypass a Data Bomb results in exactly the same effect as simply accessing the data without noticing the bomb in the first place.</p>
-<a class="header" href="#denial" id="denial"><h4>Denial</h4></a>
+<p>A Data Bomb is a form of trap. If triggered, it releases malicious code and
+destroys the contents it is wrapped around. A Data Bomb is &quot;set&quot; by wrapping it
+around one or more files. Databombs are not easy to detect, requiring a Matrix
+Perception test with a threshold equal to the number of hits achieved when
+setting the databomb. If the file is directly accessed (to read or copy), the
+bomb &quot;explodes&quot;. This destroys the data (requiring a threshold of Recovery equal
+to the number of hits initially scored creating the Data Bomb), and damaging the
+Icon of whoever detonated the bomb (inflicting Icon Damage equal to program
+rating). Data Bombs are normally bypassed with a passkey of some sort, but the
+Data Bomb program can separately be Crashed, or the passkey can be Spoofed.
+Failing to bypass a Data Bomb results in exactly the same effect as simply
+accessing the data without noticing the bomb in the first place.</p>
+<a class="header" href="#denial" id="denial"><h3>Denial</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> M <strong>Time:</strong> CA (S)</p>
-<p>Denial is a river in Egypt. This is an attack which sends a large number of nuisance requests for data to the target LTG through the Matrix. This results in the target network being destabilized, or possibly even crashing altogether. The Logic + Attack check is resisted with Firewall + Willpower, and every net hit counts as an additional program that the target is sustaining. The target network may remove effective sustained programs with an additional resistance test whenever it takes a Matrix Defense action.</p>
-<a class="header" href="#jingle" id="jingle"><h4>Jingle</h4></a>
+<p>Denial is a river in Egypt. This is an attack which sends a large number of
+nuisance requests for data to the target LTG through the Matrix. This results in
+the target network being destabilized, or possibly even crashing altogether. The
+Logic + Attack check is resisted with Firewall + Willpower, and every net hit
+counts as an additional program that the target is sustaining. The target
+network may remove effective sustained programs with an additional resistance
+test whenever it takes a Matrix Defense action.</p>
+<a class="header" href="#jingle" id="jingle"><h3>Jingle</h3></a>
 <p><strong>Type:</strong> B <strong>Range:</strong> C <strong>Time:</strong> CA</p>
-<p>Jingle plants an idea into the target's mind, getting its name for its first use: forcing people to remember advertising slogans. The Logic + Cybercombat check is opposed by the target's Firewall + Willpower + Cybercombat (if any). Net hits set the veracity with which the subject views the new fact.</p>
-<a class="header" href="#seize" id="seize"><h4>Seize</h4></a>
+<p>Jingle plants an idea into the target's mind, getting its name for its first
+use: forcing people to remember advertising slogans. The Logic + Cybercombat
+check is opposed by the target's Firewall + Willpower + Cybercombat (if any).
+Net hits set the veracity with which the subject views the new fact.</p>
+<a class="header" href="#seize" id="seize"><h3>Seize</h3></a>
 <p><strong>Type:</strong> B <strong>Range:</strong> S (LOS) <strong>Time:</strong> CA</p>
-<p>It takes only 7 misfired neurons to create an epileptic event in a normal human. A well-placed set of induction instructions can turn even the most physically capable of metahumans into a convulsing mass of tissue. If a character is affected by Seize, she may immediately resist the net hits of the attack with Willpower (Biofeedback Filter bonuses apply). If there are any net hits remaining, the character begins uncontrollably convulsing and is incapacitated. Every (Rating) combat rounds, the victim may make another Willpower check to attempt to reduce the remaining net hits of the attack. When the net hits are reduced to zero, the character regains control of her body.</p>
+<p>It takes only 7 misfired neurons to create an epileptic event in a normal human.
+A well-placed set of induction instructions can turn even the most physically
+capable of metahumans into a convulsing mass of tissue. If a character is
+affected by Seize, she may immediately resist the net hits of the attack with
+Willpower (Biofeedback Filter bonuses apply). If there are any net hits
+remaining, the character begins uncontrollably convulsing and is incapacitated.
+Every (Rating) combat rounds, the victim may make another Willpower check to
+attempt to reduce the remaining net hits of the attack. When the net hits are
+reduced to zero, the character regains control of her body.</p>
 <p><strong>Optimized Defense:</strong> Move by Wire</p>
-<a class="header" href="#communications-programs-1" id="communications-programs-1"><h2>Communications Programs</h2></a>
-<p><em>&quot;The punishment was that one man could not understand the other. Can you believe they used to consider that a punishment?&quot;</em></p>
+<a class="header" href="#communications-programs" id="communications-programs"><h2>Communications Programs</h2></a>
+<p><em>&quot;The punishment was that one man could not understand the other. Can you
+believe they used to consider that a punishment?&quot;</em></p>
 <p>Using a Communications program requires a Logic + Electronic Warfare test.</p>
-<a class="header" href="#cancel" id="cancel"><h4>Cancel</h4></a>
+<a class="header" href="#cancel" id="cancel"><h3>Cancel</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> H <strong>Time:</strong> CA (S)</p>
-<p>Information transfer is with waves as well as with particles, and when a wave hits its opposite both are canceled and effectively cease to exist. With the proper signals, the signals of a target can be neutralized. Every net hit on a Logic + Electronic Warfare vs. Signal + Signal Defense test reduces the target's dicepool on all broadcast Matrix actions by one. Cancel is a passive and very subtle effect, not at all obvious until signals actually start to fail.</p>
-<a class="header" href="#cloak" id="cloak"><h4>Cloak</h4></a>
+<p>Information transfer is with waves as well as with particles, and when a wave
+hits its opposite both are canceled and effectively cease to exist. With the
+proper signals, the signals of a target can be neutralized. Every net hit on a
+Logic + Electronic Warfare vs. Signal + Signal Defense test reduces the target's
+dicepool on all broadcast Matrix actions by one. Cancel is a passive and very
+subtle effect, not at all obvious until signals actually start to fail.</p>
+<a class="header" href="#cloak" id="cloak"><h3>Cloak</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> C <strong>Time:</strong> CA (S)</p>
-<p>With the right data manipulations a network can be hidden from casual or even in depth observation in the Matrix. The user makes a Logic + Electronic Warfare test and the target goes into Hidden Mode with the number of net hits substituting for their Matrix Stealth check to stay hidden.</p>
-<a class="header" href="#eccm" id="eccm"><h4>ECCM</h4></a>
+<p>With the right data manipulations a network can be hidden from casual or even in
+depth observation in the Matrix. The user makes a Logic + Electronic Warfare
+test and the target goes into Hidden Mode with the number of net hits
+substituting for their Matrix Stealth check to stay hidden.</p>
+<a class="header" href="#eccm" id="eccm"><h3>ECCM</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> C <strong>Time:</strong> CA (S)</p>
-<p>Jamming can really put a cramp into the style of modern networking. But with the expenditure of merely titanic computational resources on filtering out interference and reiterating questionable data packets, the difficulties can be mitigated. The user makes a Logic + Electronic Warfare test with a threshold equal to half the Background that she is attempting to overcome. Each net hit reduces the effective Background that the user has to deal with.</p>
-<a class="header" href="#impersonate" id="impersonate"><h4>Impersonate</h4></a>
+<p>Jamming can really put a cramp into the style of modern networking. But with the
+expenditure of merely titanic computational resources on filtering out
+interference and reiterating questionable data packets, the difficulties can be
+mitigated. The user makes a Logic + Electronic Warfare test with a threshold
+equal to half the Background that she is attempting to overcome. Each net hit
+reduces the effective Background that the user has to deal with.</p>
+<a class="header" href="#impersonate" id="impersonate"><h3>Impersonate</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> H <strong>Time:</strong> SA (S)</p>
-<p>When two devices or networks have an active connection, a third party (that's you) can use Impersonate to create a connection with one or the other system by insinuating itself as the one of the participants. If successful, not only does the user establish a connection, but the original connection is severed. The Logic + Electronic Warfare test is opposed by Firewall + Signal Defense (if any). The Signal Rating of the impersonated device is also added to the defense pool, assuming that it is still functional.</p>
-<p><strong>Optimized Defense:</strong> If the impersonated device or network has a Signal that is more than 1 higher than the attempting network's Signal, the target has an optimized defense.</p>
-<a class="header" href="#intercept" id="intercept"><h4>Intercept</h4></a>
+<p>When two devices or networks have an active connection, a third party (that's
+you) can use Impersonate to create a connection with one or the other system by
+insinuating itself as the one of the participants. If successful, not only does
+the user establish a connection, but the original connection is severed. The
+Logic + Electronic Warfare test is opposed by Firewall + Signal Defense (if
+any). The Signal Rating of the impersonated device is also added to the defense
+pool, assuming that it is still functional.</p>
+<p><strong>Optimized Defense:</strong> If the impersonated device or network has a Signal that
+is more than 1 higher than the attempting network's Signal, the target has an
+optimized defense.</p>
+<a class="header" href="#intercept" id="intercept"><h3>Intercept</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> L <strong>Time:</strong> SA (S)</p>
-<p>Data traveling through the air can be recorded by anyone within range, and for those of a cryptographic bent, that information can be used to figure out all kinds of things. Obtaining the information from a conversation between two other devices requires a Logic + Electronic Warfare test opposed by System + Signal Defense (if any).</p>
-<a class="header" href="#sensory-deprivation" id="sensory-deprivation"><h4>Sensory Deprivation</h4></a>
+<p>Data traveling through the air can be recorded by anyone within range, and for
+those of a cryptographic bent, that information can be used to figure out all
+kinds of things. Obtaining the information from a conversation between two other
+devices requires a Logic + Electronic Warfare test opposed by System + Signal
+Defense (if any).</p>
+<a class="header" href="#sensory-deprivation" id="sensory-deprivation"><h3>Sensory Deprivation</h3></a>
 <p><strong>Type:</strong> B <strong>Range:</strong> S (LOS) <strong>Time:</strong> CA (S)</p>
-<p>The editing out of sensory information to a metahuman brain is an essential portion of establishing VR, but it is also a potential weakness of any metahuman. The Logic + Electronic Warfare check is opposed by the target's Firewall + Willpower + Signal Defense (if any). If net hits are achieved, the subject is blinded and completely cut off from physical senses as their sensory neurons are suppressed. The victim may attempt to end this condition by taking a Toggle AR/VR action and making a Logic + Computer test with a threshold of the net hits of Sensory Deprivation.</p>
+<p>The editing out of sensory information to a metahuman brain is an essential
+portion of establishing VR, but it is also a potential weakness of any
+metahuman. The Logic + Electronic Warfare check is opposed by the target's
+Firewall + Willpower + Signal Defense (if any). If net hits are achieved, the
+subject is blinded and completely cut off from physical senses as their sensory
+neurons are suppressed. The victim may attempt to end this condition by taking a
+Toggle AR/VR action and making a Logic + Computer test with a threshold of the
+net hits of Sensory Deprivation.</p>
 <p><strong>Optimized Defense:</strong> Internal SimRig or multiple cybernetic senses.</p>
-<a class="header" href="#exploit-programs-1" id="exploit-programs-1"><h2>Exploit Programs</h2></a>
-<p><em>&quot;If algorithms that reverse engineer the production of supposedly one-way mathematical transforms from finite comparisons between plaintexts and encrypted formats are outlawed then only outlaws will have... that thing I just said.&quot;</em></p>
+<a class="header" href="#exploit-programs" id="exploit-programs"><h2>Exploit Programs</h2></a>
+<p><em>&quot;If algorithms that reverse engineer the production of supposedly one-way
+mathematical transforms from finite comparisons between plaintexts and encrypted
+formats are outlawed then only outlaws will have... that thing I just said.&quot;</em></p>
 <p>Using an Exploit program requires a Logic + Hacking test.</p>
-<a class="header" href="#backdoor" id="backdoor"><h4>Backdoor</h4></a>
+<a class="header" href="#backdoor" id="backdoor"><h3>Backdoor</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> H <strong>Time:</strong> CA (P)</p>
-<p>Backdoor creates a special trick that the user can activate as a Free Action which creates a connection between the target and the user. The Logic + Hacking test is opposed by Firewall + Signal Defense (if any).</p>
-<a class="header" href="#decrypt" id="decrypt"><h4>Decrypt</h4></a>
+<p>Backdoor creates a special trick that the user can activate as a Free Action
+which creates a connection between the target and the user. The Logic + Hacking
+test is opposed by Firewall + Signal Defense (if any).</p>
+<a class="header" href="#decrypt" id="decrypt"><h3>Decrypt</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> L <strong>Time:</strong> Special (S)</p>
-<p>Cryptology is a really complicated subject which is at the very heart of much of computing. Within the context of Shadowrun, it is assumed that any time a character gains access to the plaintext and encrypted version of a message that the encryption key <em>can</em> be reverse engineered. In the case of asymmetric encryption, any number of plaintexts can be created at will just by knowing the public version. To decrypt, a user makes a Logic + Hacking test opposed by Firewall looking to make a threshold of 2. The character only gets one chance unless more plaintext/encryption pairs are obtained. If successful, the code is broken in a single Complex Action. If sufficient hits are not achieved, the code may yet still be broken, but it takes longer depending upon how many hits the test was short of the threshold:</p>
+<p>Cryptology is a really complicated subject which is at the very heart of much of
+computing. Within the context of Shadowrun, it is assumed that any time a
+character gains access to the plaintext and encrypted version of a message that
+the encryption key <em>can</em> be reverse engineered. In the case of asymmetric
+encryption, any number of plaintexts can be created at will just by knowing the
+public version. To decrypt, a user makes a Logic + Hacking test opposed by
+Firewall looking to make a threshold of 2. The character only gets one chance
+unless more plaintext/encryption pairs are obtained. If successful, the code is
+broken in a single Complex Action. If sufficient hits are not achieved, the code
+may yet still be broken, but it takes longer depending upon how many hits the
+test was short of the threshold:</p>
 <ul>
 <li>1 hour</li>
 <li>1 day</li>
 <li>1 month</li>
 <li>1 year</li>
 </ul>
-<a class="header" href="#jedi-trick" id="jedi-trick"><h4>Jedi Trick</h4></a>
+<a class="header" href="#jedi-trick" id="jedi-trick"><h3>Jedi Trick</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> S <strong>Time:</strong> CA</p>
-<p>Jedi Trick bypasses a request for a password or show of credentials. The Logic + Hacking test is opposed by Firewall + Signal Defense (if any).</p>
+<p>Jedi Trick bypasses a request for a password or show of credentials. The Logic +
+Hacking test is opposed by Firewall + Signal Defense (if any).</p>
 <p><strong>Step by Step: The Retina Scanner</strong></p>
-<p>The simplest of retina scanners either keeps the list of retina possibilities on site or off, and sends an unlock signal to the door when a match is made. The Jedi Trick system bypasses those shenanigans altogether and directly opens the door. More advanced Retina Scanners are embedded in a Faraday Cage and have a direct wired connection to the door itself. This prevents a Jedi Trick and requires characters to either submit a valid (possibly faked) retina for scanning or to manually open the lock via Lockpicking or Harware skills.</p>
-<a class="header" href="#master-control" id="master-control"><h4>Master Control</h4></a>
+<p>The simplest of retina scanners either keeps the list of retina possibilities on
+site or off, and sends an unlock signal to the door when a match is made. The
+Jedi Trick system bypasses those shenanigans altogether and directly opens the
+door. More advanced Retina Scanners are embedded in a Faraday Cage and have a
+direct wired connection to the door itself. This prevents a Jedi Trick and
+requires characters to either submit a valid (possibly faked) retina for
+scanning or to manually open the lock via Lockpicking or Harware skills.</p>
+<a class="header" href="#master-control" id="master-control"><h3>Master Control</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> C <strong>Time:</strong> CA</p>
-<p>Master Control is a method to ramp an account up in privileges. Just because a data connection exists doesn't mean that the network on the other end actually <em>trusts</em> data packets from that source. This program solves that by manually altering the routing information for the user's connection, causing it to be treated with greater privileges. The Logic + Hacking test is opposed by Firewall + Willpower + Cybercombat (if any).</p>
-<a class="header" href="#misplace" id="misplace"><h4>Misplace</h4></a>
+<p>Master Control is a method to ramp an account up in privileges. Just because a
+data connection exists doesn't mean that the network on the other end actually
+<em>trusts</em> data packets from that source. This program solves that by manually
+altering the routing information for the user's connection, causing it to be
+treated with greater privileges. The Logic + Hacking test is opposed by Firewall</p>
+<ul>
+<li>Willpower + Cybercombat (if any).</li>
+</ul>
+<a class="header" href="#misplace" id="misplace"><h3>Misplace</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> S <strong>Time:</strong> CA</p>
-<p>Data is stored all kinds of crazy places, and successfully using Misplace causes data to begin being stored in a place topologically similar to &quot;the trashcan&quot;. The Logic + Hacking test is opposed by Firewall + Signal Defense (if any).</p>
-<a class="header" href="#ostraka" id="ostraka"><h4>Ostraka</h4></a>
+<p>Data is stored all kinds of crazy places, and successfully using Misplace causes
+data to begin being stored in a place topologically similar to &quot;the trashcan&quot;.
+The Logic + Hacking test is opposed by Firewall + Signal Defense (if any).</p>
+<a class="header" href="#ostraka" id="ostraka"><h3>Ostraka</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> S <strong>Time:</strong> CA</p>
-<p>Ostraka causes a subscribed device or program to be apparently told to disengage from the network. If it succeeds, the program shuts down or the device is ejected from the network and becomes a lone device. The Logic + Hacking test is opposed by Firewall + Willpower + Signal Defense (if any).</p>
-<a class="header" href="#peristalsis" id="peristalsis"><h4>Peristalsis</h4></a>
+<p>Ostraka causes a subscribed device or program to be apparently told to disengage
+from the network. If it succeeds, the program shuts down or the device is
+ejected from the network and becomes a lone device. The Logic + Hacking test is
+opposed by Firewall + Willpower + Signal Defense (if any).</p>
+<a class="header" href="#peristalsis" id="peristalsis"><h3>Peristalsis</h3></a>
 <p><strong>Type:</strong> B <strong>Range:</strong> S <strong>Time:</strong> SA (S)</p>
-<p>The target's autonomic nervous system is activated remotely. This can be embarrassing and socially awkward, but is usually not directly dangerous unless they have an adrenal pump (which can be activated by this method). No matter what the actual contents of the subject's intestines, the results can be distracting and painful, causing a -2 penalty to all dicepools (this penalty does not stack with further uses of this programming). The Logic + Hacking test is opposed by Firewall + Willpower + Signal Defense (if any) + Biofeedback Filter (if any).</p>
+<p>The target's autonomic nervous system is activated remotely. This can be
+embarrassing and socially awkward, but is usually not directly dangerous unless
+they have an adrenal pump (which can be activated by this method). No matter
+what the actual contents of the subject's intestines, the results can be
+distracting and painful, causing a -2 penalty to all dicepools (this penalty
+does not stack with further uses of this programming). The Logic + Hacking test
+is opposed by Firewall + Willpower + Signal Defense (if any) + Biofeedback
+Filter (if any).</p>
 <p><strong>Optimized Defense:</strong> Clean Digestion or Digestive Expansion</p>
-<a class="header" href="#taxman" id="taxman"><h4>Taxman</h4></a>
+<a class="header" href="#taxman" id="taxman"><h3>Taxman</h3></a>
 <p><strong>Type:</strong> B&amp;D <strong>Range:</strong> H <strong>Time:</strong> CA</p>
-<p>Taxman causes the user to become a seemingly legitimate data request. If successful, the target system begins sending requested files to the Taxman. The Logic + Hacking test is opposed by Firewall + Willpower + Signal Defense (if any).</p>
-<a class="header" href="#operations-programs-1" id="operations-programs-1"><h2>Operations Programs</h2></a>
+<p>Taxman causes the user to become a seemingly legitimate data request. If
+successful, the target system begins sending requested files to the Taxman. The
+Logic + Hacking test is opposed by Firewall + Willpower + Signal Defense (if
+any).</p>
+<a class="header" href="#operations-programs" id="operations-programs"><h2>Operations Programs</h2></a>
 <p><em>&quot;No one believes video evidence any more.&quot;</em></p>
 <p>Using an Operations Program requires a Logic + Computer test.</p>
-<a class="header" href="#armor" id="armor"><h4>Armor</h4></a>
+<a class="header" href="#armor" id="armor"><h3>Armor</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> H <strong>Time:</strong> CA (S)</p>
-<p>Armor Programming makes a system more resilient to Matrix damage. While it is running, the target network rolls an extra number of dice to resist Icon Damage equal to its rating. Only the best Armor program applies if more than one is running.</p>
-<a class="header" href="#fabrication" id="fabrication"><h4>Fabrication</h4></a>
+<p>Armor Programming makes a system more resilient to Matrix damage. While it is
+running, the target network rolls an extra number of dice to resist Icon Damage
+equal to its rating. Only the best Armor program applies if more than one is
+running.</p>
+<a class="header" href="#fabrication" id="fabrication"><h3>Fabrication</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> C <strong>Time:</strong> CA (S)</p>
-<p>Fabrication makes a seemingly meaningful datstream out of nothing at all. The data can continue to be produced indefinitely in real time, with a quality dictated by the results of a Logic + Computer test. This data can be tossed or saved. Multiple copies of Fabrication can run on the same network or even multiple networks in order to produce more data. For example, 6 hours of video footage can be created from whole cloth in an hour and a half by having four copies of Fabrication running for that period. If merely modifying existing footage, one should just use Data Manipulation. Determining the fake would be compared to the <em>worst</em> effort of the different Fabrications.</p>
-<a class="header" href="#medic" id="medic"><h4>Medic</h4></a>
+<p>Fabrication makes a seemingly meaningful datstream out of nothing at all. The
+data can continue to be produced indefinitely in real time, with a quality
+dictated by the results of a Logic + Computer test. This data can be tossed or
+saved. Multiple copies of Fabrication can run on the same network or even
+multiple networks in order to produce more data. For example, 6 hours of video
+footage can be created from whole cloth in an hour and a half by having four
+copies of Fabrication running for that period. If merely modifying existing
+footage, one should just use Data Manipulation. Determining the fake would be
+compared to the <em>worst</em> effort of the different Fabrications.</p>
+<a class="header" href="#medic" id="medic"><h3>Medic</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> H (LOS) <strong>Time:</strong> CA (P)</p>
-<p>Medic repairs Icon Damage equal to the number of hits gleaned from a Logic + Computer test (maximum equal to Rating). Once the effects of Medic are permanent, the programming can be run again for credit.</p>
-<a class="header" href="#obscure" id="obscure"><h4>Obscure</h4></a>
+<p>Medic repairs Icon Damage equal to the number of hits gleaned from a Logic +
+Computer test (maximum equal to Rating). Once the effects of Medic are
+permanent, the programming can be run again for credit.</p>
+<a class="header" href="#obscure" id="obscure"><h3>Obscure</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> C <strong>Time:</strong> CA (P)</p>
-<p>Obscure makes a fact unfindable within a datastore. Overwriting it thousands of times and redirecting links until the data is simply gone. Hits set the threshold for future Recovery actions.</p>
-<a class="header" href="#recover" id="recover"><h4>Recover</h4></a>
+<p>Obscure makes a fact unfindable within a datastore. Overwriting it thousands of
+times and redirecting links until the data is simply gone. Hits set the
+threshold for future Recovery actions.</p>
+<a class="header" href="#recover" id="recover"><h3>Recover</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> C <strong>Time:</strong> 1 minute (P)</p>
-<p>Deleting information beyond the potential for recovery is a difficult enterprise. Using Recover, data which has been destroyed can be reassembled into something readable. If the action gets sufficient hits to recreate the lost file, it becomes fully assembled once the program becomes permanent. Recover can also be used to repair icon damage equal to hits, though it is not ideal for this purpose.</p>
-<a class="header" href="#redundant-biofeedback-filters" id="redundant-biofeedback-filters"><h4>Redundant Biofeedback Filters</h4></a>
+<p>Deleting information beyond the potential for recovery is a difficult
+enterprise. Using Recover, data which has been destroyed can be reassembled into
+something readable. If the action gets sufficient hits to recreate the lost
+file, it becomes fully assembled once the program becomes permanent. Recover can
+also be used to repair icon damage equal to hits, though it is not ideal for
+this purpose.</p>
+<a class="header" href="#redundant-biofeedback-filters" id="redundant-biofeedback-filters"><h3>Redundant Biofeedback Filters</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> C <strong>Time:</strong> CA (S)</p>
-<p>Redundant Biofeedback Filters are something which is highly encouraged for users experienced and newbie alike when navigating the dangerous world of the modern Matrix. While it is running, the target network rolls an extra number of dice to resist B attacks equal to its rating. Only the best Redundant Biofeedback Filter program applies if more than one is running, but IT specialists will roll their eyes at you if you aren't running at least one.</p>
-<a class="header" href="#terminate-connection" id="terminate-connection"><h4>Terminate Connection</h4></a>
+<p>Redundant Biofeedback Filters are something which is highly encouraged for users
+experienced and newbie alike when navigating the dangerous world of the modern
+Matrix. While it is running, the target network rolls an extra number of dice to
+resist B attacks equal to its rating. Only the best Redundant Biofeedback Filter
+program applies if more than one is running, but IT specialists will roll their
+eyes at you if you aren't running at least one.</p>
+<a class="header" href="#terminate-connection" id="terminate-connection"><h3>Terminate Connection</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> C <strong>Time:</strong> CA</p>
-<p>Terminate Connection makes the user's network no longer connected to the target. The range usually will then be Handshake unless the connection had originally been made through a Matrix link. The user rolls Logic + Operations and is opposed by the enemy network's System + Intuition. Success terminates the connection and purges any Backdoor used to establish it in the first place.</p>
-<a class="header" href="#decompiling-forms-2" id="decompiling-forms-2"><h2>Decompiling Forms</h2></a>
+<p>Terminate Connection makes the user's network no longer connected to the target.
+The range usually will then be Handshake unless the connection had originally
+been made through a Matrix link. The user rolls Logic + Operations and is
+opposed by the enemy network's System + Intuition. Success terminates the
+connection and purges any Backdoor used to establish it in the first place.</p>
+<a class="header" href="#decompiling-forms-1" id="decompiling-forms-1"><h2>Decompiling Forms</h2></a>
 <p>Using a Decompiling Form requires a Resonance + Decompiling test.</p>
-<a class="header" href="#can-of-worms" id="can-of-worms"><h4>Can of Worms</h4></a>
+<a class="header" href="#can-of-worms" id="can-of-worms"><h3>Can of Worms</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> S (LOS) <strong>Time:</strong> CA <strong>Fading:</strong> 1/2R+2</p>
-<p>This dread technique simultaneously assaults all networks in range except the technomancer herself. She makes a Resonance + Decompiling check resisted by each network's Firewall + Signal Defense. Those which are affected must soak Icon Damage equal to Rating + net hits.</p>
-<a class="header" href="#death-note" id="death-note"><h4>Death Note</h4></a>
+<p>This dread technique simultaneously assaults all networks in range except the
+technomancer herself. She makes a Resonance + Decompiling check resisted by each
+network's Firewall + Signal Defense. Those which are affected must soak Icon
+Damage equal to Rating + net hits.</p>
+<a class="header" href="#death-note" id="death-note"><h3>Death Note</h3></a>
 <p><strong>Type:</strong> B <strong>Range:</strong> S (LOS) <strong>Time:</strong> SA <strong>Fading:</strong> 1/2R</p>
-<p>The song that ends a man is played. Man goto end. The technomancer makes a Resonance + Decompiling check, and if it is not successfully resisted with the target's Firewall + Signal Defense, the target must resist physical damage equal to the rating plus net hits with Willpower.</p>
-<a class="header" href="#lag" id="lag"><h4>Lag</h4></a>
+<p>The song that ends a man is played. Man goto end. The technomancer makes a
+Resonance + Decompiling check, and if it is not successfully resisted with the
+target's Firewall + Signal Defense, the target must resist physical damage equal
+to the rating plus net hits with Willpower.</p>
+<a class="header" href="#lag" id="lag"><h3>Lag</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> C (LOS) <strong>Time:</strong> SA (S) <strong>Fading:</strong> 1/2R</p>
-<p>The Technomancer overwhelms the processors of a network with irrelevancies.  The technomancer makes a Resonance + Decompiling check, and if it is not successfully resisted with the target's Firewall + Cybercombat the target's Response is reduced by the net hits. A target whose Response hits zero simply crashes as if its entire Icon Damage monitor was filled.</p>
-<a class="header" href="#opening" id="opening"><h4>Opening</h4></a>
+<p>The Technomancer overwhelms the processors of a network with irrelevancies.  The
+technomancer makes a Resonance + Decompiling check, and if it is not
+successfully resisted with the target's Firewall + Cybercombat the target's
+Response is reduced by the net hits. A target whose Response hits zero simply
+crashes as if its entire Icon Damage monitor was filled.</p>
+<a class="header" href="#opening" id="opening"><h3>Opening</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> L <strong>Time:</strong> CA <strong>Fading:</strong> 1/2R+1</p>
-<p>The resonance layer of mystery is removed from a transmission or file, leaving nothing but unencrypted information.  The technomancer makes a Resonance + Decompiling check, and if it is not successfully resisted with the encrypter's Firewall + Willpower the file is decrypted. Yes, two systems running the same EUE may find that their transmissions are differently difficult for a technomancer to open. That's how Resonance rolls.</p>
-<a class="header" href="#registry-dump" id="registry-dump"><h4>Registry Dump</h4></a>
+<p>The resonance layer of mystery is removed from a transmission or file, leaving
+nothing but unencrypted information.  The technomancer makes a Resonance +
+Decompiling check, and if it is not successfully resisted with the encrypter's
+Firewall + Willpower the file is decrypted. Yes, two systems running the same
+EUE may find that their transmissions are differently difficult for a
+technomancer to open. That's how Resonance rolls.</p>
+<a class="header" href="#registry-dump" id="registry-dump"><h3>Registry Dump</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> S (LOS) <strong>Time:</strong> CA <strong>Fading:</strong> 1/2R+2</p>
-<p>All running programming on all networks in range of the technomancer destabilize and may get dumped outright. She makes a Resonance + Decompiling check resisted by each network's Firewall + Signal Defense. Those which are affected have all sustained programs have their number of activating hits reduced by the number of net hits the technomancer achieves. Programs which are reduced to zero hits fade from the matrix as if they had never been.</p>
-<a class="header" href="#reset" id="reset"><h4>Reset</h4></a>
+<p>All running programming on all networks in range of the technomancer destabilize
+and may get dumped outright. She makes a Resonance + Decompiling check resisted
+by each network's Firewall + Signal Defense. Those which are affected have all
+sustained programs have their number of activating hits reduced by the number of
+net hits the technomancer achieves. Programs which are reduced to zero hits fade
+from the matrix as if they had never been.</p>
+<a class="header" href="#reset" id="reset"><h3>Reset</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> C (LOS) <strong>Time:</strong> CA <strong>Fading:</strong> 1/2R+3</p>
-<p>The target network is reset backwards in time a number of rounds equal to the net hits made against the target's Firewall + Willpower + Cybercombat. Alerts triggered, data accumulated, and Icon Damage sustained during these rounds are gone forever.</p>
-<a class="header" href="#registering-forms-2" id="registering-forms-2"><h2>Registering Forms</h2></a>
+<p>The target network is reset backwards in time a number of rounds equal to the
+net hits made against the target's Firewall + Willpower + Cybercombat. Alerts
+triggered, data accumulated, and Icon Damage sustained during these rounds are
+gone forever.</p>
+<a class="header" href="#registering-forms-1" id="registering-forms-1"><h2>Registering Forms</h2></a>
 <p>A Registering Form is used with Resonance + Registering.</p>
-<a class="header" href="#restructure" id="restructure"><h4>Restructure</h4></a>
+<a class="header" href="#restructure" id="restructure"><h3>Restructure</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> S <strong>Time:</strong> CA <strong>Fading:</strong> 1/2R+1</p>
-<p>The Resonance shakes itself slightly, and at the end a device that had been part of one network is now part of another. The technomancer's Resonance + Registering test is compared against the Firewall + Willpower + Signal Defense of both networks, and if it succeeds all involved parties display the device as having always been a part of the new network.</p>
-<a class="header" href="#test-pattern" id="test-pattern"><h4>Test Pattern</h4></a>
+<p>The Resonance shakes itself slightly, and at the end a device that had been part
+of one network is now part of another. The technomancer's Resonance +
+Registering test is compared against the Firewall + Willpower + Signal Defense
+of both networks, and if it succeeds all involved parties display the device as
+having always been a part of the new network.</p>
+<a class="header" href="#test-pattern" id="test-pattern"><h3>Test Pattern</h3></a>
 <p><strong>Type:</strong> B&amp;D <strong>Range:</strong> S (LOS) <strong>Time:</strong> CA <strong>Fading:</strong> 1/2R+1</p>
-<p>An idea is placed into the Resonance and it holds the appearance of the physically real. The technomancer defines some set of parameters which are then recorded as valid by all sensory devices in the area of the technomancer's Signal range, whether they are microphones or human eyes. The technomancer makes a Resonance + Registering check. Any observers inside the range must make the same number of hits on an Intuition + Response + Signal Defense or the technomancer's defined parameters take precedence over &quot;real&quot; sense data.</p>
-<a class="header" href="#transfigure" id="transfigure"><h4>Transfigure</h4></a>
+<p>An idea is placed into the Resonance and it holds the appearance of the
+physically real. The technomancer defines some set of parameters which are then
+recorded as valid by all sensory devices in the area of the technomancer's
+Signal range, whether they are microphones or human eyes. The technomancer makes
+a Resonance + Registering check. Any observers inside the range must make the
+same number of hits on an Intuition + Response + Signal Defense or the
+technomancer's defined parameters take precedence over &quot;real&quot; sense data.</p>
+<a class="header" href="#transfigure" id="transfigure"><h3>Transfigure</h3></a>
 <p><strong>Type:</strong> B <strong>Range:</strong> S (LOS) <strong>Time:</strong> 1 hour (P) <strong>Fading:</strong> 1/2R+2</p>
-<p>New data is implanted directly into the values, knowledge, and social mores of the target.  The target resists the effects with Willpower, but being attached to a network with the biofeedback filtration active can undo this kind of conditioning rather easily. The effects do not take hold until it becomes permanent, and every round a Firewall is engaged it can make an attempt to prevent it by succeeding in a Firewall + Biofeedback Filter (net hits).</p>
-<a class="header" href="#validation" id="validation"><h4>Validation</h4></a>
+<p>New data is implanted directly into the values, knowledge, and social mores of
+the target.  The target resists the effects with Willpower, but being attached
+to a network with the biofeedback filtration active can undo this kind of
+conditioning rather easily. The effects do not take hold until it becomes
+permanent, and every round a Firewall is engaged it can make an attempt to
+prevent it by succeeding in a Firewall + Biofeedback Filter (net hits).</p>
+<a class="header" href="#validation" id="validation"><h3>Validation</h3></a>
 <p><strong>Type:</strong> D <strong>Range:</strong> S (LOS) <strong>Time:</strong> CA <strong>Fading:</strong> 1/2R</p>
-<p>If the form is successful, any number of new valid passcodes are added to a device or network. This is resisted with Firewall + Willpower + Signal Defense.</p>
-<a class="header" href="#background-programs-1" id="background-programs-1"><h2>Background Programs</h2></a>
-<p>A background program is capable of running on a single device and does not need to run on the entire network nor does it particularly benefit from doing so. This means that a background program does not count as a program running on any network. Most of them don't even need rules, because they don't come into direct conflict with other programs. Here are some examples that your characters might have running:</p>
+<p>If the form is successful, any number of new valid passcodes are added to a
+device or network. This is resisted with Firewall + Willpower + Signal Defense.</p>
+<a class="header" href="#background-programs" id="background-programs"><h2>Background Programs</h2></a>
+<p>A background program is capable of running on a single device and does not need
+to run on the entire network nor does it particularly benefit from doing so.
+This means that a background program does not count as a program running on any
+network. Most of them don't even need rules, because they don't come into direct
+conflict with other programs. Here are some examples that your characters might
+have running:</p>
 <ul>
-<li><strong>Virtual Pet:</strong> Virtual Pet puts an Arrow of some kind of animal into the user's perception. Depending upon the firewall settings of others, it may be perceived by other users as well. Virtual Pets run the gamut of quality from simple Nintendogs to complex icons that can virtually pass a cat-equivalence Turing test. Virtual Pets are available as real animals, fantastic beasts, and even humanoids (while the DreamDate software is sold to a different audience than most Virtual Pet consumers, it uses much the same technology).</li>
-<li><strong>Miracle Shooter:</strong> Capture the flag, team death match, king of the hill, all your favorite shooter game options.</li>
+<li><strong>Virtual Pet:</strong> Virtual Pet puts an Arrow of some kind of animal into the
+user's perception. Depending upon the firewall settings of others, it may be
+perceived by other users as well. Virtual Pets run the gamut of quality from
+simple Nintendogs to complex icons that can virtually pass a cat-equivalence
+Turing test. Virtual Pets are available as real animals, fantastic beasts, and
+even humanoids (while the DreamDate software is sold to a different audience
+than most Virtual Pet consumers, it uses much the same technology).</li>
+<li><strong>Miracle Shooter:</strong> Capture the flag, team death match, king of the hill, all
+your favorite shooter game options.</li>
 </ul>
 <a class="header" href="#pilot-programs" id="pilot-programs"><h2>Pilot Programs</h2></a>
-<p>A pilot program is an autosoft of some kind. It is entirely capable of running on an isolated device. It does not count as a Sustained program, but it is rating limited by the Pilot rating of the Device.</p>
-<a class="header" href="#clearsight" id="clearsight"><h4>Clearsight</h4></a>
-<p>Clearsight is used to identify things that the Sensors detect. It is specific to a single sensor suite, and it is used for identifying targets (Pilot + Clearsight) and interpretation of sensory inputs (Sensors + Clearsight).</p>
-<a class="header" href="#fabricate" id="fabricate"><h4>Fabricate</h4></a>
-<p>Fabricate is used to create a specific thing with a specific device. The rating acts as an appropriate Artisan or Hardware skill, and the overall dicepool is Pilot + Fabricate.</p>
-<a class="header" href="#maneuver" id="maneuver"><h4>Maneuver</h4></a>
-<p>Maneuver allows a specific device to navigate in real space, acting as a piloting skill <em>and</em> as a Defense dicepool. Drones that pilot themselves roll Pilot + Maneuver while moving and have a Defense pool equal to their Maneuver rating.</p>
-<a class="header" href="#targeting" id="targeting"><h4>Targeting</h4></a>
-<p>Targeting is used to shoot things in the face. It is weapon specific. Other modifiers for ranged combat still apply (most notably, the smartlink bonus is cumulative with the Pilot + Targeting dicepool).</p>
-<a class="header" href="#some-of-the-autosofts-got-removed" id="some-of-the-autosofts-got-removed"><h4>Some of the Autosofts got removed</h4></a>
-<p>The basic book talks about an &quot;Electronic Warfare&quot; autosoft, which literally duplicates having an entire actual metahuman brain dedicated to signal defense and jamming. That's totally not acceptable, so that autosoft no longer exists. Also it has a separate Maneuver and Defense autosoft, which is unnecessary in these rules.</p>
+<p>A pilot program is an autosoft of some kind. It is entirely capable of running
+on an isolated device. It does not count as a Sustained program, but it is
+rating limited by the Pilot rating of the Device.</p>
+<a class="header" href="#clearsight" id="clearsight"><h3>Clearsight</h3></a>
+<p>Clearsight is used to identify things that the Sensors detect. It is specific to
+a single sensor suite, and it is used for identifying targets (Pilot +
+Clearsight) and interpretation of sensory inputs (Sensors + Clearsight).</p>
+<a class="header" href="#fabricate" id="fabricate"><h3>Fabricate</h3></a>
+<p>Fabricate is used to create a specific thing with a specific device. The rating
+acts as an appropriate Artisan or Hardware skill, and the overall dicepool is
+Pilot + Fabricate.</p>
+<a class="header" href="#maneuver" id="maneuver"><h3>Maneuver</h3></a>
+<p>Maneuver allows a specific device to navigate in real space, acting as a
+piloting skill <em>and</em> as a Defense dicepool. Drones that pilot themselves roll
+Pilot + Maneuver while moving and have a Defense pool equal to their Maneuver
+rating.</p>
+<a class="header" href="#targeting" id="targeting"><h3>Targeting</h3></a>
+<p>Targeting is used to shoot things in the face. It is weapon specific. Other
+modifiers for ranged combat still apply (most notably, the smartlink bonus is
+cumulative with the Pilot + Targeting dicepool).</p>
+<a class="header" href="#some-of-the-autosofts-got-removed" id="some-of-the-autosofts-got-removed"><h3>Some of the Autosofts got removed</h3></a>
+<p>The basic book talks about an &quot;Electronic Warfare&quot; autosoft, which literally
+duplicates having an entire actual metahuman brain dedicated to signal defense
+and jamming. That's totally not acceptable, so that autosoft no longer exists.
+Also it has a separate Maneuver and Defense autosoft, which is unnecessary in
+these rules.</p>
 <a class="header" href="#technomancy-1" id="technomancy-1"><h1>Technomancy</h1></a>
 <p><em>&quot;Frankly, I don't see why my existence should have to make sense. It is the providence of every sapient creature that they exist only after their creation and thus be inherently uncertain as to their original formation. It would, I think, be fundamentally unfair if you had certainty as to our origins just because you existed before us.&quot;</em></p>
 <p>The Deep Resonance has been kicking around for about a generation. Maybe longer if you believe some of the conspiracy theories. Deep in the Matrix there is a kind of music, and it seems to shape things as much or more than it is created by the hands of man. Technomancers are the latest result in the ongoing tale of the Deep Resonance. They can do things with the Matrix that others cannot. Considering that the average man on the street is literally a block out of which the Matrix is built, that makes people uneasy.</p>
