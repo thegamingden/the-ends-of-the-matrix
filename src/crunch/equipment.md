@@ -120,12 +120,15 @@ plugged into a commlink with ease (weighing 300-500 grams).
 
 Satellites circle the globe in staggering number. Most communication with LEO
 satellites is done with low density signal. These transmitters usually have a
-signal of 6 and may actually be incapable of being used to send high density
-signal. There are three kinds of portable satellite link-ups. As with Receivers,
-they come in non-portable, portable, and module forms. In any case, sat links
-which are capable of actually projecting a Signal rating of 8 are substantially
-more expensive. Sat Links are also rating 1 Receivers. Most Satellites
-themselves have Signal 10.
+Signal of 6 and some of them may actually be incapable of being used to send
+high density signal at all (particularly older ones still around from before the
+second crash). In any case, sat links which are capable of actually projecting a
+Signal rating of 8 are substantially more expensive. As with Receivers, they
+come in non-portable, portable, and module forms.
+
+Sat Links are also rating 1 Receivers.
+
+Most Satellites themselves have Signal 10.
 
 | Sat Link |     Cost |     Availability |
 |:---------|---------:|:----------------:|
@@ -254,18 +257,24 @@ Sensors in 2071 can meet or exceed the capabilities of the human sensory
 abilities. And they can do so with objects which are even smaller than the sense
 organs of a human body, but it costs a fair amount of money to get equipment
 that can do that. Size categories are in reference to the size of the object
-they are supposed to fit into. A microdrone is small enough to fit into a
-wallet, so sensor packages that are small enough to fit into them are very
-expensive. A minidrone is small enough to fit into a palm or a human eye socket.
-A small drone is roughly the size of a human head, and its sensor packages cost
-precisely as much as putting sensors into real metahuman head (you can use
-cyberware prices). A medium drone is about the size of a dog. A large drone is
-the size of a human. A huge drone is about the size of a car. A titanic drone is
-the size of garbage truck or larger. The base availabilities and costs are those
-of cybernetic senses from SR4 and Augmentation. Note that the senses available
-as cyberware take sensory information in at full simsense levels, and that mere
-20th century cameras are much cheaper. Drones *can* get multiple sets of single
-sense types and toggle between them.
+they are supposed to fit into.
+
+* A microdrone is small enough to fit into a wallet, so sensor packages that are
+  small enough to fit into them are very expensive.
+* A minidrone is small enough to fit into a palm or a human eye socket.
+* A small drone is roughly the size of a human head, and its sensor packages
+  cost precisely as much as putting sensors into real metahuman head (you can
+  use cyberware prices).
+* A medium drone is about the size of a dog.
+* A large drone is the size of a human.
+* A huge drone is about the size of a car.
+* A titanic drone is the size of garbage truck or larger.
+
+The base availabilities and costs are those of cybernetic senses from SR4 and
+Augmentation. Note that the senses available as cyberware take sensory
+information in at full simsense levels, and that mere 20th century cameras are
+much cheaper. Drones *can* get multiple sets of single sense types and toggle
+between them.
 
 | Size     | Cost     | Availability |
 |:---------|:--------:|:------------:|
