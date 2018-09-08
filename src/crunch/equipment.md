@@ -377,7 +377,7 @@ that already has a pilot in it and upgrade from there.
 
 ## Cyberware
 
-| Cyberware | Essence | Capacity | Availability | Cost |
+| Cyberware | Ess | Cap | Avail | Cost |
 |:----------|:-------:|:--------:|:------------:|-----:|
 | Retinal Duplication | 0.1 | [1] | 12F | 15,000¥ |
 | Internal Sim Module | 0.1 | [1] | - | 1,000¥ |
