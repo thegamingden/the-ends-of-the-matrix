@@ -18,6 +18,7 @@ The chart also includes info for Signal -1, which is a Trode Net, and Signal -2,
 which is Nanopaste Trodes. Both of these can be easily disrupted by any amount
 of Matrix Background, but having a little network privacy is usually better than
 nothing (particularly if you can't stand to spend the Essence for a wired DNI).
+Signal 0 is the range of a metahuman brain.
 
 | Rating | Response | Signal     | Availability | Range |
 |:------:|---------:|-----------:|:------------:|------:|
