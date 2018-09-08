@@ -7,9 +7,9 @@
 Commlinks come in a wide array of models custom and standard. It would be
 hilariously pointless for us to pretend that there are some finite number of
 possibilities for Commlink types that Shadowrunners might use. For convenience,
-despite the fact that the actual price point of commlinks varies tremendously
+despite the fact that the actual price point of Commlinks varies tremendously
 based on market conditions and perceived brand reliability and such, we assume
-that a *better* Commlink will *cost more*. Any particular commlink will have a
+that a *better* Commlink will *cost more*. Any particular Commlink will have a
 Response and a Signal. The cost in ¥ will be the price of the Response and the
 Signal added together, while the availability will simply be the higher of the
 two.
@@ -39,9 +39,9 @@ Signal 0 is the range of a metahuman brain.
 
 Just because you're using a SONY Emperor doesn't mean that you're using the Fall
 '71 Emperor *sunlight* with a dual-quad optical recoder. Indeed, the basic model
-name of a commlink basically tells you close to nothing about what the
-commlink's actual capabilities are. So commlink names are basically NERPS. Here
-is a list of prominent commlink families put out by your favorite companies:
+name of a Commlink basically tells you close to nothing about what the
+Commlink's actual capabilities are. So Commlink names are basically NERPS. Here
+is a list of prominent Commlink families put out by your favorite companies:
 
 * **Chantico Home Appliances:** Buena; Maize; Jaguar; Quetzal
 * **CMT:** Clip; Hammer; Rod
@@ -59,7 +59,7 @@ A Certified Credstick costs just 25¥ and represents a connection to a bank
 account which is not tied to any particular SIN but to a passcode (which can be
 changed by anyone with the current passcode). It is for this reason that
 Credsticks are often used as cash by criminal types. The effective dedicated
-firewall of a certified Credstick is 5. Various banks issue credsticks to
+firewall of a Certified Credstick is 5. Various banks issue credsticks to
 members which are tied to SINs, and these generally have dedicated firewalls of
 6 to 8.
 
@@ -94,7 +94,7 @@ The signal range is the range at which a system can project high density signal
 to affect a device which is not otherwise receptive to the signals. It is
 coincidentally the range at which large amounts of high density signal can be
 sent through an open connection to a device with a rating 0 receiver. These
-rating 0 receivers are cheap and plentiful, and every commlink is assumed to
+rating 0 receivers are cheap and plentiful, and every Commlink is assumed to
 have one. More powerful receivers exist, but have constraints as to size. Game
 mechanically, they add their ratings to the signal of *other devices* to
 determine range *to the receiver*. Satellites usually have a Rating 3 receiver
@@ -104,7 +104,7 @@ satellites despite their very high altitude.
 
 One is a dish which is itself non portable. One is portable but only with effort
 as it weighs in at four to six kilograms. And the last is a module which can be
-plugged into a commlink with ease (weighing 300-500 grams).
+plugged into a Commlink with ease (weighing 300-500 grams).
 
 | Receiver |     Cost |     Availability |
 |:---------|---------:|:----------------:|
@@ -145,13 +145,13 @@ Most Satellites themselves have Signal 10.
 
 Jokes aside, Windows ME is not *exactly* the same as Windows Vista, and there
 are a bewildering number of alternatives for the consumer of Operating Systems
-in 2071. Like commlinks, it is assumed that characters will be savvy shoppers
+in 2071. Like Commlinks, it is assumed that characters will be savvy shoppers
 and purchase the more expensive versions of Operating Systems which are *better*
 rather than the ones which are merely slight NERPS modifications on existing
 technology.
 
 An Operating System affects an entire network, but it still is designed to be
-run on a specific network hub. Transferring an OS to a different commlink is
+run on a specific network hub. Transferring an OS to a different Commlink is
 doable, but degrades performance (reduce ratings of System and Firewall by 2
 until someone makes a Logic + Software (12, 8 hours) test to reoptimize it for
 the new system).
@@ -272,7 +272,7 @@ they are supposed to fit into.
 
 The base availabilities and costs are those of cybernetic senses from SR4 and
 Augmentation. Note that the senses available as cyberware take sensory
-information in at full simsense levels, and that mere 20th century cameras are
+information in at full SimSense levels, and that mere 20th century cameras are
 much cheaper. Drones *can* get multiple sets of single sense types and toggle
 between them.
 
@@ -291,7 +291,7 @@ between them.
 Glitch wants her attack drone to see as well as she does, which means that it
 should be capable of seeing at a metahuman level in both normal and infrared
 spectra. The doberman itself only costs 3,000¥. The thermographic vision and
-smartlink that she wants will take up only 3 capacity and thus will fit in a
+Smartlink that she wants will take up only 3 capacity and thus will fit in a
 Rating 1 eye system. The total package would cost 2,500¥ in a metahuman skull,
 but in this case it's built for a drone that has a lot less squishy bits. Sensor
 packages for a medium drone cost half human cyberware price, so the sensor
@@ -300,25 +300,25 @@ drone that can send her visual inputs just as good as her own.
 
 #### Reduced Vision
 
-The basic 500¥ vision package assumes that you are getting human-level simsense
+The basic 500¥ vision package assumes that you are getting human-level SimSense
 quality vision, which is actually pretty good. You can purchase vision packages
 which are less good in a number of ways for less money. You can get a
 non-realtime still camera for ¼ price (this can nonetheless get normal vision
-enhancements, though things like smartlinks are fairly useless on such a
+enhancements, though things like Smartlinks are fairly useless on such a
 device). You can get a low quality video feed for a base of 100¥, you can get a
 grainy low quality video feed for a base 40¥.
 
 #### Reduced Hearing
 
 The basic 500¥ hearing package assumes that you are getting fully functional
-human level hearing - like a metahuman's. If you don't need full simsense, you
+human level hearing - like a metahuman's. If you don't need full SimSense, you
 can get a low fidelity audio feed for 50¥, and a low fidelity audio feed with
 some heinous distortion for about 10¥.
 
 #### Minimal Pressure Sensors
 
 The basic 1000¥ touch package assumes a human level of proprioception and
-tactile sensation. If you don't need full smsense tactile ability out of a
+tactile sensation. If you don't need full SimSense tactile ability out of a
 drone, you can get much lesser packages. A basic motion sensor costs only 50¥,
 and a basic orientation unit costs 100¥. 
 
@@ -337,12 +337,12 @@ capabilities of extremely powerful computers. The BattleTac system is a set of
 hardware that extracts tactical information from multiple sensory feeds. So long
 as multiple viewpoints are available, the system can assist the combat abilities
 of all users in the system. In order to contribute to the system, a user needs
-to send it high density simsense feed, but benefiting from the BattleTac's
+to send it high density SimSense feed, but benefiting from the BattleTac's
 conclusions requires only a display link. In game terms, the effective rating of
 the system cancels out penalties for being attacked multiple times and cover
 provided by allies in the system. The BattleTac's rating limits the amount of
 such penalty it can cancel, and the unit's effective rating is capped by how
-many viewpoints are contributing to it. A user operating in Hot Sim operates as
+many viewpoints are contributing to it. A user operating in HotSim operates as
 if the BattleTac's rating were one higher.
 
 | Rating |   Minimum Units |  Cost |      Availability |
@@ -360,7 +360,7 @@ his own SimRig and one of his two drones is providing SimSense quality feed,
 while the other is not. This means that he has 2 contributing members on the
 BattleTac and thus the system is capped at Rating 1. So both of his drones will
 not lose a defense die the first time someone attacks them. However, Chun
-himself is running in Hot Sim, so he is getting it at an effective rating of 2,
+himself is running in HotSim, so he is getting it at an effective rating of 2,
 canceling the first and second multiple attacker penalties to his defense pools.
 
 ## Pilot Systems
@@ -381,15 +381,15 @@ that already has a pilot in it and upgrade from there.
 |:----------|:-------:|:--------:|:------------:|-----:|
 | Retinal Duplication | 0.1 | [1] | 12F | 15,000¥ |
 | Internal Sim Module | 0.1 | [1] | - | 1,000¥ |
-| Internal Sim Module (w/Hotsim) | 0.1 | [1] | 12F | 5,000¥ |
+| Internal Sim Module (w/HotSim) | 0.1 | [1] | 12F | 5,000¥ |
 | Internal Commlink | 0.2 | [2] | - | 2,000¥ |
-| Internal Commlink (w/Hotsim) | 0.2 | [2] | 12F | 6,000¥ |
+| Internal Commlink (w/HotSim) | 0.2 | [2] | 12F | 6,000¥ |
 | Internal SimRig | 0.5 | [2] | 8 | 5,000¥ |
 
 ### Retinal Duplication
 
 Sorry, the one on page 333 is extremely expensive and don't actually work. This
-version displays a simsense quality Retina, and once you've gotten a proper copy
+version displays a SimSense quality Retina, and once you've gotten a proper copy
 from somewhere an electronic device *cannot* tell the difference. If you are
 programming it in with a less than perfect knowledge of the retina you are
 copying, then your copy is only as good as your information. In general, one can
@@ -400,9 +400,9 @@ an image of the appropriate retina from an archive.
 
 This device translates external data feeds into sensory feeds, and it does so
 inside the body after it's too late for snoopers to intercept the transmission.
-This may seem like a small subset of what an internal commlink can do, and it
+This may seem like a small subset of what an internal Commlink can do, and it
 is. It's basically the "input" section of the input/output of an internal
-commlink.
+Commlink.
 
 Adjusting the device for HotSim is a Hardware modification, and illegal. If a
 wired HotSim path is not installed the device can still wirelessly broadcast any
@@ -419,7 +419,7 @@ bypasses a need to have a wireless Sim Module.
 
 The price is for only the casing itself, you need to pay for the Commlink to go
 in it separately. If you you get it at a higher grade, you only need to pay the
-extra cost for the base price, not the cost including the commlink itself.
+extra cost for the base price, not the cost including the Commlink itself.
 
 An Internal Commlink can be modified to provide Hardware HotSim, the same as an
 Internal Sim Module.
@@ -429,10 +429,10 @@ Internal Sim Module.
 An Internal SimRig is a direct attachment to the sensory and emotive portions of
 the neurophysiology of the user. This not only gives the user the maximum Matrix
 Perception bonus for having cybernetic senses (+3), but also allows the user to
-send their full simsense feed out.
+send their full SimSense feed out.
 
 Perhaps the sneakiest part of the Internal SimRig is that the hardware itself is
 legal and can be manipulated in *software* to produce BTL sequences. This means
-that it can be used for Hot Sim without actually showing up as illegal hardware
+that it can be used for HotSim without actually showing up as illegal hardware
 on a medical scan of any invasiveness. This makes it the number one piece of
 hacker hardware.

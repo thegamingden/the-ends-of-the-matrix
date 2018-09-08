@@ -819,7 +819,7 @@ rating.
 ### Targeting
 
 Targeting is used to shoot things in the face. It is weapon specific. Other
-modifiers for ranged combat still apply (most notably, the smartlink bonus is
+modifiers for ranged combat still apply (most notably, the Smartlink bonus is
 cumulative with the Pilot + Targeting dicepool).
 
 ### Some of the Autosofts got removed
