@@ -98,7 +98,7 @@ either, it will be labeled with both a B and a D.
 A non-metahuman brain always is considered to have an optimized defense against
 any B type program that was not specifically written for the type of creature
 that it is. You cannot use hacking on the fly or threading to bypass that
-particular problem without very specialized skills and talents. So for example,
+particular problem without very specialized skills and talents. So, for example,
 a character who was attempting to use seize on a dragon or a shapeshifter would
 have their first two hits canceled automatically simply due to the alien
 neurophysiology. Ghouls are considered metahumans for this purpose.
@@ -172,20 +172,28 @@ programming descriptions.
 
 Not all programs take the same amount of time to use. Most take Complex Actions:
 "CA", but some take Simple Actions: "SA" or extended periods of time to be
-properly used. Some programs are Sustained: "(S)" meaning that they are active
-for more than an instantaneous moment of extreme code use. A network can sustain
-a number of running procedures equal to its System rating before experiencing
-slow-down. Every additional sustained program reduces all Matrix dicepools of
-the network by 2 dice. If a system is called upon to run a number of sustained
-programs beyond its system rating equal to the Logic of the metahuman brain
-running it, the entire network crashes. Some programming is Permanent: "(P)"
-meaning that it affects a real change onto the Matrix which will persist after
-the network which spawned it stops dedicating processing cycles to it. These
-programs must be sustained for 15 combat rounds, after which they no longer
-require or benefit from input the originating network. Hits on the originating
-success test can be dedicated to reducing the required sustaining time rather
-than to increasing the effect of the action. Every hit used to speed the process
-reduces the required sustaining time by 3 rounds.
+properly used.
+
+### Duration
+
+Some programs are Instant (I): They run, complete, and then you're done.
+
+Some programs are Sustained (S): They maintain activity for more than an
+instantaneous moment of extreme code use. A network can sustain a number of
+running procedures equal to its System rating before experiencing slow-down.
+Every additional sustained program reduces all Matrix dicepools of the network
+by 2 dice. If a system is called upon to run a number of sustained programs
+beyond its system rating equal to the Logic of the metahuman brain running it,
+the entire network crashes.
+
+Some programming is Permanent (P): The program affects a real change onto the
+Matrix which will persist after the network which spawned it stops dedicating
+processing cycles to it. These programs must be sustained for 15 combat rounds,
+after which they no longer require or benefit from input the originating
+network. Hits on the originating success test can be dedicated to reducing the
+required sustaining time rather than to increasing the effect of the action.
+Every hit used to speed the process reduces the required sustaining time by 3
+rounds.
 
 ## Analysis Programs
 
@@ -193,100 +201,104 @@ Using an Analysis program requires a Logic + Data Search test.
 
 ### Backtrack
 
-**Type:** D **Range:** C **Time:** SA (P)
+* **Type:** D
+* **Range:** C
+* **Time:** SA
+* **Duration:** P
+* **Optimized Defense:** Satellite Routing
 
-Backtracking is a method to find the real world source of information that is
-being placed into one's own data stores through a combination of packet analysis
-and very complicated mathematical hijinks that are well beyond the author to
-explain or understand. The end result is that a Backtrack action will be
-successful if it gains more hits on a Logic + Data Search check than the target
-has already achieved on a Matrix Stealth check (only 1 hit is needed to
-successfully backtrack a network which is not attempting to be stealthy). The
-program reveals the real world location of the target to within a 1 meter radius
-as soon as the program becomes Permanent.
-
-**Optimized Defense:** Satellite Routing.
+This program targets the Matrix Stealth value of the Network that you are
+attempting to Backtrack (minimum threshold of 1). If successful, the real world
+location of the target Network is computed to within 1 meter as soon as the
+program becomes Permanent.
 
 ### Brain Scan
 
-**Type:** B **Range:** L (LOS) **Time:** CA (P)
+* **Type:** B
+* **Range:** L (LOS)
+* **Time:** CA
+* **Duration:** P
+* **Resistance Roll:** Willpower + Firewall
 
 The contents of brains can be determined at a distance with modern data
-management techniques. But actually getting specific information out of a
+management techniques, but actually getting specific information out of a
 metahuman brain's gigantic pile of flashing instructions is time consuming and
-intensive. Success is achieved with a Logic + Datasearch test resisted by
-Willpower + Firewall. Specific information is not successfully retrieved from
-the target's memory until the scan has been sustained on the target long enough
-to be Permanent.
+intensive. Using this program, specific information is successfully retrieved
+from the target's memory once the scan has been sustained on the target long
+enough to be Permanent.
 
 ### Find Mind
 
-**Type:** B **Range:** S **Time:** CA (S)
+* **Type:** B
+* **Range:** S
+* **Time:** CA
+* **Duration:** S
+* **Resistance Roll:** Firewall + Signal Defense
 
 Disturbances in the packet flow can reveal the locations of certain kinds of
 interference. One of the most often looked for is the presence of metahuman
 brains. This technique is far more likely to work on a brain whose signal is not
-being modulated by a connection to a network or signal defense. This program
-functions similarly to a Detection Spell in the information it can give, and is
-resisted by Firewall and Signal Defense.
+being modulated by a connection to a network or by signal defense. This program
+functions similarly to a Detection Spell in the information it can give.
 
 ### Pin Drop
 
-**Type:** B&D **Range:** Special (changes L) **Time:** CA (S)
+* **Type:** B and D
+* **Range:** Special (changes L)
+* **Time:** CA
+* **Duration:** S
+* **Resistance Roll:** Signal Defense
 
 Light moves towards infinity as fast as anything can, and so the theoretical
 range at which a signal can be received is much longer than the practical range
-at which it can be received. Hardware can make a big difference (see Receivers),
-but software too can make a large difference by combing through what signal is
-available to isolate individual voices. The user picks a known (though possibly
-out of range) signal and makes a Logic + Datasearch test opposed only by Signal
-Defense. For every 2 full net hits, the user can hear the signal from the target
-as if the target's Signal strength were 1 higher. Only the most successful Pin
-Drop provides benefits should the character attempt it more than once on the
-same target, and all Pin Drops against a single target expire the next time the
-target takes a Matrix Full Defense action.
+at which it can be received. Hardware can make a big difference, but software
+can also make a large difference by combing through what signal is available to
+isolate individual voices. The user picks a known (though possibly out of range)
+signal and makes their roll. For every 2 full Net Hits, the user can hear the
+signal from the target as if the target's Signal strength were 1 higher. Only
+the most successful Pin Drop effect applies, and all Pin Drops against a single
+target expire the next time the target takes a Matrix Full Defense action.
 
 ### Probe
 
-**Type:** D **Range:** H (LOS) **Time:** CA (P)
+* **Type:** D
+* **Range:** H (LOS)
+* **Time:** CA
+* **Duration:** P
+* **Resistance Roll:** Signal Defense
 
 Probing is a technique used to identify the weaknesses in a device or
-connection. The user makes a Logic + Datasearch test opposed only by Signal
-Defense. In subsequent actions, the character's dicepools for programming used
-against that target are increased by the net hits. Only the most successful
-Probe provides benefits should the character attempt it more than once on the
-same target, and all Probes against a single target expire the next time the
+connection. While active, the character's dicepools for programming used against
+the target are increased by the net hits of the Probe. Only the most successful
+Probe applies, and all Probes against a single target expire the next time the
 target takes a Matrix Full Defense action.
 
 ### Reveal Contents
 
-**Type:** D **Range:** S (LOS) **Time:** CA (P)
+* **Type:** D
+* **Range:** S (LOS)
+* **Time:** CA
+* **Duration:** P
+* **Resistance Roll:** Firewall + Signal Defense (if any)
 
 Data in data stores can be successfully inferred from the outside, given
-sufficient probing. The user makes a Logic + Datasearch test opposed by the
-device's Firewall and Signal Defense (if any). Information in the data stores
-will be copied out (though not necessarily decrypted or defused) once the
-program has been sustained long enough to become Permanent.
-
-**Step by Step: Reveal Contents**
-
-Tani wants to break the EUE on a major competitor, so she drops in on one of the
-servers that is actually encrypting stuff for the networks. She hits it with a
-Reveal Contents, and gets a series of unencrypted files. Fascinating stuff to be
-sure, but she actually wanted something else from another system. Fortunately,
-she now has something to compare against the encrypted version and can now
-attempt to Decrypt.
+sufficient probing. Information in the data stores will be copied out (though
+not necessarily decrypted or defused) once the Reveal Contents has been
+sustained long enough for it to become Permanent.
 
 ### Who Is
 
-**Type:** D **Range:** M **Time:** CA (P)
+* **Type:** D
+* **Range:** M
+* **Time:** CA
+* **Duration:** P
 
 The Who Is protocols are an ancient and time honored method of finding the real
 world location of an LTG (which is like a phone number or email address). While
-somewhat time consuming, these techniques are quite powerful. If the number of
-hits on the Logic + Datasearch test equals the target's Matrix stealth test, the
-location of the target's transmitter will be found by the time the Who Is
-becomes permanent.
+somewhat time consuming, these techniques are quite powerful. This program uses
+the target's Matrix Stealth value for the Threshold, and the location of the
+target's transmitter will be found (accurate to within 1 meter) by the time the
+Who Is becomes permanent.
 
 ## Attack Programs
 
