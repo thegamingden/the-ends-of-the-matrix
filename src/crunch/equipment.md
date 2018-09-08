@@ -381,9 +381,9 @@ that already has a pilot in it and upgrade from there.
 |:----------|:-------:|:--------:|:------------:|-----:|
 | Retinal Duplication | 0.1 | [1] | 12F | 15,000¥ |
 | Internal Sim Module | 0.1 | [1] | - | 1,000¥ |
-| Internal Sim Module (w/Hotsim Mod) | 0.1 | [1] | 12F | 5,000¥ |
+| Internal Sim Module (w/Hotsim) | 0.1 | [1] | 12F | 5,000¥ |
 | Internal Commlink | 0.2 | [2] | - | 2,000¥ |
-| Internal Commlink (w/Hotsim Mod) | 0.2 | [2] | 12F | 6,000¥ |
+| Internal Commlink (w/Hotsim) | 0.2 | [2] | 12F | 6,000¥ |
 | Internal SimRig | 0.5 | [2] | 8 | 5,000¥ |
 
 ### Retinal Duplication
