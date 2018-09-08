@@ -218,7 +218,7 @@ program becomes Permanent.
 * **Range:** L (LOS)
 * **Time:** CA
 * **Duration:** P
-* **Resistance Roll:** Willpower + Firewall
+* **Resistance:** Willpower + Firewall
 
 The contents of brains can be determined at a distance with modern data
 management techniques, but actually getting specific information out of a
@@ -233,7 +233,7 @@ enough to be Permanent.
 * **Range:** S
 * **Time:** CA
 * **Duration:** S
-* **Resistance Roll:** Firewall + Signal Defense
+* **Resistance:** Firewall + Signal Defense
 
 Disturbances in the packet flow can reveal the locations of certain kinds of
 interference. One of the most often looked for is the presence of metahuman
@@ -247,7 +247,7 @@ functions similarly to a Detection Spell in the information it can give.
 * **Range:** Special (changes L)
 * **Time:** CA
 * **Duration:** S
-* **Resistance Roll:** Signal Defense
+* **Resistance:** Signal Defense
 
 Light moves towards infinity as fast as anything can, and so the theoretical
 range at which a signal can be received is much longer than the practical range
@@ -265,7 +265,7 @@ target expire the next time the target takes a Matrix Full Defense action.
 * **Range:** H (LOS)
 * **Time:** CA
 * **Duration:** P
-* **Resistance Roll:** Signal Defense
+* **Resistance:** Signal Defense
 
 Probing is a technique used to identify the weaknesses in a device or
 connection. While active, the character's dicepools for programming used against
@@ -279,7 +279,7 @@ target takes a Matrix Full Defense action.
 * **Range:** S (LOS)
 * **Time:** CA
 * **Duration:** P
-* **Resistance Roll:** Firewall + Signal Defense (if any)
+* **Resistance:** Firewall + Signal Defense (if any)
 
 Data in data stores can be successfully inferred from the outside, given
 sufficient probing. Information in the data stores will be copied out (though
