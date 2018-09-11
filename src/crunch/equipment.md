@@ -1,6 +1,20 @@
 # Equipment
 
+This replaces some, but not all, of the existing Equipment listings from the
+core book. Any devices or accessories not mentioned here can generally be
+assumed to still exist (eg: Skinlink, Subvocal Mic, etc).
+
 ## Hacking Hardware
+
+Note that, per _Arsenal_, any electronic device can have Hardening applied to it
+for 25¥/Rating (up to Rating 6). This raises the Availability of the device to
+be at least 4. Hardening adds its Rating as bonus dice when the device needs to
+resit EMP, Electrical Damage, the Tesla Burst Sprite Power, and any other
+similar effect. Runners are strongly advised to add Hardening to all of their
+favorite Electronics.
+
+And check out _Arsenal_ for other gizmos and extras you can buy as well. Hardening
+is just the most important one to mention here.
 
 ### Commlink Hardware
 
@@ -14,6 +28,9 @@ Response and a Signal. The cost in ¥ will be the price of the Response and the
 Signal added together, while the availability will simply be the higher of the
 two.
 
+All Commlinks are assumed to have an integrated wireless Sim Module, you don't
+need to pay for that part separately.
+
 The chart also includes info for Signal -1, which is a Trode Net, and Signal -2,
 which is Nanopaste Trodes. Both of these can be easily disrupted by any amount
 of Matrix Background, but having a little network privacy is usually better than
@@ -22,16 +39,16 @@ Signal 0 is the range of a metahuman brain.
 
 | Rating | Response | Signal     | Availability | Range |
 |:------:|---------:|-----------:|:------------:|------:|
-| -2     | -        |       100¥ |  2 | 10μm |
-| -1     | -        |        50¥ |  - | 10cm |
-|  0     | -        |          - |  - | 3m |
-|  1     |      50¥ |        20¥ |  - | 40m |
-|  2     |     300¥ |        50¥ |  - | 100m |
-|  3     |     700¥ |       100¥ |  - | 400m |
-|  4     |   2,000¥ |       500¥ |  4 | 1km |
-|  5     |   5,000¥ |     1,000¥ |  8 | 4km |
-|  6     |  14,000¥ |     3,000¥ | 15 | 10km |
-|  7     |  48,000¥ |     8,000¥ | 24 | 40km |
+| -2     | -        |       100¥ |  2 |  10μm |
+| -1     | -        |        50¥ |  - |  10cm |
+|  0     | -        |          - |  - |    3m |
+|  1     |      50¥ |        20¥ |  - |   40m |
+|  2     |     300¥ |        50¥ |  - |  100m |
+|  3     |     700¥ |       100¥ |  - |  400m |
+|  4     |   2,000¥ |       500¥ |  4 |   1km |
+|  5     |   5,000¥ |     1,000¥ |  8 |   4km |
+|  6     |  14,000¥ |     3,000¥ | 15 |  10km |
+|  7     |  48,000¥ |     8,000¥ | 24 |  40km |
 |  8     | 175,000¥ |   200,000¥ | 30 | 100km |
 |  9     | 750,000¥ | 1,200,000¥ | 36 | 400km |
 
@@ -190,6 +207,11 @@ Dedicated programming generally costs half as much.
 | IC | 500¥/R | 2/R |
 | Pilot | 500¥/R | 3/R |
 | Pilot Accessory | 100¥/R | 4/R |
+| Mapsoft (1-6) | 5¥/R | - |
+| Tutorsoft (1-5) | 500¥/R | - |
+| Activesoft (1-4) | 10,000¥/R | 8 |
+| Knowsoft (1-5) | 2,000¥/R | 4 |
+| Linguasoft (1-5) | 500¥/R | 2 |
 
 Most Program ratings are capped by the system of the network they are running
 on. IC is an exception and is instead limited by the Firewall of the Network or
@@ -204,6 +226,26 @@ Pilot and Pilot Accessory programming (Clearsight, Targeting, Maneuver, etc.)
 are purchased for individual devices. Pilot Accessory programming is capped in
 rating by the Pilot rating, Pilot is uncapped. These programs cannot be
 optimized for other systems.
+
+Mapsoft generally provides its rating as a bonus on Navigation checks when in
+the area covered by the map. It can also let you know all sorts of other things
+about a place, the kind of stuff you'd find on Wikipedia. If you make a Research
+check with a Mapsoft available, info out of the Mapsoft always comes back by the
+next Initiative Pass, but your hits for that part of the search are capped by
+the Mapsoft rating (you get the rest of your Research back at the appropriate
+time as normal, the entire search process is still a single roll).
+
+Tutorsoft is per individual skill (though Magic and Resonance skills are not
+available). They roll twice their rating as an Instruction Test to aid you in
+learning a skill.
+
+Activesoft, Knowsoft, and Linguasoft are all "Skillsoft" category programs. They
+let you act as if you have ranks in a skill that you don't actually have. You
+can't use Edge while using Skillsoft. Activesoft requires a dedicated Skillwire
+implant. Knowsoft and Linguasoft simply run as programs while they're in use
+(count them as Operations programs, Matrix Free Action to activate), but they
+must always be run on your own Network through your own DNI. You can't run them
+over a Connection, like with most other Operations.
 
 ## Matrix Interference Technology
 
