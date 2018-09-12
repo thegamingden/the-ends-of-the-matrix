@@ -18,7 +18,7 @@ There are now ten categories of Sprites, and each technomancer has a personal st
 |:---:|:---:|:---:|:---:|:---:|:----:|:----:|
 | R+0 | R+2 | R+3 | R-1 | R-1 |  R-1 |  R-1 |
 
-**Skills:** Computer, Datasearch, Electronic Warfare
+**Skills:** Computer, Data Search, Electronic Warfare
 
 **Complex Forms:** Decrypt, Fabrication, Recover, Reveal Contents, Obscure, Who Is
 
@@ -32,7 +32,7 @@ There are now ten categories of Sprites, and each technomancer has a personal st
 |:---:|:---:|:---:|:---:|:---:|:----:|:----:|
 | R+1 | R-1 | R+0 | R+2 | R-2 |  R+0 |  R+0 |
 
-**Skills:** Computer, Cybercombat, Datasearch, Software
+**Skills:** Computer, Cybercombat, Data Search, Software
 
 **Complex Forms:** Crash, Data Bomb, Jingle, Misplace, Obscure
 
@@ -46,7 +46,7 @@ There are now ten categories of Sprites, and each technomancer has a personal st
 |:---:|:---:|:---:|:---:|:---:|:----:|:----:|
 | R+1 | R-1 | R+0 | R+0 | R-2 |  R+2 |  R+0 |
 
-**Skills:** Computer, Datasearch, Electronic Warfare, Hacking
+**Skills:** Computer, Data Search, Electronic Warfare, Hacking
 
 **Complex Forms:** Backdoor, Intercept, Jedi Trick, Master Control, Ostraka
 
@@ -60,7 +60,7 @@ There are now ten categories of Sprites, and each technomancer has a personal st
 |:---:|:---:|:---:|:---:|:---:|:----:|:----:|
 | R+2 | R-1 | R+0 | R+0 | R-2 |  R+1 |  R-1 |
 
-**Skills:** Cybercombat, Datasearch, Hacking, Intimidate
+**Skills:** Cybercombat, Data Search, Hacking, Intimidate
 
 **Complex Forms:** Denial, Impersonate, Jedi Trick, Jingle, Probe, Who Is
 
@@ -74,7 +74,7 @@ There are now ten categories of Sprites, and each technomancer has a personal st
 |:---:|:---:|:---:|:---:|:---:|:----:|:----:|
 | R+2 | R+0 | R+0 | R+1 | R+0 |  R+0 |  R-3 |
 
-**Skills:** Datasearch, Electronic Warfare, Con, Etiquette
+**Skills:** Data Search, Electronic Warfare, Con, Etiquette
 
 **Complex Forms:** Brain Scan, Impersonate, Who Is
 
@@ -88,7 +88,7 @@ There are now ten categories of Sprites, and each technomancer has a personal st
 |:---:|:---:|:---:|:---:|:---:|:----:|:----:|
 | R+1 | R+0 | R+0 | R+0 | R+0 |  R+2 |  R+0 |
 
-**Skills:** Computer, Datasearch, Electronic Warfare, Hacking, Forgery, Artisan, Con
+**Skills:** Computer, Data Search, Electronic Warfare, Hacking, Forgery, Artisan, Con
 
 **Complex Forms:** Fabrication, Probe, Reveal Contents
 
@@ -102,7 +102,7 @@ There are now ten categories of Sprites, and each technomancer has a personal st
 |:---:|:---:|:---:|:---:|:---:|:----:|:----:|
 | R-1 | R+1 | R+2 | R+0 | R+1 |  R-2 |  R-1 |
 
-**Skills:** Artisan, Computer, Datasearch, Mechanic
+**Skills:** Artisan, Computer, Data Search, Mechanic
 
 **Complex Forms:** Backtrack, Fabrication, Medic, Terminate Connection
 

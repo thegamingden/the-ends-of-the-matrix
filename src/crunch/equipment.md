@@ -346,8 +346,8 @@ drone that can send her visual inputs just as good as her own.
 The basic 500¥ vision package assumes that you are getting human-level SimSense
 quality vision, which is actually pretty good. You can purchase vision packages
 which are less good in a number of ways for less money. You can get a
-non-realtime still camera for ¼ price (this can nonetheless get normal vision
-enhancements, though things like Smartlinks are fairly useless on such a
+non-realtime still camera for 1/4th price (this can nonetheless get normal
+vision enhancements, though things like Smartlinks are fairly useless on such a
 device). You can get a low quality video feed for a base of 100¥, you can get a
 grainy low quality video feed for a base 40¥.
 

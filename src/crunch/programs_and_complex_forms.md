@@ -8,7 +8,7 @@ Every Program or Complex Form fits into a Category. This category doesn't simply
 change which Paragons provide a bonus to characters using them, but to which
 skill is actually linked with activating the Program in the first place. Many
 programs are resisted in one manner or another, and they will describe the
-resistance dice pool within their description. Many programs also have an
+resistance dicepool within their description. Many programs also have an
 "optimized defense" available, and if the target *has* that defense, 2 hits of
 the user are canceled before resistance dice are even contemplated.
 

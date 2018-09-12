@@ -20,13 +20,13 @@ A basic hacking operation requires the use of one of five checks:
 
 * Logic + Computer
 * Logic + Cybercombat
-* Logic + Datasearch
+* Logic + Data Search
 * Logic + Electronic Warfare
 * Logic + Hacking
 
 Technomancers use Resonance instead of Logic when using Complex Forms
 
-Depending upon what you are doing, any of those rolls could be called upon, possibly one after another, with a variety of consequences for success or failure. But regardless, the *range* of any of these dice pools is pretty much the same. At the low end you have Matrix dabblers, characters who merely have Matrix skills at all so that they can assist a specialist. These characters may have as little as Logic 3 and a relevant skill of 1. This leads to a dicepool of 4, where they are 80% likely to get at least a single hit (and in non-stressful situations they can buy a hit), but they come up with 2 or more hits only 40% of the time (and 3+ about one time in 9). At the very high end you have characters who invested themselves with Cerebral Boosters, Math Processors, and Skill Enhancement (such as Adept Powers). This can generate a dicepool of 20 without getting into special cases like Exceptional Attributes, AIs, or powerful spirits. These characters are 71% likely to get 5 hits (and in non-stressful situations can buy 5 hits).
+Depending upon what you are doing, any of those rolls could be called upon, possibly one after another, with a variety of consequences for success or failure. But regardless, the *range* of any of these dicepools is pretty much the same. At the low end you have Matrix dabblers, characters who merely have Matrix skills at all so that they can assist a specialist. These characters may have as little as Logic 3 and a relevant skill of 1. This leads to a dicepool of 4, where they are 80% likely to get at least a single hit (and in non-stressful situations they can buy a hit), but they come up with 2 or more hits only 40% of the time (and 3+ about one time in 9). At the very high end you have characters who invested themselves with Cerebral Boosters, Math Processors, and Skill Enhancement (such as Adept Powers). This can generate a dicepool of 20 without getting into special cases like Exceptional Attributes, AIs, or powerful spirits. These characters are 71% likely to get 5 hits (and in non-stressful situations can buy 5 hits).
 
 It is the assumption of the authors that most Matrix specialists will begin play with a dicepool of about 11 dice.
 
@@ -54,7 +54,7 @@ Some checks allow characters to add the rating of equipment in addition to their
   * **Communications:** Electronic Warfare
   * **Exploit:** Hacking
   * **Operations:** Computer
-* **Matrix Perception:** Intuition + Datasearch
+* **Matrix Perception:** Intuition + Data Search
 * **Matrix Stealth:** Intuition + Hacking
 * **Matrix Initiative:**
   * **AR:** Intuition + Reaction
