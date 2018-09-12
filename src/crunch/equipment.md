@@ -242,10 +242,11 @@ learning a skill.
 Activesoft, Knowsoft, and Linguasoft are all "Skillsoft" category programs. They
 let you act as if you have ranks in a skill that you don't actually have. You
 can't use Edge while using Skillsoft. Activesoft requires a dedicated Skillwire
-implant. Knowsoft and Linguasoft simply run as programs while they're in use
-(count them as Operations programs, Matrix Free Action to activate), but they
-must always be run on your own Network through your own DNI. You can't run them
-over a Connection, like with most other Operations.
+implant. Knowsoft and Linguasoft simply run like normal programs while they're
+in use (Matrix Free Action to activate, use the Computer skill to roll the
+number of activation hits if it matters), but they must always be run on your
+own Network through your own DNI. You can't run them over a Connection, like
+with most other Operations.
 
 ## Matrix Interference Technology
 
@@ -320,13 +321,13 @@ between them.
 
 | Size     | Cost     | Availability |
 |:---------|:--------:|:------------:|
-| Micro    | x10¥     |  +4 |
-| Mini     | x2¥      |  +2 |
-| Small    | x1¥ | +0 |
-| Medium   | 1/2¥  |    +0 |
-| Large    | 1/2¥   |   +2 |
+| Micro    | x10¥  | +4 |
+| Mini     | x2¥   | +2 |
+| Small    | x1¥   | +0 |
+| Medium   | 1/2¥  | +0 |
+| Large    | 1/2¥  | +2 |
 | Huge     | 1/4¥  | +0 |
-| Titanic  | 1/10¥  |    +4 |
+| Titanic  | 1/10¥ | +4 |
 
 #### Example: Outfitting a Doberman
 
@@ -389,10 +390,10 @@ if the BattleTac's rating were one higher.
 
 | Rating |   Minimum Units |  Cost |      Availability |
 |:------:|:---------------:|------:|:-----------------:|
-| 1  |      2     |         15,000¥  |  8F |
-| 2  |      4     |         30,000¥   | 12F |
-| 3  |      8     |         90,000¥   | 16F |
-| 4 |        16    |         160,000¥ |  24F |
+|   1    |       2         |  15,000¥ |  8F |
+|   2    |       4         |  30,000¥ | 12F |
+|   3    |       8         |  90,000¥ | 16F |
+|   4    |      16         | 160,000¥ | 24F |
 
 #### Step By Step: Using a Tactical Computer
 
