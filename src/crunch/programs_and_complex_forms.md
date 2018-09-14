@@ -201,10 +201,10 @@ Using an Analysis program requires a Logic + Data Search test.
 
 ### Backtrack
 
-* **Type:** D
-* **Range:** C
-* **Time:** SA
-* **Duration:** P
+* **Type:** Digital
+* **Range:** Connection
+* **Time:** Simple Action
+* **Duration:** Permanent
 * **Optimized Defense:** Satellite Routing
 
 This program targets the Matrix Stealth value of the Network that you are
@@ -214,10 +214,10 @@ program becomes Permanent.
 
 ### Brain Scan
 
-* **Type:** B
-* **Range:** L (LOS)
-* **Time:** CA
-* **Duration:** P
+* **Type:** Bio
+* **Range:** Listeningistening (LOS)
+* **Time:** Complex Action
+* **Duration:** Permanent
 * **Resistance:** Willpower + Firewall
 
 The contents of brains can be determined at a distance with modern data
@@ -229,10 +229,10 @@ enough to be Permanent.
 
 ### Find Mind
 
-* **Type:** B
-* **Range:** S
-* **Time:** CA
-* **Duration:** S
+* **Type:** Bio
+* **Range:** Signal
+* **Time:** Complex Action
+* **Duration:** Sustained
 * **Resistance:** Firewall + Signal Defense
 
 Disturbances in the packet flow can reveal the locations of certain kinds of
@@ -243,10 +243,10 @@ functions similarly to a Detection Spell in the information it can give.
 
 ### Pin Drop
 
-* **Type:** B and D
+* **Type:** Bio and Digital
 * **Range:** Special (changes L)
-* **Time:** CA
-* **Duration:** S
+* **Time:** Complex Action
+* **Duration:** Sustained
 * **Resistance:** Signal Defense
 
 Light moves towards infinity as fast as anything can, and so the theoretical
@@ -261,10 +261,10 @@ target expire the next time the target takes a Matrix Full Defense action.
 
 ### Probe
 
-* **Type:** D
-* **Range:** H (LOS)
-* **Time:** CA
-* **Duration:** P
+* **Type:** Digital
+* **Range:** Handshake (LOS)
+* **Time:** Complex Action
+* **Duration:** Permanent
 * **Resistance:** Signal Defense
 
 Probing is a technique used to identify the weaknesses in a device or
@@ -275,10 +275,10 @@ target takes a Matrix Full Defense action.
 
 ### Reveal Contents
 
-* **Type:** D
-* **Range:** S (LOS)
-* **Time:** CA
-* **Duration:** P
+* **Type:** Digital
+* **Range:** Signal (LOS)
+* **Time:** Complex Action
+* **Duration:** Permanent
 * **Resistance:** Firewall + Signal Defense (if any)
 
 Data in data stores can be successfully inferred from the outside, given
@@ -288,10 +288,10 @@ sustained long enough for it to become Permanent.
 
 ### Who Is
 
-* **Type:** D
-* **Range:** M
-* **Time:** CA
-* **Duration:** P
+* **Type:** Digital
+* **Range:** Matrix
+* **Time:** Complex Action
+* **Duration:** Permanent
 
 The Who Is protocols are an ancient and time honored method of finding the real
 world location of an LTG (which is like a phone number or email address). While
@@ -306,42 +306,52 @@ Cybercombat usually is a short and brutal affair. As much as hackers like to
 describe the dance of code and the clashing of packets, when it comes to ending
 up on top, shooting first is a big step towards it.
 
-Using an Attack Program involves rolling Logic + Cybercombat, using the target's
-Firewall as a defense pool. A character may add their own Cybercombat skill to
-their defense pool against programming with a range of C. Programming with a
-range of S or H is affected as normal by Signal Defense. If an Attack Program is
-soaked, a B program is soaked by Willpower and a D program is soaked by System.
+Using an Analysis program requires a Logic + Cybercombat test.
+
+Many programs refer to a "Biofilter" value. This defaults to a character's
+Firewall, but the Redundant Biofeedback Filter program can increase it. Note
+that if you're running with HotSim then your Biofilter drops to 0.
 
 ### Black Hammer
 
-**Type:** B **Range:** S (LOS) **Time:** CA
+* **Type:** Bio
+* **Range:** Signal (LOS)
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Resistance:** Firewall + Signal Defense (if any)
 
 An improper neural impulse can digest a pancreas, terminate breathing, or stop a
 heart, which is exactly what Black Hammer does. If a character is affected by
-Black Hammer, she uses Willpower (Biofeedback Filter bonuses apply) to resist
-physical damage equal to the Rating of the attack plus the net hits. Black
-Hammer is incapable of doing damage beyond that which is necessary to completely
-fill in the condition monitor. Any excess damage is lost (stoppage of internal
-organ function is *bad*, but it's not "heads exploding" bad).
+Black Hammer, she uses Willpower + Biofilter to resist physical damage equal to
+the Rating of the attack plus the net hits. Black Hammer is incapable of doing
+damage beyond that which is necessary to completely fill in the condition
+monitor. Any excess damage is lost (stoppage of internal organ function is
+*bad*, but it's not "heads exploding" bad).
 
 ### Contagious RAS Override
 
-**Type:** B **Range:** S **Time:** CA (S)
+* **Type:** Bio
+* **Range:** Signal
+* **Time:** Complex Action
+* **Duration:** Sustained
+* **Resistance:** Willpower + Firewall + Signal Defense (if any)
+* **Optimized Defense:** Internal SimRig or Reaction Enhancer.
 
 RAS Overrides are a normal part of the Matrix, but a clever Matrix user can
-inflict them on others. The Logic + Cybercombat check is opposed by the target's
-Firewall + Willpower + Signal Defense (if any). If net hits are achieved, the
-subject is paralyzed as their motor neurons are edited out of functionality. All
-physical actions are taken at a -6 penalty, and the victim must make a Willpower
-(Net Hits) test to even attempt a physical action. The victim may attempt to end
-this condition by taking a Toggle AR/VR action and making a Logic + Computer
-test with a threshold of the net hits of Contagious RAS Override.
-
-**Optimized Defense:** Internal SimRig or Reaction Enhancer.
+inflict them on others. If net hits are achieved, the subject is paralyzed as
+their motor neurons are edited out of functionality. All physical actions are
+taken at a -6 penalty, and the victim must make a Willpower (Net Hits) test to
+even attempt a physical action. The victim may attempt to end this condition by
+taking a Toggle AR/VR action and making a Logic + Computer test with a threshold
+of the net hits of Contagious RAS Override.
 
 ### Crash
 
-**Type:** D **Range:** C **Time:** SA
+* **Type:** Digital
+* **Range:** Connection
+* **Time:** Simple Action
+* **Duration:** Instant
+* **Resistance:** Firewall + Cybercombat
 
 Spam and Viruses are a fact of life in the wireless world. But when you can see
 nothing but, you’re probably in the process of being crashed. If an Icon is
@@ -351,136 +361,164 @@ the net hits of the crash attack.
 
 ### Data Bomb
 
-**Type:** D **Range:** C **Time:** CA (P)
+* **Type:** Digital
+* **Range:** Connection
+* **Time:** Complex Action
+* **Duration:** Permanent
 
 A Data Bomb is a form of trap. If triggered, it releases malicious code and
 destroys the contents it is wrapped around. A Data Bomb is "set" by wrapping it
 around one or more files. Databombs are not easy to detect, requiring a Matrix
 Perception test with a threshold equal to the number of hits achieved when
-setting the databomb. If the file is directly accessed (to read or copy), the
-bomb "explodes". This destroys the data (requiring a threshold of Recovery equal
-to the number of hits initially scored creating the Data Bomb), and damaging the
+setting the Databomb. If the file is directly accessed (to read or copy), the
+bomb "explodes". This destroys the data (the threshold for Recovery is equal to
+the number of hits initially scored creating the Data Bomb), and damaging the
 Icon of whoever detonated the bomb (inflicting Icon Damage equal to program
-rating). Data Bombs are normally bypassed with a passkey of some sort, but the
-Data Bomb program can separately be Crashed, or the passkey can be Spoofed.
-Failing to bypass a Data Bomb results in exactly the same effect as simply
-accessing the data without noticing the bomb in the first place.
+rating, soak with System + Armor as normal). Data Bombs are normally bypassed
+with a passkey of some sort, but the Data Bomb effect can separately be Crashed,
+or the passkey can be Spoofed. Failing to bypass a Data Bomb results in exactly
+the same effect as simply accessing the data without noticing the bomb in the
+first place.
 
 ### Denial
 
-**Type:** D **Range:** M **Time:** CA (S)
+* **Type:** Digital
+* **Range:** Matrix
+* **Time:** Complex Action
+* **Duration:** Sustained
+* **Resistance:** Willpower + Firewall
 
 Denial is a river in Egypt. This is an attack which sends a large number of
 nuisance requests for data to the target LTG through the Matrix. This results in
-the target network being destabilized, or possibly even crashing altogether. The
-Logic + Attack check is resisted with Firewall + Willpower, and every net hit
-counts as an additional program that the target is sustaining. The target
-network may remove effective sustained programs with an additional resistance
-test whenever it takes a Matrix Defense action.
+the target network being destabilized, or possibly even crashing altogether.
+Every net hit counts as an additional program that the target is sustaining. The
+target network may remove effective sustained programs with an additional
+resistance test whenever it takes a Matrix Defense action.
 
 ### Jingle
 
-**Type:** B **Range:** C **Time:** CA
+* **Type:** Bio
+* **Range:** Connection
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Resistance:** Firewall + Willpower + Cybercombat (if any)
 
 Jingle plants an idea into the target's mind, getting its name for its first
-use: forcing people to remember advertising slogans. The Logic + Cybercombat
-check is opposed by the target's Firewall + Willpower + Cybercombat (if any).
-Net hits set the veracity with which the subject views the new fact.
+use: forcing people to remember advertising slogans. The net hits set the
+veracity with which the subject views the new fact.
 
 ### Seize
 
-**Type:** B **Range:** S (LOS) **Time:** CA
+* **Type:** Bio
+* **Range:** Signal (LOS)
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Resistance:** Firewall + Signal Defense (if any)
+* **Optimized Defense:** Move by Wire
 
 It takes only 7 misfired neurons to create an epileptic event in a normal human.
 A well-placed set of induction instructions can turn even the most physically
 capable of metahumans into a convulsing mass of tissue. If a character is
 affected by Seize, she may immediately resist the net hits of the attack with
-Willpower (Biofeedback Filter bonuses apply). If there are any net hits
-remaining, the character begins uncontrollably convulsing and is incapacitated.
-Every (Rating) combat rounds, the victim may make another Willpower check to
+Willpower + Biofilter. If there are _still_ any net hits remaining, the
+character begins uncontrollably convulsing and is incapacitated. Every (Rating)
+combat rounds, the victim may make another Willpower + Biofilter check to
 attempt to reduce the remaining net hits of the attack. When the net hits are
 reduced to zero, the character regains control of her body.
 
-**Optimized Defense:** Move by Wire
-
 ## Communications Programs
 
-*"The punishment was that one man could not understand the other. Can you
-believe they used to consider that a punishment?"*
+_"The punishment was that one man could not understand the other. Can you
+believe they used to consider that a punishment?"_
 
 Using a Communications program requires a Logic + Electronic Warfare test.
 
 ### Cancel
 
-**Type:** D **Range:** H **Time:** CA (S)
+* **Type:** Digital
+* **Range:** Handshake
+* **Time:** Complex Action
+* **Duration:** Sustained
+* **Resistance:** Signal + Signal Defense
 
 Information transfer is with waves as well as with particles, and when a wave
 hits its opposite both are canceled and effectively cease to exist. With the
-proper signals, the signals of a target can be neutralized. Every net hit on a
-Logic + Electronic Warfare vs. Signal + Signal Defense test reduces the target's
-dicepool on all broadcast Matrix actions by one. Cancel is a passive and very
-subtle effect, not at all obvious until signals actually start to fail.
+proper signals, the signals of a target can be neutralized. Every net hit
+reduces the target's dicepool on all broadcast Matrix actions by one. Cancel is
+a passive and very subtle effect, not at all obvious until signals actually
+start to fail.
 
 ### Cloak
 
-**Type:** D **Range:** C **Time:** CA (S)
+* **Type:** Digital
+* **Range:** Connection
+* **Time:** Complex Action
+* **Duration:** Sustained
 
 With the right data manipulations a network can be hidden from casual or even in
-depth observation in the Matrix. The user makes a Logic + Electronic Warfare
-test and the target goes into Hidden Mode with the number of net hits
-substituting for their Matrix Stealth check to stay hidden.
+depth observation in the Matrix. This program places target into Hidden Mode
+with the number of net hits substituting for their Matrix Stealth check to stay
+hidden.
 
 ### ECCM
 
-**Type:** D **Range:** C **Time:** CA (S)
+* **Type:** Digital
+* **Range:** Connection
+* **Time:** Complex Action
+* **Duration:** Sustained
 
 Jamming can really put a cramp into the style of modern networking. But with the
 expenditure of merely titanic computational resources on filtering out
 interference and reiterating questionable data packets, the difficulties can be
-mitigated. The user makes a Logic + Electronic Warfare test with a threshold
-equal to half the Background that she is attempting to overcome. Each net hit
-reduces the effective Background that the user has to deal with.
+mitigated. The threshold for this program is equal to half the Background that
+you are attempting to overcome, and the effective Background is reduced by your
+net hits.
 
 ### Impersonate
 
-**Type:** D **Range:** H **Time:** SA (S)
+* **Type:** Digital
+* **Range:** Handshake
+* **Time:** Simple Action
+* **Duration:** Sustained
+* **Resistance:** Firewall + Signal Defense (if any) + Signal (if the target is
+  still active)
+* **Optimized Defense:** If the impersonated device or Network has a Signal that
+  is more than 1 higher than the attempting network's Signal, the target has an
+  optimized defense.
 
-When two devices or networks have an active connection, a third party (that's
-you) can use Impersonate to create a connection with one or the other system by
+When two devices or networks have an active Connection, a third party (that's
+you) can use Impersonate to create a Connection with one or the other systems by
 insinuating itself as the one of the participants. If successful, not only does
-the user establish a connection, but the original connection is severed. The
-Logic + Electronic Warfare test is opposed by Firewall + Signal Defense (if
-any). The Signal Rating of the impersonated device is also added to the defense
-pool, assuming that it is still functional.
-
-**Optimized Defense:** If the impersonated device or network has a Signal that
-is more than 1 higher than the attempting network's Signal, the target has an
-optimized defense.
+the user establish a Connection, but the original Connection is severed.
 
 ### Intercept
 
-**Type:** D **Range:** L **Time:** SA (S)
+* **Type:** Digital
+* **Range:** Listening
+* **Time:** Simple Action
+* **Duration:** Sustained
+* **Resistance:** System + Signal Defense (if any)
 
 Data traveling through the air can be recorded by anyone within range, and for
 those of a cryptographic bent, that information can be used to figure out all
-kinds of things. Obtaining the information from a conversation between two other
-devices requires a Logic + Electronic Warfare test opposed by System + Signal
-Defense (if any).
+kinds of things. Successful use of Intercept lets you record a conversation
+between two devices or Networks.
 
 ### Sensory Deprivation
 
-**Type:** B **Range:** S (LOS) **Time:** CA (S)
+* **Type:** Bio
+* **Range:** Signal (LOS)
+* **Time:** Complex Action
+* **Duration:** Sustained
+* **Resistance:** Willpower + Firewall + Signal Defense (if any)
+* **Optimized Defense:** Internal SimRig or multiple cybernetic senses.
 
 The editing out of sensory information to a metahuman brain is an essential
 portion of establishing VR, but it is also a potential weakness of any
-metahuman. The Logic + Electronic Warfare check is opposed by the target's
-Firewall + Willpower + Signal Defense (if any). If net hits are achieved, the
-subject is blinded and completely cut off from physical senses as their sensory
-neurons are suppressed. The victim may attempt to end this condition by taking a
-Toggle AR/VR action and making a Logic + Computer test with a threshold of the
-net hits of Sensory Deprivation.
-
-**Optimized Defense:** Internal SimRig or multiple cybernetic senses.
+metahuman. If net hits are achieved, the subject is blinded and completely cut
+off from physical senses (exactly as if they were in VR). The victim may attempt
+to end this condition by taking a Toggle AR/VR action and making a Logic +
+Computer (Net hits) test.
 
 ## Exploit Programs
 
@@ -492,27 +530,35 @@ Using an Exploit program requires a Logic + Hacking test.
 
 ### Backdoor
 
-**Type:** D **Range:** H **Time:** CA (P)
+* **Type:** Digital
+* **Range:** Handshake
+* **Time:** Complex Action
+* **Duration:** Permanent
+* **Resistance:** Firewall + Signal Defense (if any)
 
-Backdoor creates a special trick that the user can activate as a Free Action
-which creates a connection between the target and the user. The Logic + Hacking
-test is opposed by Firewall + Signal Defense (if any).
+Backdoor creates a special trick that the user can activate as a Matrix Free
+Action which creates a Connection between the target and the user.
 
 ### Decrypt
 
-**Type:** D **Range:** L **Time:** Special (S)
+* **Type:** Digital
+* **Range:** Listening
+* **Time:** Special
+* **Duration:** Sustained
+* **Resistance:** Firewall
 
 Cryptology is a really complicated subject which is at the very heart of much of
 computing. Within the context of Shadowrun, it is assumed that any time a
 character gains access to the plaintext and encrypted version of a message that
-the encryption key *can* be reverse engineered. In the case of asymmetric
-encryption, any number of plaintexts can be created at will just by knowing the
-public version. To decrypt, a user makes a Logic + Hacking test opposed by
-Firewall looking to make a threshold of 2. The character only gets one chance
-unless more plaintext/encryption pairs are obtained. If successful, the code is
-broken in a single Complex Action. If sufficient hits are not achieved, the code
-may yet still be broken, but it takes longer depending upon how many hits the
-test was short of the threshold:
+the encryption key *can* be reverse engineered. To decrypt a key, a user makes a
+Logic + Hacking test opposed by the Firewall of whatever Network made the
+encryption key, looking to make a threshold of 2. The character only gets one
+chance unless more plaintext/encryption pairs are obtained. In the case of
+asymmetric encryption, any number of plaintexts can be created at will just by
+knowing the public key. If successful, the code is broken in a single Complex
+Action. If sufficient hits are not achieved, the code may yet still be broken,
+but it takes longer depending upon how many hits the test was short of the
+threshold:
 
 * 1 hour
 * 1 day
@@ -521,10 +567,13 @@ test was short of the threshold:
 
 ### Jedi Trick
 
-**Type:** D **Range:** S **Time:** CA
+* **Type:** Digital
+* **Range:** Signal
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Resistance:** Firewall + Signal Defense (if any)
 
-Jedi Trick bypasses a request for a password or show of credentials. The Logic +
-Hacking test is opposed by Firewall + Signal Defense (if any).
+Jedi Trick bypasses a request for a password or show of credentials.
 
 **Step by Step: The Retina Scanner**
 
@@ -534,59 +583,73 @@ Jedi Trick system bypasses those shenanigans altogether and directly opens the
 door. More advanced Retina Scanners are embedded in a Faraday Cage and have a
 direct wired connection to the door itself. This prevents a Jedi Trick and
 requires characters to either submit a valid (possibly faked) retina for
-scanning or to manually open the lock via Lockpicking or Harware skills.
+scanning or to manually open the lock via the Lockpicking or Hardware skills.
 
 ### Master Control
 
-**Type:** D **Range:** C **Time:** CA
+* **Type:** Digital
+* **Range:** Connection
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Resistance:** Willpower + Firewall + Cybercombat (if any)
 
 Master Control is a method to ramp an account up in privileges. Just because a
-data connection exists doesn't mean that the network on the other end actually
+Connection exists doesn't mean that the Network on the other end actually
 *trusts* data packets from that source. This program solves that by manually
-altering the routing information for the user's connection, causing it to be
-treated with greater privileges. The Logic + Hacking test is opposed by Firewall
-+ Willpower + Cybercombat (if any).
+altering the routing information for the user's Connection, causing it to be
+treated with greater privileges.
 
 ### Misplace
 
-**Type:** D **Range:** S **Time:** CA
+* **Type:** Digital
+* **Range:** Signal
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Resistance:** Firewall + Signal Defense (if any)
 
 Data is stored all kinds of crazy places, and successfully using Misplace causes
 data to begin being stored in a place topologically similar to "the trashcan".
-The Logic + Hacking test is opposed by Firewall + Signal Defense (if any).
 
 ### Ostraka
 
-**Type:** D **Range:** S **Time:** CA
+* **Type:** Digital
+* **Range:** Signal
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Resistance:** Willpower + Firewall + Signal Defense (if any)
 
 Ostraka causes a subscribed device or program to be apparently told to disengage
 from the network. If it succeeds, the program shuts down or the device is
-ejected from the network and becomes a lone device. The Logic + Hacking test is
-opposed by Firewall + Willpower + Signal Defense (if any).
+ejected from the Network and becomes a lone device.
 
 ### Peristalsis
 
-**Type:** B **Range:** S **Time:** SA (S)
+* **Type:** Bio
+* **Range:** Signal
+* **Time:** Simple Action
+* **Duration:** Sustained
+* **Resistance:** Willpower + Firewall + Signal Defense (if any) + Biofilter
+* **Optimized Defense:** Clean Digestion or Digestive Expansion
 
 The target's autonomic nervous system is activated remotely. This can be
 embarrassing and socially awkward, but is usually not directly dangerous unless
 they have an adrenal pump (which can be activated by this method). No matter
 what the actual contents of the subject's intestines, the results can be
 distracting and painful, causing a -2 penalty to all dicepools (this penalty
-does not stack with further uses of this programming). The Logic + Hacking test
-is opposed by Firewall + Willpower + Signal Defense (if any) + Biofeedback
-Filter (if any).
-
-**Optimized Defense:** Clean Digestion or Digestive Expansion
+does not stack with further uses of this programming).
 
 ### Taxman
+
+* **Type:** Bio and Digital
+* **Range:** Handshake
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Resistance:** Willpower + Firewall + Signal Defense (if any)
 
 **Type:** B&D **Range:** H **Time:** CA
 
 Taxman causes the user to become a seemingly legitimate data request. If
-successful, the target system begins sending requested files to the Taxman. The
-Logic + Hacking test is opposed by Firewall + Willpower + Signal Defense (if
-any).
+successful, the target system begins sending the requested files to the Taxman.
 
 ## Operations Programs
 
@@ -596,7 +659,10 @@ Using an Operations Program requires a Logic + Computer test.
 
 ### Armor
 
-**Type:** D **Range:** H **Time:** CA (S)
+* **Type:** Digital
+* **Range:** Handshake
+* **Time:** Complex Action
+* **Duration:** Sustained
 
 Armor Programming makes a system more resilient to Matrix damage. While it is
 running, the target network rolls an extra number of dice to resist Icon Damage
@@ -605,37 +671,48 @@ running.
 
 ### Fabrication
 
-**Type:** D **Range:** C **Time:** CA (S)
+* **Type:** Digital
+* **Range:** Connection
+* **Time:** Complex Action
+* **Duration:** Sustained
 
 Fabrication makes a seemingly meaningful datstream out of nothing at all. The
 data can continue to be produced indefinitely in real time, with a quality
-dictated by the results of a Logic + Computer test. This data can be tossed or
-saved. Multiple copies of Fabrication can run on the same network or even
-multiple networks in order to produce more data. For example, 6 hours of video
-footage can be created from whole cloth in an hour and a half by having four
-copies of Fabrication running for that period. If merely modifying existing
-footage, one should just use Data Manipulation. Determining the fake would be
-compared to the *worst* effort of the different Fabrications.
+dictated by the hits of the program. This data can be tossed or saved. Multiple
+copies of Fabrication can run on the same Network or even multiple Networks in
+order to produce more data. For example, six hours of video footage can be
+created from whole cloth in an hour and a half by having four copies of
+Fabrication running for that period. If merely modifying existing footage, one
+should just use Data Manipulation. Determining the fake would be compared to the
+*worst* effort of the different Fabrications.
 
 ### Medic
 
-**Type:** D **Range:** H (LOS) **Time:** CA (P)
+* **Type:** Digital
+* **Range:** Handshake (LOS)
+* **Time:** Complex Action
+* **Duration:** Permanent
 
-Medic repairs Icon Damage equal to the number of hits gleaned from a Logic +
-Computer test (maximum equal to Rating). Once the effects of Medic are
-permanent, the programming can be run again for credit.
+Medic repairs Icon Damage equal to the number of hits. Once the effects of Medic
+are permanent, the programming can be run again for further repair.
 
 ### Obscure
 
-**Type:** D **Range:** C **Time:** CA (P)
+* **Type:** Digital
+* **Range:** Connection
+* **Time:** Complex Action
+* **Duration:** Permanent
 
 Obscure makes a fact unfindable within a datastore. Overwriting it thousands of
-times and redirecting links until the data is simply gone. Hits set the
+times and redirecting links until the data is simply gone. Program hits set the
 threshold for future Recovery actions.
 
 ### Recover
 
-**Type:** D **Range:** C **Time:** 1 minute (P)
+* **Type:** Digital
+* **Range:** Connection
+* **Time:** 1 minute
+* **Duration:** Permanent
 
 Deleting information beyond the potential for recovery is a difficult
 enterprise. Using Recover, data which has been destroyed can be reassembled into
@@ -646,24 +723,30 @@ this purpose.
 
 ### Redundant Biofeedback Filters
 
-**Type:** D **Range:** C **Time:** CA (S)
+* **Type:** Digital
+* **Range:** Connection
+* **Time:** Complex Action
+* **Duration:** Sustained
 
 Redundant Biofeedback Filters are something which is highly encouraged for users
 experienced and newbie alike when navigating the dangerous world of the modern
-Matrix. While it is running, the target network rolls an extra number of dice to
+Matrix. While it is running, the target Network rolls an extra number of dice to
 resist B attacks equal to its rating. Only the best Redundant Biofeedback Filter
 program applies if more than one is running, but IT specialists will roll their
 eyes at you if you aren't running at least one.
 
 ### Terminate Connection
 
-**Type:** D **Range:** C **Time:** CA
+* **Type:** Digital
+* **Range:** Connection
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Resistance:** System + Intuition
 
 Terminate Connection makes the user's network no longer connected to the target.
-The range usually will then be Handshake unless the connection had originally
-been made through a Matrix link. The user rolls Logic + Operations and is
-opposed by the enemy network's System + Intuition. Success terminates the
-connection and purges any Backdoor used to establish it in the first place.
+The range will usually then be Handshake, unless the Connection had originally
+been made through a Matrix link. Success terminates the connection and purges
+any Backdoor used to establish it in the first place.
 
 ## Decompiling Forms
 
@@ -671,62 +754,86 @@ Using a Decompiling Form requires a Resonance + Decompiling test.
 
 ### Can of Worms
 
-**Type:** D **Range:** S (LOS) **Time:** CA **Fading:** 1/2R+2
+* **Type:** Digital
+* **Range:** Signal (LOS)
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Fading:** 1/2R + 2
+* **Resistance:** Firewall + Signal Defense (if any)
 
 This dread technique simultaneously assaults all networks in range except the
-technomancer herself. She makes a Resonance + Decompiling check resisted by each
-network's Firewall + Signal Defense. Those which are affected must soak Icon
-Damage equal to Rating + net hits.
+technomancer herself. All other Networks in range must resist the Form, and
+those which are affected must soak Icon Damage equal to Rating + Net Hits.
 
 ### Death Note
 
-**Type:** B **Range:** S (LOS) **Time:** SA **Fading:** 1/2R
+* **Type:** Bio
+* **Range:** Signal (LOS)
+* **Time:** Simple Action
+* **Duration:** Instant
+* **Fading:** 1/2R
+* **Resistance:** Firewall + Signal Defense (if any)
 
-The song that ends a man is played. Man goto end. The technomancer makes a
-Resonance + Decompiling check, and if it is not successfully resisted with the
-target's Firewall + Signal Defense, the target must resist physical damage equal
-to the rating plus net hits with Willpower.
+The song that ends a man is played. Man goto end. If the Form is successful, the
+target must resist physical damage equal to the rating plus net hits with
+Willpower + Biofilter.
 
 ### Lag
 
-**Type:** D **Range:** C (LOS) **Time:** SA (S) **Fading:** 1/2R
+* **Type:** Digital
+* **Range:** Connection (LOS)
+* **Time:** Simple Action
+* **Duration:** Sustained
+* **Fading:** 1/2R
+* **Resistance:** Firewall + Cybercombat (if any)
 
-The Technomancer overwhelms the processors of a network with irrelevancies.  The
-technomancer makes a Resonance + Decompiling check, and if it is not
-successfully resisted with the target's Firewall + Cybercombat the target's
-Response is reduced by the net hits. A target whose Response hits zero simply
-crashes as if its entire Icon Damage monitor was filled.
+The Technomancer overwhelms the processors of a network with irrelevancies. The
+target's Response is reduced by the net hits of the Form. A target whose
+Response hits zero simply crashes as if its entire Icon Damage monitor was
+filled.
 
 ### Opening
 
-**Type:** D **Range:** L **Time:** CA **Fading:** 1/2R+1
+* **Type:** Digital
+* **Range:** Listening
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Fading:** 1/2R + 1
+* **Resistance:** Willpower + Firewall
 
 The resonance layer of mystery is removed from a transmission or file, leaving
-nothing but unencrypted information.  The technomancer makes a Resonance +
-Decompiling check, and if it is not successfully resisted with the encrypter's
-Firewall + Willpower the file is decrypted. Yes, two systems running the same
-EUE may find that their transmissions are differently difficult for a
-technomancer to open. That's how Resonance rolls.
+nothing but unencrypted information. If this Form is not successfully resisted
+the file is decrypted. Yes, Willpower is supposed to be in the resistance pool.
+Two systems running the same EUE may find that their transmissions are
+differently difficult for a technomancer to open. That's how Resonance rolls.
 
 ### Registry Dump
 
-**Type:** D **Range:** S (LOS) **Time:** CA **Fading:** 1/2R+2
+* **Type:** Digital
+* **Range:** Signal (LOS)
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Fading:** 1/2R + 2
+* **Resistance:** Firewall + Signal Defense (if any)
 
-All running programming on all networks in range of the technomancer destabilize
-and may get dumped outright. She makes a Resonance + Decompiling check resisted
-by each network's Firewall + Signal Defense. Those which are affected have all
-sustained programs have their number of activating hits reduced by the number of
-net hits the technomancer achieves. Programs which are reduced to zero hits fade
-from the matrix as if they had never been.
+All running programming on all Networks in range of the technomancer destabilize
+and may get dumped outright. Each potential target resists separately. Those
+which are affected have the number of hits for all their active programs reduced
+by the number of net hits the technomancer achieves. Programs which are reduced
+to zero hits fade from the matrix as if they had never been.
 
 ### Reset
 
-**Type:** D **Range:** C (LOS) **Time:** CA **Fading:** 1/2R+3
+* **Type:** Digital
+* **Range:** Connection (LOS)
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Fading:** 1/2R + 3
+* **Resistance:** Willpower + Firewall + Cybercombat (if any)
 
-The target network is reset backwards in time a number of rounds equal to the
-net hits made against the target's Firewall + Willpower + Cybercombat. Alerts
-triggered, data accumulated, and Icon Damage sustained during these rounds are
-gone forever.
+The target Network is reset backwards in time a number of rounds equal to the
+Net Hits. Alerts triggered, data accumulated, and Icon Damage sustained during
+these rounds are gone forever.
 
 ## Registering Forms
 
@@ -734,43 +841,65 @@ A Registering Form is used with Resonance + Registering.
 
 ### Restructure
 
+* **Type:** Digital
+* **Range:** Signal
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Fading:** 1/2R + 1
+* **Resistance:** Willpower + Firewall + Signal Defense (if any)
+
 **Type:** D **Range:** S **Time:** CA **Fading:** 1/2R+1
 
 The Resonance shakes itself slightly, and at the end a device that had been part
-of one network is now part of another. The technomancer's Resonance +
-Registering test is compared against the Firewall + Willpower + Signal Defense
-of both networks, and if it succeeds all involved parties display the device as
-having always been a part of the new network.
+of one network is now part of another. This Form is resisted by both Networks
+separately. If both of them are affected, the desired device is suddenly part of
+the new Network as if it had always been there.
 
 ### Test Pattern
 
-**Type:** B&D **Range:** S (LOS) **Time:** CA **Fading:** 1/2R+1
+* **Type:** Bio and Digital
+* **Range:** Signal (LOS)
+* **Time:** Complex Action
+* **Duration:** Sustained
+* **Fading:** 1/2R + 1
+* **Resistance:** Intuition + Response + Signal Defense (if any)
 
 An idea is placed into the Resonance and it holds the appearance of the
 physically real. The technomancer defines some set of parameters which are then
 recorded as valid by all sensory devices in the area of the technomancer's
-Signal range, whether they are microphones or human eyes. The technomancer makes
-a Resonance + Registering check. Any observers inside the range must make the
-same number of hits on an Intuition + Response + Signal Defense or the
-technomancer's defined parameters take precedence over "real" sense data.
+Signal range, whether they are microphones or human eyes. Networks in range who
+are affected experience whatever the technomancer's parameters are instead of
+whatever is "really" going on (this is basically like an Illusion spell).
 
 ### Transfigure
 
-**Type:** B **Range:** S (LOS) **Time:** 1 hour (P) **Fading:** 1/2R+2
+* **Type:** Bio
+* **Range:** Signal (LOS)
+* **Time:** 1 hour
+* **Duration:** Permanent
+* **Fading:** 1/2R + 2
+* **Resistance:** Willpower + Special
 
 New data is implanted directly into the values, knowledge, and social mores of
-the target.  The target resists the effects with Willpower, but being attached
-to a network with the biofeedback filtration active can undo this kind of
-conditioning rather easily. The effects do not take hold until it becomes
-permanent, and every round a Firewall is engaged it can make an attempt to
-prevent it by succeeding in a Firewall + Biofeedback Filter (net hits).
+the target. The target resists the effects with Willpower, but being attached to
+a network with a Biofilter can undo this kind of conditioning rather easily. The
+effects do not take hold until the Form becomes Permanent, and every round a
+Biofilter is engaged it can roll itself against the net hits of the Form to
+prevent it from succeeding.
 
 ### Validation
+
+* **Type:** Digital
+* **Range:** Signal (LOS)
+* **Time:** Complex Action
+* **Duration:** Instant
+* **Fading:** 1/2R
+* **Resistance:** Willpower + Firewall + Signal Defense (if any)
 
 **Type:** D **Range:** S (LOS) **Time:** CA **Fading:** 1/2R
 
 If the form is successful, any number of new valid passcodes are added to a
-device or network. This is resisted with Firewall + Willpower + Signal Defense.
+device or Network.
 
 ## Background Programs
 
@@ -800,7 +929,7 @@ rating limited by the Pilot rating of the Device.
 ### Clearsight
 
 Clearsight is used to identify things that the Sensors detect. It is specific to
-a single sensor suite, and it is used for identifying targets (Pilot +
+a single sensor suite type, and it is used for identifying targets (Pilot +
 Clearsight) and interpretation of sensory inputs (Sensors + Clearsight).
 
 ### Fabricate

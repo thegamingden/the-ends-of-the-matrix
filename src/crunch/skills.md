@@ -70,9 +70,9 @@ Forms are activated with Resonance + Cybercombat.
 
 When a Connection is established between two Icons, Signal Defense is
 essentially useless. A character's Signal Defense does not apply against attacks
-made at Connection range, regardless of who the target is. A character may use
-her own Cybercombat to defend herself from attacks made at Connection Range (but
-she does not take a penalty for Defaulting if they are untrained).
+made at Connection range, regardless of program. A character instead uses their
+Cybercombat to defend herself (but she does not take a penalty for Defaulting if
+they are untrained).
 
 ### Cybercombat Specializations
 
