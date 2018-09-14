@@ -68,10 +68,11 @@ Forms are activated with Resonance + Cybercombat.
 
 ### Defense
 
-When a connection is established between two icons, signal defense is
+When a Connection is established between two Icons, Signal Defense is
 essentially useless. A character's Signal Defense does not apply against attacks
-made at Connection Range, regardless of who the target is. A character may use
-her own Cybercombat to defend herself from attacks made at Connection Range.
+made at Connection range, regardless of who the target is. A character may use
+her own Cybercombat to defend herself from attacks made at Connection Range (but
+she does not take a penalty for Defaulting if they are untrained).
 
 ### Cybercombat Specializations
 
@@ -213,10 +214,10 @@ immersive VR, then the character makes regular Perception tests instead.
 A skilled electronic warrior can defend herself and others against programs
 running in the Matrix. To provide signal defense, she must have LOS to all the
 targets being defended, she must be be presently active in the Matrix, and she
-must declare which systems she is protecting as a free action. Signal Defense
-provides a number of extra resistance dice equal to the character's Electronic
-Warfare skill. If more than one Matrix user is providing Signal Defense on the
-same target, use the teamwork rules.
+must declare which systems she is protecting as a Matrix Free Action. Signal
+Defense provides a number of extra resistance dice equal to the character's
+Electronic Warfare skill. If more than one Matrix user is providing Signal
+Defense on the same target, use the teamwork rules.
 
 A character who is actively providing signal defense can do so even against
 programs she is not aware of. The act of signal modulation and source
@@ -225,6 +226,10 @@ there's someone on the other end or not. Signal Defense normally requires a
 network with a generic Firewall. Sprites cannot provide Signal Defense unless
 they have the Signal Management power. Technomancers can provide Signal Defense
 normally.
+
+Note that Signal Defense is entirely ineffective once a Connection is open
+between two networks. Any resistance test that would use Signal Defense as part
+of the defense pool should instead use the target's Cybercombat instead.
 
 ### Electronic Warfare Specializations
 
