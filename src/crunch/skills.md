@@ -379,7 +379,7 @@ combat round during which the technomancer can attempt to take control of it. If
 she does not do so, the sprite disintegrates into random and unintelligible bits
 and bytes on its next action. Removing tasks causes Fading. The technomancer
 must resist fading equal to half the sprite's rating + the number of total hits
-it achieved.
+it achieved. Removing Tasks is a Signal (LOS) effect.
 
 ### Rend Icon
 
@@ -387,9 +387,9 @@ A technomancer can simply attack enemy icons with the Decompiling skill. This
 attack takes a Simple Action, and uses Resonance + Decompiling as a dicepool.
 The target's defense pool is their Firewall + Cybercombat (if any). The attack
 inflicts Matrix damage with a DV of the technomancer's Charisma + net hits. The
-damage is soaked with System. Rending an icon causes no fading, and icons
-crashed in this manner leave no record in the Matrix or their own internal logs
-of having crashed. This attack has a range of Connection.
+damage is soaked with System + Armor. Rending an icon causes no fading, and
+icons crashed in this manner leave no record in the Matrix or their own internal
+logs of having crashed. This attack has a range of Connection.
 
 ### Unravel Commands
 
@@ -405,10 +405,10 @@ original instruction set of the device. This action has a range of Connection.
 
 ### Decompiling Specializations
 
-* Unraveling
-* Task Removal
-* Rending
 * Decompiling Forms
+* Remove Tasks
+* Rend Icon
+* Unraveling
 
 ## Registering
 
