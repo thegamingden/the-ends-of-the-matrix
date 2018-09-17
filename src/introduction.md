@@ -67,3 +67,18 @@ would. It is the hope that these presented rules will not have problems like
 that, or that if they do that at the very least they will not produce a such
 perfect storm which relegates the concept of the Matrix Specialist to the
 dustbin of history.
+
+## Versioning
+
+This document is based on [The 4.01
+Version](http://tgdmb.com/viewtopic.php?t=48836), but it has been modified since
+then. Changes to formatting, or even small changes that fix minor logic errors
+(such as Machine Sprites getting a Clearsight Complex Form instead of the
+Perception Skill they should have) are not particularly marked out. However,
+there are a few spots where the 4.01 version simply doesn't cover some case that
+has since come up in play. For those things, I've written in new rules that work
+with the rest of the ruleset. Those entirely new rules are marked as "Bonus
+Rule", so that you know that I've made something up. If the Bonus Rules are dumb
+you can blame me and my gaming groups, not Frank.
+
+-Lokathor
