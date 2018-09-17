@@ -45,7 +45,8 @@ Technomancer's first Initiative Pass in a combat round. While joined, a Sprite
 maintains its own ability scores for determining any dice pools it rolls on
 actions it performs, and joined Sprites _don't_ grant any of their ability
 scores to their Technomancer's Network (Though the Puppeteer power can kinda do
-that, if that's what you want).
+that, if that's what you want). A Technomancer can eject a Sprite from their
+Network as a Matrix Free Action.
 
 ## Types of Sprites
 _"I've heard your song. It's a bad song."_
