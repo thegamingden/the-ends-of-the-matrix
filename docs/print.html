@@ -1057,15 +1057,15 @@ combat round during which the technomancer can attempt to take control of it. If
 she does not do so, the sprite disintegrates into random and unintelligible bits
 and bytes on its next action. Removing tasks causes Fading. The technomancer
 must resist fading equal to half the sprite's rating + the number of total hits
-it achieved.</p>
+it achieved. Removing Tasks is a Signal (LOS) effect.</p>
 <a class="header" href="#rend-icon" id="rend-icon"><h3>Rend Icon</h3></a>
 <p>A technomancer can simply attack enemy icons with the Decompiling skill. This
 attack takes a Simple Action, and uses Resonance + Decompiling as a dicepool.
 The target's defense pool is their Firewall + Cybercombat (if any). The attack
 inflicts Matrix damage with a DV of the technomancer's Charisma + net hits. The
-damage is soaked with System. Rending an icon causes no fading, and icons
-crashed in this manner leave no record in the Matrix or their own internal logs
-of having crashed. This attack has a range of Connection.</p>
+damage is soaked with System + Armor. Rending an icon causes no fading, and
+icons crashed in this manner leave no record in the Matrix or their own internal
+logs of having crashed. This attack has a range of Connection.</p>
 <a class="header" href="#unravel-commands" id="unravel-commands"><h3>Unravel Commands</h3></a>
 <p>Any device operating on its own does so under the auspices of a set of commands.
 A Technomancer can unravel those command structures directly. By taking an
@@ -1078,10 +1078,10 @@ The technomancer resists fading equal to the number of hits on the highest
 original instruction set of the device. This action has a range of Connection.</p>
 <a class="header" href="#decompiling-specializations" id="decompiling-specializations"><h3>Decompiling Specializations</h3></a>
 <ul>
-<li>Unraveling</li>
-<li>Task Removal</li>
-<li>Rending</li>
 <li>Decompiling Forms</li>
+<li>Remove Tasks</li>
+<li>Rend Icon</li>
+<li>Unraveling</li>
 </ul>
 <a class="header" href="#registering" id="registering"><h2>Registering</h2></a>
 <p>The Registering skill is used similarly to Binding, to register sprites to
@@ -2366,6 +2366,20 @@ area with lots of interference (such as a jammed area). If a Sprite is ever
 beyond its signal range to all Matrix devices, it is destroyed utterly.</p>
 <p>Every sprite has the same Signal range as the technomancer who compiled it,
 regardless of rating.</p>
+<p><strong>Bonus Rules:</strong> A Sprite can spend a Simple Action to join into the Network of
+the Technomancer who compiled it (any Connections it has open transfer on to the
+Technomancer). While so joined they cannot be individually attacked with any
+normal matrix action (though they're still subject to Task Removal), and they
+are simply crashed or not depending on the state of the Technomancer's Network
+(as with a normal subsumed device). Joined Sprites even stay with the
+Tehnomancer when they go Ghosting. Joined Sprites do <em>not</em> take their own
+actions. Instead, one of them can take an Initiative Pass each round in place of
+the Network's IC. If the Technomancer's Network is not currently running any IC
+at all, one Sprite can take a single Initiative Pass immediately after the
+Technomancer's first Initiative Pass in a combat round. While joined, a Sprite
+maintains its own ability scores for determining any dice pools it rolls on
+actions it performs, and joined Sprites <em>don't</em> grant any of their ability scores
+to their Technomancer's Network (that's what the Puppeteer power is for).</p>
 <a class="header" href="#types-of-sprites" id="types-of-sprites"><h2>Types of Sprites</h2></a>
 <p><em>&quot;I've heard your song. It's a bad song.&quot;</em></p>
 <p>There are now ten categories of Sprites, and each technomancer has a personal

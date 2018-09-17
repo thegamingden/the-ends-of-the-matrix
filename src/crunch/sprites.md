@@ -31,6 +31,21 @@ beyond its signal range to all Matrix devices, it is destroyed utterly.
 Every sprite has the same Signal range as the technomancer who compiled it,
 regardless of rating.
 
+**Bonus Rules:** A Sprite can spend a Simple Action to join into the Network of
+the Technomancer who compiled it (any Connections it has open transfer on to the
+Technomancer). While so joined they cannot be individually attacked with any
+normal matrix action (though they're still subject to Task Removal), and they
+are simply crashed or not depending on the state of the Technomancer's Network
+(as with a normal subsumed device). Joined Sprites even stay with the
+Tehnomancer when they go Ghosting. Joined Sprites do _not_ take their own
+actions. Instead, one of them can take an Initiative Pass each round in place of
+the Network's IC. If the Technomancer's Network is not currently running any IC
+at all, one Sprite can take a single Initiative Pass immediately after the
+Technomancer's first Initiative Pass in a combat round. While joined, a Sprite
+maintains its own ability scores for determining any dice pools it rolls on
+actions it performs, and joined Sprites _don't_ grant any of their ability scores
+to their Technomancer's Network (that's what the Puppeteer power is for).
+
 ## Types of Sprites
 _"I've heard your song. It's a bad song."_
 
