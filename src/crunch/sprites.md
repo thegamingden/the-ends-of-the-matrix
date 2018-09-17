@@ -43,8 +43,9 @@ the Network's IC. If the Technomancer's Network is not currently running any IC
 at all, one Sprite can take a single Initiative Pass immediately after the
 Technomancer's first Initiative Pass in a combat round. While joined, a Sprite
 maintains its own ability scores for determining any dice pools it rolls on
-actions it performs, and joined Sprites _don't_ grant any of their ability scores
-to their Technomancer's Network (that's what the Puppeteer power is for).
+actions it performs, and joined Sprites _don't_ grant any of their ability
+scores to their Technomancer's Network (Though the Puppeteer power can kinda do
+that, if that's what you want).
 
 ## Types of Sprites
 _"I've heard your song. It's a bad song."_
