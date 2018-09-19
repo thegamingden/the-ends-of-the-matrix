@@ -72,7 +72,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="../lore.html"><strong aria-hidden="true">2.</strong> Lore</a></li><li><ol class="section"><li><a href="../lore/four_questions.html"><strong aria-hidden="true">2.1.</strong> Four Questions</a></li><li><a href="../lore/perceiving_the_matrix.html"><strong aria-hidden="true">2.2.</strong> Perceiving The Matrix</a></li><li><a href="../lore/encryption.html"><strong aria-hidden="true">2.3.</strong> Encryption</a></li><li><a href="../lore/hacking_hardware.html"><strong aria-hidden="true">2.4.</strong> Hacking Hardware</a></li><li><a href="../lore/intrusion_countermeasures.html"><strong aria-hidden="true">2.5.</strong> Intrusion Countermeasures</a></li><li><a href="../lore/matrix_infrastructure_and_topology.html"><strong aria-hidden="true">2.6.</strong> Matrix Infrastructure and Topology</a></li><li><a href="../lore/growing_up_wireless.html"><strong aria-hidden="true">2.7.</strong> Growing Up Wireless</a></li><li><a href="../lore/technomancers.html"><strong aria-hidden="true">2.8.</strong> Technomancers</a></li><li><a href="../lore/sprites.html"><strong aria-hidden="true">2.9.</strong> Sprites</a></li></ol></li><li><a href="../crunch.html"><strong aria-hidden="true">3.</strong> Crunch</a></li><li><ol class="section"><li><a href="../crunch/dicepools.html"><strong aria-hidden="true">3.1.</strong> Dicepools</a></li><li><a href="../crunch/skills.html"><strong aria-hidden="true">3.2.</strong> Skills</a></li><li><a href="../crunch/matrix_architecture.html"><strong aria-hidden="true">3.3.</strong> Matrix Architecture</a></li><li><a href="../crunch/matrix_actions.html"><strong aria-hidden="true">3.4.</strong> Matrix Actions</a></li><li><a href="../crunch/matrix_attributes.html"><strong aria-hidden="true">3.5.</strong> Matrix Attributes</a></li><li><a href="../crunch/programs_and_complex_forms.html" class="active"><strong aria-hidden="true">3.6.</strong> Programs and Complex Forms</a></li><li><a href="../crunch/technomancy.html"><strong aria-hidden="true">3.7.</strong> Technomancy</a></li><li><a href="../crunch/sprites.html"><strong aria-hidden="true">3.8.</strong> Sprites</a></li><li><a href="../crunch/equipment.html"><strong aria-hidden="true">3.9.</strong> Equipment</a></li></ol></li><li><a href="../bonus_houserules.html"><strong aria-hidden="true">4.</strong> Bonus Houserules</a></li></ol>
+            <ol class="chapter"><li><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="../lore.html"><strong aria-hidden="true">2.</strong> Lore</a></li><li><ol class="section"><li><a href="../lore/four_questions.html"><strong aria-hidden="true">2.1.</strong> Four Questions</a></li><li><a href="../lore/perceiving_the_matrix.html"><strong aria-hidden="true">2.2.</strong> Perceiving The Matrix</a></li><li><a href="../lore/encryption.html"><strong aria-hidden="true">2.3.</strong> Encryption</a></li><li><a href="../lore/hacking_hardware.html"><strong aria-hidden="true">2.4.</strong> Hacking Hardware</a></li><li><a href="../lore/intrusion_countermeasures.html"><strong aria-hidden="true">2.5.</strong> Intrusion Countermeasures</a></li><li><a href="../lore/matrix_infrastructure_and_topology.html"><strong aria-hidden="true">2.6.</strong> Matrix Infrastructure and Topology</a></li><li><a href="../lore/growing_up_wireless.html"><strong aria-hidden="true">2.7.</strong> Growing Up Wireless</a></li><li><a href="../lore/technomancers.html"><strong aria-hidden="true">2.8.</strong> Technomancers</a></li><li><a href="../lore/sprites.html"><strong aria-hidden="true">2.9.</strong> Sprites</a></li></ol></li><li><a href="../crunch.html"><strong aria-hidden="true">3.</strong> Crunch</a></li><li><ol class="section"><li><a href="../crunch/dicepools_and_glossary.html"><strong aria-hidden="true">3.1.</strong> Dicepools and Glossary</a></li><li><a href="../crunch/skills.html"><strong aria-hidden="true">3.2.</strong> Skills</a></li><li><a href="../crunch/matrix_architecture.html"><strong aria-hidden="true">3.3.</strong> Matrix Architecture</a></li><li><a href="../crunch/matrix_actions.html"><strong aria-hidden="true">3.4.</strong> Matrix Actions</a></li><li><a href="../crunch/matrix_attributes.html"><strong aria-hidden="true">3.5.</strong> Matrix Attributes</a></li><li><a href="../crunch/programs_and_complex_forms.html" class="active"><strong aria-hidden="true">3.6.</strong> Programs and Complex Forms</a></li><li><a href="../crunch/technomancy.html"><strong aria-hidden="true">3.7.</strong> Technomancy</a></li><li><a href="../crunch/sprites.html"><strong aria-hidden="true">3.8.</strong> Sprites</a></li><li><a href="../crunch/equipment.html"><strong aria-hidden="true">3.9.</strong> Equipment</a></li></ol></li><li><a href="../bonus_houserules.html"><strong aria-hidden="true">4.</strong> Bonus Houserules</a></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -453,10 +453,12 @@ of the net hits of Contagious RAS Override.</p>
 <li><strong>Resistance:</strong> Firewall + Cybercombat</li>
 </ul>
 <p>Spam and Viruses are a fact of life in the wireless world. But when you can see
-nothing but, you’re probably in the process of being crashed. If an Icon is
+nothing but, you’re probably in the process of being crashed. If a Network is
 affected by Crash, it uses Armor + System to resist Icon damage equal to the
-rating of the attack plus any net hits. Program Icons have their hits reduced by
-the net hits of the crash attack.</p>
+rating of the attack plus any net hits. You can also target Crash directly at a
+Program or Complex Form being sustained by a Network. In this case, reduce the
+hits of the target by the net hits of your Crash. If the target's hits are
+reduced to 0 then it immediately ends.</p>
 <a class="header" href="#data-bomb" id="data-bomb"><h3>Data Bomb</h3></a>
 <ul>
 <li><strong>Type:</strong> Digital</li>
@@ -947,24 +949,38 @@ prevent it from succeeding.</p>
 <p><strong>Type:</strong> D <strong>Range:</strong> S (LOS) <strong>Time:</strong> CA <strong>Fading:</strong> 1/2R</p>
 <p>If the form is successful, any number of new valid passcodes are added to a
 device or Network.</p>
-<a class="header" href="#background-programs" id="background-programs"><h2>Background Programs</h2></a>
-<p>A background program is capable of running on a single device and does not need
-to run on the entire network nor does it particularly benefit from doing so.
-This means that a background program does not count as a program running on any
-network. Most of them don't even need rules, because they don't come into direct
-conflict with other programs. Here are some examples that your characters might
-have running:</p>
+<a class="header" href="#ic" id="ic"><h2>IC</h2></a>
+<p><strong>Bonus Rule</strong> An IC running on a Network is not a sustained program, it's more
+like an augmentation to the Firewall of the OS. As with other Generic Network
+attributes, only the best available IC within a Network has any effect. IC gets
+only a single Initiative Pass per Combat Turn, though its Initiative is a very
+fast Firewall + Rating + Response.</p>
+<p>Your Network IC can take any of the following actions:</p>
 <ul>
-<li><strong>Virtual Pet:</strong> Virtual Pet puts an Arrow of some kind of animal into the
-user's perception. Depending upon the firewall settings of others, it may be
-perceived by other users as well. Virtual Pets run the gamut of quality from
-simple Nintendogs to complex icons that can virtually pass a cat-equivalence
-Turing test. Virtual Pets are available as real animals, fantastic beasts, and
-even humanoids (while the DreamDate software is sold to a different audience
-than most Virtual Pet consumers, it uses much the same technology).</li>
-<li><strong>Miracle Shooter:</strong> Capture the flag, team death match, king of the hill, all
-your favorite shooter game options.</li>
+<li><strong>Send Mail:</strong> The IC can spend one of the Network's Matrix Free Actions to
+send a mail out to any other device within Matrix range. Usually it takes this
+action to alert someone about an intruder, but it could send mail for other
+reasons I suppose.</li>
+<li><strong>Run Program:</strong> The IC can run any Program present in the Network. It uses
+Firewall + Rating as the dice pool, and the target Network must either be the
+IC's own Network (eg: Armor or Medic) or a Network on the other end of an open
+Connection (eg: Crash or Blackhammer). Remember that having an open Connection
+<em>does</em> make all other ranges count as satisfied, so IC totally <em>can</em> hit you
+with a Blackhammer once a Connection opens.</li>
+<li><strong>Matrix Perception:</strong> An IC program can perform Matrix Perception tests using
+Firewall + Rating. Technically speaking an IC with nothing else to do could be
+rolling two of these every combat round, but you should instead limit it to
+one perception check per character action that might have been noticed (such
+as opening a Backdoor, running a Taxman, etc).</li>
 </ul>
+<p>IC cannot take <em>any</em> other Matrix Actions, so it can't close a connection
+without the Terminate Connection program available, and it can't Matrix Stealth
+without the Cloak program available, and so on. It also doesn't provide any
+Signal Defense or Cybercombat protection to the Network it's running on, you're
+on your own for that one chummer.</p>
+<p>IC doesn't actually have any mental stats, so if it's running on an Empty
+Network targeted by something that use a Mental Attribute as part of the defense
+(eg: Denial or Ostraka) then the IC is of no help there.</p>
 <a class="header" href="#pilot-programs" id="pilot-programs"><h2>Pilot Programs</h2></a>
 <p>A pilot program is an autosoft of some kind. It is entirely capable of running
 on an isolated device. It does not count as a Sustained program, but it is
@@ -992,6 +1008,24 @@ duplicates having an entire actual metahuman brain dedicated to signal defense
 and jamming. That's totally not acceptable, so that autosoft no longer exists.
 Also it has a separate Maneuver and Defense autosoft, which is unnecessary in
 these rules.</p>
+<a class="header" href="#background-programs" id="background-programs"><h2>Background Programs</h2></a>
+<p>A background program is capable of running on a single device and does not need
+to run on the entire network nor does it particularly benefit from doing so.
+This means that a background program does not count as a program running on any
+network. Most of them don't even need rules, because they don't come into direct
+conflict with other programs. Here are some examples that your characters might
+have running:</p>
+<ul>
+<li><strong>Virtual Pet:</strong> Virtual Pet puts an Arrow of some kind of animal into the
+user's perception. Depending upon the firewall settings of others, it may be
+perceived by other users as well. Virtual Pets run the gamut of quality from
+simple Nintendogs to complex icons that can virtually pass a cat-equivalence
+Turing test. Virtual Pets are available as real animals, fantastic beasts, and
+even humanoids (while the DreamDate software is sold to a different audience
+than most Virtual Pet consumers, it uses much the same technology).</li>
+<li><strong>Miracle Shooter:</strong> Capture the flag, team death match, king of the hill, all
+your favorite shooter game options.</li>
+</ul>
 
                     </main>
 
