@@ -12,7 +12,7 @@
    * [Technomancers](lore/technomancers.md)
    * [Sprites](lore/sprites.md)
 * [Crunch](crunch.md)
-   * [Dicepools](crunch/dicepools.md)
+   * [Dicepools and Glossary](crunch/dicepools_and_glossary.md)
    * [Skills](crunch/skills.md)
    * [Matrix Architecture](crunch/matrix_architecture.md)
    * [Matrix Actions](crunch/matrix_actions.md)
