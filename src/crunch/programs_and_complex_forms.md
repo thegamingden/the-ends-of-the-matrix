@@ -354,10 +354,12 @@ of the net hits of Contagious RAS Override.
 * **Resistance:** Firewall + Cybercombat
 
 Spam and Viruses are a fact of life in the wireless world. But when you can see
-nothing but, you’re probably in the process of being crashed. If an Icon is
+nothing but, you’re probably in the process of being crashed. If a Network is
 affected by Crash, it uses Armor + System to resist Icon damage equal to the
-rating of the attack plus any net hits. Program Icons have their hits reduced by
-the net hits of the crash attack.
+rating of the attack plus any net hits. You can also target Crash directly at a
+Program or Complex Form being sustained by a Network. In this case, reduce the
+hits of the target by the net hits of your Crash. If the target's hits are
+reduced to 0 then it immediately ends.
 
 ### Data Bomb
 
@@ -901,24 +903,41 @@ prevent it from succeeding.
 If the form is successful, any number of new valid passcodes are added to a
 device or Network.
 
-## Background Programs
+## IC
 
-A background program is capable of running on a single device and does not need
-to run on the entire network nor does it particularly benefit from doing so.
-This means that a background program does not count as a program running on any
-network. Most of them don't even need rules, because they don't come into direct
-conflict with other programs. Here are some examples that your characters might
-have running:
+**Bonus Rule** An IC running on a Network is not a sustained program, it's more
+like an augmentation to the Firewall of the OS. As with other Generic Network
+attributes, only the best available IC within a Network has any effect. IC gets
+only a single Initiative Pass per Combat Turn, though its Initiative is a very
+fast Firewall + Rating + Response.
 
-* **Virtual Pet:** Virtual Pet puts an Arrow of some kind of animal into the
-  user's perception. Depending upon the firewall settings of others, it may be
-  perceived by other users as well. Virtual Pets run the gamut of quality from
-  simple Nintendogs to complex icons that can virtually pass a cat-equivalence
-  Turing test. Virtual Pets are available as real animals, fantastic beasts, and
-  even humanoids (while the DreamDate software is sold to a different audience
-  than most Virtual Pet consumers, it uses much the same technology).
-* **Miracle Shooter:** Capture the flag, team death match, king of the hill, all
-  your favorite shooter game options.
+Your Network IC can take any of the following actions:
+
+* **Send Mail:** The IC can spend one of the Network's Matrix Free Actions to
+  send a mail out to any other device within Matrix range. Usually it takes this
+  action to alert someone about an intruder, but it could send mail for other
+  reasons I suppose.
+* **Run Program:** The IC can run any Program present in the Network. It uses
+  Firewall + Rating as the dice pool, and the target Network must either be the
+  IC's own Network (eg: Armor or Medic) or a Network on the other end of an open
+  Connection (eg: Crash or Blackhammer). Remember that having an open Connection
+  _does_ make all other ranges count as satisfied, so IC totally _can_ hit you
+  with a Blackhammer once a Connection opens.
+* **Matrix Perception:** An IC program can perform Matrix Perception tests using
+  Firewall + Rating. Technically speaking an IC with nothing else to do could be
+  rolling two of these every combat round, but you should instead limit it to
+  one perception check per character action that might have been noticed (such
+  as opening a Backdoor, running a Taxman, etc).
+
+IC cannot take _any_ other Matrix Actions, so it can't close a connection
+without the Terminate Connection program available, and it can't Matrix Stealth
+without the Cloak program available, and so on. It also doesn't provide any
+Signal Defense or Cybercombat protection to the Network it's running on, you're
+on your own for that one chummer.
+
+IC doesn't actually have any mental stats, so if it's running on an Empty
+Network targeted by something that use a Mental Attribute as part of the defense
+(eg: Denial or Ostraka) then the IC is of no help there.
 
 ## Pilot Programs
 
@@ -958,3 +977,22 @@ duplicates having an entire actual metahuman brain dedicated to signal defense
 and jamming. That's totally not acceptable, so that autosoft no longer exists.
 Also it has a separate Maneuver and Defense autosoft, which is unnecessary in
 these rules.
+
+## Background Programs
+
+A background program is capable of running on a single device and does not need
+to run on the entire network nor does it particularly benefit from doing so.
+This means that a background program does not count as a program running on any
+network. Most of them don't even need rules, because they don't come into direct
+conflict with other programs. Here are some examples that your characters might
+have running:
+
+* **Virtual Pet:** Virtual Pet puts an Arrow of some kind of animal into the
+  user's perception. Depending upon the firewall settings of others, it may be
+  perceived by other users as well. Virtual Pets run the gamut of quality from
+  simple Nintendogs to complex icons that can virtually pass a cat-equivalence
+  Turing test. Virtual Pets are available as real animals, fantastic beasts, and
+  even humanoids (while the DreamDate software is sold to a different audience
+  than most Virtual Pet consumers, it uses much the same technology).
+* **Miracle Shooter:** Capture the flag, team death match, king of the hill, all
+  your favorite shooter game options.
