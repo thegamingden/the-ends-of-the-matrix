@@ -227,6 +227,14 @@ are purchased for individual devices. Pilot Accessory programming is capped in
 rating by the Pilot rating, Pilot is uncapped. These programs cannot be
 optimized for other systems.
 
+**Bonus Rule:** Pilot is capped at 6. A Drone's Pilot can also stands in for its
+System, Firewall, and Armor Program rating as needed, but it cannot otherwise
+maintain a Network, IC, or sustain Programs. You can install a real OS on top of
+the Pilot OS if you want a more capable lone drone, but any important drone will
+probably be joined within a Rigger's Network. This rule is an attempt to
+simplify bookkeeping for Drones, so that common Drones need less numbers written
+down.
+
 Mapsoft generally provides its rating as a bonus on Navigation checks when in
 the area covered by the map. It can also let you know all sorts of other things
 about a place, the kind of stuff you'd find on Wikipedia. If you make a Research
