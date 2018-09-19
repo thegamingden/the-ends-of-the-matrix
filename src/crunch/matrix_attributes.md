@@ -105,8 +105,6 @@ Retransmission and cabling allow a signal to travel very much farther than it wo
 
 Icons do not keep track of physical and stun damage separately. Instead there is just a single condition monitor which represents the health of the entire network. Each network has a number of boxes equal to 8 + 1/2 System rating. When a network's condition monitor is filled, the network and all of the devices on it are incapable of taking Matrix actions and their System and Firewall ratings are considered zero.
 
-Networks can be restored to a previous state in which they weren't damaged. To determine how long this takes make a Response + System (10, 1 turn) extended test. This test uses the total System rating rather than the current effective System Rating (which of course, is zero). Note that cascading viruses are the rule in 2071, so larger networks are not any harder to bring down than smaller networks.
-
 ## Technomancers and their Attributes
 
 A Technomancer's "network" is just her own body. As such, her attributes on the Matrix are not dependent upon her equipment in any meaningful fashion.
