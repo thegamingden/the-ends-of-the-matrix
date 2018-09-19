@@ -48,6 +48,10 @@ Programs have a variable action cost, some of them take Simple or Complex Action
 
 Characters are generally given an opportunity to spot things in the Matrix reactively without even spending actions. However, if a user is sufficiently sure that something is there, whether from simple paranoia or some other piece of information, then the user can spend a Simple Action to make an additional Matrix Perception Test (Intuition + Data Search). If the user already knows what is being looked for, a +2 dicepool modifier is gained.
 
+### Restore Icon
+
+Networks can be restored to a previous state in which they weren't damaged. To determine how long this takes make a Response + System (10, 1 turn) extended test. This test uses the total System rating rather than the current effective System Rating (which of course, is zero). Note that cascading viruses are the rule in 2071, so larger networks are not any harder to bring down than smaller networks.
+
 ## Fundamental Hacking Actions
 
 The matrix has certain structural weaknesses, which can be exploited by anyone with a basic knowledge of the underlying infrastructure, whether they have a special program or not.

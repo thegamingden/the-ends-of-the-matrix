@@ -13,7 +13,16 @@ Everything you interact with in the Matrix is represented by multisensory iconog
 
 ### Program Icons
 
-An armor program might appear as literal armor or as a horde of weasels which devour incoming attacks, but there is always a tangible representative of any program's activities in the Matrix. Sustained programming does not have condition tracks, but instead merely has the number of hits made when putting them up in the first place. Should that total be zero (or reduced to zero), the program fades away and the icon is destroyed.
+An Armor program might appear as literal armor or as a horde of weasels which
+devour incoming attacks, but there is always a tangible representative of any
+program's activities in the Matrix. Sustained programming does not have
+condition tracks, but instead merely has the number of hits made when putting
+them up in the first place. Should that total be zero (or reduced to zero), the
+program fades away and the icon is destroyed.
+
+**Bonus Rule** Programming that doesn't even count as a sustained program, such
+as Pilot, IC, or an Autosoft, can change the appearance of the Network that it's
+running on, but you cannot target it individually for crashing.
 
 ### Device/Network Icons
 
