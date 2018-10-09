@@ -300,6 +300,14 @@ the target's Matrix Stealth value for the Threshold, and the location of the
 target's transmitter will be found (accurate to within 1 meter) by the time the
 Who Is becomes permanent.
 
+**Bonus Rule:** Note that... this is definitely the most vague Program in the
+entire game. Precisely what it does is either the best thing in the game
+(because you can locate nearly anyone, anywhere, in 15 turns) or it's entirely
+useless (because individual commlinks don't have LTGs, so you can only trace
+buildings and other fixed installations with it, in which case why didn't
+whoever just broadcast their message/signal via commlink instead so that Who Is
+wouldn't work on them). Seriously, you should probably ignore that it exists.
+
 ## Attack Programs
 
 Cybercombat usually is a short and brutal affair. As much as hackers like to
